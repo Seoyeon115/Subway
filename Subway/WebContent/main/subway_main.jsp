@@ -11,6 +11,7 @@
 <body>
 	<!-- header -->
 	<jsp:include page="header.jsp"></jsp:include>
+	
 	<!-- content -->
 	<div class="carousel">
 		<section>
@@ -27,7 +28,7 @@
 	</div>
 
 	<div class="content">
-		<section>
+		<section class="main_menu">
 			<div>
 				<img src="http://localhost:9000/Subway/images/subway's menu.png">
 				<div>
@@ -39,7 +40,7 @@
 					</ul>
 				</div>
 			</div>
-			<article>
+			<article class="classic">
 				<div>
 					<img src="http://localhost:9000/Subway/images/sandwich_cl06.jpg">
 					<div>
@@ -53,8 +54,8 @@
 					<div>
 						<h3>이탈리안 비엠티</h3>
 						<span>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의</span><br>
-						<span>조화! 전세계가 사랑하는 써브웨이의 베스</span><br>
-						<span>트셀러! Biggest Meatiest Tastiest, its' M.B.T!</span>
+						<span>조화! 전세계가 사랑하는 써브웨이의 베스트셀러!</span><br>
+						<span>Biggest Meatiest Tastiest, its' B.M.T!</span>
 					</div>
 				</div>
 				<div>
@@ -76,8 +77,8 @@
 				</div>
 			</article>
 		</section>
-		<section>
-			<article>
+		<section class="main_inform">
+			<article class="inform1">
 				<div>
 					<img src="http://localhost:9000/Subway/images/bg_utilization.png">
 					<div>
@@ -92,7 +93,7 @@
 					encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</article>
-			<article>
+			<article class="inform2">
 				<div>
 					<div>
 						<img src="http://localhost:9000/Subway/images/subway's menu.png">
