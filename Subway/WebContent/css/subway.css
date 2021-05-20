@@ -193,6 +193,8 @@
 		list-style-type:none;
 		text-align:right;
 		margin-top:-30px;
+		display:inline-block;
+		margin-left:440px;
 	}
 	div.content>section:first-child li{
 		display:inline-block;
@@ -238,7 +240,7 @@
 	/****/
 	div.content>section:nth-child(2){
 		width:100%; height:800px;
-		background-image:url('http://localhost:9000/2st_project/images/bg_content.gif');
+		background-image:url('http://localhost:9000/Subway/images/bg_content.gif');
 		margin-top:150px;
 	}
 	div.content>section:nth-child(2)>article:first-child{

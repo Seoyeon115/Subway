@@ -52,8 +52,8 @@
 					<img src="http://localhost:9000/Subway/images/sandwich_cl01.jpg">
 					<div>
 						<h3>이탈리안 비엠티</h3>
-						<span>페퍼로니, 살라미 그리고 햄이 만들어내는 최강</span><br>
-						<span>의 조화! 전세계가 사랑하는 써브웨이의 베스</span><br>
+						<span>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의</span><br>
+						<span>조화! 전세계가 사랑하는 써브웨이의 베스</span><br>
 						<span>트셀러! Biggest Meatiest Tastiest, its' M.B.T!</span>
 					</div>
 				</div>
