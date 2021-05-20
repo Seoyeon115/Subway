@@ -4,9 +4,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/2st_project/images/icon.png">
+	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
 	<title>SUBWAY 써브웨이</title>
-	<link rel="stylesheet" href="http://localhost:9000/2st_project/css/subway.css">
+	<link rel="stylesheet" href="http://localhost:9000/Subway/css/subway.css">
 </head>
 <body>
 	<!-- header -->
@@ -14,11 +14,11 @@
 	<!-- content -->
 	<div class="carousel">
 		<section>
-			<a href="#"><img src="http://localhost:9000/2st_project/images/main1.png"></a>
+			<a href="#"><img src="http://localhost:9000/Subway/images/main1.png"></a>
 			<div>
 				<ul>
-					<li><a href="#"><img src="http://localhost:9000/2st_project/images/icon_map.png"> 매장찾기</a></li>
-					<li><a href="#"><img src="http://localhost:9000/2st_project/images/icon_franchise.png"> 주문하기</a></li>
+					<li><a href="#"><img src="http://localhost:9000/Subway/images/icon_map.png"> 매장찾기</a></li>
+					<li><a href="#"><img src="http://localhost:9000/Subway/images/icon_franchise.png"> 주문하기</a></li>
 				</ul>
 			</div>
 		</section>
@@ -26,7 +26,7 @@
 	<div class="content">
 		<section>
 			<div>
-				<img src="http://localhost:9000/2st_project/images/subway's menu.png">
+				<img src="http://localhost:9000/Subway/images/subway's menu.png">
 				<div>
 					<h1>Subway's Menu</h1>
 					<ul>
@@ -38,7 +38,7 @@
 			</div>
 			<article>
 				<div>
-					<img src="http://localhost:9000/2st_project/images/sandwich_cl06.jpg">
+					<img src="http://localhost:9000/Subway/images/sandwich_cl06.jpg">
 					<div>
 						<h3>에그마요</h3>
 						<span>부드러운 달걀과 고소한 마요네즈가 만나</span><br>
@@ -46,7 +46,7 @@
 					</div>
 				</div>
 				<div>
-					<img src="http://localhost:9000/2st_project/images/sandwich_cl01.jpg">
+					<img src="http://localhost:9000/Subway/images/sandwich_cl01.jpg">
 					<div>
 						<h3>이탈리안 비엠티</h3>
 						<span>페퍼로니, 살라미 그리고 햄이 만들어내는 최강</span><br>
@@ -55,7 +55,7 @@
 					</div>
 				</div>
 				<div>
-					<img src="http://localhost:9000/2st_project/images/sandwich_cl02.jpg">
+					<img src="http://localhost:9000/Subway/images/sandwich_cl02.jpg">
 					<div>
 						<h3>비엘티</h3>
 						<span>오리지널 아메리칸 스타일 베이컨의</span><br>
@@ -63,7 +63,7 @@
 					</div>
 				</div>
 				<div>
-					<img src="http://localhost:9000/2st_project/images/sandwich_cl03.jpg">
+					<img src="http://localhost:9000/Subway/images/sandwich_cl03.jpg">
 					<div>
 						<h3>미트볼</h3>
 						<span>이탈리안 스타일 비프 미트볼에</span><br>
@@ -76,7 +76,7 @@
 		<section>
 			<article>
 				<div>
-					<img src="http://localhost:9000/2st_project/images/bg_utilization.png">
+					<img src="http://localhost:9000/Subway/images/bg_utilization.png">
 					<div>
 						<span>써브웨이를</span><br>
 						<span>제대로 즐기는 방법!</span><br>
@@ -92,7 +92,7 @@
 			<article>
 				<div>
 					<div>
-						<img src="http://localhost:9000/2st_project/images/subway's menu.png">
+						<img src="http://localhost:9000/Subway/images/subway's menu.png">
 						<div>
 							<h1>What's New</h1>
 							<span>써브웨이의 다양한 소식을</span>
@@ -111,7 +111,7 @@
 					</div>
 				</div>
 				<div>
-					<img src="http://localhost:9000/2st_project/images/logo_20210308043409639.png">
+					<img src="http://localhost:9000/Subway/images/logo_20210308043409639.png">
 				</div>
 			</article>
 		</section>
