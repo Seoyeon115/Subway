@@ -26,8 +26,8 @@
 				<span>SUBWAY® is a Registered Trademark of Subway IP LLC. © 2021 Subway IP LLC. All Rights Reserved.</span>
 			</div>
 			<div>
-				<a href="https://www.instagram.com/subwaykorea/"><img src="http://localhost:9000/2st_project/images/insta.PNG"></a>
-				<a href="https://www.facebook.com/Subwaykr"><img src="http://localhost:9000/2st_project/images/facebook.PNG"></a>
+				<a href="https://www.instagram.com/subwaykorea/"><img src="http://localhost:9000/Subway/images/insta.PNG"></a>
+				<a href="https://www.facebook.com/Subwaykr"><img src="http://localhost:9000/Subway/images/facebook.PNG"></a>
 			</div>
 		</div>
 	</footer>
