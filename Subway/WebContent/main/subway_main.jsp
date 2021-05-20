@@ -11,7 +11,6 @@
 <body>
 	<!-- header -->
 	<jsp:include page="header.jsp"></jsp:include>
-	<!-- 장희수 -->
 	<!-- content -->
 	<div class="carousel">
 		<section>
