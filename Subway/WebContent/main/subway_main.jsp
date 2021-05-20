@@ -14,15 +14,18 @@
 	<!-- content -->
 	<div class="carousel">
 		<section>
-			<a href="#"><img src="http://localhost:9000/Subway/images/main1.png"></a>
-			<div>
-				<ul>
-					<li><a href="#"><img src="http://localhost:9000/Subway/images/icon_map.png"> 매장찾기</a></li>
-					<li><a href="#"><img src="http://localhost:9000/Subway/images/icon_franchise.png"> 주문하기</a></li>
-				</ul>
-			</div>
+			<img src="http://localhost:9000/Subway/images/main1.png">
 		</section>
 	</div>
+	<div class="find">
+		<div class="find1"><a href="#"><img src="http://localhost:9000/Subway/images/icon_map.png"></a></div>
+		<div class="find2"><a href="#">매장찾기</a></div>		
+	</div>
+	<div class="order">
+		<div class="order1"><a href="#"><img src="http://localhost:9000/Subway/images/icon_franchise.png"></a></div>
+		<div class="order2"><a href="#">주문하기</a></div>		
+	</div>
+
 	<div class="content">
 		<section>
 			<div>
