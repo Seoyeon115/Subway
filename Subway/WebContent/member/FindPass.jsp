@@ -14,27 +14,28 @@
 	<jsp:include page="../main/header.jsp"></jsp:include>
 	
 	<!-- content -->
-	<div class="content">
-		<div class="login1">
-			<div class="login2">
-				<div class="login3">
-					<h2>LOGIN</h2>
-					<div class="login_text">써브웨이 회원으로 로그인하시면 제공하는<br>다양한 서비스를 이용할 수 있습니다.</div>
-					<form name="login_form" action="#" method="get">
+	<div class="fp">
+		<div class="fp1">
+			<div class="fp2">
+				<div class="fp3">
+					<h2>비밀번호 찾기</h2>
+					<div class="fp_text">이름, 휴대폰 번호, 아이디를 입력해주세요.</div>
+					<form name="fp_form" action="#" method="get">
 						<ul>
 							<li>
-								<label>이메일 아이디</label>
-								<input type="text" name="id" id="id" placeholder="이메일 아이디 입력">
+								<label>이름</label>
+								<input type="text" name="name" id="name" placeholder="이름 입력">
 							</li>
 							<li>
-								<label>비밀번호</label>
-								<input type="password" name="pass" id="pass" placeholder="비밀번호 입력" >
+								<label>휴대폰 번호</label>
+								<input type="text" name="hp" id="hp" placeholder="휴대폰 번호 입력" >
 							</li>
 							<li>
-								<span class="radio"><input type="radio" name="saveid" id="saveid" value="sid">이메일 아이디 저장</span>
+								<label>아이디</label>
+								<input type="text" name="id" id="id" placeholder="아이디 입력" >
 							</li>
 							<li>
-								<button type="button">로그인</button>
+								<button type="button">확인</button>
 							</li>
 						</ul>
 					</form>

@@ -10,7 +10,7 @@
 	<header>
 		<div>
 			<nav>
-				<a href="http://localhost:9000/Subway/main.html"><img src="http://localhost:9000/Subway/images/subway.PNG"></a>
+				<a href="http://localhost:9000/Subway/main/subway_main.jsp"><img src="http://localhost:9000/Subway/images/subway.PNG"></a>
 				<ul>
 					<li><a href="http://localhost:9000/Subway/member/login.jsp">로그인 </a><div></div></li>
 					<li><a href="#">회원가입 </a><div></div></li>
