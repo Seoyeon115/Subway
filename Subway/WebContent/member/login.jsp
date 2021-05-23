@@ -42,7 +42,7 @@
 					<ul>
 						<li><a href="http://localhost:9000/Subway/member/FindId.jsp">아이디 찾기</a><div></div></li>
 						<li><a href="http://localhost:9000/Subway/member/FindPass.jsp">비밀번호 찾기</a><div></div></li>
-						<li><a href="#">회원가입</a></li>
+						<li><a href="http://localhost:9000/Subway/member/join.jsp">회원가입</a></li>
 					</ul>
 					</div>
 				</div>

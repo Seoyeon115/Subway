@@ -1,0 +1,139 @@
+/** 회원가입 화면 **/
+div.content{
+	border-top:1px solid rgb(229,229,229);
+	width:100%;
+	height:1150px;
+	background-color:rgb(246,246,246);
+	border:1px sollid red;
+}
+div.content h1{
+	margin-top:50px;
+}
+div.join{
+	border:1px solid white;
+	width:1000px;
+	margin:auto;
+	margin-top:60px;
+	height:850px;
+	margin-bottom:20px;
+	border-radius:30px 0 0 0;
+	background-color:white;
+}
+
+div.header{
+	border:1px solid rgb(88,0,108);
+	width:1000px;
+	height:50px;
+	line-height:50px;
+	border-radius:30px 0 0 0;
+	background-color:rgb(88,0,108);
+	color:rgb(255,195,0);
+	font-size:21px;
+	font-weight:900;
+}
+div.join h3{
+	float:left;
+	margin-top:55px;
+	margin-left:50px;
+	margin-bottom:20px;
+}
+div.join1{
+	border:1px solid red;
+	width:600px;
+	margin:auto;
+	height:600px;
+	margin-top:90px;
+}
+div.check{
+	border:1px solid white;
+	width:1000px;
+	margin:auto;
+	height:80px;
+	line-height:80px;
+	margin-bottom:10px;
+	background-color:white;	
+}
+div.check button{
+	padding:8px 14px;
+	background-color:rgb(0,146,35);
+	color:white;
+	font-weight:900;
+	border:1px solid rgb(0,146,35);
+	border-radius:20px;
+	font-size:14px;
+}
+div.form1{
+	/*border:1px solid green;*/
+	clear:left;
+	width:900px;
+	margin:auto;
+	height:350px;
+}
+div.form1 ul, div.form2 ul{
+	list-style-type:none;
+}
+div.form1 ul li{
+	border:1px solid rgb(238,238,238);
+	text-align:left;
+	padding:15px;
+	margin-top:5px;
+	font-size:12px;
+	font-weight:bold;
+}
+div.form2 ul li{
+	border:1px solid rgb(238,238,238);
+	font-size:12px;
+	font-weight:bold;
+	text-align:left;
+	padding:15px;
+}
+div.join h4{
+	margin-top:50px;
+	font-size:18px;
+	text-align:left;
+	margin-left:50px;
+	margin-bottom:20px;
+}
+div.form2{
+	/*border:1px solid black;*/
+	width:900px;
+	margin:auto;
+	height:200px;
+}
+div.form1 ul li input, div.form2 ul li input{
+	margin-left:10px;
+	padding:2px;
+	border:none;
+}
+div.form1 ul li input:focus, div.form2 ul li input:focus{
+	outline:none;
+}
+div.form1 ul li input::-webkit-input-placeholder, div.form2 ul li input::-webkit-input-placeholder{
+	color:rgb(212,211,212);
+}
+
+div.form1 ul li label, div.form2 ul li label{
+	/*border:1px solid orange;*/
+	padding:5px;
+	display:inline-block;
+	width:110px;	
+}
+div.form1 ul li select{
+	/*border:1px solid violet;*/
+	margin-left:50px;
+	padding:5px;
+	border:none;
+
+}
+
+div.form1 ul li button, div.form2 ul li button{
+	float:right;
+	padding:5px 20px;
+	background-color:white;
+	border-right:white;
+	border-top:white;
+	border-bottom:white;
+	border-left-color:rgb(230,230,230);
+	color:rgb(0,146,35);
+	font-weight:900;
+}
