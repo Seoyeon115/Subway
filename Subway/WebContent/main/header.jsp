@@ -20,7 +20,7 @@
 		</div>
 		<div>
 			<ul>
-				<li><a href="#">메뉴소개</a></li>
+				<li><a href="../menulist/sandwich.jsp">메뉴소개</a></li>
 				<li><a href="#">이용방법</a></li>
 				<li><a href="#">공지사항</a></li>
 				<li><a href="#">이벤트</a></li>
