@@ -1,0 +1,132 @@
+*{
+	margin:0; padding:0;	
+	font-family:"¸¼Àº°íµñ";
+}
+
+/********************
+	order - content 
+********************/
+
+div.order_content{
+	width:100%;
+	margin:auto;
+	background-image:url('http://localhost:9000/Subway/order/order_images/home_bg.jpg');
+	background-repeat:no-repeat;
+	background-position:top center;
+	background-color:#0aa8e7;
+	text-align:center;
+}
+section.order_title{
+	width:1280px;
+	margin:auto;
+}
+section.order_title>div{
+	display:inline-block;
+}
+section.order_title div>h1{
+	font-size:80px;
+	color:white;
+	padding:60px 0 15px 0;
+}
+section.order_title div>span{
+	font-size:15px;
+	font-weight:bold;
+	color:white;
+}
+/**/
+article.order_step>div>img{
+	display:inline-block;
+	vertical-align:middle;
+	padding:10px;
+}
+article.order_step>div>img:nth-child(3){
+	padding:65px 0;
+	margin-right:-50px;
+	margin-bottom:-70px;
+}
+article.order_step>div>div{
+	display:inline-block;
+	vertical-align:middle;
+	text-align:left;
+	padding:0 30px 10px 10px;
+	margin-left:-130px;
+}
+article.order_step>div>div>span:first-child{
+	font-size:18px;
+	color:#ffc300;
+}
+article.order_step>div>div>span:last-child{
+	font-size:22px;
+	color:white;
+}
+
+/****/
+section.menu_list>div.menu_tap{
+	display:inline-block;
+	background-color:white;
+	width:1170px;
+	box-shadow: 0 10px 10px -10px lightgray;
+	position: sticky;
+}
+section.menu_list>div.menu_tap>ul{
+	display:inline-block;
+	list-style-type:none;
+	text-align:center;
+}
+section.menu_list>div.menu_tap li{
+	display:inline-block;
+	padding:25px 50px;
+}
+section.menu_list>div.menu_tap a{
+	text-decoration:none;
+	font-size:18px;
+	color:gray;
+}
+/**/
+section.menu_list>div.menu_sandwich{
+	display:inline-block;
+	background-color:white;
+	width:1170px; 
+	text-align:center;
+	margin-bottom:150px;
+}
+div.menu_sandwich ul{
+	display:inline-block;
+	list-style-type:none;
+	text-align:center;
+	padding:20px;
+}
+div.menu_sandwich li{
+	display:inline-block;
+}
+div.menu_sandwich a{
+	text-decoration:none;
+}
+div.menu_sandwich p{
+	padding:50px 0;
+}
+div.menu_sandwich img{
+	display:inline-block;
+	width:270px;
+	margin:0 50px;
+	float:left;
+}
+div.menu_sandwich strong{
+	font-size:22px;
+	font-weight:bold;
+	color:black;
+}
+div.menu_sandwich span{
+	display:block;
+	margin:5px 0 10px 0;
+}
+div.menu_sandwich span.eng_name{
+	font-size:18px;
+	font-weight:bold;
+	color:gray;
+}
+div.menu_sandwich span.kcal{
+	font-size:20px;
+	font-weight:bold;
+	color:#ffc300;
+}
