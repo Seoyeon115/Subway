@@ -169,3 +169,103 @@ div.menu_sandwich a:hover>img {
     -o-transform:scale(1.1);
     transform:scale(1.1);
 }
+
+
+/********************
+	order_detail 
+	- content 
+********************/
+div.order_detail{
+	width:1000px;
+	margin:120px auto;
+}
+article.menu_inform>div{
+	display:inline-block;
+}
+article.menu_inform img{
+	display:inline-block;
+	width:485px;
+	margin:0 40px 0 0;
+}
+article.menu_inform p{
+	display:inline-block;
+	text-align:left;
+	margin-top:10px;
+}
+article.menu_inform p>span:first-child{
+	font-size:18px;
+	font-weight:bold;
+	color:#009223;
+}
+article.menu_inform p>strong{
+	font-size:45px;
+	color:black;
+}
+article.menu_inform p>span:nth-child(3){
+	font-size:20px;
+	font-weight:bold;
+	color:#b2b2b2;
+	padding-bottom:10px;
+}
+article.menu_inform p>span:nth-child(4),
+article.menu_inform p>span:last-child{
+	font-size:15px;
+	color:#b2b2b2;
+}
+/**/
+section.nutrient{
+	width:1000px;
+	margin:40px 0 60px 0;
+}
+section.nutrient>h1{
+	text-align:left;
+	font-size:25px;
+	font-weight:bold;
+	color:#696969;
+}
+table.content_layout{
+	border-top:4px solid #009223;	
+	border-bottom:1px solid lightgray;	
+	width:1000px;
+	margin:40px auto;
+}
+table.content_layout th{
+	border-bottom:1px solid #009223;	
+	color:#009223;
+	padding:20px 0;
+}
+table.content_layout td{
+	color:#696969;
+	padding:20px 0;
+}
+section.nutrient>div{
+	text-align:left;
+	font-size:13px;
+	color:#7a7a7a;
+	margin-top:-10px;
+}
+section.nutrient span:first-child{
+	margin-bottom:-3px;
+}
+
+/**/
+section.order_btn{
+	text-align:center;
+}
+section.order_btn>button{
+	width:180px;
+	background-color:#009223;
+	border:1px solid #009223;
+	border-radius:30px;
+	padding:10px;
+	color:white;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	margin-top:20px;
+}
+section.order_btn img{
+border:1px solid red;
+	width:20px;
+	float:right;
+}
