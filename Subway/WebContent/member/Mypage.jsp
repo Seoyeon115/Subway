@@ -24,19 +24,19 @@
 						<img src="http://localhost:9000/Subway/images/img_profile_male.png">
 						</div>
 						<div class="info_text">김민호님</div>
-						<a href="#">회원 정보 변경</a>
+						<a href="http://localhost:9000/Subway/member/Mypage_passcheck.jsp">회원 정보 변경</a>
 					</div>
 					<div class="myorder">
 						<div class="myorder_text">
 						주문내역<br><p>0개</p>
 						</div>
-						<div class="myorder_link"><a href="#">주문 내역 관리</a></div>
+						<div class="myorder_link"><a href="http://localhost:9000/Subway/member/Mypage_orderlist.jsp">주문 내역 관리</a></div>
 					</div>
 					<div class="coupon">
 						<div class="coupon_text">
 						쿠폰<br><p>0개</p>
 						</div>
-						<div class="coupon_link"><a href="#">쿠폰 관리</a></div>
+						<div class="coupon_link"><a href="http://localhost:9000/Subway/member/Mypage_coupon.jsp">쿠폰 관리</a></div>
 					</div>
 				</article>
 			</section>

@@ -1,0 +1,100 @@
+div.content{
+	border-top:1px solid rgb(229,229,229);
+	width:100%;
+	height:1000px;
+	background-color:rgb(246,246,246);
+}
+div.passcheck_text h1{
+	margin-top:80px;
+	font-size:40px;
+}
+div.passcheck_text p{
+	margin-top:20px;
+	color:rgb(102,102,102);
+	font-size:14px;
+	font-weight:900;
+}
+div.content1{
+	width:1000px;
+	height:505.5px;
+	border:1px solid white;
+	margin:auto;
+	margin-top:50px;
+	background-color:white;
+}
+div.passcheck_form{
+	width:800px;
+	height:300px;
+	/*border:1px solid green;*/
+	margin:auto;
+	margin-top:100px;
+}
+div.passcheck_form ul{
+	list-style-type:none;
+}
+div.passcheck_form ul li{
+	border:1px solid rgb(229,229,229);
+	font-size:14px;
+	font-weight:bold;
+	text-align:left;
+	padding:18px;
+	margin-bottom:10px;
+	color:rgb(102,102,102);
+}
+div.passcheck_form ul li input{
+	margin-left:10px;
+	padding:2px;
+	border:none;
+}
+div.passcheck_form ul li input:focus{
+	outline:none;
+}
+div.passcheck_form ul li input::-webkit-input-placeholder{
+	color:rgb(212,211,212);
+	font-weight:bold;
+	font-size:14px;
+}
+div.passcheck_form ul li label{
+	padding:5px;
+	display:inline-block;
+	width:110px;	
+}
+div.warning{
+	width:800px;
+	height:80px;
+	margin:auto;
+	font-size:12px;
+	line-height:80px;
+	text-align:left;
+	color:rgb(153,153,165);
+	background-color:rgb(246,246,246);
+	font-weight:900;
+}
+div.warning_img{
+	display:inline-block;
+	margin-top:17px;
+	float:left;
+	margin-left:20px;
+}
+div.passcheck_button{
+	width:1000px;
+	height:100px;
+	margin:auto;
+	border:1px solid white;
+	margin-top:2px;
+	line-height:100px;
+	background-color:white;
+}
+div.passcheck_button button{
+	padding:10px 55px;
+	background-color:rgb(0,146,35);
+	color:white;
+	font-weight:900;
+	border:1px solid rgb(0,146,35);
+	border-radius:30px;
+	font-size:16px;
+}
+
+
+
+
