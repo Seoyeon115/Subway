@@ -24,7 +24,7 @@
 	</div>
 	<div class="order">
 		<div class="order1"><a href="#"><img src="http://localhost:9000/Subway/images/icon_franchise.png"></a></div>
-		<div class="order2"><a href="http://localhost:9000/Subway/order/order.jsp">주문하기</a></div>		
+		<div class="order2"><a href="http://localhost:9000/Subway/order/order_sandwich.jsp">주문하기</a></div>		
 	</div>
 
 	<div class="content">

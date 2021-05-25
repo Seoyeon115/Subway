@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
-	<title>HOME-SUB > 메뉴선택</title>
+	<title>메뉴선택</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 </head>
@@ -39,9 +39,9 @@
 		<section class="menu_list">
 			<div class="menu_tap">
 				<ul>
-					<li><a href="#">샌드위치</a></li>
-					<li><a href="#">쿠키</a></li>
-					<li><a href="#">음료</a></li>
+					<li class="sandwich"><a href="http://localhost:9000/Subway/order/order_sandwich.jsp">샌드위치</a></li>
+					<li><a href="http://localhost:9000/Subway/order/order_cookie.jsp">쿠키</a></li>
+					<li><a href="http://localhost:9000/Subway/order/order_drink.jsp">음료</a></li>
 				</ul>
 			</div>
 			<div class="menu_sandwich">

@@ -24,7 +24,7 @@
 				<li><a href="#">이용방법</a></li>
 				<li><a href="#">공지사항</a></li>
 				<li><a href="#">이벤트</a></li>
-				<li><a href="http://localhost:9000/Subway/order/order.jsp">온라인 주문</a></li>
+				<li><a href="http://localhost:9000/Subway/order/order_sandwich.jsp">온라인 주문</a></li>
 			</ul>
 		</div>
 		
