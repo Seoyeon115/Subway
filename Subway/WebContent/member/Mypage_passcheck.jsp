@@ -44,6 +44,7 @@
 		</div>
 	</div>
 	
+	
 	<!-- footer -->
 	<jsp:include page="../main/footer.jsp"></jsp:include>
 
