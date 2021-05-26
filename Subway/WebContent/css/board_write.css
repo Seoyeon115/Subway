@@ -1,0 +1,124 @@
+/*********** 공지사항 - 관리자  ***********/
+
+div {
+    display: block;
+}
+
+.title {
+    width: 30%;
+    font-size: 30px;
+    padding: 100px 0px 30px 0px;
+    margin: 30px 0px 30px 0px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+div.content{
+	width: 1000px;
+	margin: auto; 
+/* 	border: 1px solid red; */
+}
+
+div.content>section{
+	margin: 0px 0px;
+}
+
+.content_layout{
+/* 	border:3px solid #c9decf; */	
+	width: 80%;
+	margin: 0px 50px;
+}
+
+.btn_style2 {
+	background-color: #009223;
+	border:1px solid #009223;
+	border-radius:3px;
+	font-size: 14px;
+	font-weight: 900;
+	color:white;
+	width: 17%;
+	padding:5px 0;
+	margin: 15px 0px 30px 0px;
+	
+}
+
+
+
+/*** 게시판 공통 ****/
+section.board_list table, section.board_list table th, section.board_list table td,
+section.board_write table, section.board_write table th, section.board_write table td,
+section.board_content table, section.board_content table th, section.board_content table td
+{
+	border:1px solid #333;
+	border-collapse:collapse;
+}
+section.board_list table th, section.board_list table td,
+section.board_write table th, section.board_write table td,
+section.board_content table th, section.board_content table td
+{
+	padding:8px 0;
+	font-size:15px;
+	color:black;
+	text-align: center;
+}
+section.board_list table th, section.board_write table th, section.board_content table th {
+	background-color : #ffc300;
+/* 	color:white; */
+}
+
+
+
+/***** 글쓰기 *****/
+:-webkit-any(article, aside, nav, section) h1 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+user agent stylesheet
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+section.board_write table th{
+	width:20%;
+}
+
+section.board_write table td{
+	text-align: left;
+	padding-left: 12px;
+}
+
+section.board_write table tr:last-child>td {
+	text-align: center;
+}
+
+section.board_write input, section.board_write textarea{
+	border: 1px solid gray;
+	border-radius: 4px;
+	width: 90%;
+	padding: 5px 10px;
+}
+section.board_write textarea{
+	height: 300px;
+}
+
+section.board_write table tr:nth-child(3) input {
+	border: 1px solid white;
+}
+section.board_write table tr:last-child td{
+	border: 1px solid white;
+	padding-top:20px;
+}
+section.board_write table button{
+	margin-right: 5px;
+}
+
+
