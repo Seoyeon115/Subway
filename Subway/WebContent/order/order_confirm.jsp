@@ -8,20 +8,6 @@
 	<title>메뉴선택</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
-	<script>
-		window.onload = function(){
-			function onClick(){
-				document.querySelector('.modal_wrap').style.display = 'block';
-				document.querySelector('.black_bg').style.display = 'block';
-			}
-			function offClick(){
-				document.querySelector('.modal_wrap').style.display = 'none';
-				document.querySelector('.black_bg').style.display = 'none';
-			}
-			document.getElementById('modal_btn').addEventListener('click', onClick);
-			document.querySelector('.modal_close').addEventListener('click', offClick);
-		};
-	</script>
 </head>
 <body>
 	<!-- header -->
@@ -79,19 +65,94 @@
 							<span>※ 괄호 안 %는 1일 영양소 기준치에 대한 비율</span>
 						</div>
 					</section>
-					<section class="order_btn">
-						<button type="button" class="btn_style" id="modal_btn">주문 시작하기<!-- <img src="http://localhost:9000/Subway/order/order_images/icon_reg.png"> --></button>
-						<div class="black_bg"></div>
-						<div class="modal_wrap">
-							<div class="modal_close"><a href="#"></a></div>
-							<div class="popup">
-								<!--  <iframe></iframe>-->
-								<div class="popup_btn">
-									<button type="button" class="btn_style2" onclick="location.href='http://localhost:9000/Subway/order/order_confirm.jsp'">이전</button>
-									<button type="button" class="btn_style" onclick="location.href='http://localhost:9000/Subway/order/order_confirm.jsp'">다음</button>
-								</div>
-							</div>
+					<section class="confirm">
+						<ol>
+							<li class="step01">
+								<dl>
+									<dt>
+										<img src="http://localhost:9000/Subway/order/order_images/menu_view_bg01.png">
+										<strong>STEP 01</strong>
+										<span>필수 선택 *</span>
+									</dt>
+									<dd>
+										<ul>
+											<li>
+												<a href="#">길이 선택</a>
+											</li>
+											<li>
+												<a href="#">빵 선택</a>
+											</li>
+											<li>
+												<a href="#">치즈 선택</a>
+											</li>
+											<li>
+												<a href="#">야채 선택</a>
+											</li>
+											<li>
+												<a href="#">소스/시즈닝 선택</a>
+											</li>
+								
+										</ul>
+										<span></span>
+									</dd>
+								</dl>
+							</li>
+							<li class="step02">
+								<dl>
+									<dt>
+										<img src="http://localhost:9000/Subway/order/order_images/menu_view_bg02.png">
+										<strong>STEP 02</strong>
+										<span>추가 선택</span>
+									</dt>
+									<dd>
+										<ul>
+											<li>
+												<a href="#">추가 선택</a>
+											</li>
+											<li>
+												<a href="#">미트 추가</a>
+											</li>
+										</ul>
+										<span></span>
+									</dd>
+								</dl>
+							</li>
+							<li class="step03">
+								<dl>
+									<dt>
+										<img src="http://localhost:9000/Subway/order/order_images/menu_view_bg03.png">
+										<strong>STEP 03</strong>
+										<span>상품 선택</span>
+									</dt>
+									<dd>
+										<ul>
+											<li>
+												<a href="#">단품</a>
+											</li>
+											<li>
+												<a href="#">세트</a>
+											</li>
+										</ul>
+										<span></span>
+									</dd>
+								</dl>
+							</li>
+						</ol>
+					</section>
+					<section class="order_price">
+						<div class="count">
+							<span>수량</span>
+							<img src="http://localhost:9000/Subway/order/order_images/btn_minus.png">
+							<img src="http://localhost:9000/Subway/order/order_images/btn_plus.png">
 						</div>
+						<div class="price">
+							<span>최종 결제 금액</span>
+							<span>원</span>
+						</div>
+					</section>
+					<section class="order_btn">
+						<button type="button" class="btn_style2"onclick="location.href='#'">장바구니</button>
+						<button type="button" class="btn_style" onclick="location.href='#'">주문하기</button>
 					</section>
 				</div>
 			</div>
