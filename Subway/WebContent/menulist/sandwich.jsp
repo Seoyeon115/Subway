@@ -41,6 +41,7 @@
 			</div>
 			<a href="#" class="btn_view"></a>
 			</li>
+			<%--
 			<li class="item"><a href="#"><img src="images/스파이스쉬림프아보카도(샌드위치)_20210429050610933.png"></a><br>
 			<strong class="tit">스파이시 쉬림프 아보카도</strong>
 			<span class="eng">Spicy Shrimp Avocado</span>
@@ -53,6 +54,7 @@
 			</div>
 			<a href="#" class="btn_view"></a>
 			</li>
+			 --%>
 			<li class="item"><a href="#"><img src="images/shrimp_20210315103931131.jpg"></a><br>
 			<strong class="tit">쉬림프</strong>
 			<span class="eng">Shrimp</span>
@@ -64,7 +66,7 @@
 					진짜 새우의 풍미가 가득<br>
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/로스트치킨샌드위치_20210503113731657.png"></a><br>
 			<strong class="tit">로스트 치킨</strong>
@@ -89,6 +91,7 @@
 			</div>
 			<a href="#" class="btn_view"></a>
 			</li>
+			<%--
 			<li class="item"><a href="#"><img src="images/sandwich_K-BBQ_20200901125954475_20210204032257598.jpg"></a><br>
 			<strong class="tit">K-바비큐</strong>
 			<span class="eng">K-BBQ</span>
@@ -101,6 +104,7 @@
 			</div>
 			<a href="#" class="btn_view"></a>
 			</li>
+			 --%>
 			<li class="item"> <a href="#"><img src="images/item_sandwich_rotisserie_20210312063000816.jpg"></a><br>
 			<strong class="tit">로티세리 바비큐 치킨</strong>
 			<span class="eng">Rotisserie Barbucue Chicken</span>

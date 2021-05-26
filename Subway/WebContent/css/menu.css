@@ -154,6 +154,82 @@
     transform: scale(0.5);
 }
 
+/**
+	상세보기 페이지
+**/
+.detail_name h1{
+	text-align:center;
+	padding-top:50px;
+}
+.detail_eng_kcal {
+	text-align:center;
+}
+.line {
+	background-color:lightgray;
+	width:1px; height:15px;
+	display:inline-block;
+}
+.detail_eng {
+	color:#575757;
+	font-size:20px;
+}
+.detail_cal {
+	font-size:20px;
+	padding-left:20px;
+}
+.detail_image {
+	text-align:center;
+}
+.image_left{
+	width:370px; height:260px;
+	margin-top:140px;
+	margin-left:-100px;
+	float:left;
+	opacity:0.4;
+	
+}
+.image_right {
+	width:370px; height:260px;
+	float:right;
+	margin-top:140px;
+	margin-right:-100px;
+	opacity:0.4;
+	
+}
+
+.image_left:hover, .image_right:hover {
+	opacity:1;
+}
+.side_ul {
+	list-style-type:none;
+	margin-top:20px;
+}
+.side_ul li {
+	display:inline-block;
+}
+.detail_side_image {
+	width:142px; height:100px;
+	margin:0 0 0 21px;
+}
+.side_image_kor {
+	font-size:13px;
+}
+.sub_p {
+	font-size:12px;
+	margin-top:60px;
+	margin-bottom:30px;
+}
+.a_name {
+	margin-top:0px;
+	margin-bottom:100px;
+}
+.a_name>span {
+	font-weight:bold;
+}
+.pre_name {
+	margin-right:1200px;
+}
+
 
 
 
