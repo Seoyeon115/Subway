@@ -44,7 +44,7 @@
 				<!-- 우측 영역 -->
 				<div class="board_right">
 					<div class="board_nav_cont">
-						<a href="#" onclick="view.view(192);return false;">
+						<a href="http://localhost:9000/Subway/event/event_content_cupon.jsp" onclick="view.view(192);return false;">
 							<div class="board_nav_txt prev">
 								PREV<span class="arr"></span>
 							</div>
@@ -58,7 +58,7 @@
 						</a>
 					</div>
 					<div class="board_nav_cont">
-						<a href="#" onclick="view.view(186);return false;">
+						<a href="http://localhost:9000/Subway/event/event_content_3.jsp" onclick="view.view(186);return false;">
 							<div class="board_nav_txt next">
 								NEXT<span class="arr"></span>
 							</div>

@@ -65,7 +65,7 @@
 									<p class="summary">
 										6월 한달간<br>신규회원을 위한 이벤트 !
 									</p>
-									<a class="btn_more" href="#"
+									<a class="btn_more" href="http://localhost:9000/Subway/event/event_content_cupon.jsp"
 										onclick="view.view(191);return false;">자세히보기</a>
 								</div>
 							</li>
@@ -88,7 +88,7 @@
 									<p class="summary">
 										속은 같아도 빵은 다르게!<br>취향대로 즐기는 아침!
 									</p>
-									<a class="btn_more" href="#"
+									<a class="btn_more" href="http://localhost:9000/Subway/event/event_content_2.jsp"
 										onclick="view.view(186);return false;">자세히보기</a>
 								</div>
 							</li>
@@ -112,7 +112,7 @@
 									<p class="summary">
 										말이 안 나올 땐?<br>손으로 주문하자!
 									</p>
-									<a class="btn_more" href="#"
+									<a class="btn_more" href="http://localhost:9000/Subway/event/event_content_3.jsp"
 										onclick="view.view(180);return false;">자세히보기</a>
 								</div>
 							</li>
@@ -160,7 +160,7 @@
 				<!-- 이벤트 list content s -->
 				<div class="event_list_content">
 					<ul id="eventListContent">
-						<li><a href="#" onclick="view.view(192);return false;">
+						<li><a href="http://localhost:9000/Subway/event/event_content_cupon.jsp" onclick="view.view(192);return false;">
 								<div class="event_img">
 									<img src="../event/images/cupon_btm.jpg"
 										alt="신규회원 할인">
@@ -182,7 +182,7 @@
 
 								</div>
 						</a></li>
-						<li><a href="#" onclick="view.view(191);return false;">
+						<li><a href="http://localhost:9000/Subway/event/event_content_2.jsp" onclick="view.view(191);return false;">
 								<div class="event_img">
 									<img src="../event/images/event_370x192_20210503055916911.jpg"
 										alt="이달의 썹!프라이즈!">
@@ -204,7 +204,7 @@
 
 								</div>
 						</a></li>
-						<li><a href="#" onclick="view.view(186);return false;">
+						<li><a href="http://localhost:9000/Subway/event/event_content_3.jsp" onclick="view.view(186);return false;">
 								<div class="event_img">
 									<img src="../event/images/event_370x192_20201113042155863.jpg"
 										alt="써브웨이 아침메뉴!">
