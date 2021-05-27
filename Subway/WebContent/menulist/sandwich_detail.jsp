@@ -16,13 +16,10 @@
 		<div class="detail_eng_kcal"><span class="detail_eng">Shrimp</span><div class="line"></div><span class="detail_cal">229kcal</span></div>
 	</div>
 	<div class="detail_image">
-		<a href="#"><img src="images/스파이스쉬림프(샌드위치)_20210429050445371.png" class="image_left"></a>
+		<a href="#"><img src="images/스파이스쉬림프(샌드위치)_20210429050445371.png" class="image_left" ></a>
 		<a href="#"><img src="images/shrimp_20210315103931131.jpg" style="margin:0 100px;"></a>
 		<a href="#"><img src="images/로스트치킨샌드위치_20210503113731657.png" class="image_right"></a>
-		<div class="a_name">
-			<span class="pre_name">스파이시 쉬림프</span>
-			<span>로스트 치킨</span>
-		</div>
+		
 		<p class="detail_summary">
 					탱글한 식감이 그대로 살아있는 통새우가<br>
 					5마리 들어가 한 입 베어 먹을 때 마다 <br>

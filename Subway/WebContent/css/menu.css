@@ -49,6 +49,7 @@
 	display:inline-block;
 	margin-left:25px;
 }
+
 .menulist {
 	background-color:rgb(242,242,242);
 	margin:auto;
@@ -74,6 +75,30 @@
     margin: 20px auto 0;
     position: relative;
     z-index: 1;
+}
+
+.item {
+	 animation: fadein 2s;
+	-webkit-animation:fadein 2s;
+}
+@-webkit-keyframes fadein {
+ 
+    /* Safari and Chrome */
+    from {
+        opacity: 0;
+        width:0%;
+        height:0%;
+    }
+
+    to {
+        opacity: 1;
+        width:100%;
+        height:100%;
+    }
+}
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 .item:hover .tit{
 	color:#fff; top:-159px; transition-duration:0.4s;	
@@ -186,7 +211,7 @@
 	margin-left:-100px;
 	float:left;
 	opacity:0.4;
-	
+	position:relative;
 }
 .image_right {
 	width:370px; height:260px;
@@ -194,8 +219,11 @@
 	margin-top:140px;
 	margin-right:-100px;
 	opacity:0.4;
+	position:relative;
 	
 }
+
+
 
 .image_left:hover, .image_right:hover {
 	opacity:1;

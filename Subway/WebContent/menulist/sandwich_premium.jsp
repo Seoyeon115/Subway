@@ -7,6 +7,8 @@
 <title>메뉴소개-샌드위치</title>
 <link rel="stylesheet" href="../css/menu.css">
 <link rel="stylesheet" href="../css/main.css">
+<script src="jquery-3.6.0.min.js"></script>
+<script src="menu_change.js"></script>
 </head>
 <body>
 	<jsp:include page="../main/header.jsp"></jsp:include>
@@ -20,15 +22,15 @@
 	</div>
 	<div class="detail_menu">
 		<ul>
-			<li><a href="sandwich.jsp">All</a><div class="line"></div></li>
-			<li><a href="sandwich_classic.jsp">클래식</a><div class="line"></div></li>
-			<li><a href="sandwich_fresh.jsp">프레쉬&라이트</a><div class="line"></div></li>
-			<li><a href="sandwich_premium.jsp">프리미엄</a></li>
+			<li><a href="sandwich.jsp" id="all">All</a><div class="line"></div></li>
+			<li><a href="sandwich_classic.jsp" id="classic">클래식</a><div class="line"></div></li>
+			<li><a href="sandwich_fresh.jsp" id="fresh">프레쉬&라이트</a><div class="line"></div></li>
+			<li><a href="sandwich_premium.jsp" id="premium" style="color:blue">프리미엄</a></li>
 		</ul>
 	</div>
 	<div class="menulist">
 		<ul>
-			<li class="item"><a href="#"><img src="images/스파이스쉬림프(샌드위치)_20210429050445371.png"></a><br>
+			<li class="item"><a href="#"><img src="images/스파이스쉬림프(샌드위치)_20210429050445371.png" class="menu_image"></a><br>
 			<strong class="tit">스파이시 쉬림프</strong>
 			<span class="eng">Spicy Shrimp</span>
 			<span class="kcal">233 kcal</span>
