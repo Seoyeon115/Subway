@@ -34,7 +34,8 @@ section.order_title div>span{
 	color:white;
 }
 /**/
-article.order_step>div>img{
+article.order_step>div>img,
+article.order_step2>div>img{
 	display:inline-block;
 	vertical-align:middle;
 	padding:10px;
@@ -44,20 +45,29 @@ article.order_step>div>img:nth-child(3){
 	margin-right:-50px;
 	margin-bottom:-70px;
 }
-article.order_step>div>div{
+article.order_step>div>div,
+article.order_step2>div>div{
 	display:inline-block;
 	vertical-align:middle;
 	text-align:left;
 	padding:0 30px 10px 10px;
 	margin-left:-130px;
 }
-article.order_step>div>div>span:first-child{
+article.order_step>div>div>span:first-child,
+article.order_step2>div>div>span:first-child{
 	font-size:18px;
 	color:#ffc300;
 }
-article.order_step>div>div>span:last-child{
+article.order_step>div>div>span:last-child,
+article.order_step2>div>div>span:last-child{
 	font-size:22px;
 	color:white;
+}
+/**/
+article.order_step2>div>img:nth-child(5){
+	padding:65px 0;
+	margin-right:-50px;
+	margin-bottom:-70px;
 }
 
 /****/
@@ -462,8 +472,13 @@ div.price>span:last-child{
 	margin:20px 10px 0 10px;
 }
 
-
-
+/********************
+	order_final
+	- content 
+********************/
+section.order_form_box{
+border:1px solid red;
+}
 
 
 

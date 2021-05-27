@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
-	<title>메뉴선택</title>
+	<title>주문서</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 </head>
@@ -15,56 +15,89 @@
 	
 	<!-- content -->
 	<div class="order_content">
-		<jsp:include page="content.jsp"></jsp:include>
+		<section class="order_title">
+			<div>
+				<h1>Home-sub</h1>
+				<span>온라인 주문 시 배달되는 서비스입니다.</span>
+			</div>
+			<article class="order_step2">
+				<div>
+					<img src="http://localhost:9000/Subway/order/order_images/step01_off_bg.png">
+					<img src="http://localhost:9000/Subway/order/order_images/step_bg_off.png">
+					<img src="http://localhost:9000/Subway/order/order_images/step02_off_bg.png">
+					<img src="http://localhost:9000/Subway/order/order_images/step_bg_off.png">
+					<img src="http://localhost:9000/Subway/order/order_images/step03_on_bg.png">
+					<div>
+						<span>STEP 2</span><br>
+						<span>주문하기</span>
+					</div>
+					<img src="http://localhost:9000/Subway/order/order_images/step_bg_on.png">
+					<img src="http://localhost:9000/Subway/order/order_images/step04_off_bg.png">
+				</div>
+			</article>
+		</section>
 
 		<section class="menu_list">
-			<div class="menu_tap">
-				<ul>
-					<li class="sandwich"><a href="http://localhost:9000/Subway/order/order_sandwich.jsp">샌드위치</a></li>
-					<li><a href="http://localhost:9000/Subway/order/order_cookie.jsp">쿠키</a></li>
-					<li><a href="http://localhost:9000/Subway/order/order_drink.jsp">음료</a></li>
-				</ul>
-			</div>
 			<div class="menu_sandwich">
 				<div class="order_detail">
-					<article class="menu_inform">
-						<div>
-							<img src="http://localhost:9000/Subway/order/order_images/스파이스쉬림프(샌드위치)_20210430044448992.png">
-							<p>
-								<span>샌드위치</span>
-								<strong>스파이시 쉬림프</strong>
-								<span>Spicy Shrimp</span>
-								<span>빨간맛에 빠진 쉬림프! 이국적인 매콤함이 더해진 시즌 한정</span>
-								<span>스파이시 쉬림프!</span>
-							</p>
+					<section class="order_form_box">
+						<h2>픽업 매장</h2>
+						<div class="store_form">
+							<div>
+								<dl>
+									<dt>매장명</dt>
+									<dd>주소</dd>
+								</dl>
+							</div>
+							<div>
+								<dl>
+									<dt>방문포장/매장식사</dt>
+									<dd>
+										<input type="radio" value="takeout" name="방문포장" id="takeout">방문포장
+										<input type="radio" value="takein" name="매장식사" id="takein">매장식사
+									</dd>
+								</dl>
+							</div>
+							<div>
+								<dl>
+									<dt>전화번호</dt>
+									<dd>
+										<input type="text" name="hp">
+									</dd>
+								</dl>
+							</div>
+							<div>
+								<dl>
+									<dt>주문시, 요청사항</dt>
+									<dd>
+										<input type="text" placeholder="주문시 요청사항을 입력하세요">
+									</dd>
+								</dl>
+							</div>
+							<div>
+								<dl>
+									<dt>일회용품</dt>
+									<dd>
+										<input type="radio" value="" name="" id="">일회용품(스푼, 포크 등)을 사용하지 않겠습니다.
+									</dd>
+								</dl>
+							</div>
 						</div>
-					</article>
-					<section class="nutrient">
-						<h1>영양성분표</h1>
-						<table class="content_layout">
-							<tr>
-								<th>중량(g)</th>
-								<th>열량(kacl)</th>
-								<th>당류(g)</th>
-								<th>단백질(g)</th>
-								<th>포화지방(g)</th>
-								<th>나트륨(mg)</th>
-							</tr>
-							<div></div>
-							<tr>
-								<td>196</td>
-								<td>233</td>
-								<td>9</td>
-								<td>14(25%)</td>
-								<td>1(7%)</td>
-								<td>513(26%)</td>
-							</tr>
-						</table>
-						<div>
-							<span>※ 샌드위치 영양정보 : 기본야채 5종(양상추, 토마토, 양파, 피망, 오이) 및 제품에 따른 미트류 포함, 치즈 및 소스 제외, 15cm 위트 브레드 기준</span>
-							<span>※ 괄호 안 %는 1일 영양소 기준치에 대한 비율</span>
+						<h2>할인 방법 선택</h2>
+						<div class="coupon_choice">
+							<dl>
+								<dt>쿠폰 사용</dt>
+								<dd>
+									<select name="coupon" id="coupon">
+										<option></option>
+									</select>
+								</dd>
+							</dl>
 						</div>
+						<h2>결제 수단 선택</h2>
+						
 					</section>
+					<!-- 
 					<section class="confirm">
 						<ol>
 							<li class="step01">
@@ -152,8 +185,9 @@
 					</section>
 					<section class="order_btn">
 						<button type="button" class="btn_style2"onclick="location.href='#'">장바구니</button>
-						<button type="button" class="btn_style" onclick="location.href='http://localhost:9000/Subway/order/order_final.jsp'">주문하기</button>
+						<button type="button" class="btn_style" onclick="location.href='#'">주문하기</button>
 					</section>
+					-->
 				</div>
 			</div>
 		</section>
