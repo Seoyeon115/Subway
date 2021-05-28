@@ -55,7 +55,7 @@
 							<li><div class="step">STEP<strong>5</strong></div></li>						
 						</ol>
 				 </div>
-	            <img src="http://localhost:9000/test/images/img_store_order01.png">
+	            <img src="http://localhost:9000/Subway/images/img_store_order01.png">
 	             <div class="info_content">
 	            	<ol>
 	            	 <p class="step_num">STEP 1</p>
@@ -82,7 +82,7 @@
 							<li><div class="step">STEP<strong>5</strong></div></li>								
 						</ol>
 				 </div>
-	           	<img src="http://localhost:9000/test/images/img_store_order02.png">
+	           	<img src="http://localhost:9000/Subway/images/img_store_order02.png">
 	           	<div class="info_content">
 	           	<ol>
 	           		 <p class="step_num">STEP 2</p>
@@ -108,7 +108,7 @@
 							<li><div class="step">STEP<strong>5</strong></div></li>						
 						</ol>
 				 </div>
-	            <img src="http://localhost:9000/test/images/img_store_order03.png">
+	            <img src="http://localhost:9000/Subway/images/img_store_order03.png">
 	            <div class="info_content">
 	            <ol>
 	            	 <p class="step_num">STEP 3</p>
@@ -133,7 +133,7 @@
 							<li><div class="step">STEP<strong>5</strong></div></li>							
 						</ol>
 				 </div>
-	           <img src="http://localhost:9000/test/images/img_store_order04.png">
+	           <img src="http://localhost:9000/Subway/images/img_store_order04.png">
 	           <div class="info_content">
 	            <ol>
 	            	 <p class="step_num">STEP 4</p>
@@ -163,7 +163,7 @@
 							<li class="active"><div class="step">STEP<strong>5</strong></div></li>						
 						</ol>
 				 </div>
-	            <img src="http://localhost:9000/test/images/img_store_order05.png">
+	            <img src="http://localhost:9000/Subway/images/img_store_order05.png">
 	            <div class="info_content">
 	            <ol>
 	            	<p class="step_num">STEP 5</p>
