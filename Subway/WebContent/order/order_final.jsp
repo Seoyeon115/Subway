@@ -53,8 +53,8 @@
 								<dl>
 									<dt>방문포장/매장식사</dt>
 									<dd>
-										<input type="radio" value="takeout" name="방문포장" id="takeout">방문포장
-										<input type="radio" value="takein" name="매장식사" id="takein">매장식사
+										<input type="radio" value="takeout" name="eat" id="takeout"><label>방문포장 </label>
+										<input type="radio" value="takein" name="eat" id="takein"><label>매장식사</label>
 									</dd>
 								</dl>
 							</div>
@@ -89,105 +89,68 @@
 								<dt>쿠폰 사용</dt>
 								<dd>
 									<select name="coupon" id="coupon">
-										<option></option>
+										<option value="">보유하신 쿠폰이 없습니다.</option>
 									</select>
+									<div></div>
+									<a href="#">쿠폰 사용</a>
 								</dd>
 							</dl>
 						</div>
 						<h2>결제 수단 선택</h2>
-						
-					</section>
-					<!-- 
-					<section class="confirm">
-						<ol>
-							<li class="step01">
+						<div class="pay_choice">
+							<div>
 								<dl>
-									<dt>
-										<img src="http://localhost:9000/Subway/order/order_images/menu_view_bg01.png">
-										<strong>STEP 01</strong>
-										<span>필수 선택 *</span>
-									</dt>
+									<dt>현금 영수증 신청</dt>
 									<dd>
 										<ul>
-											<li>
-												<a href="#">길이 선택</a>
-											</li>
-											<li>
-												<a href="#">빵 선택</a>
-											</li>
-											<li>
-												<a href="#">치즈 선택</a>
-											</li>
-											<li>
-												<a href="#">야채 선택</a>
-											</li>
-											<li>
-												<a href="#">소스/시즈닝 선택</a>
-											</li>
-								
+											<li><a href="#">발금안함</a></li>
+											<li><a href="#">개인소득공제</a></li>
+											<li><a href="#">사업자증빙용</a></li>
 										</ul>
-										<span></span>
 									</dd>
 								</dl>
-							</li>
-							<li class="step02">
+							</div>
+							<div>
 								<dl>
-									<dt>
-										<img src="http://localhost:9000/Subway/order/order_images/menu_view_bg02.png">
-										<strong>STEP 02</strong>
-										<span>추가 선택</span>
-									</dt>
+									<dt>결제 수단</dt>
 									<dd>
 										<ul>
-											<li>
-												<a href="#">추가 선택</a>
-											</li>
-											<li>
-												<a href="#">미트 추가</a>
-											</li>
+											<li><a href="#">신용카드</a></li>
 										</ul>
-										<span></span>
 									</dd>
 								</dl>
-							</li>
-							<li class="step03">
-								<dl>
-									<dt>
-										<img src="http://localhost:9000/Subway/order/order_images/menu_view_bg03.png">
-										<strong>STEP 03</strong>
-										<span>상품 선택</span>
-									</dt>
-									<dd>
-										<ul>
-											<li>
-												<a href="#">단품</a>
-											</li>
-											<li>
-												<a href="#">세트</a>
-											</li>
-										</ul>
-										<span></span>
-									</dd>
-								</dl>
-							</li>
-						</ol>
-					</section>
-					<section class="order_price">
-						<div class="count">
-							<span>수량</span>
-							<img src="http://localhost:9000/Subway/order/order_images/btn_minus.png">
-							<img src="http://localhost:9000/Subway/order/order_images/btn_plus.png">
-						</div>
-						<div class="price">
-							<span>최종 결제 금액</span>
-							<span>원</span>
+							</div>
 						</div>
 					</section>
-					<section class="order_btn">
-						<button type="button" class="btn_style2"onclick="location.href='#'">장바구니</button>
-						<button type="button" class="btn_style" onclick="location.href='#'">주문하기</button>
+					<section class="final_menu_confirm">
+						<h2>주문내역</h2>
+						<div class="menu_confirm">
+							<dl>
+								<dt>스파이시 쉬림프</dt>
+								<dd><strong></strong>원</dd>
+							</dl>
+						</div>
 					</section>
-					-->
+					<section class="total_amount">
+						<h2>총 결제 금액</h2>
+						<div class="amount">
+							<dl>
+								<dt>총 주문 금액</dt>
+								<dd><strong id="orderTotal"></strong>원</dd>
+							</dl>
+							<dl>
+								<dt>쿠폰 사용</dt>
+								<dd><strong id="couponTotal"></strong>0원</dd>
+							</dl>
+							<dl>
+								<dt>잔여 결제금액</dt>
+								<dd><strong id="finalTotal"></strong>원</dd>
+							</dl>
+						</div>
+					</section>
+					<section class="pay_btn">
+						<button type="button" class="btn_style"onclick="location.href='http://localhost:9000/Subway/order/order_final_check.jsp'">결제하기</button>
+					</section>
 				</div>
 			</div>
 		</section>

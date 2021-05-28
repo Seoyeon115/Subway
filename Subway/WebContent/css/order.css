@@ -35,18 +35,15 @@ section.order_title div>span{
 }
 /**/
 article.order_step>div>img,
-article.order_step2>div>img{
+article.order_step2>div>img,
+article.order_step3>div>img{
 	display:inline-block;
 	vertical-align:middle;
 	padding:10px;
 }
-article.order_step>div>img:nth-child(3){
-	padding:65px 0;
-	margin-right:-50px;
-	margin-bottom:-70px;
-}
 article.order_step>div>div,
-article.order_step2>div>div{
+article.order_step2>div>div,
+article.order_step3>div>div{
 	display:inline-block;
 	vertical-align:middle;
 	text-align:left;
@@ -54,17 +51,21 @@ article.order_step2>div>div{
 	margin-left:-130px;
 }
 article.order_step>div>div>span:first-child,
-article.order_step2>div>div>span:first-child{
+article.order_step2>div>div>span:first-child,
+article.order_step3>div>div>span:first-child{
 	font-size:18px;
 	color:#ffc300;
 }
 article.order_step>div>div>span:last-child,
-article.order_step2>div>div>span:last-child{
+article.order_step2>div>div>span:last-child,
+article.order_step3>div>div>span:last-child{
 	font-size:22px;
 	color:white;
 }
 /**/
-article.order_step2>div>img:nth-child(5){
+article.order_step>div>img:nth-child(3),
+article.order_step2>div>img:nth-child(5),
+article.order_step3>div>img:nth-child(7){
 	padding:65px 0;
 	margin-right:-50px;
 	margin-bottom:-70px;
@@ -275,6 +276,7 @@ section.order_btn{
 	margin:20px 10px 0 10px;
 }
 .btn_style:hover{
+	border:2px solid #00791f;
 	background-color:#00791f;
 }
 section.order_btn img{
@@ -471,15 +473,187 @@ div.price>span:last-child{
 	text-align:center;
 	margin:20px 10px 0 10px;
 }
-
+.btn_style2:hover{
+	background-color:#009223;
+	color:white;
+}
 /********************
 	order_final
 	- content 
 ********************/
+div.order_detail h2{
+	text-align:left;
+	font-size:25px;
+	font-weight:bold;
+	color:#696969;
+	padding:15px 0;
+	margin-top:50px;
+}
 section.order_form_box{
-border:1px solid red;
+	text-align:left;
+	margin-top:-50px;
+}
+div.store_form>div:first-child>dl{
+	background-color:#f2f2f2;
+	border:1px solid #f2f2f2;
+}
+section.order_form_box dl{
+	display:inline-block;
+	border:1px solid lightgray;
+	text-align:left;
+	margin:5px auto;
+	padding:25px 20px;
+}
+section.order_form_box dt,
+section.final_menu_confirm dt, 
+section.total_amount dt{
+	display:inline-block;
+	width:150px;
+	margin-left:20px;
+	font-weight:bold;
+	vertical-align:middle;
+}
+section.order_form_box dd{
+	display:inline-block;
+	width:765px;
+	margin-left:10px;
+	vertical-align:middle;
+}
+section.order_form_box dd>input[type="text"]{
+	border:none;
+	width:250px;
+	font-size:15px;
+}
+section.order_form_box dd>input::placeholder{
+	color:lightgray;
+}
+section.order_form_box dd>label{
+	vertical-align:middle;
+	margin-right:10px;
+}
+section.order_form_box dd>input[type="radio"]{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	width:25px; 
+	height:25px;
+	margin-right:10px;
+	vertical-align:middle;
+	border:1px solid lightgray;
+	border-radius: 100%;
+}
+section.order_form_box dd>input[type="radio"]:checked{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	width:25px; 
+	height:25px;
+	margin-right:10px;
+	vertical-align:middle;
+	border:1px solid light;
+	border-radius: 100%;
+	background-image:url('http://localhost:9000/Subway/order/order_images/icon_checkbox.png');
+}
+/**/
+div.coupon_choice select{
+	border:1px solid lightgray;
+	width:655px;
+	padding:10px;
+	margin-left:-40px;
+	font-size:15px;
+	color:lightgray;
+}
+div.coupon_choice dd>div{
+	display:inline-block;
+	width:2px;
+	height:30px;
+	margin-left:20px;
+	vertical-align:middle;
+	background-color:lightgray;
+}
+div.coupon_choice dd>a{
+	margin-left:30px;
+	font-size:16px;
+	font-weight:bold;
+	color:#009223;
+}
+/**/
+div.pay_choice a{
+	text-align:center;
+	color:white;
+	font-weight:bold;
+}
+div.pay_choice ul{
+	margin:0;
+	padding:0;
+}
+div.pay_choice ul>li{
+	background-color:#009223;
+	border-radius:5px;
+	text-align:center;
+	width:125px;
+	padding:8px 0;
+	margin:0 3px;
+	vertical-align:middle;
+}
+div.pay_choice ul:first-child>li:nth-child(2),
+div.pay_choice ul:first-child>li:nth-child(3){
+	background-color:#f2f2f2;
+}
+div.pay_choice ul:first-child>li:nth-child(2)>a,
+div.pay_choice ul:first-child>li:nth-child(3)>a{
+	color:gray;
 }
 
+/**/
+section.final_menu_confirm, section.total_amount{
+	text-align:left;
+}
+section.final_menu_confirm>div{
+	border-top:4px solid #009223;	
+	border-bottom:1px solid #009223;	
+	margin:10px auto;
+	padding:30px 10px;
+}
+section.final_menu_confirm dd, section.total_amount dd{
+	display:inline-block;
+	float:right;
+}
+/**/
+section.total_amount>div{
+	border-top:4px solid #009223;	
+	border-bottom:1px solid lightgray;	
+	margin:10px auto 40px auto;
+	padding:50px 10px;
+}
+section.total_amount dl:nth-child(2){
+	border-top:1px solid lightgray;	
+	border-bottom:1px solid lightgray;	
+	padding:30px 0;
+	margin:20px 0 40px 0;
+}
+section.total_amount dl:last-child>dd{
+	color:#009223;
+	font-size:20px;
+	font-weight:bold;
+}
 
-
+/**********************
+	order_final_check
+	- content 
+**********************/
+div.order_final_form{
+	display:inline-block;
+	width:500px; height:300px;
+	text-align:center;
+	margin:50px auto;
+}
+div.order_final_form>img{
+	width:80px;
+	margin:0;
+	padding:50px 0 40px 200px;
+}
+div.order_final_form>div{
+	display:inline-block;
+	font-size:25px;
+	font-weight:bold;
+}
 
