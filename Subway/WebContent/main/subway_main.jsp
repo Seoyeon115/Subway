@@ -166,7 +166,7 @@
 					<div>
 						<span>써브웨이를</span><br>
 						<span>제대로 즐기는 방법!</span><br>
-						<div><a href="#">이용방법</a></div>
+						<div><a href="http://localhost:9000/Subway/method/orderstore_test.jsp">이용방법</a></div>
 					</div>
 				</div>
 				<div>
