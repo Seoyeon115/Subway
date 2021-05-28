@@ -166,22 +166,22 @@
 		font-size:40px;
 		margin-left:25px;
 	}
-	section.main_menu ul{
+	.list_ul{
 		list-style-type:none;
 		text-align:right;
 		margin-top:-30px;
 		display:inline-block;
 		margin-left:440px;
 	}
-	section.main_menu li{
+	.list_ul>li{
 		display:inline-block;
 	}
-	section.main_menu a{
+	.list_ul>li>a{
 		text-decoration:none;
 		color:gray;
 		padding:10px;
 	}
-	section.main_menu li>div{
+	.list_ul li div{
 		background-color:gray;
 		width:1px; height:14px;
 		font-size:14px;
@@ -194,25 +194,25 @@
 		display:inline-block;
 		margin-top:-50px;
 	}
-	section.main_menu article>div{
+	section.main_menu article>ul>li>div{
 		margin:10px;
 		float:left;
 	}
 	section.main_menu article img{
 		width:250px;
 	}
-	section.main_menu article>div>div{
+	section.main_menu article>ul>li>div>div{
 		text-align:center;
 		color:gray;
 		font-size:13px;
 	}
-	section.main_menu article>div>div>span{
+	section.main_menu article>ul>li>div>div>span{
 		display:inline-block;
 		color:gray;
 		font-size:12px;
 		padding-top:5px;
 	}
-	section.main_menu article>div>div>h3{
+	section.main_menu article>ul>li>div>div>h3{
 		color:black;
 		font-size:18px;
 		margin-bottom:10px;
@@ -322,7 +322,39 @@
 		text-decoration:underline;
 		color:#009f00;
 	}
+	.section input[id*="slide"] {
+		display:none;
+		margin-bottom:20px;
+	}
+	.classic {
+		max-width:1200px;
+		margin:0 auto;
+		overflow:hidden;
+	}
+	.slidelist {
+		white-space:nowrap;
+		font-size:0;
+	}
+	.slidelist li {
+		display:inline-block;
+		vertical-align:middle;
+		width:100%;
+		transition:all .5s;
+	}
+	.lab {
+		margin:10px;
+		font-weight:bold;
+		cursor:pointer;
+	}
+	/*
+	.slidelist>li div {
+		width:100%;
+	}
+	*/
 	
+	.section [id="slide01"]:checked ~ .classic .slidelist > li { transform:translateX(0%);  }
+	.section [id="slide02"]:checked ~ .classic .slidelist > li { transform:translateX(-100%); }
+	.section [id="slide03"]:checked ~ .classic .slidelist > li { transform:translateX(-200%); }
 	
 	/******************
 		footer style
