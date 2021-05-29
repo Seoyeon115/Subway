@@ -8,6 +8,24 @@
 	<title>SUBWAY 써브웨이</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/member.css">
+	<script src="http://localhost:9000/Subway/member/js/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#loginbtn").click(function(){
+				if($("#id").val() == ""){
+					alert("이메일 아이디를 입력해주세요");
+					$("#id").focus();
+					return false;
+				}else if($("#pass").val() == ""){
+					alert("비밀번호를 입력해주세요");
+					$("#pass").focus();
+					return false;
+				}else{
+					login_form.submit();
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<!-- header -->
@@ -34,7 +52,7 @@
 								<span class="radio"><input type="radio" name="saveid" id="saveid" value="sid">이메일 아이디 저장</span>
 							</li>
 							<li>
-								<button type="button">로그인</button>
+								<button type="button" id="loginbtn">로그인</button>
 							</li>
 						</ul>
 					</form>
