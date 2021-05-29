@@ -38,7 +38,7 @@
 		<h1>써브웨이 이용방법</h1>
 		<div class="orderstore_tab">
 			<div class="orderstore_text"><a href="#">매장에서 주문하기</a></div>
-			<div class="orderstore_text2"><a href="#">주문 TIP</a></div>
+			<div class="orderstore_text2" ><a href="http://localhost:9000/Subway/method/orderstore_tip.jsp">주문 TIP</a></div>
 		</div>
 		<div class="orderstore_content" id="store_order">			
 	<div id="container">
