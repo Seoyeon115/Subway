@@ -8,6 +8,19 @@
 	<title>메뉴선택</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
+	<script src="../order/js/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#minus").click(function(){
+				$("#count_result").text(parseInt($("#count_result").text())-1);
+				$("#count_price").text(parseInt($("#count_price").text())-8000);
+			});
+			$("#plus").click(function(){
+				$("#count_result").text(parseInt($("#count_result").text())+1);
+				$("#count_price").text(8000+parseInt($("#count_price").text()));
+			});
+		});
+	</script>
 </head>
 <body>
 	<!-- header -->
@@ -142,12 +155,13 @@
 					<section class="order_price">
 						<div class="count">
 							<span>수량</span>
-							<img src="http://localhost:9000/Subway/order/order_images/btn_minus.png">
-							<img src="http://localhost:9000/Subway/order/order_images/btn_plus.png">
+							<input type="button" onclick="minus" id="minus">
+							<span id="count_result">1</span>
+							<input type="button" onclick="plus" id="plus">
 						</div>
 						<div class="price">
 							<span>최종 결제 금액</span>
-							<span>원</span>
+							<span id="count_price">8000</span><span>원</span>
 						</div>
 					</section>
 					<section class="order_btn">

@@ -442,32 +442,56 @@ section.order_price{
 	border-bottom:1px solid lightgray;
 	width:980px;
 	margin:40px 0;
-	padding-bottom:15px;
+	padding-bottom:10px;
+	display:inline-block;
 }
 section.order_price span{
 	display:inline-block;
 	font-size:25px;
 	font-weight:bold;
+	padding-right:10px;
 }
 div.count{
-	text-align:left;
+	float:left;
 }
-div.count>img{
-	width:37px;
-	margin:0 30px;
+div.count>input{
+	cursor:pointer;
+	width:40px;
+	height:40px;
+	border:0;
+	vertical-align:middle;
+	margin-left:10px;
+	margin-top:-10px;
+}
+div.count>input#minus{
+	background:url('http://localhost:9000/Subway/order/order_images/btn_minus.png');
+	background-repeat:no-repeat;
+}
+div.count>input#plus{
+	background:url('http://localhost:9000/Subway/order/order_images/btn_plus.png');
+	background-repeat:no-repeat;
 }
 div.count>span{
-	float:left;
 	color:#555555;
 	margin-left:10px;
+}
+div.count>span#count_result{
+	font-size:35px;
+	font-weight:bold;
+	color:black;
+	padding:0 15px;
 }
 
 div.price{
 	text-align:right;
 }
+div.price>span:nth-child(2){
+	font-size:40px;
+	font-weight:bold;
+	color:#009223;
+}
 div.price>span:last-child{
 	color:#009223;
-	padding-left:100px;
 }
 
 .btn_style2{
