@@ -22,7 +22,7 @@
 		<article class="c_btn">
 			<div class="find">
 				<div class="find1"><a href="#"><img src="http://localhost:9000/Subway/images/icon_map.png"></a></div>
-				<div class="find2"><a href="#">매장찾기</a></div>		
+				<div class="find2"><a href="http://localhost:9000/Subway/map/map_search.jsp">매장찾기</a></div>		
 			</div>
 			<div class="order">
 				<div class="order1"><a href="#"><img src="http://localhost:9000/Subway/images/icon_franchise.png"></a></div>

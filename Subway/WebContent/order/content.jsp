@@ -18,7 +18,7 @@
 					<img src="http://localhost:9000/Subway/order/order_images/step_bg_off.png">
 					<img src="http://localhost:9000/Subway/order/order_images/step02_on_bg.png">
 					<div>
-						<span>STEP 1</span><br>
+						<span>STEP 2</span><br>
 						<span>메뉴선택</span>
 					</div>
 					<img src="http://localhost:9000/Subway/order/order_images/step_bg_on.png">

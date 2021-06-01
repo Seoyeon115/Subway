@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
-	<title>주문완료</title>
+	<title>HOME-SUB > 매장찾기</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 </head>
@@ -20,36 +20,26 @@
 				<h1>Home-sub</h1>
 				<span>온라인 주문 시 배달되는 서비스입니다.</span>
 			</div>
-			<article class="order_step3">
+			<article class="order_step0">
 				<div>
-					<img src="http://localhost:9000/Subway/order/order_images/step01_off_bg.png">
-					<img src="http://localhost:9000/Subway/order/order_images/step_bg_off.png">
+					<img src="http://localhost:9000/Subway/order/order_images/step01_on_bg.png">
+					<div>
+						<span>STEP 1</span><br>
+						<span>매장선택</span>
+					</div>
+					<img src="http://localhost:9000/Subway/order/order_images/step_bg_on.png">
 					<img src="http://localhost:9000/Subway/order/order_images/step02_off_bg.png">
 					<img src="http://localhost:9000/Subway/order/order_images/step_bg_off.png">
 					<img src="http://localhost:9000/Subway/order/order_images/step03_off_bg.png">
 					<img src="http://localhost:9000/Subway/order/order_images/step_bg_off.png">
-					<img src="http://localhost:9000/Subway/order/order_images/step04_on_bg2.png">
-					<div>
-						<span>STEP 4</span><br>
-						<span>주문완료</span>
-					</div>
+					<img src="http://localhost:9000/Subway/order/order_images/step04_off_bg.png">
 				</div>
 			</article>
 		</section>
 
 		<section class="menu_list">
-			<div class="menu_sandwich">
-				<div class="order_detail">
-					<div class="order_final_form">
-						<img src="http://localhost:9000/Subway/order/order_images/step04_on_bg.png">
-						<div>주문이 완료되었습니다.</div>
-					</div>
-					
-					<section class="order_check_btn">
-						<button type="button" class="btn_style2"onclick="location.href='http://localhost:9000/Subway/main/subway_main.jsp'">홈으로 이동</button>
-						<button type="button" class="btn_style"onclick="location.href='http://localhost:9000/Subway/member/Mypage_orderlist.jsp'">주문 내역 확인</button>
-					</section>
-				</div>
+			<div class="order_map">
+				<iframe src="https://map.naver.com/v5/search/%EC%84%9C%EB%B8%8C%EC%9B%A8%EC%9D%B4?c=14134222.5546623,4518373.6724403,15,0,0,0,dh"></iframe>
 			</div>
 		</section>
 	</div>

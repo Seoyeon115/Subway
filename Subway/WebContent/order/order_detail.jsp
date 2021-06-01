@@ -5,9 +5,9 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
-	<title>SUBWAY</title>
+	<title>SUBWAY - 매장찾기</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
-	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
+	<link rel="stylesheet" href="http://localhost:9000/Subway/css/map.css">
 	<script>
 		window.onload = function(){
 			function onClick(){
@@ -86,6 +86,7 @@
 							<div class="modal_close"><a href="#"></a></div>
 							<div class="popup">
 								<!--  <iframe></iframe>-->
+								<!--  <div class="popup_content"></div> -->
 								<div class="popup_btn">
 									<button type="button" class="btn_style2" onclick="location.href='http://localhost:9000/Subway/order/order_confirm.jsp'">이전</button>
 									<button type="button" class="btn_style" onclick="location.href='http://localhost:9000/Subway/order/order_confirm.jsp'">다음</button>

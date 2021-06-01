@@ -28,7 +28,7 @@
 					<img src="http://localhost:9000/Subway/order/order_images/step_bg_off.png">
 					<img src="http://localhost:9000/Subway/order/order_images/step03_on_bg.png">
 					<div>
-						<span>STEP 2</span><br>
+						<span>STEP 3</span><br>
 						<span>주문하기</span>
 					</div>
 					<img src="http://localhost:9000/Subway/order/order_images/step_bg_on.png">
