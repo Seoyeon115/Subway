@@ -670,9 +670,11 @@ div.order_final_form>div{
 	order_map
 	- content 
 *****************/
-
 div.order_map>iframe{
 	width:1170px;
 	height:700px;
-	margin-bottom:150px;
+	margin-bottom:50px;
+}
+section.map_order_btn{
+	padding-bottom:100px;
 }

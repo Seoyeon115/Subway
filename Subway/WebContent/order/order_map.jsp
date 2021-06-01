@@ -42,6 +42,9 @@
 				<iframe src="https://map.naver.com/v5/search/%EC%84%9C%EB%B8%8C%EC%9B%A8%EC%9D%B4?c=14134222.5546623,4518373.6724403,15,0,0,0,dh"></iframe>
 			</div>
 		</section>
+		<section class="map_order_btn">
+			<button type="button" class="btn_style2" onclick="location.href='http://localhost:9000/Subway/order/order_sandwich.jsp'">주문하기</button>
+		</section>
 	</div>
 	<!-- footer -->
 	<jsp:include page="../main/footer.jsp"></jsp:include>
