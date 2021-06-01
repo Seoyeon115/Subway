@@ -1,0 +1,189 @@
+
+#modal-header {
+	background-color:white;
+	width:80%;
+	margin:20px auto;
+	border-radius:15px;
+	text-align:left;
+}
+
+#modal-body {
+	background-color:white;
+	width:80%;
+	margin:20px auto;
+	border-radius:15px;
+	font-size:25px;
+}
+
+#next1, #next2, #next3, #next4, #next5, #next6 {
+	border-radius:15px;
+	background-color:#009223;
+	padding:10px 30px;
+	color:white;
+	font-size:23px;
+	
+}
+.btn_radio {
+	width:20px;
+	height:20px;
+	margin:20px;
+}
+
+#modal2 {
+	width:60%;
+	margin:auto;
+}
+
+input[name="bread_choice"] ,input[name="cheese_choice"]{
+	opacity:0;
+	
+}
+
+input[name="vegetable_choice"],input[name="sauce_choice"],input[name="side_choice"] {
+	opacity:0;
+}
+
+.bread_01{
+	content:url("../order/order_detail_images/img_recipe_b01.png");
+	width:160px;
+	height:112px;
+}
+.bread_02{
+	content:url("../order/order_detail_images/img_recipe_b02.png");
+	width:160px;
+	height:112px;
+}
+.bread_03{
+	content:url("../order/order_detail_images/img_recipe_b03.png");
+	width:160px;
+	height:112px;
+}
+.bread_04{
+	content:url("../order/order_detail_images/img_recipe_b04.png");
+	width:160px;
+	height:112px;
+}
+.bread_05{
+	content:url("../order/order_detail_images/img_recipe_b05.png");
+	width:160px;
+	height:112px;
+}
+.bread_06{
+	content:url("../order/order_detail_images/img_recipe_b06.png");
+	width:160px;
+	height:112px;
+}
+
+.bread_list> li , .cheese_list> li, .vegetable_list_01> li, .vegetable_list_02> li, .sauce_list> li, .side_list> li{
+	border:1px solid #DDDDDD;
+	margin:10px 5px;
+	cursor:pointer;
+}
+
+.bread_list li span, .cheese_list li span, .vegetable_list_01 li span, .vegetable_list_02 li span , .sauce_list li span,
+.side_list li span {
+	font-weight:bold;
+	font-size:18px;	
+}
+
+.cheese_01 {
+	content:url("../order/order_detail_images/img_recipe_c01.png");
+	width:160px; height:112px;
+}
+.cheese_02 {
+	content:url("../order/order_detail_images/img_recipe_c02.png");
+	width:160px; height:112px;
+}
+.cheese_03 {
+	content:url("../order/order_detail_images/img_recipe_c03.png");
+	width:160px; height:112px;
+}
+
+.vegetable_01 {
+	content:url("../order/order_detail_images/img_recipe_v01.png");
+	width:160px; height:112px;
+}
+.vegetable_02 {
+	content:url("../order/order_detail_images/img_recipe_v02.png");
+	width:160px; height:112px;
+}
+.vegetable_03 {
+	content:url("../order/order_detail_images/img_recipe_v03.png");
+	width:160px; height:112px;
+}
+.vegetable_04 {
+	content:url("../order/order_detail_images/img_recipe_v04.png");
+	width:160px; height:112px;
+}
+.vegetable_05 {
+	content:url("../order/order_detail_images/img_recipe_v05.png");
+	width:160px; height:112px;
+}
+.vegetable_06 {
+	content:url("../order/order_detail_images/img_recipe_v06.png");
+	width:160px; height:112px;
+}
+.vegetable_07 {
+	content:url("../order/order_detail_images/img_recipe_v07.png");
+	width:160px; height:112px;
+}
+.vegetable_08 {
+	content:url("../order/order_detail_images/img_recipe_v08.png");
+	width:160px; height:112px;
+}
+
+.sauce_01 {
+	content:url("../order/order_detail_images/img_recipe_s03.png");
+	width:160px; height:112px;
+}
+.sauce_02 {
+	content:url("../order/order_detail_images/img_recipe_s05.png");
+	width:160px; height:112px;
+}
+.sauce_03 {
+	content:url("../order/order_detail_images/img_recipe_s07.png");
+	width:160px; height:112px;
+}
+.sauce_04 {
+	content:url("../order/order_detail_images/img_recipe_s11.png");
+	width:160px; height:112px;
+}
+.sauce_05 {
+	content:url("../order/order_detail_images/img_recipe_s12.png");
+	width:160px; height:112px;
+}
+.sauce_06 {
+	content:url("../order/order_detail_images/img_recipe_s17.png");
+	width:160px; height:112px;
+}
+
+.side_01 {
+	content:url("../order/order_detail_images/img_toppping_02.png");
+	width:160px; height:112px;
+}
+.side_02 {
+	content:url("../order/order_detail_images/img_toppping_03.png");
+	width:160px; height:112px;
+}
+.side_03 {
+	content:url("../order/order_detail_images/img_toppping_04.png");
+	width:160px; height:112px;
+}
+.side_04 {
+	content:url("../order/order_detail_images/img_toppping_05.png");
+	width:160px; height:112px;
+}
+.side_05 {
+	content:url("../order/order_detail_images/img_toppping_06.png");
+	width:160px; height:112px;
+}
+
+.modal-body-scroll {
+  height:500px;
+  overflow:auto;
+}
+.modal-body {
+    max-height: calc(100vh - 212px);
+    overflow-y: auto;
+}
+
