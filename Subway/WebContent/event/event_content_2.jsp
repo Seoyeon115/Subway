@@ -20,8 +20,6 @@
 			<div class="content">
 				<h2 class="title">이달의 썹!프라이즈!</h2>
 
-
-
 				<div class="date">
 					<em>2021.05.04 ~ 2021.06.30</em>
 				</div>

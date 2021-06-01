@@ -685,3 +685,47 @@ input {
 .event_view_wrapper .board_right .board_nav_cont .board_nav_img img {
     width: 100%;
 }
+
+.evt_cont {
+    position: relative;
+    display: block;
+}
+
+.youtube_wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+iframe {
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    border-image: initial;
+}
+
+.youtube_wrap {
+    position: absolute;
+    padding-bottom: 47.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+    width: 83%;
+    top: 42.5%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.event_view_wrapper .event_view_conten .text_wrap img {
+    max-width: 800px;
+}
+img {
+    vertical-align: top;
+    border: 0;
+}
