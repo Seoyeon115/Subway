@@ -10,16 +10,18 @@
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
 	<script>
-		$(document).ready(function(){
-			$("#minus").click(function(){
+	$(document).ready(function(){
+		$("#minus").click(function(){
+			if($("#count_result").text() > 1){
 				$("#count_result").text(parseInt($("#count_result").text())-1);
 				$("#count_price").text(parseInt($("#count_price").text())-8000);
-			});
-			$("#plus").click(function(){
-				$("#count_result").text(parseInt($("#count_result").text())+1);
-				$("#count_price").text(8000+parseInt($("#count_price").text()));
-			});
+			}
 		});
+		$("#plus").click(function(){
+			$("#count_result").text(parseInt($("#count_result").text())+1);
+			$("#count_price").text(8000+parseInt($("#count_price").text()));
+		});
+	});
 	</script>
 </head>
 <body>
@@ -46,9 +48,9 @@
 							<p>
 								<span>샌드위치</span>
 								<strong>스파이시 쉬림프</strong>
-								<span>Spicy Shrimp</span>
-								<span>빨간맛에 빠진 쉬림프! 이국적인 매콤함이 더해진 시즌 한정</span>
-								<span>스파이시 쉬림프!</span>
+								<span class="eng_name">Spicy Shrimp</span>
+								<span class="infor">빨간맛에 빠진 쉬림프! 이국적인 매콤함이 더해진 시즌 한정</span>
+								<span class="infor">스파이시 쉬림프!</span>
 							</p>
 						</div>
 					</article>

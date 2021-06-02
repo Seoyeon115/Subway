@@ -9,8 +9,8 @@
 <body>
 		<section class="order_title">
 			<div>
-				<h1>Home-sub</h1>
-				<span>온라인 주문 시 배달되는 서비스입니다.</span>
+				<h1>Fast-sub</h1>
+				<span>온라인 주문 후 매장에서 픽업/시식하는 서비스 입니다.</span>
 			</div>
 			<article class="order_step">
 				<div>

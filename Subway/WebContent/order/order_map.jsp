@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
-	<title>HOME-SUB > 매장찾기</title>
+	<title>FAST-SUB > 매장찾기</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 </head>
@@ -17,8 +17,8 @@
 	<div class="order_content">
 		<section class="order_title">
 			<div>
-				<h1>Home-sub</h1>
-				<span>온라인 주문 시 배달되는 서비스입니다.</span>
+				<h1>Fast-sub</h1>
+				<span>온라인 주문 후 매장에서 픽업/시식하는 서비스 입니다.</span>
 			</div>
 			<article class="order_step0">
 				<div>

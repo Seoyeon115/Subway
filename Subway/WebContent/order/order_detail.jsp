@@ -14,7 +14,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="order.js"></script>
-	
 </head>
 <body>
 	<!-- header -->
@@ -40,9 +39,9 @@
 							<p>
 								<span>샌드위치</span>
 								<strong>스파이시 쉬림프</strong>
-								<span>Spicy Shrimp</span>
-								<span>빨간맛에 빠진 쉬림프! 이국적인 매콤함이 더해진 시즌 한정</span>
-								<span>스파이시 쉬림프!</span>
+								<span class="eng_name">Spicy Shrimp</span>
+								<span class="infor">빨간맛에 빠진 쉬림프! 이국적인 매콤함이 더해진 시즌 한정</span>
+								<span class="infor">스파이시 쉬림프!</span>
 							</p>
 						</div>
 					</article>

@@ -198,6 +198,7 @@ div.order_detail{
 }
 article.menu_inform>div{
 	display:inline-block;
+	text-align:center;
 }
 article.menu_inform img{
 	display:inline-block;
@@ -208,6 +209,7 @@ article.menu_inform p{
 	display:inline-block;
 	text-align:left;
 	margin-top:10px;
+	margin-right:50px;
 }
 article.menu_inform p>span:first-child{
 	font-size:18px;
@@ -218,14 +220,13 @@ article.menu_inform p>strong{
 	font-size:45px;
 	color:black;
 }
-article.menu_inform p>span:nth-child(3){
+article.menu_inform p>span.eng_name{
 	font-size:20px;
 	font-weight:bold;
 	color:#b2b2b2;
 	padding-bottom:10px;
 }
-article.menu_inform p>span:nth-child(4),
-article.menu_inform p>span:last-child{
+article.menu_inform p>span.infor{
 	font-size:15px;
 	color:#b2b2b2;
 }
@@ -281,10 +282,28 @@ section.order_btn{
 	font-weight:bold;
 	text-align:center;
 	margin:20px 10px 0 10px;
+	cursor:pointer;
 }
 .btn_style:hover{
 	border:2px solid #00791f;
 	background-color:#00791f;
+}
+.btn_style2{
+	width:180px;
+	background-color:white;
+	border:2px solid #009223;
+	border-radius:30px;
+	padding:10px;
+	color:#009223;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	margin:20px 10px 0 10px;
+	cursor:pointer;
+}
+.btn_style2:hover{
+	background-color:#009223;
+	color:white;
 }
 section.order_btn img{
 border:1px solid red;
@@ -496,22 +515,7 @@ div.price>span:last-child{
 	color:#009223;
 }
 
-.btn_style2{
-	width:180px;
-	background-color:white;
-	border:2px solid #009223;
-	border-radius:30px;
-	padding:10px;
-	color:#009223;
-	font-size:18px;
-	font-weight:bold;
-	text-align:center;
-	margin:20px 10px 0 10px;
-}
-.btn_style2:hover{
-	background-color:#009223;
-	color:white;
-}
+
 /********************
 	order_final
 	- content 
@@ -652,6 +656,12 @@ section.final_menu_confirm dd, section.total_amount dd{
 	display:inline-block;
 	float:right;
 }
+#menu_amount{
+	display:inline-block;
+	color:gray;
+	font-size:17px;
+	margin-right:80px;
+}
 /**/
 section.total_amount>div{
 	border-top:4px solid #009223;	
@@ -669,6 +679,10 @@ section.total_amount dl:last-child>dd{
 	color:#009223;
 	font-size:20px;
 	font-weight:bold;
+}
+#finalTotal{
+	color:#009223;
+	font-size:30px;
 }
 
 /**********************
