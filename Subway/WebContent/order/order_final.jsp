@@ -127,7 +127,7 @@
 						<div class="menu_confirm">
 							<dl>
 								<dt>스파이시 쉬림프</dt>
-								<dd><strong></strong>원</dd>
+								<dd><span id="menu_amount">1개</span><strong id="menu_price">8000 </strong>원</dd>
 							</dl>
 						</div>
 					</section>
@@ -136,7 +136,7 @@
 						<div class="amount">
 							<dl>
 								<dt>총 주문 금액</dt>
-								<dd><strong id="orderTotal"></strong>원</dd>
+								<dd><strong id="orderTotal">8000 </strong>원</dd>
 							</dl>
 							<dl>
 								<dt>쿠폰 사용</dt>
@@ -144,7 +144,7 @@
 							</dl>
 							<dl>
 								<dt>잔여 결제금액</dt>
-								<dd><strong id="finalTotal"></strong>원</dd>
+								<dd><strong id="finalTotal">8000 </strong>원</dd>
 							</dl>
 						</div>
 					</section>
