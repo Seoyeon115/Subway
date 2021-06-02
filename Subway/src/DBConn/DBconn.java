@@ -17,7 +17,6 @@ public class DBconn {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(url,user,pass);
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

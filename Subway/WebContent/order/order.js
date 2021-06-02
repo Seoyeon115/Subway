@@ -104,5 +104,43 @@ $(document).ready(function(){
 		
 	});
 	
+	$("#next6").click(function(){
+		$("#myModal6").modal("hide");
+	});
+	
+	$("input[name='cookie_choice']").change(function(){
+		$("input[name='cookie_choice']").each(function(){
+			var value = $(this).val();
+			var checked = $(this).prop('checked');
+			var $label = $(this).parent();
+			var $span = $(this).next().next();
+			if(checked){
+				$label.css("background-color","#009223");
+				$span.css("color","#FFFFFF");
+			}else {
+				$label.css("background-color","#FFFFFF");
+				$span.css("color","#333");
+			}
+		});
+		
+	});
+	
+	$("input[name='bevarage_choice']").change(function(){
+		$("input[name='bevarage_choice']").each(function(){
+			var value = $(this).val();
+			var checked = $(this).prop('checked');
+			var $label = $(this).parent();
+			var $span = $(this).next().next();
+			if(checked){
+				$label.css("background-color","#009223");
+				$span.css("color","#FFFFFF");
+			}else {
+				$label.css("background-color","#FFFFFF");
+				$span.css("color","#333");
+			}
+		});
+		
+	});
+	
 
 });

@@ -92,7 +92,7 @@
 							</div>
 							
 							<div class="modal fade" id="myModal2" role="dialog">
-								<div class="modal-dialog modal-dialog-centered" style="width:1000px;">
+								<div class="modal-dialog modal-dialog-centered" style="width:800px;">
 									
 									<div class="modal-content" style="background-color:#ffc300;">
 										<div class="modal-header" id="modal-header">
@@ -135,7 +135,7 @@
 							
 							
 							<div class="modal fade" id="myModal3" role="dialog">
-								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
+								<div class="modal-dialog modal-dialog-centered" style="width:800px;">
 									
 									<div class="modal-content" style="background-color:#ffc300;">
 										<div class="modal-header" id="modal-header">
@@ -164,7 +164,7 @@
 							</div>
 							
 							<div class="modal fade modal-dialog-scrollable" id="myModal4" role="dialog">
-								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
+								<div class="modal-dialog modal-dialog-centered" style="width:800px;">
 									
 									<div class="modal-content" style="background-color:#ffc300;">
 										<div class="modal-header" id="modal-header">
@@ -218,7 +218,7 @@
 							
 							
 							<div class="modal fade" id="myModal5" role="dialog">
-								<div class="modal-dialog modal-dialog-centered" style="width:1000px;">
+								<div class="modal-dialog modal-dialog-centered" style="width:800px;">
 									
 									<div class="modal-content" style="background-color:#ffc300;">
 										<div class="modal-header" id="modal-header">
@@ -260,7 +260,7 @@
 							
 							
 							<div class="modal fade" id="myModal6" role="dialog">
-								<div class="modal-dialog modal-dialog-centered" style="width:1000px;">
+								<div class="modal-dialog modal-dialog-centered" style="width:800px;">
 									
 									<div class="modal-content" style="background-color:#ffc300;">
 										<div class="modal-header" id="modal-header">
@@ -297,7 +297,7 @@
 							</div>
 							
 							
-							<div class="modal fade" id="myModal7" role="dialog">
+							<div class="modal fade modal-dialog-scrollable" id="myModal7" role="dialog">
 								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
 									
 									<div class="modal-content" style="background-color:#ffc300;">
@@ -307,8 +307,8 @@
 										</div>
 										<div class="modal-body" id="modal-body">
 											<div>
-												<input type="radio" name="single_set"><label>&nbsp;&nbsp;단품</label>
-												<input type="radio" name="single_set"><label>&nbsp;&nbsp;세트</label>
+												<input type="radio" name="single_set" class="btn_radio"><label>&nbsp;&nbsp;단품</label>
+												<input type="radio" name="single_set" class="btn_radio"><label>&nbsp;&nbsp;세트</label>
 											</div>
 										</div>
 										<div class="modal-body" id="modal-body">
@@ -317,26 +317,26 @@
 												<h3>여기에 선택 메뉴 출력</h3>
 											</div>
 										</div>
-										<div class="modal-body modal-body-scroll" id="modal-body">
+										<div class="modal-body modal-body-scroll-cookie" id="modal-body">
 											<div>
 												<h3>쿠키</h3>
-												<ul>
-													<li>초코칩 쿠키</li>
-													<li>더블 초코칩 쿠키</li>
-													<li>오트밀 레이즌 쿠키</li>
-													<li>라즈베리 치즈케익 쿠키</li>
-													<li>화이트 초코 마카다미아 쿠키</li>
-													<li>민트초코 쿠키</li>
+												<ul class="cookie_list">
+													<li><input type="radio" name="cookie_choice" id="cookie_01"><label for="cookie_01">초코칩 쿠키</label></li>
+													<li><input type="radio" name="cookie_choice" id="cookie_02"><label for="cookie_02">더블 초코칩 쿠키</label></li>
+													<li><input type="radio" name="cookie_choice" id="cookie_03"><label for="cookie_03">오트밀 레이즌 쿠키</label></li>
+													<li><input type="radio" name="cookie_choice" id="cookie_04"><label for="cookie_04">라즈베리 치즈케익 쿠키</label></li>
+													<li><input type="radio" name="cookie_choice" id="cookie_05"><label for="cookie_05">화이트 초코 마카다미아 쿠키</label></li>
+													<li><input type="radio" name="cookie_choice" id="cookie_06"><label for="cookie_06">민트초코 쿠키</label></li>
 												</ul>
 												<h3>음료</h3>
-												<ul>
-													<li>탄산음류 16oz</li>
-													<li>탄산음류 32oz</li>
+												<ul class="bevarage_list">
+													<li><input type="radio" name="bevarage_choice" id="beverage_01"><label for="beverage_01">탄산음류 16oz</label></li>
+													<li><input type="radio" name="bevarage_choice" id="beverage_02"><label for="cookie_02">탄산음류 32oz</label></li>
 												</ul>
 											</div>
 										</div>
 										<div class="modal-footer">
-											<button type="button" id="next5" data-toggle="modal">확인</button>
+											<button type="button" id="next7" data-toggle="modal">확인</button>
 										</div>
 									</div>
 								</div>

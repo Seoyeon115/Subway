@@ -15,7 +15,7 @@
 	font-size:25px;
 }
 
-#next1, #next2, #next3, #next4, #next5, #next6 {
+#next1, #next2, #next3, #next4, #next5, #next6, #next7 {
 	border-radius:15px;
 	background-color:#009223;
 	padding:10px 30px;
@@ -34,7 +34,8 @@
 	margin:auto;
 }
 
-input[name="bread_choice"] ,input[name="cheese_choice"]{
+input[name="bread_choice"] ,input[name="cheese_choice"],input[name="cookie_choice"],
+input[name="bevarage_choice"]{
 	opacity:0;
 	
 }
@@ -74,7 +75,8 @@ input[name="vegetable_choice"],input[name="sauce_choice"],input[name="side_choic
 	height:112px;
 }
 
-.bread_list> li , .cheese_list> li, .vegetable_list_01> li, .vegetable_list_02> li, .sauce_list> li, .side_list> li{
+.bread_list> li , .cheese_list> li, .vegetable_list_01> li, .vegetable_list_02> li, .sauce_list> li, .side_list> li,
+.cookie_list> li, .bevarage_list> li {
 	border:1px solid #DDDDDD;
 	margin:10px 5px;
 	cursor:pointer;
@@ -182,8 +184,22 @@ input[name="vegetable_choice"],input[name="sauce_choice"],input[name="side_choic
   height:500px;
   overflow:auto;
 }
+.modal-body-scroll-cookie {
+	height:200px;
+	overflow:auto;
+}
 .modal-body {
     max-height: calc(100vh - 212px);
     overflow-y: auto;
 }
+.cookie_list {
+	margin-top: 0px;
+}
+.cookie_list li , .bevarage_list li{
+	width:600px;
+	margin:0px 10px;
+	padding:7px 0px;
+	text-align:left;
+}
+
 

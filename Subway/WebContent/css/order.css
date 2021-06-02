@@ -95,7 +95,6 @@ section.menu_list>div.menu_tap>ul{
 }
 section.menu_list>div.menu_tap li{
 	display:inline-block;
-	width:80px;
 	padding:25px 50px;
 }
 section.menu_list>div.menu_tap a{
@@ -119,6 +118,7 @@ section.menu_list>div.menu_sandwich{
 	text-align:center;
 	margin-bottom:150px;
 }
+/*
 div.menu_sandwich ul{
 	display:inline-block;
 	list-style-type:none;
@@ -126,6 +126,7 @@ div.menu_sandwich ul{
 	padding:20px;
 	margin-top:30px;
 }
+*/
 div.menu_sandwich li{
 	display:inline-block;
 }
@@ -253,6 +254,7 @@ table.content_layout th{
 table.content_layout td{
 	color:#696969;
 	padding:20px 0;
+	text-align:left;
 }
 section.nutrient>div{
 	text-align:left;
