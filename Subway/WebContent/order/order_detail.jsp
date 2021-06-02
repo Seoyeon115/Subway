@@ -330,7 +330,7 @@
 												<h3>음료</h3>
 												<ul class="bevarage_list">
 													<li><input type="radio" name="bevarage_choice" id="beverage_01"><label for="beverage_01">탄산음류 16oz</label></li>
-													<li><input type="radio" name="bevarage_choice" id="beverage_02"><label for="cookie_02">탄산음류 32oz</label></li>
+													<li><input type="radio" name="bevarage_choice" id="beverage_02"><label for="beverage_02">탄산음류 32oz</label></li>
 												</ul>
 											</div>
 										</div>
