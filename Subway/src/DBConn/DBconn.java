@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class DBConn {
+public class DBconn {
 	Connection conn;
 	PreparedStatement pstmt;
 	ResultSet  rs;
@@ -13,7 +13,7 @@ public class DBConn {
 	String user = "scott";
 	String pass = "tiger";
 	
-	public DBConn() {
+	public DBconn() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			conn = DriverManager.getConnection(url,user,pass);
