@@ -24,6 +24,7 @@ $(document).ready(function(){
 		$("#myModal2").modal("hide");
 	});
 	
+	
 	$("input[name='cheese_choice']").change(function(){
 		$("input[name='cheese_choice']").each(function(){
 			var value = $(this).val();

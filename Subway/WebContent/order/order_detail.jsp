@@ -336,6 +336,7 @@
 										</div>
 										<div class="modal-footer">
 											<button type="button" id="next7" data-toggle="modal">확인</button>
+											
 										</div>
 									</div>
 								</div>

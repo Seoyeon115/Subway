@@ -198,7 +198,7 @@ input[name="vegetable_choice"],input[name="sauce_choice"],input[name="side_choic
 .cookie_list li , .bevarage_list li{
 	width:600px;
 	margin:0px 10px;
-	padding:7px 0px;
+	padding:6px 0px;
 	text-align:left;
 }
 
