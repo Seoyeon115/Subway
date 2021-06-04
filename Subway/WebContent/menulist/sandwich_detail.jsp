@@ -1,5 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    import="com.subway.dao.*,com.subway.vo.*,java.util.*,java.sql.*"%>
+<%
+	String idx = request.getParameter("idx");
+	MenuDAO dao = new MenuDAO();
+	MenuVO vo = dao.Menu_Detail(idx);
+	ArrayList<MenuVO> list = dao.getMenuList();
+	
+	int idx_next_int, idx_prev_int;
+	int idx_int = Integer.parseInt(idx);
+	if(idx_int == list.size()){
+		idx_next_int = 1;
+		idx_prev_int = idx_int -1;
+	}else if(idx_int == 1){
+		idx_next_int = idx_int +1;
+		idx_prev_int = list.size();
+	}else {
+		idx_next_int = idx_int +1;
+		idx_prev_int = idx_int -1;
+	}
+	
+	
+	String idx_next = String.valueOf(idx_next_int);
+	String idx_prev = String.valueOf(idx_prev_int);
+	
+	MenuVO menu_prev = dao.Menu_Detail(idx_prev);
+	MenuVO menu_next = dao.Menu_Detail(idx_next);
+	
+
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,40 +41,43 @@
 	<jsp:include page="../main/header.jsp"></jsp:include>
 	
 	<div class="detail_name">
-		<h1>쉬림프</h1><br>
-		<div class="detail_eng_kcal"><span class="detail_eng">Shrimp</span><div class="line"></div><span class="detail_cal">229kcal</span></div>
+		<h1><%= vo.getKor_name() %></h1><br>
+		<div class="detail_eng_kcal"><span class="detail_eng"><%= vo.getEng_name() %></span><div class="line"></div><span class="detail_cal"><%= vo.getKcal() %></span></div>
 	</div>
 	<div class="detail_image">
-		<a href="#"><img src="images/스파이스쉬림프(샌드위치)_20210429050445371.png" class="image_left" ></a>
-		<a href="#"><img src="images/shrimp_20210315103931131.jpg" style="margin:0 100px;"></a>
-		<a href="#"><img src="images/로스트치킨샌드위치_20210503113731657.png" class="image_right"></a>
+		<a href="sandwich_detail.jsp?idx=<%=idx_prev %>"><img src="http://localhost:9000/Subway/menulist/images/<%= menu_prev.getImage_path() %>" class="image_left" ></a>
+		<a href="#"><img src="http://localhost:9000/Subway/menulist/images/<%= vo.getImage_path() %>" style="margin:0 100px;"></a>
+		<a href="sandwich_detail.jsp?idx=<%=idx_next %>"><img src="http://localhost:9000/Subway/menulist/images/<%= menu_next.getImage_path() %>" class="image_right"></a>
 		
 		<p class="detail_summary">
-					탱글한 식감이 그대로 살아있는 통새우가<br>
-					5마리 들어가 한 입 베어 먹을 때 마다 <br>
-					진짜 새우의 풍미가 가득<br>
+					<%= vo.getMenu_summary() %>
 		</p>
 		<div>
 			<ul class="side_ul">
-				<li><img src="images/recipe_shrimp_5.jpg" class="detail_side_image">
-				<p class="side_image_kor">새우 5마리</p>
+				<li><img src="http://localhost:9000/Subway/menulist/images/<%= vo.getMaterial1_image_path() %>" class="detail_side_image">
+				<p class="side_image_kor"> <%= vo.getMaterial1() %>  </p>
 				</li>
 				
-				<li><img src="images/recipe_cheese.jpg" class="detail_side_image">
-				<p class="side_image_kor">치즈 2장</p>
+				<li><img src="http://localhost:9000/Subway/menulist/images/<%= vo.getMaterial2_image_path() %>" class="detail_side_image">
+				<p class="side_image_kor"> <%= vo.getMaterial2() %></p>
 				</li>
+				<% if(vo.getMaterial3_image_path() != null) { %>
+				<li><img src="http://localhost:9000/Subway/menulist/images/<%= vo.getMaterial3_image_path() %>" class="detail_side_image">
+				<p class="side_image_kor">&nbsp;&nbsp;&nbsp;&nbsp;<%= vo.getMaterial3() %></p>
+				</li>
+				<% } else { } %>
 				
-				<li><img src="images/sauce_sweet_chilli.png" class="detail_side_image">
-				<p class="side_image_kor">&nbsp;&nbsp;&nbsp;&nbsp;스위트 칠리</p>
+				<% if(vo.getMaterial4_image_path() != null) { %>
+				<li><img src="http://localhost:9000/Subway/menulist/images/<%= vo.getMaterial4_image_path() %>" class="detail_side_image">
+				<p class="side_image_kor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= vo.getMaterial4() %></p>
 				</li>
+				<% } else { } %>
 				
-				<li><img src="images/sauce_ranch.png" class="detail_side_image">
-				<p class="side_image_kor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;랜치</p>
+				<% if(vo.getMaterial5_image_path() != null) { %>
+				<li><img src="http://localhost:9000/Subway/menulist/images/<%= vo.getMaterial5_image_path() %>" class="detail_side_image">
+				<p class="side_image_kor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= vo.getMaterial5() %></p>
 				</li>
-				
-				<li><img src="images/sauce_hot_chilli.png" class="detail_side_image">
-				<p class="side_image_kor">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;핫칠리</p>
-				</li>
+				<% } else { } %>
 				
 			</ul>
 			<p class="sub_p">
