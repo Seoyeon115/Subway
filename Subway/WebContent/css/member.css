@@ -36,6 +36,7 @@ div.login3>form ul{
 	width:85%;
 	margin:auto;
 }
+
 div.login3>form ul li:nth-child(1){
 	margin-top:50px;
 	border:1px solid rgb(212,211,212);

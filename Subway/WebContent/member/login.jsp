@@ -38,11 +38,11 @@
 				<div class="login3">
 					<h2>LOGIN</h2>
 					<div class="login_text">써브웨이 회원으로 로그인하시면 제공하는<br>다양한 서비스를 이용할 수 있습니다.</div>
-					<form name="login_form" action="#" method="get">
+					<form name="login_form" action="loginProcess.jsp" method="post">
 						<ul>
 							<li>
 								<label>이메일 아이디</label>
-								<input type="text" name="id" id="id" placeholder="이메일 아이디 입력">
+								<input type="text" name="email" id="email" placeholder="이메일 아이디 입력">
 							</li>
 							<li>
 								<label>비밀번호</label>

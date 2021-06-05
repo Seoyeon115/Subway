@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -136,9 +136,9 @@
 		<h1>회원가입</h1>
 			<div class="join">
 				<div class="header">정보입력</div>
-						<h3>기본 정보(필수 입력)</h3>
+					<h3>기본 정보(필수 입력)</h3>
+						<form name="join_form" action="joinProcess.jsp" method="post">
 							<div class="form1">
-							<form name="join_form" action="#" method="get">
 								<ul>
 									<li>
 										<label>아이디(이메일)</label>
@@ -180,16 +180,15 @@
 										<input type="text" name="hp3" id="hp3" placeholder="휴대폰번호 입력"> 
 									</li>
 								</ul>
-							</form>
+							
 							</div>
 							
 							<h4>추가 정보(선택 입력)</h4>
 							<div class="form2">
-							<form name="join_form2" action="#" method="get">
 								<ul>
 									<li>
 										<label>우편번호</label>
-										<input type="text" name="mail" id="mail" placeholder="우편번호 입력">
+										<input type="text" name="post" id="post" placeholder="우편번호 입력">
 										<button type="button">우편번호검색</button>
 									</li>
 									<li>
@@ -198,13 +197,14 @@
 									</li>
 									<li>
 										<label>상세주소</label>
-										<input type="text" name="detail_addr" id="detail_addr" placeholder="상세주소 입력">
+										<input type="text" name="daddr" id="daddr" placeholder="상세주소 입력">
 									</li>
 								</ul>
-							</form>
+							
 							</div>
-						
+					</form>
 			</div>
+			
 			<div class="check">
 				<button type="button" id="joinbtn">회원가입 완료</button>
 			</div>
