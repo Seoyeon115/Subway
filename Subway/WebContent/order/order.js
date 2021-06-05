@@ -1,6 +1,11 @@
 $(document).ready(function(){
 	$("#next1").click(function(){
-		$("#myModal").modal("hide");
+		if($("input[name='sub']:checked").length == 0){
+			alert("빵 길이를 선택해주세요");
+			return false;
+		}else{
+			$("#myModal").modal("hide");
+		}
 	});
 	
 	$("input[name='bread_choice']").change(function(){
@@ -21,7 +26,12 @@ $(document).ready(function(){
 	});
 	
 	$("#next2").click(function(){
-		$("#myModal2").modal("hide");
+		if($("input[name='bread_choice']:checked").length == 0){
+			alert("빵 종류를 선택해주세요");
+			return false;
+		}else{
+			$("#myModal2").modal("hide");
+		}
 	});
 	
 	
@@ -43,7 +53,12 @@ $(document).ready(function(){
 	});
 	
 	$("#next3").click(function(){
-		$("#myModal3").modal("hide");
+		if($("input[name='cheese_choice']:checked").length == 0){
+			alert("치즈를 선택해주세요");
+			return false;
+		}else{
+			$("#myModal3").modal("hide");
+		}
 	});
 	
 	$("input[name='vegetable_choice']").change(function(){
@@ -64,7 +79,12 @@ $(document).ready(function(){
 	});
 	
 	$("#next4").click(function(){
-		$("#myModal4").modal("hide");
+		if($("input[name='vegetable_choice']:checked").length == 0){
+			alert("야채를 선택해주세요");
+			return false;
+		}else{
+			$("#myModal4").modal("hide");
+		}
 	});
 	
 	$("input[name='sauce_choice']").change(function(){
@@ -85,7 +105,12 @@ $(document).ready(function(){
 	});
 	
 	$("#next5").click(function(){
-		$("#myModal5").modal("hide");
+		if($("input[name='sauce_choice']:checked").length == 0){
+			alert("소스를 선택해주세요");
+			return false;
+		}else{
+			$("#myModal5").modal("hide");
+		}
 	});
 	
 	$("input[name='side_choice']").change(function(){
@@ -140,6 +165,17 @@ $(document).ready(function(){
 				$span.css("color","#333");
 			}
 		});
+		
+	});
+	
+	$("#next7").click(function(){
+		
+			order_detail.submit();
+			
+		
+		
+		
+		
 		
 	});
 	

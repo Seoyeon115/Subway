@@ -1,5 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    import="com.subway.vo.*,com.subway.dao.*"%>
+<%
+	request.setCharacterEncoding("utf-8");
+	OrderVO vo = new OrderVO();
+	vo.setSub(request.getParameter("sub"));
+	vo.setBread_choice(request.getParameter("bread_choice"));
+	vo.setCheese_choice(request.getParameter("cheese_choice"));
+	vo.setVegetable_choice(request.getParameterValues("vegetable_choice"));
+	vo.setSauce_choice(request.getParameter("sauce_choice"));
+	vo.setSide_choice(request.getParameter("side_choice"));
+	vo.setSingle_set(request.getParameter("single_set"));
+	vo.setCookie_choice(request.getParameter("cookie_choice"));
+	vo.setBeverage_choice(request.getParameter("beverage_choice"));
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -92,19 +106,19 @@
 									<dd>
 										<ul>
 											<li>
-												<a href="#">길이 선택</a>
+												<a href="#"><%= vo.getSub() %></a>
 											</li>
 											<li>
-												<a href="#">빵 선택</a>
+												<a href="#"><%= vo.getBread_choice() %></a>
 											</li>
 											<li>
-												<a href="#">치즈 선택</a>
+												<a href="#"><%= vo.getCheese_choice() %></a>
 											</li>
 											<li>
-												<a href="#">야채 선택</a>
+												<a href="#"><%= vo.getVegetable_list() %></a>
 											</li>
 											<li>
-												<a href="#">소스/시즈닝 선택</a>
+												<a href="#"><%= vo.getSauce_choice() %></a>
 											</li>
 								
 										</ul>
@@ -122,7 +136,7 @@
 									<dd>
 										<ul>
 											<li>
-												<a href="#">추가 선택</a>
+												<a href="#"><%= vo.getSide_choice() %></a>
 											</li>
 											<li>
 												<a href="#">미트 추가</a>
