@@ -38,7 +38,7 @@
 							<p>
 								<strong><%= vo.getKor_name() %></strong>
 								<span class="eng_name"><%= vo.getEng_name() %></span>
-								<span class="kcal"><%= vo.getKcal() %></span>
+								<span class="kcal"><%= vo.getKcal() %> Kcal</span>
 							</p>
 						</a>
 					</li>
