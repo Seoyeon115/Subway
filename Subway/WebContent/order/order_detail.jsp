@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    import="com.subway.dao.*,com.subway.vo.*"%>
+<%
+	String idx = request.getParameter("idx");
+	MenuDAO dao = new MenuDAO();
+	MenuVO vo = dao.Menu_Detail(idx);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -35,13 +41,12 @@
 				<div class="order_detail">
 					<article class="menu_inform">
 						<div>
-							<img src="http://localhost:9000/Subway/order/order_images/스파이스쉬림프(샌드위치)_20210430044448992.png">
+							<img src="http://localhost:9000/Subway/menulist/images/<%= vo.getImage_path() %>">
 							<p>
 								<span>샌드위치</span>
-								<strong>스파이시 쉬림프</strong>
-								<span class="eng_name">Spicy Shrimp</span>
-								<span class="infor">빨간맛에 빠진 쉬림프! 이국적인 매콤함이 더해진 시즌 한정</span>
-								<span class="infor">스파이시 쉬림프!</span>
+								<strong style="font-size:35px;"><%= vo.getKor_name() %></strong>
+								<span class="eng_name"><%= vo.getEng_name() %></span>
+								<span class="infor" style="width:373px;"><%= vo.getMenu_summary() %></span>
 							</p>
 						</div>
 					</article>
@@ -58,12 +63,12 @@
 							</tr>
 							<div></div>
 							<tr>
-								<td>196</td>
-								<td>233</td>
-								<td>9</td>
-								<td>14(25%)</td>
-								<td>1(7%)</td>
-								<td>513(26%)</td>
+								<td><%= vo.getWeight() %></td>
+								<td><%= vo.getKcal() %></td>
+								<td><%= vo.getSugars() %></td>
+								<td><%= vo.getProtein() %></td>
+								<td><%= vo.getSaturated_fat() %></td>
+								<td><%= vo.getNatrium() %></td>
 							</tr>
 						</table>
 						<div>
@@ -314,7 +319,8 @@
 										<div class="modal-body" id="modal-body">
 											<div>
 												<h4>쿠키 세트 선택</h4>
-												<h3>여기에 선택 메뉴 출력</h3>
+												<h3 id="set_price">구성품을 선택해주세요</h3>
+												<input type="hidden" name="set_price_hidden" id="set_price_hidden" value="set_price_hidden">
 											</div>
 										</div>
 										<div class="modal-body modal-body-scroll-cookie" id="modal-body">
@@ -336,6 +342,7 @@
 											</div>
 										</div>
 										<div class="modal-footer">
+											<input type="hidden" name="idx" value="<%= idx %>">
 											<button type="button" id="next7" data-toggle="modal">확인</button>
 											
 										</div>

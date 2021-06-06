@@ -13,6 +13,13 @@
 	vo.setSingle_set(request.getParameter("single_set"));
 	vo.setCookie_choice(request.getParameter("cookie_choice"));
 	vo.setBeverage_choice(request.getParameter("beverage_choice"));
+	
+	String set_price = request.getParameter("set_price_hidden");
+	String idx = request.getParameter("idx");
+	
+	MenuDAO dao = new MenuDAO();
+	MenuVO menuvo = dao.Menu_Detail(idx);
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -23,20 +30,9 @@
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
-	<script>
-	$(document).ready(function(){
-		$("#minus").click(function(){
-			if($("#count_result").text() > 1){
-				$("#count_result").text(parseInt($("#count_result").text())-1);
-				$("#count_price").text(parseInt($("#count_price").text())-8000);
-			}
-		});
-		$("#plus").click(function(){
-			$("#count_result").text(parseInt($("#count_result").text())+1);
-			$("#count_price").text(8000+parseInt($("#count_price").text()));
-		});
-	});
-	</script>
+	<script src="order.js"></script>
+	
+	
 </head>
 <body>
 	<!-- header -->
@@ -61,10 +57,9 @@
 							<img src="http://localhost:9000/Subway/order/order_images/스파이스쉬림프(샌드위치)_20210430044448992.png">
 							<p>
 								<span>샌드위치</span>
-								<strong>스파이시 쉬림프</strong>
-								<span class="eng_name">Spicy Shrimp</span>
-								<span class="infor">빨간맛에 빠진 쉬림프! 이국적인 매콤함이 더해진 시즌 한정</span>
-								<span class="infor">스파이시 쉬림프!</span>
+								<strong><%= menuvo.getKor_name() %></strong>
+								<span class="eng_name"><%= menuvo.getEng_name() %></span>
+								<span class="infor"><%= menuvo.getMenu_summary() %></span>
 							</p>
 						</div>
 					</article>
@@ -81,12 +76,12 @@
 							</tr>
 							<div></div>
 							<tr>
-								<td>196</td>
-								<td>233</td>
-								<td>9</td>
-								<td>14(25%)</td>
-								<td>1(7%)</td>
-								<td>513(26%)</td>
+								<td><%= menuvo.getWeight() %></td>
+								<td><%= menuvo.getKcal() %></td>
+								<td><%= menuvo.getSugars() %></td>
+								<td><%= menuvo.getProtein() %></td>
+								<td><%= menuvo.getSaturated_fat() %></td>
+								<td><%= menuvo.getNatrium() %></td>
 							</tr>
 						</table>
 						<div>
@@ -136,10 +131,8 @@
 									<dd>
 										<ul>
 											<li>
-												<a href="#"><%= vo.getSide_choice() %></a>
-											</li>
-											<li>
-												<a href="#">미트 추가</a>
+												<a href="#"><% if(vo.getSide_choice() != null) { %><%= vo.getSide_choice() %></a>
+												<% } else { %> 선택안함 <% } %>
 											</li>
 										</ul>
 										<span></span>
@@ -155,12 +148,21 @@
 									</dt>
 									<dd>
 										<ul>
-											<li>
-												<a href="#">단품</a>
-											</li>
-											<li>
-												<a href="#">세트</a>
-											</li>
+											<% if(vo.getSingle_set() == "단품") { %>
+												<li style="background-color:#009223;">
+													<a href="#" >단품</a>
+												</li>
+												<li style="background-color:#F2F2F2;">
+													<a href="#" style="color:#333">세트</a>
+												</li>
+											<% } else { %>
+												<li style="background-color:#F2F2F2;">
+													<a href="#" style="color:#333">단품</a>
+												</li>
+												<li style="background-color:#009223;">
+													<a href="#" >세트</a>
+												</li>
+											<% } %>
 										</ul>
 										<span></span>
 									</dd>
@@ -177,8 +179,52 @@
 						</div>
 						<div class="price">
 							<span>최종 결제 금액</span>
-							<span id="count_price">8000</span><span>원</span>
+							<span id="count_price">
+								<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_15()%>
+								<% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_15()+1900 %>
+								<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_15()+2100 %> <% } else { %> error 
+								<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_30()%>
+								<% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_30()+1900 %>
+								<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_30()+2100 %> <% } else { %> error <% }}} %>
+							</span>
+							<span>원</span>
+							
+							
 						</div>
+					<!-- 
+					if(vo.getSub().equals("15")){
+						if(단품){
+							단품
+						}else if(세트){
+							if(set_price.equals("1900원"){
+								menuvo.getprice15 + 1900
+							}else if(set_price.equals("2100원"){
+								menuvo.getprice15 + 2100
+							}else {
+								error
+							}
+						}
+					}else if(vo.getsub().equals("30")){
+						if("단품"){
+							단품30
+						)else if ("세트"){
+							if(set_price.equals("1900원"){
+								menuvo.getprice15 + 1900
+							}else if(set_price.equals("2100원"){
+								menuvo.getprice15 + 2100
+							}else {
+								error
+							}
+						}
+					}
+					 -->
+					<%--
+					<% if(vo.getSub().equals("15cm")){ if(vo.getSingle_set().equals("단품")) { %><%= menuvo.getPrice_15()%>
+							<% } else if(vo.getSingle_set().equals("세트")){ %> <%= menuvo.getPrice_15() %> <% }}else if(vo.getSub().equals("30cm")){  %>
+							<% if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrcie_30() %> <% }else if(vo.getSingle_set().equals("세트")) { %>
+							<%= menuvo.getPrcie_30() %> <% }} %>
+					--%> 
+					 
 					</section>
 					<section class="order_btn">
 						<button type="button" class="btn_style2"onclick="location.href='#'">장바구니</button>
@@ -188,6 +234,7 @@
 			</div>
 		</section>
 	</div>
+	
 	<!-- footer -->
 	<jsp:include page="../main/footer.jsp"></jsp:include>
 </body>

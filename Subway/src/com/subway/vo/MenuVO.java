@@ -57,10 +57,10 @@ public class MenuVO {
 	public void setPrice_15(int price_15) {
 		this.price_15 = price_15;
 	}
-	public int getPrcie_30() {
+	public int getPrice_30() {
 		return price_30;
 	}
-	public void setPrcie_30(int prcie_30) {
+	public void setPrice_30(int prcie_30) {
 		this.price_30 = prcie_30;
 	}
 	public String getKor_name() {

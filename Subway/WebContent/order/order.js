@@ -141,8 +141,18 @@ $(document).ready(function(){
 			var $label = $(this).parent();
 			var $span = $(this).next().next();
 			if(checked){
+				$("#set").prop('checked',true);
 				$label.css("background-color","#009223");
 				$span.css("color","#FFFFFF");
+				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "16oz") {
+					$("#set_price").text('1900원');
+					$("input[name='set_price_hidden']").attr('value','1900원');
+					$("#set_price").css("font-weight","bold");
+				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "32oz"){
+					$("#set_price").text('2100원');
+					$("input[name='set_price_hidden']").attr('value','2100원');
+					$("#set_price").css("font-weight","bold");
+				}
 			}else {
 				$label.css("background-color","#FFFFFF");
 				$span.css("color","#333");
@@ -158,8 +168,18 @@ $(document).ready(function(){
 			var $label = $(this).parent();
 			var $span = $(this).next().next();
 			if(checked){
+				$("#set").prop('checked',true);
 				$label.css("background-color","#009223");
 				$span.css("color","#FFFFFF");
+				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='bevarage_choice']:checked").val() == "16oz") {
+					$("#set_price").text('1900원');
+					$("input[name='set_price_hidden']").attr('value','1900원');
+					$("#set_price").css("font-weight","bold");
+				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='bevarage_choice']:checked").val() == "32oz"){
+					$("#set_price").text('2100원');
+					$("input[name='set_price_hidden']").attr('value','2100원');
+					$("#set_price").css("font-weight","bold");
+				}
 			}else {
 				$label.css("background-color","#FFFFFF");
 				$span.css("color","#333");
@@ -168,16 +188,46 @@ $(document).ready(function(){
 		
 	});
 	
+	$("#single").click(function(){
+		$("#set_price").text("0원");
+		$("input[name='cookie_choice']").each(function(){
+			var value = $(this).val();
+			var checked = $(this).prop('checked');
+			var $label = $(this).parent();
+			var $span = $(this).next().next();
+			$label.css("background-color","#FFFFFF");
+			$span.css("color","#FFFFFF");
+		});
+		
+		$("input[name='bevarage_choice']").each(function(){
+			var value1 = $(this).val();
+			var checked1 = $(this).prop('checked');
+			var $label1 = $(this).parent();
+			var $span1 = $(this).next().next();
+			$label1.css("background-color","#FFFFFF");
+			$span1.css("color","#FFFFFF");
+		})
+	});
+
+	
 	$("#next7").click(function(){
-		
-			order_detail.submit();
-			
-		
-		
-		
-		
-		
+		order_detail.submit();
 	});
 	
-
+	
+	var price = parseInt($("#count_price").text());
+	$("#minus").click(function(){
+		if($("#count_result").text() > 1){
+			$("#count_result").text(parseInt($("#count_result").text())-1);
+			//$("#count_price").text(parseInt($("#count_price").text())-8000);
+			$("#count_price").text(parseInt($("#count_price").text())-price);
+		}
+	});
+	
+	$("#plus").click(function(){
+		$("#count_result").text(parseInt($("#count_result").text())+1);
+		//$("#count_price").text(8000+parseInt($("#count_price").text()));
+		$("#count_price").text(parseInt($("#count_price").text())+price);
+	});
+	
 });
