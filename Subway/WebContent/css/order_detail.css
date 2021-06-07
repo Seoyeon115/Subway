@@ -35,7 +35,7 @@
 }
 
 input[name="bread_choice"] ,input[name="cheese_choice"],input[name="cookie_choice"],
-input[name="bevarage_choice"]{
+input[name="beverage_choice"]{
 	opacity:0;
 	
 }

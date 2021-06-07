@@ -95,4 +95,147 @@ public class MenuDAO extends DBconn{
 		
 		return vo;
 	}
+	
+	
+	//쿠키 메뉴 리스트
+	public ArrayList<MenuVO> getCookieList() {
+		ArrayList<MenuVO> list = new ArrayList<MenuVO>();
+		String sql = " select idx, kor_name, eng_name, menu_summary, price, "
+				   + " weight, kcal, sugars, protein, saturated_fat, Natrium, image_path from cookie_menu";
+		getPreparedStatement(sql);
+		
+		try {
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				MenuVO vo = new MenuVO();
+				vo.setIdx(rs.getString(1));
+				vo.setKor_name(rs.getString(2));
+				vo.setEng_name(rs.getString(3));
+				vo.setMenu_summary(rs.getString(4));
+				vo.setPrice(rs.getInt(5));
+				vo.setWeight(rs.getString(6));
+				vo.setKcal(rs.getString(7));
+				vo.setSugars(rs.getString(8));
+				vo.setProtein(rs.getString(9));
+				vo.setSaturated_fat(rs.getString(10));
+				vo.setNatrium(rs.getString(11));
+				vo.setImage_path(rs.getString(12));
+				
+				list.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return list;
+	}
+	
+	//음료 메뉴 리스트
+	public ArrayList<MenuVO> getDrinkList(){
+		ArrayList<MenuVO> list = new ArrayList<MenuVO>();
+		String sql = "select idx, kor_name, eng_name, price, image_path from drink_menu";
+		getPreparedStatement(sql);
+		
+		try {
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				MenuVO vo = new MenuVO();
+				vo.setIdx(rs.getString(1));
+				vo.setKor_name(rs.getString(2));
+				vo.setEng_name(rs.getString(3));
+				vo.setPrice(rs.getInt(4));
+				vo.setImage_path(rs.getString(5));
+				
+				list.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return list;
+	}
+	
+	//쿠키 메뉴 디테일
+	public MenuVO Cookie_Detail(String idx) {
+		MenuVO vo = new MenuVO();
+		String sql = " select idx, kor_name, eng_name, menu_summary, price, "
+				   + " weight, kcal, sugars, protein, saturated_fat, Natrium, image_path from cookie_menu where idx=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, idx);
+			rs = pstmt.executeQuery();
+
+			while(rs.next()) {
+				vo.setIdx(rs.getString(1));
+				vo.setKor_name(rs.getString(2));
+				vo.setEng_name(rs.getString(3));
+				vo.setMenu_summary(rs.getString(4));
+				vo.setPrice(rs.getInt(5));
+				vo.setWeight(rs.getString(6));
+				vo.setKcal(rs.getString(7));
+				vo.setSugars(rs.getString(8));
+				vo.setProtein(rs.getString(9));
+				vo.setSaturated_fat(rs.getString(10));
+				vo.setNatrium(rs.getString(11));
+				vo.setImage_path(rs.getString(12));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return vo;
+	}
+	
+	//음료 메뉴 디테일
+	public MenuVO Drink_Detail(String idx) {
+		MenuVO vo = new MenuVO();
+		String sql = "select idx, kor_name, eng_name, price, image_path from drink_menu where idx=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, idx);
+			rs = pstmt.executeQuery();
+
+			while(rs.next()) {
+				vo.setIdx(rs.getString(1));
+				vo.setKor_name(rs.getString(2));
+				vo.setEng_name(rs.getString(3));
+				vo.setPrice(rs.getInt(4));
+				vo.setImage_path(rs.getString(5));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return vo;
+	}
+	
+	
+	//all메뉴
+	public MenuVO getAllMenuList(String idx) {
+		MenuVO vo = new MenuVO();
+		String sql ="select idx, kor_name, eng_name, price_15, price_30, price, image_path from all_menu where idx=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, idx);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				vo.setIdx(rs.getString(1));
+				vo.setKor_name(rs.getString(2));
+				vo.setEng_name(rs.getString(3));
+				vo.setPrice_15(rs.getInt(4));
+				vo.setPrice_30(rs.getInt(5));
+				vo.setPrice(rs.getInt(6));
+				vo.setImage_path(rs.getString(7));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return vo;
+	}
+	
 }

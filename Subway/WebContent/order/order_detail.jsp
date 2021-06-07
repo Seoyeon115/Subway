@@ -327,17 +327,17 @@
 											<div>
 												<h3>쿠키</h3>
 												<ul class="cookie_list">
+													<li><input type="radio" name="cookie_choice" id="cookie_06" value="민트초코 쿠키"><label for="cookie_06">민트초코 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_01" value="초코칩 쿠키"><label for="cookie_01">초코칩 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_02" value="더블 초코칩 쿠키"><label for="cookie_02">더블 초코칩 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_03" value="오트밀 레이즌 쿠키"><label for="cookie_03">오트밀 레이즌 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_04" value="라즈베리 치즈케익 쿠키"><label for="cookie_04">라즈베리 치즈케익 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_05" value="화이트 초코 마카라미아 쿠키"><label for="cookie_05">화이트 초코 마카다미아 쿠키</label></li>
-													<li><input type="radio" name="cookie_choice" id="cookie_06" value="민트초코 쿠키"><label for="cookie_06">민트초코 쿠키</label></li>
 												</ul>
 												<h3>음료</h3>
 												<ul class="bevarage_list">
-													<li><input type="radio" name="bevarage_choice" id="beverage_01" value="16oz"><label for="beverage_01">탄산음류 16oz</label></li>
-													<li><input type="radio" name="bevarage_choice" id="beverage_02" value="32oz"><label for="beverage_02">탄산음류 32oz</label></li>
+													<li><input type="radio" name="beverage_choice" id="beverage_01" value="16oz"><label for="beverage_01">탄산음료 16oz</label></li>
+													<li><input type="radio" name="beverage_choice" id="beverage_02" value="22oz"><label for="beverage_02">탄산음료 22oz</label></li>
 												</ul>
 											</div>
 										</div>

@@ -3,12 +3,18 @@ package com.subway.vo;
 public class MenuVO {
 	//샌드위치, 쿠키, 음료
 	//이름,영어이름,설명,영양성분,가격
-	int price_15,price_30;
+	int price_15,price_30,price;
 	String kor_name,eng_name,menu_summary,material1,material2,material3,
 	material4,material5,weight,kcal,sugars,protein,saturated_fat,Natrium,idx,image_path,
 	material1_image_path,material2_image_path,material3_image_path,material4_image_path,material5_image_path;
 	
 	
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
 	public String getMaterial1_image_path() {
 		return material1_image_path;
 	}

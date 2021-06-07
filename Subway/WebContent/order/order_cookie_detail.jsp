@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
+<%
+	String idx = request.getParameter("idx");
+	MenuDAO dao = new MenuDAO();
+	MenuVO vo = dao.Cookie_Detail(idx);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,13 +50,11 @@
 				<div class="order_detail">
 					<article class="menu_inform">
 						<div>
-							<img src="http://localhost:9000/Subway/order/order_images/img_sides_14_20210205012854822.jpg">
+							<img src="http://localhost:9000/Subway/order/order_images/<%= vo.getImage_path()%>">
 							<p>
-								<strong>민트초코 쿠키</strong>
-								<span class="eng_name">MintChoco</span>
-								<span class="infor">민초 시즌이 돌아왔다!</span>
-								<span class="infor">진한 초콜릿에 상쾌한 민트가 퐁당!</span>
-								<span class="infor">특별한 달콤함에 푹 빠져보세요.</span>
+								<strong style="font-size:35px;"><%= vo.getKor_name() %></strong>
+								<span class="eng_name"><%= vo.getEng_name() %></span>
+								<span class="infor" style="width:370px;"><%= vo.getMenu_summary() %></span>
 							</p>
 						</div>
 					</article>
@@ -67,12 +71,12 @@
 							</tr>
 							<div></div>
 							<tr>
-								<td>45</td>
-								<td>215</td>
-								<td>20</td>
-								<td>2(4%)</td>
-								<td>6(37%)</td>
-								<td>130(7%)</td>
+								<td><%= vo.getWeight() %></td>
+								<td><%= vo.getKcal() %></td>
+								<td><%= vo.getSugars() %></td>
+								<td><%= vo.getProtein() %></td>
+								<td><%= vo.getSaturated_fat() %></td>
+								<td><%= vo.getNatrium() %></td>
 							</tr>
 						</table>
 						<div>
@@ -88,12 +92,12 @@
 						</div>
 						<div class="price">
 							<span>최종 결제 금액</span>
-							<span id="count_price">1000</span><span>원</span>
+							<span id="count_price"><%= vo.getPrice()%></span><span>원</span>
 						</div>
 					</section>
 					<section class="order_btn">
 						<button type="button" class="btn_style2"onclick="location.href='#'">장바구니</button>
-						<button type="button" class="btn_style" onclick="location.href='http://localhost:9000/Subway/order/order_final.jsp'">주문하기</button>
+						<button type="button" class="btn_style" onclick="location.href='http://localhost:9000/Subway/order/order_final.jsp?idx=<%=vo.getIdx()%>'">주문하기</button>
 					</section>
 				</div>
 			</div>

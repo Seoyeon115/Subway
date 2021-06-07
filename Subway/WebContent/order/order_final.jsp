@@ -1,5 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
+<%
+	String idx = request.getParameter("idx");
+	MenuDAO dao = new MenuDAO();
+	MenuVO vo = dao.getAllMenuList(idx);
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -126,8 +133,11 @@
 						<h2>주문내역</h2>
 						<div class="menu_confirm">
 							<dl>
-								<dt>스파이시 쉬림프</dt>
-								<dd><span id="menu_amount">1개</span><strong id="menu_price">8000 </strong>원</dd>
+								<dt><%= vo.getKor_name() %></dt>
+								<dd><span id="menu_amount">1개</span>
+								<strong id="menu_price">
+								<%= vo.getPrice() %> 
+								</strong>원</dd>
 							</dl>
 						</div>
 					</section>
@@ -136,7 +146,7 @@
 						<div class="amount">
 							<dl>
 								<dt>총 주문 금액</dt>
-								<dd><strong id="orderTotal">8000 </strong>원</dd>
+								<dd><strong id="orderTotal"><%= vo.getPrice() %> </strong>원</dd>
 							</dl>
 							<dl>
 								<dt>쿠폰 사용</dt>
@@ -144,7 +154,7 @@
 							</dl>
 							<dl>
 								<dt>잔여 결제금액</dt>
-								<dd><strong id="finalTotal">8000 </strong>원</dd>
+								<dd><strong id="finalTotal"><%= vo.getPrice() %> </strong>원</dd>
 							</dl>
 						</div>
 					</section>

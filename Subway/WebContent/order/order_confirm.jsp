@@ -57,9 +57,9 @@
 							<img src="http://localhost:9000/Subway/order/order_images/스파이스쉬림프(샌드위치)_20210430044448992.png">
 							<p>
 								<span>샌드위치</span>
-								<strong><%= menuvo.getKor_name() %></strong>
+								<strong style="font-size:35px;"><%= menuvo.getKor_name() %></strong>
 								<span class="eng_name"><%= menuvo.getEng_name() %></span>
-								<span class="infor"><%= menuvo.getMenu_summary() %></span>
+								<span class="infor" style="width:373px;"><%= menuvo.getMenu_summary() %></span>
 							</p>
 						</div>
 					</article>
@@ -99,25 +99,25 @@
 										<span>필수 선택 *</span>
 									</dt>
 									<dd>
-										<ul>
+										<ul style="margin-top:13px;">
 											<li>
-												<a href="#"><%= vo.getSub() %></a>
+												<a href="#">길이 선택</a>
 											</li>
 											<li>
-												<a href="#"><%= vo.getBread_choice() %></a>
+												<a href="#">빵 선택</a>
 											</li>
 											<li>
-												<a href="#"><%= vo.getCheese_choice() %></a>
+												<a href="#">치즈 선택</a>
 											</li>
 											<li>
-												<a href="#"><%= vo.getVegetable_list() %></a>
+												<a href="#">야채 선택</a>
 											</li>
 											<li>
-												<a href="#"><%= vo.getSauce_choice() %></a>
+												<a href="#">소스/시즈닝 선택</a>
 											</li>
 								
 										</ul>
-										<span></span>
+										<span style="font-size:12px; text-align:left; margin-top:-8px; margin-left:40px;"><%= vo.getSub() %>, <%= vo.getBread_choice() %>, <%= vo.getCheese_choice() %>, <%= vo.getVegetable_list() %>, <%= vo.getSauce_choice() %></span>
 									</dd>
 								</dl>
 							</li>
@@ -129,13 +129,20 @@
 										<span>추가 선택</span>
 									</dt>
 									<dd>
+										<% if(vo.getSide_choice() == null){ %>
 										<ul>
 											<li>
-												<a href="#"><% if(vo.getSide_choice() != null) { %><%= vo.getSide_choice() %></a>
-												<% } else { %> 선택안함 <% } %>
+												<a href="#">추가 선택</a>
 											</li>
 										</ul>
-										<span></span>
+										<%}else{ %>
+										<ul style="margin-top:13px;">
+											<li>
+												<a href="#">추가 선택</a>
+											</li>
+										</ul>
+										<span style="font-size:12px; text-align:left; margin-top:-8px; margin-left:40px;"><%= vo.getSide_choice() %></span>
+										<%} %>
 									</dd>
 								</dl>
 							</li>
@@ -147,24 +154,26 @@
 										<span>상품 선택</span>
 									</dt>
 									<dd>
+										<% if(vo.getSingle_set().equals("단품")) { %>
 										<ul>
-											<% if(vo.getSingle_set() == "단품") { %>
-												<li style="background-color:#009223;">
-													<a href="#" >단품</a>
-												</li>
-												<li style="background-color:#F2F2F2;">
-													<a href="#" style="color:#333">세트</a>
-												</li>
-											<% } else { %>
-												<li style="background-color:#F2F2F2;">
-													<a href="#" style="color:#333">단품</a>
-												</li>
-												<li style="background-color:#009223;">
-													<a href="#" >세트</a>
-												</li>
-											<% } %>
+											<li style="background-color:#009223;">
+												<a href="#" >단품</a>
+											</li>
+											<li style="background-color:#F2F2F2;">
+												<a href="#" style="color:#333">세트</a>
+											</li>
 										</ul>
-										<span></span>
+										<% } else { %>
+										<ul style="margin-top:13px;">
+											<li style="background-color:#F2F2F2;">
+												<a href="#" style="color:#333">단품</a>
+											</li>
+											<li style="background-color:#009223;">
+												<a href="#" >세트</a>
+											</li>
+										</ul>
+										<span style="font-size:12px; text-align:left; margin-top:-8px; margin-left:40px;"><%= vo.getCookie_choice() %>, <%= vo.getBeverage_choice() %></span>
+										<% } %>
 									</dd>
 								</dl>
 							</li>
