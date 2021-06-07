@@ -55,4 +55,28 @@ public class MemberDAO extends DBconn {
 			
 			return result;
 	}
+	
+	//회원정보 체크 -- count 함수를 사용
+	public boolean getCheckResult(String email, String pass) {
+			boolean result = false;
+			String sql = "select count(*) from subway_member where email=? and pass=?";
+			getPreparedStatement(sql);
+			
+			try {
+				pstmt.setString(1, email);
+				pstmt.setString(2, pass);
+				
+				rs = pstmt.executeQuery();
+				if(rs.next()) {
+					if(rs.getInt(1) == 1) result = true;
+					
+				}
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			close();
+			
+			return result;
+	}
 }
