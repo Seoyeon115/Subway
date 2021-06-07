@@ -23,26 +23,48 @@
 						<h3>회원 정보</h3>
 						<button type="button">비밀번호 변경</button>
 					</div>
-					<ul>
+					<!--  <ul>
 						<li>
 							<label>이메일 아이디</label>
-							<input type="text" name="email" id="email">
+							<input type="text" name="email" id="email" value="">
 							
 						</li>
 						<li>
 							<label>우편번호</label>
-							<input type="text" name="post" id="post">
+							<input type="text" name="post" id="post" value="">
 						</li>
 						<li>
 							<label>주소</label>
-							<input type="text" name="addr" id="addr">
+							<input type="text" name="addr" id="addr" value="">
 						</li>
 						<li>
 							<label>휴대폰 번호</label>
-							<input type="text" name="hp" id="hp">
+							<input type="text" name="hp" id="hp" value="">
 							<button type="button">정보변경</button>
 						</li>
-					</ul>
+					</ul> -->
+					<table border="1">
+						<tr>
+							<th>이메일 아이디</th>
+							<td colspan="5">0428mhk@naver.com</td>
+						</tr>
+					</table>
+					<br>
+					<table border="1" id="content_table">	
+						<tr>
+							<th>이름</th>
+							<td colspan="5">김민호</td>
+						</tr>
+						<tr>
+							<th>주소</th>
+							<td colspan="5">서울시 강남구</td>
+						</tr>
+						<tr>
+							<th>휴대폰 번호</th>
+							<td colspan="5">010-3333-3333<button type="button">정보변경</button></td>
+							
+						</tr>
+					</table>
 					<p>· 이름이나 생년월일, 성별, 핸드폰 번호 등의 정보가 변경되었다면 본인확인을 통해 정보를 수정할 수 있습니다.</p>
 				</div>
 			</div>
