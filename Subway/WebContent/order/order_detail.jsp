@@ -132,6 +132,7 @@
 												</li>
 												
 											</ul>
+											<button type="button" id="prev1" data-toggle="modal" data-target="#myModal">이전</button>
 											<button type="button" id="next2" data-toggle="modal" data-target="#myModal3">다음</button>
 										</div>
 									</div>
@@ -162,6 +163,7 @@
 													<span>모짜렐라 치즈</span>
 												</li>
 											</ul>
+											<button type="button" id="prev2" data-toggle="modal" data-target="#myModal2">이전</button>
 											<button type="button" id="next3" data-toggle="modal" data-target="#myModal4">다음</button>
 										</div>
 									</div>
@@ -215,6 +217,7 @@
 													<span>할라피뇨</span>
 												</li>
 											</ul>
+											<button type="button" id="prev3" data-toggle="modal" data-target="#myModal3">이전</button>
 											<button type="button" id="next4" data-toggle="modal" data-target="#myModal5">확인</button>
 										</div>
 									</div>
@@ -257,6 +260,7 @@
 													<span>스모크 바비큐</span>
 												</li>
 											</ul>
+											<button type="button" id="prev4" data-toggle="modal" data-target="#myModal4">이전</button>
 											<button type="button" id="next5" data-toggle="modal" data-target="#myModal6">다음</button>
 										</div>
 									</div>
@@ -295,6 +299,7 @@
 													<span>페퍼로니</span>
 												</li>
 											</ul>
+											<button type="button" id="prev5" data-toggle="modal" data-target="#myModal5">이전</button>
 											<button type="button" id="next6" data-toggle="modal" data-target="#myModal7">다음</button>
 										</div>
 									</div>
@@ -343,7 +348,8 @@
 										</div>
 										<div class="modal-footer">
 											<input type="hidden" name="idx" value="<%= idx %>">
-											<button type="button" id="next7" data-toggle="modal">확인</button>
+											<button type="button" id="prev6" data-toggle="modal" data-target="#myModal6">이전</button>
+											<button type="button" id="next7" data-toggle="modal">다음</button>
 											
 										</div>
 									</div>

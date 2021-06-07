@@ -34,6 +34,11 @@ $(document).ready(function(){
 		}
 	});
 	
+	$("#prev1").click(function(){
+		$("#myModal2").modal("hide");
+	});
+	
+	
 	
 	$("input[name='cheese_choice']").change(function(){
 		$("input[name='cheese_choice']").each(function(){
@@ -59,6 +64,10 @@ $(document).ready(function(){
 		}else{
 			$("#myModal3").modal("hide");
 		}
+	});
+	
+	$("#prev2").click(function(){
+		$("#myModal3").modal("hide");
 	});
 	
 	$("input[name='vegetable_choice']").change(function(){
@@ -87,6 +96,10 @@ $(document).ready(function(){
 		}
 	});
 	
+	$("#prev3").click(function(){
+		$("#myModal4").modal("hide");
+	});
+	
 	$("input[name='sauce_choice']").change(function(){
 		$("input[name='sauce_choice']").each(function(){
 			var value = $(this).val();
@@ -113,6 +126,10 @@ $(document).ready(function(){
 		}
 	});
 	
+	$("#prev4").click(function(){
+		$("#myModal5").modal("hide");
+	});
+	
 	$("input[name='side_choice']").change(function(){
 		$("input[name='side_choice']").each(function(){
 			var value = $(this).val();
@@ -131,6 +148,10 @@ $(document).ready(function(){
 	});
 	
 	$("#next6").click(function(){
+		$("#myModal6").modal("hide");
+	});
+	
+	$("#prev5").click(function(){
 		$("#myModal6").modal("hide");
 	});
 	
@@ -208,10 +229,19 @@ $(document).ready(function(){
 			$span1.css("color","#FFFFFF");
 		})
 	});
+	
+	$("#prev6").click(function(){
+		$("#myModal7").modal("hide");
+	});
 
 	
 	$("#next7").click(function(){
-		order_detail.submit();
+		if($("input[name='single_set']:checked").length == 0){
+			alert("단품/세트를 선택해주세요");
+			return false;
+		}else{
+			order_detail.submit();
+		}
 	});
 	
 	
