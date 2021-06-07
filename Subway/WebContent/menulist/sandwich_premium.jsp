@@ -41,8 +41,10 @@
 					쉬림프!<br>
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=1" class="btn_view"></a>
 			</li>
+			<!-- 
+			
 			<li class="item"><a href="#"><img src="images/스파이스쉬림프아보카도(샌드위치)_20210429050610933.png"></a><br>
 			<strong class="tit">스파이시 쉬림프 아보카도</strong>
 			<span class="eng">Spicy Shrimp Avocado</span>
@@ -55,6 +57,7 @@
 			</div>
 			<a href="#" class="btn_view"></a>
 			</li>
+			 -->
 			<li class="item"><a href="#"><img src="images/shrimp_20210315103931131.jpg"></a><br>
 			<strong class="tit">쉬림프</strong>
 			<span class="eng">Shrimp</span>
@@ -66,7 +69,7 @@
 					진짜 새우의 풍미가 가득<br>
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=2" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/sandwich_K-BBQ_20200901125954475_20210204032257598.jpg"></a><br>
 			<strong class="tit">K-바비큐</strong>
@@ -78,8 +81,9 @@
 					마늘,간장 그리고 은은한 불맛까지!
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=1" class="btn_view"></a>
 			</li>
+			<!--  
 			<li class="item"><a href="#"><img src="images/풀드포크_20200914110036750.jpg"></a><br>
 			<strong class="tit">폴드 포크 바비큐</strong>
 			<span class="eng">Pulled Pork Barbecue</span>
@@ -92,6 +96,7 @@
 			</div>
 			<a href="#" class="btn_view"></a>
 			</li>
+			-->
 			<li class="item"><a href="#"><img src="images/steak_n_cheese_20210315103943888.jpg"></a><br>
 			<strong class="tit">스테이크 & 치즈</strong>
 			<span class="eng">Steak & Cheese</span>
@@ -102,7 +107,7 @@
 					한가득
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=3" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/터키 베이컨 아보카도_20200914105945007.jpg"></a><br>
 			<strong class="tit">터키 베이컨 아보카도</strong>
@@ -114,7 +119,7 @@
 					아보카도는 신의 한수
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=4" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/스파이시 이탈리안_20200914110115080.jpg"></a><br>
 			<strong class="tit">스파이시 이탈리안</strong>
@@ -126,7 +131,7 @@
 					쏘 핫한 이탈리아의 맛
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=9" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/치킨-데리야끼_20200707034325843_20210204031836906.jpg"></a><br>
 			<strong class="tit">치킨 데리야끼</strong>
@@ -138,7 +143,7 @@
 					데리야끼 소스와의 환상적인 만남
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=10" class="btn_view"></a>
 			</li>
 			
 			

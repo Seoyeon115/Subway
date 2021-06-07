@@ -42,7 +42,7 @@
 					Biggest Meatiest Tastiest,its' B.M.T!
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=12" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/비엘티_20200707033847305_20210204025320342.jpg"></a><br>
 			<strong class="tit">비엘티</strong>
@@ -54,7 +54,7 @@
 					그대로~
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=11" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/미트볼샌드위치_20210503114049252.png"></a><br>
 			<strong class="tit">미트볼</strong>
@@ -67,7 +67,7 @@
 					살아있는 마리나라소스를 듬뿍
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=13" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/햄_20200707034527390_20210204024721139.jpg"></a><br>
 			<strong class="tit">햄</strong>
@@ -79,7 +79,7 @@
 					넘치는 맛의 
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=16" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/참치_20200707034257210_20210204024840656.jpg"></a><br>
 			<strong class="tit">참치</strong>
@@ -91,7 +91,7 @@
 					마요네즈의 완벽한 조화
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=15" class="btn_view"></a>
 			</li>
 		</ul>
 	</div>

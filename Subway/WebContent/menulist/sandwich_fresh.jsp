@@ -39,7 +39,7 @@
 					오븐에 구워 담백한 저칼로리 닭가슴살의 건강한 풍미
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=5" class="btn_view"></a>
 			</li>
 			<li class="item"> <a href="#"><img src="images/item_sandwich_rotisserie_20210312063000816.jpg"></a><br>
 			<strong class="tit">로티세리 바비큐 치킨</strong>
@@ -51,7 +51,7 @@
 					손으로 찢어 더욱 부드러운 치킨의 혁명
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=6" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/써브웨이 클럽(샌드위치)_20210503113422349.png"></a><br>
 			<strong class="tit">서브웨이 클럽</strong>
@@ -63,7 +63,7 @@
 					앙상블
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=8" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/item_sandwich_turkey_20210312063055119.jpg"></a><br>
 			<strong class="tit">터키</strong>
@@ -74,7 +74,7 @@
 					280kcal로 슬림하게 즐기는 오리지날 터키 샌드위치
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=14" class="btn_view"></a>
 			</li>
 			<li class="item"><a href="#"><img src="images/item_sandwich_veggie_20210312063107485.jpg"></a><br>
 			<strong class="tit">베지</strong>
@@ -85,7 +85,7 @@
 					첫 구운 빵과 신선한 7가지 야채로 즐기는 깔끔한 한끼
 				</p>
 			</div>
-			<a href="#" class="btn_view"></a>
+			<a href="sandwich_detail.jsp?idx=18" class="btn_view"></a>
 			</li>
 		</ul>
 	</div>

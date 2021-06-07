@@ -30,6 +30,7 @@
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
+	
 	<script src="order.js"></script>
 	
 	
@@ -197,43 +198,7 @@
 								<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_30()+2100 %> <% } else { %> error <% }}} %>
 							</span>
 							<span>원</span>
-							
-							
 						</div>
-					<!-- 
-					if(vo.getSub().equals("15")){
-						if(단품){
-							단품
-						}else if(세트){
-							if(set_price.equals("1900원"){
-								menuvo.getprice15 + 1900
-							}else if(set_price.equals("2100원"){
-								menuvo.getprice15 + 2100
-							}else {
-								error
-							}
-						}
-					}else if(vo.getsub().equals("30")){
-						if("단품"){
-							단품30
-						)else if ("세트"){
-							if(set_price.equals("1900원"){
-								menuvo.getprice15 + 1900
-							}else if(set_price.equals("2100원"){
-								menuvo.getprice15 + 2100
-							}else {
-								error
-							}
-						}
-					}
-					 -->
-					<%--
-					<% if(vo.getSub().equals("15cm")){ if(vo.getSingle_set().equals("단품")) { %><%= menuvo.getPrice_15()%>
-							<% } else if(vo.getSingle_set().equals("세트")){ %> <%= menuvo.getPrice_15() %> <% }}else if(vo.getSub().equals("30cm")){  %>
-							<% if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrcie_30() %> <% }else if(vo.getSingle_set().equals("세트")) { %>
-							<%= menuvo.getPrcie_30() %> <% }} %>
-					--%> 
-					 
 					</section>
 					<section class="order_btn">
 						<button type="button" class="btn_style2"onclick="location.href='#'">장바구니</button>
