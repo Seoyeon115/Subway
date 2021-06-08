@@ -7,6 +7,28 @@ import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
 	
+	public String Certification(String name, String hp) {
+		String result ="";
+		String sql = "select email from subway_member where name = ? and hp = ?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, name);
+			pstmt.setString(2, hp);
+			
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				result += rs.getString(1);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	
 	public String getUserEmail(String hp) {
 		String to = "";
 		String sql = "select email from subway_member where hp = ?";

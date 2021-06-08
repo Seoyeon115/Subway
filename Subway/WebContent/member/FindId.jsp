@@ -38,14 +38,14 @@
 				<div class="fi3">
 					<h2>아이디 찾기</h2>
 					<div class="fi_text">이름과 휴대폰 번호를 입력해주세요.</div>
-					<form name="fi_form" action="#" method="get">
+					<form name="fi_form" action="findidEmailSend.jsp" method="post">
 						<ul>
 							<li>
 								<label>이름</label>
 								<input type="text" name="name" id="name" placeholder="이름 입력">
 							</li>
 							<li>
-								<label>휴대폰 번호</label>
+								<label>전화번호</label>
 								<input type="text" name="hp" id="hp" placeholder="휴대폰 번호 입력" >
 							</li>
 							<li>
