@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -57,11 +58,11 @@
 						</tr>
 						<tr>
 							<th>주소</th>
-							<td colspan="5">서울시 강남구</td>
+							<td colspan="5">경기도</td>
 						</tr>
 						<tr>
 							<th>휴대폰 번호</th>
-							<td colspan="5">010-3333-3333<button type="button">정보변경</button></td>
+							<td colspan="5">010-2222-2222<button type="button">정보변경</button></td>
 							
 						</tr>
 					</table>
