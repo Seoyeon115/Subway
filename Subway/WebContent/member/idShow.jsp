@@ -3,9 +3,15 @@
     import="com.subway.dao.*,com.subway.vo.*"%>
 <%
 	String hp = request.getParameter("hp");
+	String userID = request.getParameter("id");
 	MemberDAO dao = new MemberDAO();
-	String email = dao.getUserEmail(hp);
-	System.out.println(hp);
+	String email = null;
+	String pass = null;
+	if(userID == null){
+		email = dao.getUserEmail(hp);
+	}else {
+		pass = dao.getUserPass(userID);
+	}
 %>
 <!DOCTYPE html>
 <html>
@@ -45,7 +51,9 @@
 				<div class="login3">
 					<h2>LOGIN</h2>
 					<div class="login_text">써브웨이 회원으로 로그인하시면 제공하는<br>다양한 서비스를 이용할 수 있습니다.</div>
-					<span>고객님의 아이디는 <%= email %> 입니다 </span>
+					<% if(pass == null) { %><span>고객님의 아이디는 <%= email %> 입니다 </span><%} else { %>
+						<span>고객님의 비밀번호는 <%= pass %> 입니다 </span>
+					<% } %>
 					<form name="login_form" action="loginProcess.jsp" method="post">
 						<ul>
 							<li>

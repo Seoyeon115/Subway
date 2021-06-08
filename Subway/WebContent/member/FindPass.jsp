@@ -42,7 +42,7 @@
 				<div class="fp3">
 					<h2>비밀번호 찾기</h2>
 					<div class="fp_text">이름, 휴대폰 번호, 아이디를 입력해주세요.</div>
-					<form name="fp_form" action="#" method="get">
+					<form name="fp_form" action="findidEmailSend.jsp" method="post">
 						<ul>
 							<li>
 								<label>이름</label>
