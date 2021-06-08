@@ -6,6 +6,7 @@ import java.util.*;
 import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
+	
 	public String Certification(String name, String hp,String id) {
 		String result ="";
 		String sql = "select email from subway_member where name = ? and hp = ? and email = ?";

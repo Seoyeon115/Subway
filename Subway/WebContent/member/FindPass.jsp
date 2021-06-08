@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<meta charset="UTF-8">
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
 	<title>SUBWAY 써브웨이</title>

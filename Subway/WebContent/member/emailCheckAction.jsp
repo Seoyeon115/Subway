@@ -5,6 +5,7 @@
 
 
 <%
+
 	request.setCharacterEncoding("utf-8");
 	String code = request.getParameter("code");
 	MemberDAO dao = new MemberDAO();

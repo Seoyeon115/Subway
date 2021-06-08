@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"
     import="com.subway.dao.*,com.subway.vo.*"%>
 <%
+
 	String hp = request.getParameter("hp");
 	String userID = request.getParameter("id");
 	MemberDAO dao = new MemberDAO();

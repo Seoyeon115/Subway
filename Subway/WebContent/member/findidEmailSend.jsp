@@ -11,6 +11,7 @@
 <%@page import="java.util.Properties"%>
 <%@page import="java.io.PrintWriter"%>
 <%
+
 	MemberDAO dao = new MemberDAO();
 	String name = request.getParameter("name");
 	String hp = request.getParameter("hp");
