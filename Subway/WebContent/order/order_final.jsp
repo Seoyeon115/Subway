@@ -3,8 +3,26 @@
 <%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
 <%
 	String idx = request.getParameter("idx");
+	String set_price = request.getParameter("set_price_hidden");
 	MenuDAO dao = new MenuDAO();
-	MenuVO vo = dao.getAllMenuList(idx);
+
+	MenuVO allvo = dao.getAllMenuList(idx);
+	MenuVO sandwichvo = dao.Menu_Detail(idx);
+	/*
+	OrderVO ordervo = new OrderVO();
+	ordervo.setSub(request.getParameter("sub"));
+	ordervo.setBread_choice(request.getParameter("bread_choice"));
+	ordervo.setCheese_choice(request.getParameter("cheese_choice"));
+	ordervo.setVegetable_choice(request.getParameterValues("vegetable_choice"));
+	ordervo.setSauce_choice(request.getParameter("sauce_choice"));
+	ordervo.setSide_choice(request.getParameter("side_choice"));
+	ordervo.setSingle_set(request.getParameter("single_set"));
+	ordervo.setCookie_choice(request.getParameter("cookie_choice"));
+	ordervo.setBeverage_choice(request.getParameter("beverage_choice"));
+	*/
+	session = request.getSession(false);
+	OrderVO vo = (OrderVO) session.getAttribute("ordervo");
+	
 %>
 
 <!DOCTYPE html>
@@ -15,6 +33,20 @@
 	<title>주문서</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
+	<script src="../order/js/jquery-3.6.0.min.js"></script>
+	<script src="order.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#listBtn").click(function(){
+				$(this).show();
+				/*$(this).css("transform","rotate(360deg)").css("transform-origin","50% 50%");*/
+				$("#addSide").toggle();
+				$("#addSet").toggle();
+			});
+			
+		});
+		
+	</script>
 </head>
 <body>
 	<!-- header -->
@@ -75,7 +107,7 @@
 							</div>
 							<div>
 								<dl>
-									<dt>주문시, 요청사항</dt>
+									<dt>주문시 요청사항</dt>
 									<dd>
 										<input type="text" placeholder="주문시 요청사항을 입력하세요">
 									</dd>
@@ -132,13 +164,55 @@
 					<section class="final_menu_confirm">
 						<h2>주문내역</h2>
 						<div class="menu_confirm">
+							<% if(sandwichvo.getIdx() != null){ %> 
 							<dl>
-								<dt><%= vo.getKor_name() %></dt>
-								<dd><span id="menu_amount">1개</span>
-								<strong id="menu_price">
-								<%= vo.getPrice() %> 
-								</strong>원</dd>
+								<dt>
+									<%= allvo.getKor_name() %>
+									<span id="option"><%= vo.getSub() %>, <%= vo.getBread_choice() %>, <%= vo.getCheese_choice() %>, <%= vo.getVegetable_list() %>, <%= vo.getSauce_choice() %></span>
+								</dt>
+								<dd style="margin-top:10px;">
+									<span id="menu_amount">1개</span>
+									<strong id="menu_price">
+									</strong>원
+									<% if(vo.getSide_choice() != null || vo.getSingle_set().equals("세트")){ %>
+									<img src="http://localhost:9000/Subway/order/order_images/bill_list_btn.png" style="width:22px; cursor:pointer;" id="listBtn">
+									<% } %>
+								</dd>
 							</dl>
+							<% }else{ %>
+							<dl style="margin-top:-10px; padding:10px 0;">
+								<dt>
+									<%= allvo.getKor_name() %>
+								</dt>
+								<dd>
+									<span id="menu_amount">1개</span>
+									<strong id="menu_price"><%= allvo.getPrice() %> </strong>원
+								</dd>
+							</dl>
+							<% } %>
+							
+							<% if(sandwichvo.getIdx() != null){ if(vo.getSide_choice() != null){%>
+							<dl id="addSide" style="border-bottom:none; margin-bottom:-20px; display:none;">
+								<dt><%= vo.getSide_choice() %></dt>
+								<dd style="margin-right:35px;">
+									<strong id="menu_price"><%= allvo.getPrice() %> </strong>원
+								</dd>
+							</dl>
+							<% }if(vo.getSingle_set().equals("세트")){ %>
+							<dl id="addSet" style="border-top:1px solid lightgray; padding-top:25px; margin-top:15px; display:none;">
+								<dt>
+									<%= vo.getSingle_set() %>
+									<span id="option"><%= vo.getCookie_choice() %>, <%= vo.getBeverage_choice() %></span>
+								</dt>
+								<dd style="margin-top:10px; margin-right:35px;">
+									<strong id="menu_price">
+										<% if(vo.getSingle_set().equals("세트")){ if(vo.getBeverage_choice().equals("16oz")){%>1900
+										<% }else if(vo.getBeverage_choice().equals("22oz")){ %>2100
+										<% }} %>
+									</strong>원
+								</dd>
+							</dl>
+							<% }} %>
 						</div>
 					</section>
 					<section class="total_amount">
@@ -146,7 +220,8 @@
 						<div class="amount">
 							<dl>
 								<dt>총 주문 금액</dt>
-								<dd><strong id="orderTotal"><%= vo.getPrice() %> </strong>원</dd>
+								<dd><strong id="orderTotal">
+								</strong>원</dd>
 							</dl>
 							<dl>
 								<dt>쿠폰 사용</dt>
@@ -154,7 +229,8 @@
 							</dl>
 							<dl>
 								<dt>잔여 결제금액</dt>
-								<dd><strong id="finalTotal"><%= vo.getPrice() %> </strong>원</dd>
+								<dd><strong id="finalTotal">
+								</strong>원</dd>
 							</dl>
 						</div>
 					</section>

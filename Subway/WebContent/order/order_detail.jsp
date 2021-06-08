@@ -337,7 +337,7 @@
 													<li><input type="radio" name="cookie_choice" id="cookie_02" value="더블 초코칩 쿠키"><label for="cookie_02">더블 초코칩 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_03" value="오트밀 레이즌 쿠키"><label for="cookie_03">오트밀 레이즌 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_04" value="라즈베리 치즈케익 쿠키"><label for="cookie_04">라즈베리 치즈케익 쿠키</label></li>
-													<li><input type="radio" name="cookie_choice" id="cookie_05" value="화이트 초코 마카라미아 쿠키"><label for="cookie_05">화이트 초코 마카다미아 쿠키</label></li>
+													<li><input type="radio" name="cookie_choice" id="cookie_05" value="화이트 초코 마카다미아 쿠키"><label for="cookie_05">화이트 초코 마카다미아 쿠키</label></li>
 												</ul>
 												<h3>음료</h3>
 												<ul class="bevarage_list">
@@ -350,7 +350,6 @@
 											<input type="hidden" name="idx" value="<%= idx %>">
 											<button type="button" id="prev6" data-toggle="modal" data-target="#myModal6">이전</button>
 											<button type="button" id="next7" data-toggle="modal">다음</button>
-											
 										</div>
 									</div>
 								</div>

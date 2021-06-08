@@ -656,11 +656,25 @@ section.final_menu_confirm>div{
 	border-top:4px solid #009223;	
 	border-bottom:1px solid #009223;	
 	margin:10px auto;
-	padding:30px 10px;
+	padding:30px 10px 20px 10px;
+}
+section.final_menu_confirm dt{
+	width:500px;
 }
 section.final_menu_confirm dd, section.total_amount dd{
 	display:inline-block;
 	float:right;
+}
+#listBtn{
+	float:right;
+	margin:2px 0 0 15px;
+	transform: scaleY(-1);
+}
+#option{
+	color:gray;
+	font-size:14px; 
+	text-align:left;
+	padding-top:3px;
 }
 #menu_amount{
 	display:inline-block;
@@ -668,6 +682,13 @@ section.final_menu_confirm dd, section.total_amount dd{
 	font-size:17px;
 	margin-right:80px;
 }
+#addSide{
+	border-top:1px solid lightgray;
+	border-bottom:1px solid lightgray;
+	padding:25px 0;
+	margin:10px 0 30px 0;
+}
+
 /**/
 section.total_amount>div{
 	border-top:4px solid #009223;	
