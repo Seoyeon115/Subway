@@ -37,6 +37,10 @@
 					alert("비밀번호 확인을 입력해주세요");
 					$("#cpass").focus();
 					return false;
+				}else if($("#name").val() == ""){
+					alert("이름 입력해주세요");
+					$("#name").focus();
+					return false;
 				}else if($("#hp1").val() == ""){
 					alert("휴대폰 번호를 입력해주세요");
 					$("#hp1").focus();
@@ -172,6 +176,10 @@
 										<label>비밀번호 확인</label>
 										<input type="password" name="cpass" id="cpass" placeholder="비밀번호 입력">
 										<div id="msg"></div>
+									</li>
+									<li>
+										<label>이름</label>
+										<input type="text" name="name" id="name" placeholder="이름 입력">
 									</li>
 									<li>
 										<label>휴대폰 번호</label>

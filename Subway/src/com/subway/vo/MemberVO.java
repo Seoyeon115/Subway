@@ -1,7 +1,7 @@
 package com.subway.vo;
 
 public class MemberVO {
-	String email1, email2, email, pass, hp1, hp2, hp3, hp, post, addr, daddr;
+	String email1, email2, email, pass, name, hp1, hp2, hp3, hp, post, addr, daddr;
 
 	public String getEmail1() {
 		return email1;
@@ -37,6 +37,14 @@ public class MemberVO {
 
 	public void setPass(String pass) {
 		this.pass = pass;
+	}
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getHp1() {

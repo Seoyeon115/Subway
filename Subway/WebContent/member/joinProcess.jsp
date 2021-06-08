@@ -6,6 +6,7 @@
 	vo.setEmail1(request.getParameter("email1"));
 	vo.setEmail2(request.getParameter("email2"));
 	vo.setPass(request.getParameter("pass"));
+	vo.setName(request.getParameter("name"));
 	vo.setHp1(request.getParameter("hp1"));
 	vo.setHp2(request.getParameter("hp2"));
 	vo.setHp3(request.getParameter("hp3"));
