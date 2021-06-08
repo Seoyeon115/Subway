@@ -86,7 +86,7 @@ div.passcheck_button{
 	background-color:white;
 }
 
-div.passcheck_button button{
+div.passcheck_button input[type='button']{
 	padding:10px 55px;
 	background-color:rgb(0,146,35);
 	color:white;

@@ -46,6 +46,26 @@ public class MemberDAO extends DBconn {
 		return to;
 	}
 	
+	public MemberVO getInfo(String email) {
+		MemberVO vo = new MemberVO();
+		String sql = " select email,name,hp,addr from subway_member where email=? ";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo.setEmail(rs.getString(1));
+				vo.setName(rs.getString(2));
+				vo.setHp(rs.getString(3));
+				vo.setAddr(rs.getString(4));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return vo;
+	}
+	
 	public boolean getInsertResult(MemberVO vo){
 		boolean result = false;
 		String sql = "insert into subway_member values(?,?,?,?,?,?,?)";

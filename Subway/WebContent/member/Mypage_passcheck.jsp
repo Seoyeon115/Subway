@@ -24,6 +24,12 @@
 				}
 			});
 		});
+		
+		function submit2(frm) { 
+		    frm.action='Mypage_InfoModify.jsp'; 
+		    frm.submit(); 
+		    return true; 
+		  } 
 	</script>
 </head>
 <body>
@@ -36,6 +42,7 @@
 			<h1>비밀번호 확인</h1>
 			<p>회원가입 시 등록한 비밀번호를 재입력 해주세요.</p>
 			<form name="passcheck_form" action="Mypage_PassProcess.jsp" method="post">
+			
 			<div class="content1">
 				<div class="passcheck_form">
 								<ul>
@@ -56,7 +63,7 @@
 			</div>
 			
 				<div class="passcheck_button">
-					<button type="button" id="passcheckbtn">확인</button>
+					<input type="button" id="passcheckbtn" value="확인" onclick='return submit2(this.form);'>
 				</div>
 			</form>
 		</div>

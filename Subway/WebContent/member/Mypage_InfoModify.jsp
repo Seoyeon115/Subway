@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
+<% 
+	String email = request.getParameter("email");
+	
+	MemberDAO dao = new MemberDAO();
+	MemberVO vo = dao.getInfo(email);
+%>
 
 <!DOCTYPE html>
 <html>
@@ -47,24 +53,25 @@
 					<table border="1">
 						<tr>
 							<th>이메일 아이디</th>
-							<td colspan="5">0428mhk@naver.com</td>
+							<td colspan="5"><%=vo.getEmail() %></td>
 						</tr>
 					</table>
 					<br>
 					<table border="1" id="content_table">	
 						<tr>
 							<th>이름</th>
-							<td colspan="5">김민호</td>
+							<td colspan="5"><%=vo.getName() %></td>
 						</tr>
 						<tr>
 							<th>주소</th>
-							<td colspan="5">경기도</td>
+							<td colspan="5"><%=vo.getAddr() %></td>
 						</tr>
 						<tr>
 							<th>휴대폰 번호</th>
-							<td colspan="5">010-2222-2222<button type="button">정보변경</button></td>
+							<td colspan="5"><%=vo.getHp() %><button type="button">정보변경</button></td>
 							
 						</tr>
+						
 					</table>
 					<p>· 이름이나 생년월일, 성별, 핸드폰 번호 등의 정보가 변경되었다면 본인확인을 통해 정보를 수정할 수 있습니다.</p>
 				</div>
