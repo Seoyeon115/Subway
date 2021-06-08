@@ -46,6 +46,9 @@ public class MemberDAO extends DBconn {
 		return to;
 	}
 	
+	
+	
+	
 	public boolean getInsertResult(MemberVO vo){
 		boolean result = false;
 		String sql = "insert into subway_member values(?,?,?,?,?,?,?)";
