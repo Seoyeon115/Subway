@@ -1,38 +1,83 @@
-
 #modal-header {
 	background-color:white;
 	width:80%;
 	margin:20px auto;
-	border-radius:15px;
+	border-radius:20px;
 	text-align:left;
+	padding:5px 30px;
 }
 
 #modal-body {
 	background-color:white;
 	width:80%;
 	margin:20px auto;
-	border-radius:15px;
+	border-radius:20px;
 	font-size:25px;
 }
 
 #next1, #next2, #next3, #next4, #next5, #next6, #next7 {
-	border-radius:15px;
+	width:130px;
+	border-radius:40px;
 	background-color:#009223;
+	border:2px solid #009223;
 	padding:10px 30px;
 	color:white;
-	font-size:23px;
+	font-size:18px;
+	font-weight:bold;
 }
+
 #prev1, #prev2, #prev3, #prev4, #prev5, #prev6 {
-	border-radius:15px;
-	background-color:#009223;
+	width:130px;
+	border-radius:40px;
+	background-color:white;
+	border:2px solid #009223;
 	padding:10px 30px;
+	color:#009223;
+	font-size:18px;
+	font-weight:bold;
+}
+#h3style{
+	color:#009223;
+	font-size:18px;
+	font-weight:bold;
+}
+#h3set_style{
 	color:white;
-	font-size:23px;
+	font-size:30px;
+	font-weight:bold;
+	padding:10px 0;
+}
+span.option_style{
+	color:block;
+	font-size:20px;
+	font-weight:bold;
+}
+#set_price{
+	width:100px;
+	float:right;
+	color:#ffc300;
+	font-size:20px;
+	margin-top:-70px;
 }
 .btn_radio {
-	width:20px;
-	height:20px;
-	margin:20px;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	width:25px; 
+	height:25px;
+	vertical-align:middle;
+	border:1px solid lightgray;
+	border-radius: 100%;
+}
+
+.btn_radio:checked{
+	-webkit-appearance: none;
+    -moz-appearance: none;
+	width:25px; 
+	height:25px;
+	vertical-align:middle;
+	border:1px solid light;
+	border-radius: 100%;
+	background-image:url('http://localhost:9000/Subway/order/order_images/icon_checkbox.png');
 }
 
 #modal2 {

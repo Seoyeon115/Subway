@@ -101,7 +101,7 @@
 								<dl>
 									<dt>전화번호</dt>
 									<dd>
-										<input type="text" name="hp">
+										<input type="text" name="hp" style="outline:none;">
 									</dd>
 								</dl>
 							</div>
@@ -109,7 +109,7 @@
 								<dl>
 									<dt>주문시 요청사항</dt>
 									<dd>
-										<input type="text" placeholder="주문시 요청사항을 입력하세요">
+										<input type="text" placeholder="주문시 요청사항을 입력하세요" style="outline:none;">
 									</dd>
 								</dl>
 							</div>
