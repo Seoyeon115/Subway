@@ -1,4 +1,128 @@
 $(document).ready(function(){
+	//체크시 옵션값 적용
+	$("#15cm").click(function(){
+		$("#sub_option").text(this.value);
+	});
+	$("#30cm").click(function(){
+		$("#sub_option").text(this.value);
+	});
+	
+	$("#bread_01").click(function(){
+		$("#bread_option").text(this.value);
+	});
+	$("#bread_02").click(function(){
+		$("#bread_option").text(this.value);
+	});
+	$("#bread_03").click(function(){
+		$("#bread_option").text(this.value);
+	});
+	$("#bread_04").click(function(){
+		$("#bread_option").text(this.value);
+	});
+	$("#bread_05").click(function(){
+		$("#bread_option").text(this.value);
+	});
+	$("#bread_06").click(function(){
+		$("#bread_option").text(this.value);
+	});
+	
+	$("#cheese_01").click(function(){
+		$("#cheese_option").text(this.value);
+	});
+	$("#cheese_02").click(function(){
+		$("#cheese_option").text(this.value);
+	});
+	$("#cheese_03").click(function(){
+		$("#cheese_option").text(this.value);
+	});
+	
+	$("#vegetable_01").click(function(){
+		$("#vege_option").text(this.value);
+	});
+	$("#vegetable_02").click(function(){
+		$("#vege_option").text(this.value);
+	});
+	$("#vegetable_03").click(function(){
+		$("#vege_option").text(this.value);
+	});
+	$("#vegetable_04").click(function(){
+		$("#vege_option").text(this.value);
+	});
+	$("#vegetable_05").click(function(){
+		$("#vege_option").text(this.value);
+	});
+	$("#vegetable_06").click(function(){
+		$("#vege_option").text(this.value);
+	});
+	$("#vegetable_07").click(function(){
+		$("#vege_option").text(this.value);
+	});
+	$("#vegetable_08").click(function(){
+		$("#vege_option").text(this.value);
+	});
+	
+	$("#sauce_01").click(function(){
+		$("#sau_option").text(this.value);
+	});
+	$("#sauce_02").click(function(){
+		$("#sau_option").text(this.value);
+	});
+	$("#sauce_03").click(function(){
+		$("#sau_option").text(this.value);
+	});
+	$("#sauce_04").click(function(){
+		$("#sau_option").text(this.value);
+	});
+	$("#sauce_05").click(function(){
+		$("#sau_option").text(this.value);
+	});
+	$("#sauce_06").click(function(){
+		$("#sau_option").text(this.value);
+	});
+	
+	$("#side_01").click(function(){
+		$("#side_option").text(this.value);
+	});
+	$("#side_02").click(function(){
+		$("#side_option").text(this.value);
+	});
+	$("#side_03").click(function(){
+		$("#side_option").text(this.value);
+	});
+	$("#side_04").click(function(){
+		$("#side_option").text(this.value);
+	});
+	$("#side_05").click(function(){
+		$("#side_option").text(this.value);
+	});
+	
+	$("#cookie_06").click(function(){
+		$("#set_option").text(this.value);
+	});
+	$("#cookie_01").click(function(){
+		$("#set_option").text(this.value);
+	});
+	$("#cookie_02").click(function(){
+		$("#set_option").text(this.value);
+	});
+	$("#cookie_03").click(function(){
+		$("#set_option").text(this.value);
+	});
+	$("#cookie_04").click(function(){
+		$("#set_option").text(this.value);
+	});
+	$("#cookie_05").click(function(){
+		$("#set_option").text(this.value);
+	});
+	$("#beverage_01").click(function(){
+		$("#set_option").text(this.value);
+	});
+	$("#beverage_02").click(function(){
+		$("#set_option").text(this.value);
+	});
+	
+	
+
 	$("#next1").click(function(){
 		if($("input[name='sub']:checked").length == 0){
 			alert("빵 길이를 선택해주세요");
@@ -7,7 +131,6 @@ $(document).ready(function(){
 			$("#myModal").modal("hide");
 		}
 	});
-	
 	$("input[name='bread_choice']").change(function(){
 		$("input[name='bread_choice']").each(function(){
 			var value = $(this).val();
@@ -165,12 +288,12 @@ $(document).ready(function(){
 				$("#set").prop('checked',true);
 				$label.css("background-color","#009223");
 				$span.css("color","#FFFFFF");
-				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "16oz") {
-					$("#set_price").text('1900원');
+				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "탄산음료 16oz") {
+					$("#set_price").text('+ 1900원');
 					$("input[name='set_price_hidden']").attr('value','1900원');
 					$("#set_price").css("font-weight","bold");
-				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "22oz"){
-					$("#set_price").text('2100원');
+				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "탄산음료 22oz"){
+					$("#set_price").text('+ 2100원');
 					$("input[name='set_price_hidden']").attr('value','2100원');
 					$("#set_price").css("font-weight","bold");
 				}
@@ -192,12 +315,12 @@ $(document).ready(function(){
 				$("#set").prop('checked',true);
 				$label.css("background-color","#009223");
 				$span.css("color","#FFFFFF");
-				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "16oz") {
-					$("#set_price").text('1900원');
+				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 16oz") {
+					$("#set_price").text('+ 1900원');
 					$("input[name='set_price_hidden']").attr('value','1900원');
 					$("#set_price").css("font-weight","bold");
-				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "22oz"){
-					$("#set_price").text('2100원');
+				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 22oz"){
+					$("#set_price").text('+ 2100원');
 					$("input[name='set_price_hidden']").attr('value','2100원');
 					$("#set_price").css("font-weight","bold");
 				}
@@ -239,6 +362,16 @@ $(document).ready(function(){
 		if($("input[name='single_set']:checked").length == 0){
 			alert("단품/세트를 선택해주세요");
 			return false;
+		}if($("input[value='세트']:checked").length == 1){
+			if($("input[name='cookie_choice']:checked").length == 0){
+				alert("쿠키를 선택해주세요");
+				return false;
+			}else if($("input[name='beverage_choice']:checked").length == 0){
+				alert("음료를 선택해주세요");
+				return false;
+			}else{
+				order_detail.submit();
+			}
 		}else{
 			order_detail.submit();
 		}

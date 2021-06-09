@@ -82,14 +82,15 @@
 							<div class="modal fade" id="myModal" role="dialog">
 								<div class="modal-dialog">
 									
-									<div class="modal-content" style="background-color:#ffc300">
+									<div class="modal-content" style="background-color:#ffc300; border-radius:30px;">
 										<div class="modal-header" id="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h3>빵 길이 선택</h3>
+											<h3 id="h3style">빵 길이 선택</h3>
+											<span class="option_style" id="sub_option">15cm</span>
 										</div>
 										<div class="modal-body" id="modal-body">
-											<input type="radio" name="sub" class="btn_radio" value="15cm"><label class="label_sub1">&nbsp;&nbsp;15cm</label><br>
-											<input type="radio" name="sub" class="btn_radio" value="30cm"><label class="label_sub2">&nbsp;&nbsp;30cm</label><br><br><br>
+											<input type="radio" name="sub" class="btn_radio" id="15cm" value="15cm" style="outline:none; margin:0;" checked><label class="label_sub1">&nbsp;&nbsp;15cm</label><br>
+											<input type="radio" name="sub" class="btn_radio" id="30cm" value="30cm" style="outline:none; margin:0;"><label class="label_sub2">&nbsp;&nbsp;30cm</label><br><br><br>
 											<button type="button" id="next1" data-toggle="modal" data-target="#myModal2">다음</button>
 										</div>
 									</div>
@@ -97,12 +98,13 @@
 							</div>
 							
 							<div class="modal fade" id="myModal2" role="dialog">
-								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
+								<div class="modal-dialog modal-dialog-centered" style="width:900px; border-radius:30px;">
 									
-									<div class="modal-content" style="background-color:#ffc300;">
+									<div class="modal-content" style="background-color:#ffc300; border-radius:30px;">
 										<div class="modal-header" id="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h3>빵 선택</h3>
+											<h3 id="h3style">빵 선택</h3>
+											<span class="option_style" id="bread_option">빵을 선택하세요.</span>
 										</div>
 										<div class="modal-body" id="modal-body">
 											<ul class="bread_list">
@@ -143,10 +145,11 @@
 							<div class="modal fade" id="myModal3" role="dialog">
 								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
 									
-									<div class="modal-content" style="background-color:#ffc300;">
+									<div class="modal-content" style="background-color:#ffc300; border-radius:30px;">
 										<div class="modal-header" id="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h3>치즈 선택</h3>
+											<h3 id="h3style">치즈 선택</h3>
+											<span class="option_style" id="cheese_option">치즈를 선택하세요.</span>
 										</div>
 										<div class="modal-body" id="modal-body">
 											<ul class="cheese_list">
@@ -173,10 +176,11 @@
 							<div class="modal fade modal-dialog-scrollable" id="myModal4" role="dialog">
 								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
 									
-									<div class="modal-content" style="background-color:#ffc300;">
+									<div class="modal-content" style="background-color:#ffc300; border-radius:30px;">
 										<div class="modal-header" id="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h3>야채 선택</h3>
+											<h3 id="h3style">야채 선택 (다중 선택)</h3>
+											<span class="option_style" id="vege_option">원하는 야채를 선택하여 주세요.</span>
 										</div>
 										<div class="modal-body modal-body-scroll" id="modal-body">
 											<label>생야채</label>
@@ -228,10 +232,11 @@
 							<div class="modal fade" id="myModal5" role="dialog">
 								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
 									
-									<div class="modal-content" style="background-color:#ffc300;">
+									<div class="modal-content" style="background-color:#ffc300; border-radius:30px;">
 										<div class="modal-header" id="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h3>소스 선택</h3>
+											<h3 id="h3style">소스/시즈닝 선택</h3>
+											<span class="option_style" id="sau_option">소스/시즈닝을 선택하여 주세요.</span>
 										</div>
 										<div class="modal-body" id="modal-body">
 											<ul class="sauce_list">
@@ -271,10 +276,11 @@
 							<div class="modal fade" id="myModal6" role="dialog">
 								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
 									
-									<div class="modal-content" style="background-color:#ffc300;">
+									<div class="modal-content" style="background-color:#ffc300; border-radius:30px;">
 										<div class="modal-header" id="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h3>추가 선택</h3>
+											<h3 id="h3style">추가 선택 (다중 선택 가능)</h3>
+											<span class="option_style" id="side_option">원하는 추가 선택 제품을 선택하여 주세요.</span>
 										</div>
 										<div class="modal-body" id="modal-body">
 											<ul class="side_list">
@@ -310,21 +316,22 @@
 							<div class="modal fade modal-dialog-scrollable" id="myModal7" role="dialog">
 								<div class="modal-dialog modal-dialog-centered" style="width:900px;">
 									
-									<div class="modal-content" style="background-color:#ffc300;">
-										<div class="modal-header" id="modal-header">
+									<div class="modal-content" style="background-color:#ffc300; border-radius:30px;">
+										<div>
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
-											<h3>세트 선택</h3>
+											<h3 id="h3set_style">세트 선택</h3>
 										</div>
 										<div class="modal-body" id="modal-body">
 											<div>
-												<input type="radio" name="single_set" id="single" class="btn_radio" value="단품"><label>&nbsp;&nbsp;단품</label>
-												<input type="radio" name="single_set" id="set" class="btn_radio" value="세트"><label>&nbsp;&nbsp;세트</label>
+												<input type="radio" name="single_set" id="single" class="btn_radio" value="단품" style="outline:none; margin:0;"><label>&nbsp;&nbsp;단품</label>
+												<input type="radio" name="single_set" id="set" class="btn_radio" value="세트" style="outline:none; margin:0;"><label>&nbsp;&nbsp;세트</label>
 											</div>
 										</div>
 										<div class="modal-body" id="modal-body">
 											<div>
-												<h4>쿠키 세트 선택</h4>
-												<h3 id="set_price">구성품을 선택해주세요</h3>
+												<h3 id="h3style" style="text-align:left; margin-left:20px;">쿠키 세트 선택</h3>
+												<span class="option_style" id="set_option" style="text-align:left; margin-left:20px;">구성품을 선택해주세요.</span>
+												<span id="set_price"></span>
 												<input type="hidden" name="set_price_hidden" id="set_price_hidden" value="set_price_hidden">
 											</div>
 										</div>
@@ -337,12 +344,12 @@
 													<li><input type="radio" name="cookie_choice" id="cookie_02" value="더블 초코칩 쿠키"><label for="cookie_02">더블 초코칩 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_03" value="오트밀 레이즌 쿠키"><label for="cookie_03">오트밀 레이즌 쿠키</label></li>
 													<li><input type="radio" name="cookie_choice" id="cookie_04" value="라즈베리 치즈케익 쿠키"><label for="cookie_04">라즈베리 치즈케익 쿠키</label></li>
-													<li><input type="radio" name="cookie_choice" id="cookie_05" value="화이트 초코 마카라미아 쿠키"><label for="cookie_05">화이트 초코 마카다미아 쿠키</label></li>
+													<li><input type="radio" name="cookie_choice" id="cookie_05" value="화이트 초코 마카다미아 쿠키"><label for="cookie_05">화이트 초코 마카다미아 쿠키</label></li>
 												</ul>
 												<h3>음료</h3>
 												<ul class="bevarage_list">
-													<li><input type="radio" name="beverage_choice" id="beverage_01" value="16oz"><label for="beverage_01">탄산음료 16oz</label></li>
-													<li><input type="radio" name="beverage_choice" id="beverage_02" value="22oz"><label for="beverage_02">탄산음료 22oz</label></li>
+													<li><input type="radio" name="beverage_choice" id="beverage_01" value="탄산음료 16oz"><label for="beverage_01">탄산음료 16oz</label></li>
+													<li><input type="radio" name="beverage_choice" id="beverage_02" value="탄산음료 22oz"><label for="beverage_02">탄산음료 22oz</label></li>
 												</ul>
 											</div>
 										</div>
@@ -350,7 +357,6 @@
 											<input type="hidden" name="idx" value="<%= idx %>">
 											<button type="button" id="prev6" data-toggle="modal" data-target="#myModal6">이전</button>
 											<button type="button" id="next7" data-toggle="modal">다음</button>
-											
 										</div>
 									</div>
 								</div>

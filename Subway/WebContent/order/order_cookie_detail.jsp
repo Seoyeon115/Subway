@@ -20,12 +20,12 @@
 			$("#minus").click(function(){
 				if($("#count_result").text() > 1){
 					$("#count_result").text(parseInt($("#count_result").text())-1);
-					$("#count_price").text(parseInt($("#count_price").text())-1000);
+					$("#count_price").text(parseInt($("#count_price").text())-<%= vo.getPrice()%>);
 				}
 			});
 			$("#plus").click(function(){
 				$("#count_result").text(parseInt($("#count_result").text())+1);
-				$("#count_price").text(1000+parseInt($("#count_price").text()));
+				$("#count_price").text(<%= vo.getPrice()%>+parseInt($("#count_price").text()));
 			});
 		});
 	</script>

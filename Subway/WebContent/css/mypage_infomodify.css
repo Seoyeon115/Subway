@@ -43,6 +43,7 @@ div.member_info3 button{
 	border:rgb(242,242,242);
 	margin-top:20px;
 }
+
 /*div.member_info ul{
 	list-style-type:none;
 }
@@ -126,7 +127,7 @@ div.member_info ul li:nth-child(4) button{
  	border:1px solid rgb(238,238,238);
  	border-right:none;
  	padding:22px;
- 	width:120px;
+ 	width:140px;
  	text-align:left;
  	color:rgb(102,102,102);
  	font-weight:900;
@@ -139,6 +140,11 @@ div.member_info ul li:nth-child(4) button{
   	color:rgb(153,153,166);
   	font-weight:500;
   }
+
+ #content_table tr:nth-child(3) td{
+ 	vertical-align:middle;
+ 	padding-top:6px;
+ }
   
   #content_table tr:nth-child(1) th{
   	border-bottom:1px solid white;
@@ -186,20 +192,175 @@ div.member_info ul li:nth-child(4) button{
 	background-color:white;
  }
  div.info_button button:nth-child(1){
- 	font-size:17px;
- 	padding:10px 23px;
+ 	border:1px solid green;
+ 	height:55px;
+ 	line-height:50px;
  	border-radius:30px;
  	background-color:white;
  	color:rgb(0,146,35);
  	font-weight:900;
  	border:2px solid rgb(0,146,35);
+ 	padding:0 23px;
+ 	font-size:17px;
+ 	
  }
  div.info_button button:nth-child(2){
- 	font-size:17px;
- 	padding:10px 32px;
+ 	border:1px solid green;
+ 	height:55px;
+ 	line-height:50px;
  	border-radius:30px;
  	background-color:rgb(0,146,35);
  	color:white;
  	font-weight:900;
  	border:2px solid rgb(0,146,35);
+ 	padding:0 27px;
+ 	font-size:17px;
  }
+
+ modal {
+        text-align: center;
+       
+ }
+ 
+@media screen and (min-width: 1300px) { 
+        .modal:before {
+                display: inline-block;
+                vertical-align: middle;
+                content: " ";
+                height: 100%;
+        }
+}
+ 
+.modal-dialog {
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+}
+ 
+ div.modal-content{
+ 	border:1px solid #ffc300;
+ 	background-color:#ffc300; 
+ 	border-radius:30px;
+ 	width:1000px;
+ 	height:800px;
+ 	margin-left:220px;
+ }
+ div.modal-content2{
+ 	border:1px solid white;
+ 	width:950px;
+ 	height:750px;
+ 	margin:auto;
+ 	margin-top:20px;
+ 	border-radius:30px;
+ 	background-color:white;
+ }
+ div.line{
+ 	border:1px solid rgb(0,146,35);
+ 	background-color:rgb(0,146,35);
+ 	width:900px;
+ 	height:5px;
+ 	margin:auto;
+ 	
+ }
+ #h3style{
+ 	color:rgb(0,146,35);
+ 	font-weight:900;	
+ }
+ div.text1{
+ 	width:900px;
+ 	margin:auto;
+ 	height:30px;
+ 	font-size:17px;
+ 	font-weight:900;
+ 	color:rgb(102,102,102);
+ }
+ div.text2{
+ 	width:900px;
+ 	margin:auto;
+ 	font-size:17px;
+ 	font-weight:900;
+ 	color:rgb(102,102,102);
+ 	
+ }
+#modal_btn{
+	height:40px; 
+	line-height:30px;
+}
+#email_table th{
+	width:140px;
+}
+#modal-body{
+	border:1px solid white;
+	width:900px;
+	height:500px;
+	margin:auto;
+}
+#modal-body ul{
+	list-style-type:none;
+}
+#modal-body ul li{
+	border:1px solid rgb(229,229,229);
+	font-size:14px;
+	font-weight:bold;
+	text-align:left;
+	color:rgb(102,102,102);
+	height:70px;
+	margin-bottom:8px;
+}
+#modal-body ul li input{
+	border:none;
+	height:67px;
+	margin-left:20px;
+	vertical-align:top;
+}
+#modal-body ul li:nth-child(3){
+	border:none;
+}
+#modal-body ul li input:focus{
+	outline:none;
+}
+#modal-body ul li input::-webkit-input-placeholder{
+	color:rgb(212,211,212);
+	font-weight:bold;
+	font-size:14px;
+}
+#modal-body ul li label{
+	padding:3px;
+	display:inline-block;
+	width:120px;
+	height:20px;
+	line-height:20px;
+	vertical-align:top;
+	margin-left:20px;
+	margin-top:20px;
+}
+#modal-body ul li p{
+	padding:3px;
+	width:880px;
+	height:20px;
+	line-height:20px;
+	vertical-align:middle;
+	text-align:middle;
+}
+#cancel{
+	border:2px solid rgb(0,146,35);
+	background-color:white;
+	color:rgb(0,146,35);
+	font-weight:900;
+	font-weight:16px;
+	height:40px;
+	line-height:40px;
+	width:100px;
+	border-radius:20px;
+}
+#change_pass{
+	border:2px solid rgb(0,146,35);
+	background-color:rgb(0,146,35);
+	color:white;
+	font-weight:900;
+	font-weight:16px;
+	height:40px;
+	line-height:40px;
+	width:120px;
+	border-radius:20px;
+}
