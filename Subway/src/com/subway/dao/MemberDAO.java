@@ -101,13 +101,14 @@ public class MemberDAO extends DBconn {
 		return to;
 	}
 	
-	public MemberVO getInfo(String email) {
+	public MemberVO getInfo(String email, String pass) {
 		MemberVO vo = new MemberVO();
-		String sql = " select email,name,hp,addr from subway_member where email=? ";
+		String sql = " select email,name,hp,addr from subway_member where email=? and pass=? ";
 		getPreparedStatement(sql);
 		
 		try {
 			pstmt.setString(1, email);
+			pstmt.setString(2, pass);
 			rs = pstmt.executeQuery();
 			if(rs.next()) {
 				vo.setEmail(rs.getString(1));
