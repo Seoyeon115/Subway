@@ -49,6 +49,7 @@
 				<span id="count_result">1</span>
 				<input type="button" onclick="plus" id="plus">
 				
+				
 				<div class="price">
 					<span class="total_price_text">총 주문금액</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<span id="total_price">금액 출력</span><span class="won">원</span>
