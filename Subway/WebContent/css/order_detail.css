@@ -47,17 +47,25 @@
 	font-weight:bold;
 	padding:10px 0;
 }
-span.option_style{
+span.option_style, div.option_style, #s1{
 	color:block;
 	font-size:20px;
 	font-weight:bold;
+}
+span.set_option_style{
+	color:block;
+	font-size:20px;
+	font-weight:bold;
+	float:left; 
+	margin-left:20px; 
+	display:inline-block; 
 }
 #set_price{
 	width:100px;
 	float:right;
 	color:#ffc300;
 	font-size:20px;
-	margin-top:-70px;
+	margin-top:-40px;
 }
 .btn_radio {
 	-webkit-appearance: none;
@@ -236,7 +244,7 @@ input[name="vegetable_choice"],input[name="sauce_choice"],input[name="side_choic
   overflow:auto;
 }
 .modal-body-scroll-cookie {
-	height:200px;
+	height:300px;
 	overflow:auto;
 }
 .modal-body {
@@ -253,4 +261,7 @@ input[name="vegetable_choice"],input[name="sauce_choice"],input[name="side_choic
 	text-align:left;
 }
 
-
+div.modal-footer{
+	text-align:center;
+	border:none;
+}
