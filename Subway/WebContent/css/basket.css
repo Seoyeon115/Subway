@@ -1,0 +1,199 @@
+.main_text {
+	text-align:center;
+	font-size:40px;
+	margin-top:20px;
+	background-color:white;
+	font-weight:bold;
+}
+.section {
+	width:80%;
+	margin:auto;
+	background-color:white;
+	margin-bottom:50px;
+}
+.pickup_shop{
+	height:70px;
+	background-color:#58006c;
+	text-align:center;
+	margin:20px 0 20px 0;
+}
+.pickup_shop_text {
+	display:inline-block;
+	text-align:center;
+	color:white;
+	margin-top:25px;
+}
+.Explanation {
+	backgourn-color:white;
+	text-align:center;
+	border-bottom:1px solid lightgrey;
+	padding-bottom:15px;
+}
+.section-1 {
+	height:100px;
+	backgournd-color:white;
+}
+.allselect {
+	width:30px;
+	height:20px;
+	margin-left:150px;
+	margin-top:50px;
+}
+.allselect_text {
+	font-size:25px;
+	font-weight:bold;
+}
+.choice_delete {
+	float:right;
+	margin:30px 150px 0 0;
+	width:170px;
+	height:60px;
+	border-radius:30px;
+	font-weight:bold;
+	color:#009223;
+	background-color:white;
+	border:2px solid #009223;
+	font-size:20px;
+}
+.menu_section {
+	width:80%;
+	margin:auto;
+	background-color:white;
+	border-bottom:1px solid lightgray;
+}
+
+.menu_radio{
+	width:30px;
+	height:20px;
+	margin-left:150px;
+	margin-top:50px;
+}
+.menu_text {
+	font-size:25px;
+	font-weight:bold;
+	display:inline-block;
+}
+.choice_text {
+	color:gray;
+	font-size:18px;
+	display:inline-block;
+	margin:30px 0 0 150px;
+}
+.price_text {
+	color:#009223;
+	font-weight:bold;
+	font-size:30px;
+	display:inline-block;
+	margin:80px 0 0 150px;
+}
+.menu_image {
+	width:348px;
+	height:244px;
+	float:right;
+	margin-right:130px;
+	margin-top:-100px;
+}
+.line {
+	border:1px solid lightgray;
+	width:80%;
+	margin:auto;
+}
+.add {
+	display:inline-block;
+	border-radius:20px;
+	border:1px solid lightgray;
+	color:gray;
+	font-weight:bold;
+	padding:10px 20px;
+	margin-left:150px;
+}
+.add_price {
+	float:right;
+	margin-right:170px;
+	font-weight:bold;
+	font-size:20px;
+}
+
+#minus,#plus {
+	cursor:pointer;
+	width:40px;
+	height:40px;
+	border:0;
+	vertical-align:middle;
+	margin-left:10px;
+	margin-top:-10px;
+}
+.count {
+	display:inline-block;
+	font-size:25px;
+	font-weight:bold;
+	padding-right:10px;
+	margin-left:150px;
+}
+#minus {
+	background:url('http://localhost:9000/Subway/order/order_images/btn_minus.png');
+	background-repeat:no-repeat;
+}
+#plus {
+	background:url('http://localhost:9000/Subway/order/order_images/btn_plus.png');
+	background-repeat:no-repeat;
+}
+#count_result {
+	font-size:35px;
+	font-weight:bold;
+	color:black;
+	padding:0 15px;
+}
+
+.price {
+	float:right;
+	margin-right:170px;
+	margin-top:10px;
+}
+
+.total_price_text {
+	font-size:20px;
+}
+#total_price {
+	font-size:25px;
+	font-weight:bold;
+	color:#FF8300;
+	
+}
+.won {
+	color:#FF8300;
+	font-size:20px;
+}
+
+.bottom_section {
+	margin-top:20px;
+	width:80%;
+	margin:auto;
+	background-color:white;
+}
+.price_checked {
+	margin-top:40px;
+	font-size:25px;
+	font-weight:bold;
+	margin-left:150px;
+}
+
+#bottom_total_price{
+	color:#009223;
+	font-size:30px;
+	font-weight:bold;
+}
+.won_1 {
+	color:#009223;
+	font-size:25px;
+}
+.btn_order {
+	padding:10px 40px;
+	float:right;
+	margin-right:150px;
+	color:white;
+	font-size:25px;
+	font-weight:bold;
+	background-color:#009223;
+	border-radius:30px;
+}

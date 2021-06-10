@@ -50,34 +50,16 @@
 		<div class="login1">
 			<div class="login2">
 				<div class="login3">
-					<h2>LOGIN</h2>
 					<div class="login_text">써브웨이 회원으로 로그인하시면 제공하는<br>다양한 서비스를 이용할 수 있습니다.</div>
 					<% if(pass == null) { %><span>고객님의 아이디는 <%= email %> 입니다 </span><%} else { %>
 						<span>고객님의 비밀번호는 <%= pass %> 입니다 </span>
 					<% } %>
-					<form name="login_form" action="loginProcess.jsp" method="post">
-						<ul>
-							<li>
-								<label>이메일 아이디</label>
-								<input type="text" name="email" id="email" placeholder="이메일 아이디 입력">
-							</li>
-							<li>
-								<label>비밀번호</label>
-								<input type="password" name="pass" id="pass" placeholder="비밀번호 입력" >
-							</li>
-							<li>
-								<span class="radio"><input type="radio" name="saveid" id="saveid" value="sid">이메일 아이디 저장</span>
-							</li>
-							<li>
-								<button type="button" id="loginbtn">로그인</button>
-							</li>
-						</ul>
-					</form>
-					<div class="bottom_bar">
-					<ul>
-						<li><a href="http://localhost:9000/Subway/member/FindId.jsp">아이디 찾기</a><div></div></li>
-						<li><a href="http://localhost:9000/Subway/member/FindPass.jsp">비밀번호 찾기</a><div></div></li>
-						<li><a href="http://localhost:9000/Subway/member/join.jsp">회원가입</a></li>
+					
+					<div class="bottom_bar" style="display:inline-block; margin-left:70px;">
+					<ul style="margin:auto;">
+						<li><a href="http://localhost:9000/Subway/member/login.jsp">로그인</a><div></div></li>
+						<li><a href="http://localhost:9000/Subway/member/join.jsp">회원가입</a><div></div></li>
+						<li><a href="http://localhost:9000/Subway/main/subway_main.jsp">메인화면으로</a></li>
 					</ul>
 					</div>
 				</div>

@@ -393,4 +393,8 @@ $(document).ready(function(){
 		$("#count_price").text(parseInt($("#count_price").text())+price);
 	});
 	
+	$("#count_price").click(function(){
+		alert($("#count_price").text());
+	})
+	
 });

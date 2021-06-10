@@ -3,6 +3,12 @@
     import="com.subway.vo.*,com.subway.dao.*"%>
 <%
 	request.setCharacterEncoding("utf-8");
+	String set_price = request.getParameter("set_price_hidden");
+	String idx = request.getParameter("idx");
+	
+	MenuDAO dao = new MenuDAO();
+	MenuVO menuvo = dao.Menu_Detail(idx);
+	
 	OrderVO vo = new OrderVO();
 	vo.setSub(request.getParameter("sub"));
 	vo.setBread_choice(request.getParameter("bread_choice"));
@@ -13,12 +19,10 @@
 	vo.setSingle_set(request.getParameter("single_set"));
 	vo.setCookie_choice(request.getParameter("cookie_choice"));
 	vo.setBeverage_choice(request.getParameter("beverage_choice"));
+	vo.setIdx(idx);
+	vo.setKor_name(menuvo.getKor_name());
+	vo.setImage_path(menuvo.getImage_path());
 	
-	String set_price = request.getParameter("set_price_hidden");
-	String idx = request.getParameter("idx");
-	
-	MenuDAO dao = new MenuDAO();
-	MenuVO menuvo = dao.Menu_Detail(idx);
 	
 	session.setAttribute("ordervo", vo);
 	
@@ -56,7 +60,7 @@
 				<div class="order_detail">
 					<article class="menu_inform">
 						<div>
-							<img src="http://localhost:9000/Subway/order/order_images/스파이스쉬림프(샌드위치)_20210430044448992.png">
+							<img src="http://localhost:9000/Subway/order/order_images/<%= menuvo.getImage_path() %>">
 							<p>
 								<span>샌드위치</span>
 								<strong style="font-size:35px;"><%= menuvo.getKor_name() %></strong>
@@ -204,7 +208,7 @@
 						</section>
 						<section class="order_btn">
 							<input type="hidden" name="idx" value="<%= idx %>">
-							<button type="button" class="btn_style2"onclick="location.href='#'">장바구니</button>
+							<button type="button" class="btn_style2"onclick="location.href='basket.jsp'">장바구니</button>
 							<button type="button" class="btn_style" onclick="location.href='http://localhost:9000/Subway/order/order_final.jsp?idx=<%=idx%>'">주문하기</button>
 						</section>
 					</form>

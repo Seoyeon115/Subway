@@ -1,10 +1,52 @@
 package com.subway.vo;
 
 public class OrderVO {
-	String sub,bread_choice,cheese_choice,
-	sauce_choice,side_choice,single_set,cookie_choice,beverage_choice,vegetable_list;
+	String idx,sub,bread_choice,cheese_choice,kor_name,image_path,
+	sauce_choice,side_choice,single_set,cookie_choice,beverage_choice,vegetable_list,count,total_price;
 	
 	String[] vegetable_choice;
+	
+
+	
+	public String getImage_path() {
+		return image_path;
+	}
+
+	public void setImage_path(String image_path) {
+		this.image_path = image_path;
+	}
+
+	public String getKor_name() {
+		return kor_name;
+	}
+
+	public void setKor_name(String kor_name) {
+		this.kor_name = kor_name;
+	}
+
+	public String getIdx() {
+		return idx;
+	}
+
+	public void setIdx(String idx) {
+		this.idx = idx;
+	}
+
+	public String getCount() {
+		return count;
+	}
+
+	public void setCount(String count) {
+		this.count = count;
+	}
+
+	public String getTotal_price() {
+		return total_price;
+	}
+
+	public void setTotal_price(String total_price) {
+		this.total_price = total_price;
+	}
 
 	public String getSub() {
 		return sub;
