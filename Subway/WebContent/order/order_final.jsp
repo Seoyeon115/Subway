@@ -3,23 +3,11 @@
 <%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
 <%
 	String idx = request.getParameter("idx");
-	String set_price = request.getParameter("set_price_hidden");
 	MenuDAO dao = new MenuDAO();
 
 	MenuVO allvo = dao.getAllMenuList(idx);
 	MenuVO sandwichvo = dao.Menu_Detail(idx);
-	/*
-	OrderVO ordervo = new OrderVO();
-	ordervo.setSub(request.getParameter("sub"));
-	ordervo.setBread_choice(request.getParameter("bread_choice"));
-	ordervo.setCheese_choice(request.getParameter("cheese_choice"));
-	ordervo.setVegetable_choice(request.getParameterValues("vegetable_choice"));
-	ordervo.setSauce_choice(request.getParameter("sauce_choice"));
-	ordervo.setSide_choice(request.getParameter("side_choice"));
-	ordervo.setSingle_set(request.getParameter("single_set"));
-	ordervo.setCookie_choice(request.getParameter("cookie_choice"));
-	ordervo.setBeverage_choice(request.getParameter("beverage_choice"));
-	*/
+
 	session = request.getSession(false);
 	OrderVO vo = (OrderVO) session.getAttribute("ordervo");
 	
@@ -38,8 +26,9 @@
 	<script>
 		$(document).ready(function(){
 			$("#listBtn").click(function(){
-				$(this).show();
-				/*$(this).css("transform","rotate(360deg)").css("transform-origin","50% 50%");*/
+				/*$(this).show();*/
+				/*$(this).css("transform","rotate(360deg)").css("transform-origin","11px, 7px");*/
+				
 				$("#addSide").toggle();
 				$("#addSet").toggle();
 			});
@@ -173,6 +162,12 @@
 								<dd style="margin-top:10px;">
 									<span id="menu_amount">1개</span>
 									<strong id="menu_price">
+										<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_15()%>
+										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_15()+1900 %>
+										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_15()+2100 %> <% } else { %> error 
+										<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_30()%>
+										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_30()+1900 %>
+										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_30()+2100 %> <% } else { %> error <% }}} %>
 									</strong>원
 									<% if(vo.getSide_choice() != null || vo.getSingle_set().equals("세트")){ %>
 									<img src="http://localhost:9000/Subway/order/order_images/bill_list_btn.png" style="width:22px; cursor:pointer;" id="listBtn">
@@ -206,8 +201,8 @@
 								</dt>
 								<dd style="margin-top:10px; margin-right:35px;">
 									<strong id="menu_price">
-										<% if(vo.getSingle_set().equals("세트")){ if(vo.getBeverage_choice().equals("16oz")){%>1900
-										<% }else if(vo.getBeverage_choice().equals("22oz")){ %>2100
+										<% if(vo.getSingle_set().equals("세트")){ if(vo.getBeverage_choice().equals("탄산음료 16oz")){%>1900
+										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")){ %>2100
 										<% }} %>
 									</strong>원
 								</dd>
@@ -218,10 +213,45 @@
 					<section class="total_amount">
 						<h2>총 결제 금액</h2>
 						<div class="amount">
+							<% if(sandwichvo.getIdx() != null){ %>
 							<dl>
 								<dt>총 주문 금액</dt>
-								<dd><strong id="orderTotal">
-								</strong>원</dd>
+								<dd>
+									<strong id="orderTotal">
+										<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_15()%>
+										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_15()+1900 %>
+										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_15()+2100 %> <% } else { %> error 
+										<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_30()%>
+										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_30()+1900 %>
+										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_30()+2100 %> <% } else { %> error <% }}} %>
+									</strong>원
+								</dd>
+							</dl>
+							<dl>
+								<dt>쿠폰 사용</dt>
+								<dd><strong id="couponTotal"></strong>1000 원</dd>
+							</dl>
+							<dl>
+								<dt>잔여 결제금액</dt>
+								<dd>
+									<strong id="finalTotal">
+										<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_15()-1000%>
+										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_15()+1900-1000 %>
+										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_15()+2100-1000 %> <% } else { %> error 
+										<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_30()-1000%>
+										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_30()+1900-1000 %>
+										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_30()+2100-1000 %> <% } else { %> error <% }}} %>
+									</strong>원
+								</dd>
+							</dl>
+							<% }else{ %>
+							<dl>
+								<dt>총 주문 금액</dt>
+								<dd>
+									<strong id="orderTotal">
+										<%= allvo.getPrice() %>
+									</strong>원
+								</dd>
 							</dl>
 							<dl>
 								<dt>쿠폰 사용</dt>
@@ -229,9 +259,13 @@
 							</dl>
 							<dl>
 								<dt>잔여 결제금액</dt>
-								<dd><strong id="finalTotal">
-								</strong>원</dd>
+								<dd>
+									<strong id="finalTotal">
+										<%= allvo.getPrice() %>
+									</strong>원
+								</dd>
 							</dl>
+							<% } %>
 						</div>
 					</section>
 					<section class="pay_btn">

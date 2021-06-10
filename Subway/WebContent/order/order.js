@@ -9,10 +9,39 @@ $(document).ready(function(){
 	$("[name='cheese_choice']").click(function(){
 		$("#cheese_option").text(this.value);
 	});
+	
+	
+	
+	/*
 	$("[name='vegetable_choice']").click(function(){
-		$("#s1").css("display","none");
-		$("#vege_option").append($(this).val() + " ").css("padding-bottom","10px");
+		if($(this).prop('checked')){
+			$("#s1").hide();
+			$("#vege_option").append($(this).val() + " ").css("padding-bottom","10px");
+		}else if($("#vegetable_01").is('checked') == false){
+			alert(this.value);
+		}
 	});
+	*/
+	
+	
+	$("[name='vegetable_choice']").change(function(){
+		var value = $(this).val();
+		var checked = $(this).prop('checked');
+		var $label = $(this).parent();
+		var $span = $(this).next().next();
+		if(checked){
+			$("#s1").hide();
+			$("#vege_option").append(value + " ").css("padding-bottom","10px");
+		}else {
+			$("#vege_option").text("");
+		}
+	});
+	
+	
+	
+	
+	
+	
 	$("[name='sauce_choice']").click(function(){
 		$("#sau_option").text(this.value);
 	});
@@ -194,19 +223,19 @@ $(document).ready(function(){
 			if(checked){
 				$("#set").prop('checked',true);
 				$label.css("background-color","#009223");
-				$span.css("color","#FFFFFF");
-				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "탄산음료 16oz") {
-					$("#set_price").text('+ 1900원');
+				$label.css("color","#FFFFFF");
+				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 16oz") {
+					$("#set_price").text('1900원');
 					$("input[name='set_price_hidden']").attr('value','1900원');
 					$("#set_price").css("font-weight","bold");
-				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "탄산음료 22oz"){
-					$("#set_price").text('+ 2100원');
+				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 22oz"){
+					$("#set_price").text('2100원');
 					$("input[name='set_price_hidden']").attr('value','2100원');
 					$("#set_price").css("font-weight","bold");
 				}
 			}else {
 				$label.css("background-color","#FFFFFF");
-				$span.css("color","#333");
+				$label.css("color","#333");
 			}
 		});
 		
@@ -221,19 +250,19 @@ $(document).ready(function(){
 			if(checked){
 				$("#set").prop('checked',true);
 				$label.css("background-color","#009223");
-				$span.css("color","#FFFFFF");
+				$label.css("color","#FFFFFF");
 				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 16oz") {
-					$("#set_price").text('+ 1900원');
+					$("#set_price").text('1900원');
 					$("input[name='set_price_hidden']").attr('value','1900원');
 					$("#set_price").css("font-weight","bold");
 				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 22oz"){
-					$("#set_price").text('+ 2100원');
+					$("#set_price").text('2100원');
 					$("input[name='set_price_hidden']").attr('value','2100원');
 					$("#set_price").css("font-weight","bold");
 				}
 			}else {
 				$label.css("background-color","#FFFFFF");
-				$span.css("color","#333");
+				$label.css("color","#333");
 			}
 		});
 		
@@ -247,18 +276,20 @@ $(document).ready(function(){
 			var $label = $(this).parent();
 			var $span = $(this).next().next();
 			$label.css("background-color","#FFFFFF");
-			$span.css("color","#FFFFFF");
+			$label.css("color","#333");
 			$("#set_option").text("");
 			$("#set_option2").text("");
 		});
 		
 		$("input[name='beverage_choice']").each(function(){
-			var value1 = $(this).val();
-			var checked1 = $(this).prop('checked');
-			var $label1 = $(this).parent();
-			var $span1 = $(this).next().next();
-			$label1.css("background-color","#FFFFFF");
-			$span1.css("color","#FFFFFF");
+			var value = $(this).val();
+			var checked = $(this).prop('checked');
+			var $label = $(this).parent();
+			var $span = $(this).next().next();
+			$label.css("background-color","#FFFFFF");
+			$label.css("color","#333");
+			$("#set_option").text("");
+			$("#set_option2").text("");
 		})
 	});
 	
