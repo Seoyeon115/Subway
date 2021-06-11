@@ -127,7 +127,7 @@ public class OrderVO {
 				if(i == 0) {
 					vegetable_list += vegetable_choice[i];
 				}else {
-					vegetable_list += "," + vegetable_choice[i];
+					vegetable_list += ", " + vegetable_choice[i];
 				}
 			}
 		}

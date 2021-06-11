@@ -180,7 +180,9 @@
 										<div class="modal-header" id="modal-header">
 											<button type="button" class="close" data-dismiss="modal">&times;</button>
 											<h3 id="h3style">야채 선택 (다중 선택)</h3>
-											<span class="option_style" id="vege_option">원하는 야채를 선택하여 주세요.</span>
+											<div class="option_style" id="vege_option">
+												<span id="s1">원하는 야채를 선택하여 주세요.</span>
+											</div>
 										</div>
 										<div class="modal-body modal-body-scroll" id="modal-body">
 											<label>생야채</label>
@@ -330,7 +332,8 @@
 										<div class="modal-body" id="modal-body">
 											<div>
 												<h3 id="h3style" style="text-align:left; margin-left:20px;">쿠키 세트 선택</h3>
-												<span class="option_style" id="set_option" style="text-align:left; margin-left:20px;">구성품을 선택해주세요.</span>
+												<span class="set_option_style" id="set_option" style="margin-left:20px;">구성품을 선택해주세요.</span>
+												<span class="set_option_style" id="set_option2"></span>
 												<span id="set_price"></span>
 												<input type="hidden" name="set_price_hidden" id="set_price_hidden" value="set_price_hidden">
 											</div>

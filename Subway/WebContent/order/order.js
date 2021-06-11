@@ -1,125 +1,61 @@
 $(document).ready(function(){
 	//체크시 옵션값 적용
-	$("#15cm").click(function(){
+	$("[name='sub']").click(function(){
 		$("#sub_option").text(this.value);
 	});
-	$("#30cm").click(function(){
-		$("#sub_option").text(this.value);
-	});
-	
-	$("#bread_01").click(function(){
+	$("[name='bread_choice']").click(function(){
 		$("#bread_option").text(this.value);
 	});
-	$("#bread_02").click(function(){
-		$("#bread_option").text(this.value);
-	});
-	$("#bread_03").click(function(){
-		$("#bread_option").text(this.value);
-	});
-	$("#bread_04").click(function(){
-		$("#bread_option").text(this.value);
-	});
-	$("#bread_05").click(function(){
-		$("#bread_option").text(this.value);
-	});
-	$("#bread_06").click(function(){
-		$("#bread_option").text(this.value);
-	});
-	
-	$("#cheese_01").click(function(){
-		$("#cheese_option").text(this.value);
-	});
-	$("#cheese_02").click(function(){
-		$("#cheese_option").text(this.value);
-	});
-	$("#cheese_03").click(function(){
+	$("[name='cheese_choice']").click(function(){
 		$("#cheese_option").text(this.value);
 	});
 	
-	$("#vegetable_01").click(function(){
-		$("#vege_option").text(this.value);
+	
+	
+	/*
+	$("[name='vegetable_choice']").click(function(){
+		if($(this).prop('checked')){
+			$("#s1").hide();
+			$("#vege_option").append($(this).val() + " ").css("padding-bottom","10px");
+		}else if($("#vegetable_01").is('checked') == false){
+			alert(this.value);
+		}
 	});
-	$("#vegetable_02").click(function(){
-		$("#vege_option").text(this.value);
-	});
-	$("#vegetable_03").click(function(){
-		$("#vege_option").text(this.value);
-	});
-	$("#vegetable_04").click(function(){
-		$("#vege_option").text(this.value);
-	});
-	$("#vegetable_05").click(function(){
-		$("#vege_option").text(this.value);
-	});
-	$("#vegetable_06").click(function(){
-		$("#vege_option").text(this.value);
-	});
-	$("#vegetable_07").click(function(){
-		$("#vege_option").text(this.value);
-	});
-	$("#vegetable_08").click(function(){
-		$("#vege_option").text(this.value);
+	*/
+	
+	
+	$("[name='vegetable_choice']").change(function(){
+		var value = $(this).val();
+		var checked = $(this).prop('checked');
+		var $label = $(this).parent();
+		var $span = $(this).next().next();
+		if(checked){
+			$("#s1").hide();
+			$("#vege_option").append(value + " ").css("padding-bottom","10px");
+		}else {
+			$("#vege_option").text("");
+		}
 	});
 	
-	$("#sauce_01").click(function(){
+	
+	
+	
+	
+	
+	$("[name='sauce_choice']").click(function(){
 		$("#sau_option").text(this.value);
 	});
-	$("#sauce_02").click(function(){
-		$("#sau_option").text(this.value);
+	$("[name='side_choice']").click(function(){
+		$("#side_option").text(this.value);
 	});
-	$("#sauce_03").click(function(){
-		$("#sau_option").text(this.value);
+	$("[name='cookie_choice']").click(function(){
+		$("#set_option").text(this.value);
 	});
-	$("#sauce_04").click(function(){
-		$("#sau_option").text(this.value);
-	});
-	$("#sauce_05").click(function(){
-		$("#sau_option").text(this.value);
-	});
-	$("#sauce_06").click(function(){
-		$("#sau_option").text(this.value);
+	$("[name='beverage_choice']").click(function(){
+		$("#set_option2").text(", " + $(this).val());
 	});
 	
-	$("#side_01").click(function(){
-		$("#side_option").text(this.value);
-	});
-	$("#side_02").click(function(){
-		$("#side_option").text(this.value);
-	});
-	$("#side_03").click(function(){
-		$("#side_option").text(this.value);
-	});
-	$("#side_04").click(function(){
-		$("#side_option").text(this.value);
-	});
-	$("#side_05").click(function(){
-		$("#side_option").text(this.value);
-	});
 	
-	$("#cookie_06").click(function(){
-		$("#set_option").text(this.value);
-	});
-	$("#cookie_01").click(function(){
-		$("#set_option").text(this.value);
-	});
-	$("#cookie_02").click(function(){
-		$("#set_option").text(this.value);
-	});
-	$("#cookie_03").click(function(){
-		$("#set_option").text(this.value);
-	});
-	$("#cookie_04").click(function(){
-		$("#set_option").text(this.value);
-	});
-	$("#cookie_05").click(function(){
-		$("#set_option").text(this.value);
-	});
-	$("#beverage_01").click(function(){
-		$("#set_option").text(this.value);
-	});
-	$("#beverage_02").click(function(){
-		$("#set_option").text(this.value);
-	});
 	
 	
 
@@ -287,19 +223,19 @@ $(document).ready(function(){
 			if(checked){
 				$("#set").prop('checked',true);
 				$label.css("background-color","#009223");
-				$span.css("color","#FFFFFF");
-				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "탄산음료 16oz") {
-					$("#set_price").text('+ 1900원');
+				$label.css("color","#FFFFFF");
+				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 16oz") {
+					$("#set_price").text('1900원');
 					$("input[name='set_price_hidden']").attr('value','1900원');
 					$("#set_price").css("font-weight","bold");
-				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='cookie_choice']:checked").val() == "탄산음료 22oz"){
-					$("#set_price").text('+ 2100원');
+				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 22oz"){
+					$("#set_price").text('2100원');
 					$("input[name='set_price_hidden']").attr('value','2100원');
 					$("#set_price").css("font-weight","bold");
 				}
 			}else {
 				$label.css("background-color","#FFFFFF");
-				$span.css("color","#333");
+				$label.css("color","#333");
 			}
 		});
 		
@@ -314,19 +250,19 @@ $(document).ready(function(){
 			if(checked){
 				$("#set").prop('checked',true);
 				$label.css("background-color","#009223");
-				$span.css("color","#FFFFFF");
+				$label.css("color","#FFFFFF");
 				if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 16oz") {
-					$("#set_price").text('+ 1900원');
+					$("#set_price").text('1900원');
 					$("input[name='set_price_hidden']").attr('value','1900원');
 					$("#set_price").css("font-weight","bold");
 				}else if($("input[name='cookie_choice']:checked").length == 1 && $("input[name='beverage_choice']:checked").val() == "탄산음료 22oz"){
-					$("#set_price").text('+ 2100원');
+					$("#set_price").text('2100원');
 					$("input[name='set_price_hidden']").attr('value','2100원');
 					$("#set_price").css("font-weight","bold");
 				}
 			}else {
 				$label.css("background-color","#FFFFFF");
-				$span.css("color","#333");
+				$label.css("color","#333");
 			}
 		});
 		
@@ -340,16 +276,20 @@ $(document).ready(function(){
 			var $label = $(this).parent();
 			var $span = $(this).next().next();
 			$label.css("background-color","#FFFFFF");
-			$span.css("color","#FFFFFF");
+			$label.css("color","#333");
+			$("#set_option").text("");
+			$("#set_option2").text("");
 		});
 		
 		$("input[name='beverage_choice']").each(function(){
-			var value1 = $(this).val();
-			var checked1 = $(this).prop('checked');
-			var $label1 = $(this).parent();
-			var $span1 = $(this).next().next();
-			$label1.css("background-color","#FFFFFF");
-			$span1.css("color","#FFFFFF");
+			var value = $(this).val();
+			var checked = $(this).prop('checked');
+			var $label = $(this).parent();
+			var $span = $(this).next().next();
+			$label.css("background-color","#FFFFFF");
+			$label.css("color","#333");
+			$("#set_option").text("");
+			$("#set_option2").text("");
 		})
 	});
 	
