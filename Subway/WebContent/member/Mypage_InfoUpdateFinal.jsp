@@ -1,16 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
 <% 
-	session = request.getSession(false);
-	String email = (String) session.getAttribute("email");
-	String pass = (String) session.getAttribute("pass");
-	System.out.println(email);
-	System.out.println(pass);
 	
+	session = request.getSession(false);
+	MemberVO vo = (MemberVO) session.getAttribute("membervo");
+	String email = vo.getEmail();
+	String pass = vo.getPass();
 	
 	MemberDAO dao = new MemberDAO();
-	MemberVO vo = dao.getInfo(email, pass);
-	session.setAttribute("membervo", vo);
+	//MemberVO vo = dao.getInfo(pass);
 	
 %>
 
@@ -73,7 +71,7 @@
 	<!-- content -->
 	<div class="content">
 		<h1>정보변경</h1>
-		<form name="modify_form" action="Mypage_InfoModifyProcess.jsp" method="post">
+		<form name="modify_form" action="Mypage_InfoUpdateProcess.jsp" method="post">
 			<div class="member_info">
 				<div class="member_info2">
 					<div class="member_info3">
@@ -123,6 +121,7 @@
 					</div>
 					
 					<table border="1" id="email_table">
+						
 						<tr>
 							<th>이메일 아이디</th>
 							<td colspan="5"><%=vo.getEmail() %></td>
@@ -142,8 +141,7 @@
 							<th>휴대폰 번호</th>
 							<td colspan="5"><%=vo.getHp() %>
 							<a href="Mypage_InfoUpdate.jsp?email=<%=email%>&pass=<%=pass%>"><button type="button">정보변경</button></a>
-							</td>
-							
+							</td>			
 						</tr>
 						
 					</table>

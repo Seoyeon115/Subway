@@ -1,16 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
 <% 
-	session = request.getSession(false);
-	String email = (String) session.getAttribute("email");
-	String pass = (String) session.getAttribute("pass");
-	System.out.println(email);
-	System.out.println(pass);
-	
+	String email = request.getParameter("email");
+	String pass = request.getParameter("pass");
 	
 	MemberDAO dao = new MemberDAO();
-	MemberVO vo = dao.getInfo(email, pass);
-	session.setAttribute("membervo", vo);
+	MemberVO vo = dao.getInfo(email,pass);
+	
 	
 %>
 
@@ -62,6 +58,7 @@
     	});
     	
     	
+    	
     </script>
 	
 	
@@ -73,7 +70,8 @@
 	<!-- content -->
 	<div class="content">
 		<h1>정보변경</h1>
-		<form name="modify_form" action="Mypage_InfoModifyProcess.jsp" method="post">
+		<form name="modify_form" action="Mypage_InfoUpdateProcess.jsp" method="post">
+			<input type="hidden" name="pass" value="<%= pass %>">
 			<div class="member_info">
 				<div class="member_info2">
 					<div class="member_info3">
@@ -125,23 +123,24 @@
 					<table border="1" id="email_table">
 						<tr>
 							<th>이메일 아이디</th>
-							<td colspan="5"><%=vo.getEmail() %></td>
+							<td colspan="5"><input type="text" name="email" value="<%=vo.getEmail()%>"></td>
 						</tr>
 					</table>
 					<br>
 					<table border="1" id="content_table">	
 						<tr>
 							<th>이름</th>
-							<td colspan="5"><%=vo.getName() %></td>
+							<td colspan="5"><input type="text" name="name" id="name" value="<%=vo.getName()%>"></td>
 						</tr>
 						<tr>
 							<th>주소</th>
-							<td colspan="5"><%=vo.getAddr() %></td>
+							<td colspan="5"><input type="text" name="addr" id="addr" value="<%=vo.getAddr()%>"></td>
 						</tr>
 						<tr>
 							<th>휴대폰 번호</th>
-							<td colspan="5"><%=vo.getHp() %>
-							<a href="Mypage_InfoUpdate.jsp?email=<%=email%>&pass=<%=pass%>"><button type="button">정보변경</button></a>
+							<td colspan="5"><input type="text" name="hp" id="hp" value="<%=vo.getHp()%>">
+							<a href="Mypage_InfoUpdate.jsp"><button type="button">정보변경</button></a>
+							
 							</td>
 							
 						</tr>
@@ -152,7 +151,7 @@
 			</div>
 			<div class="info_button">
 				<a href="Mypage_InfoDelete.jsp?email=<%=email%>&pass=<%=pass%>"><button type="button">회원탈퇴</button></a>
-				<button type="button">회원정보 변경</button>
+				<button type="submit" id="btnUpdate">회원정보 변경</button>
 			</div>
 		</form>
 	</div>

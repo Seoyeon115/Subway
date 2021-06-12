@@ -7,7 +7,7 @@
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
 	<title>SUBWAY 써브웨이</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
-	<link rel="stylesheet" href="http://localhost:9000/Subway/css/member.css">
+	<link rel="stylesheet" href="http://localhost:9000/Subway/css/loginfail.css">
 	
 </head>
 <body>
@@ -15,12 +15,13 @@
 	<jsp:include page="../main/header.jsp"></jsp:include>
 	
 	<!-- content -->
-	<h3>로그인에 실패하셨습니다.</h3>
-		<div class="join">
-			<a href="#">다시 로그인하기</a>
-			<a href="#">홈으로 돌아가기</a>
-						
+	<div class="content">
+	<h3>등록된 회원정보가 존재하지 않습니다.</h3>
+		<div class="link">
+			<a href="http://localhost:9000/Subway/member/FindId.jsp">아이디 찾기</a>
+			<a href="http://localhost:9000/Subway/member/FindPass.jsp">비밀번호 찾기</a>				
 		</div>
+	</div>
 	<!-- footer -->
 	<jsp:include page="../main/footer.jsp"></jsp:include>
 

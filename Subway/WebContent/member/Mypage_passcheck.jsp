@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,13 +24,7 @@
 					passcheck_form.submit();
 				}
 			});
-		});
-		
-		function submit2(frm) { 
-		    frm.action='Mypage_InfoModify.jsp'; 
-		    frm.submit(); 
-		    return true; 
-		  } 
+		});	
 	</script>
 </head>
 <body>
@@ -39,8 +34,8 @@
 	<!-- content -->
 	<div class="content">
 		<div class="passcheck_text">
-			<h1>비밀번호 확인</h1>
-			<p>회원가입 시 등록한 비밀번호를 재입력 해주세요.</p>
+			<h1>회원정보 확인</h1>
+			<p>회원가입시 등록한 비밀번호를 재입력 해주세요.</p>
 			<form name="passcheck_form" action="Mypage_PassProcess.jsp" method="post">
 			
 			<div class="content1">
@@ -63,7 +58,7 @@
 			</div>
 			
 				<div class="passcheck_button">
-					<input type="button" id="passcheckbtn" value="확인" onclick='return submit2(this.form);'>
+					<input type="button" id="passcheckbtn" value="확인">
 				</div>
 			</form>
 		</div>

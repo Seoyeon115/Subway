@@ -6,6 +6,90 @@ import java.util.*;
 import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
+	//삭제처리
+	public boolean getDeleteResult(String email, String pass) {
+		boolean result = false;
+		String sql = "delete from subway_member where email=? and pass=? ";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			pstmt.setString(2, pass);
+			
+			int value = pstmt.executeUpdate();
+			if(value != 0) {
+				result = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		
+		return result;
+	}
+	
+	//마지막 회원수정 정보 보여주기
+	public MemberVO getInfo(String pass) {
+		MemberVO vo = new MemberVO();
+		String sql = " select email,name,hp,addr from subway_member where pass=? ";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, pass);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo.setEmail(rs.getString(1));
+				vo.setName(rs.getString(2));
+				vo.setHp(rs.getString(3));
+				vo.setAddr(rs.getString(4));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return vo;
+	}
+	
+	//회원정보 변경
+	public boolean getUpdateResult(MemberVO vo) {
+		boolean result = false;
+		String sql = "update subway_member set email=?, name=?, addr=?, hp=? where pass=? ";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, vo.getEmail());
+			pstmt.setString(2, vo.getName());
+			pstmt.setString(3, vo.getAddr());
+			pstmt.setString(4, vo.getHp());
+			pstmt.setString(5, vo.getPass());
+			
+			int value = pstmt.executeUpdate();
+			if(value != 0) {
+				result = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	
+	//비밀번호 변경
+	public boolean ChangePass(String ncpass, String email) {
+		boolean result = false;
+		String sql = " update subway_member set pass = ? where email = ?  ";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, ncpass);
+			pstmt.setString(2, email);
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
 	
 	public String Certification(String name, String hp,String id) {
 		String result ="";
@@ -101,6 +185,7 @@ public class MemberDAO extends DBconn {
 		return to;
 	}
 	
+	//회원정보 보여주기
 	public MemberVO getInfo(String email, String pass) {
 		MemberVO vo = new MemberVO();
 		String sql = " select email,name,hp,addr from subway_member where email=? and pass=? ";
