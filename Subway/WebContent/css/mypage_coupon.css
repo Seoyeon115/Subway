@@ -1,6 +1,6 @@
 div.content{
 	width:100%;
-	height:800px;
+	height:1200px;
 	border-top:2px solid rgb(229,229,229);
 	background-color:rgb(246,246,246);
 }
@@ -52,11 +52,134 @@ div.coupon2{
 }
 div.coupon_content{
 	width:1190px;
-	height:500px;
+	height:800px;
 	margin:auto;
 	margin-top:30px;
 	background-color:white;
 }
+div.coupon_content span{
+	padding:5px 0;
+	font-size:20px;
+	font-weight:900;
+	color:rgb(255,194,13);
+}
+div #coupon1{
+	border:1px solid rgb(0,146,35);
+	margin-top:50px;
+	width:700px;
+	height:150px;
+	margin:auto;
+	margin-top:20px;
+	background-color:rgb(30,74,36);
+	
+}
+div #coupon1 ul{
+	list-style-type:none;
+	
+}
+div #coupon1 ul li{
+	display:inline-block;
+	
+	color:rgb(251,254,179);
+	float:left;
+}
+#text1{
+	font-size:70px;
+	line-height:150px;
+	
+}
+#text2{
+	font-size:40px;
+	font-weight:900;
+	line-height:170px;
+	margin-left:20px;	
+}
 
+
+
+
+div #coupon2{
+	border:1px solid rgb(30,74,36);
+	margin-top:70px;
+	width:700px;
+	height:150px;
+	margin:auto;
+	margin-top:20px;
+	background-color:rgb(30,74,36);
+}
+div #coupon2 ul{
+	list-style-type:none;
+	
+}
+div #coupon2 ul li{
+	display:inline-block;
+	
+	color:rgb(251,254,179);
+	float:left;
+}
+#text3{
+	font-size:70px;
+	line-height:150px;
+	
+}
+#text4{
+	font-size:40px;
+	font-weight:900;
+	line-height:170px;
+	margin-left:20px;	
+}
+
+div #coupon3{
+	border:1px solid rgb(30,74,36);
+	margin-top:50px;
+	width:700px;
+	height:150px;
+	margin:auto;
+	margin-top:20px;
+	background-color:rgb(30,74,36);
+}
+div #coupon3 ul{
+	list-style-type:none;
+	
+}
+div #coupon3 ul li{
+	display:inline-block;
+	
+	color:rgb(251,254,179);
+	float:left;
+}
+#text5{
+	font-size:70px;
+	line-height:150px;
+	
+}
+#text6{
+	font-size:40px;
+	font-weight:900;
+	line-height:170px;
+	margin-left:20px;	
+}
+div.cute_img1{
+	float:left;
+	margin-left:80px;
+}
+div.cute_img2{
+	float:left;
+	margin-left:80px;
+}
+div.cute_img3{
+	float:left;
+	margin-left:80px;
+}
+div.notice_text{
+	width:800px;
+	height:50px;
+	margin:auto;
+	line-height:50px;
+	text-align:center;
+	display:inline-block;
+	font-size:20px;
+	font-weight:900;
+}
 
 
