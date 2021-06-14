@@ -257,6 +257,29 @@ public class MemberDAO extends DBconn {
 			return result;
 	}
 	
+	public SessionVO getLoginResult(MemberVO vo) {
+		SessionVO svo = new SessionVO(); 
+		String sql = " select count(*) result, name from subway_member where email=? and pass=? group by name ";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, vo.getEmail());
+			pstmt.setString(2, vo.getPass());
+			
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				svo.setResult(rs.getInt(1));
+				svo.setName(rs.getString(2));
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		
+		return svo;
+		
+}
 	//회원정보 체크 -- count 함수를 사용
 	public boolean getCheckResult(String email, String pass) {
 			boolean result = false;
