@@ -1,28 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"
-    import="com.subway.vo.*,java.util.*"%>
+    import="com.subway.vo.*,java.util.*,com.subway.dao.*"%>
 <%
-	session = request.getSession(false);
-	ArrayList<OrderVO>	basket = new ArrayList<OrderVO>();
-	OrderVO order = (OrderVO) session.getAttribute("ordervo");
-	basket.add(order);
-	ArrayList<Integer> tot_price = new ArrayList<Integer>();
-
+	MenuDAO menudao = new MenuDAO();
+	SessionVO smember = (SessionVO) session.getAttribute("svo");
+	String price = request.getParameter("count_price");
+	ArrayList<OrderVO> vo = menudao.selectBasket(smember.getEmail());
 	
-	
-	for(int i=0; i<basket.size(); i++){
-		if(basket.get(i).getBeverage_choice().equals("탄산음료 16oz")){
-			tot_price.add( basket.get(i).getPrice() + 1900);
-		}else if(basket.get(i).getBeverage_choice().equals("탄산음료 22oz")){
-			tot_price.add( basket.get(i).getPrice() + 2100);
-		}else {
-			tot_price.add(0);
-			System.out.println("tot_price 금액 계산 오류");
-		}
-	}
-	for(int i=0; i<tot_price.size(); i++){
-		System.out.println(tot_price.get(i));
-	}
 	
 %>
 <!DOCTYPE html>
@@ -53,32 +37,34 @@
 				<br>
 			</div>
 			
-			<% for(int i=0; i<basket.size(); i++){ %>
-			<div class="menu_section section">
-				<input type="radio" id="menu_radio" class="menu_radio"><label class="menu_text"><%= basket.get(i).getKor_name() %></label><br>
-				<span class="choice_text">&nbsp;&nbsp;<%= basket.get(i).getSub() %>, <%= basket.get(i).getBread_choice() %>, <%= basket.get(i).getCheese_choice() %>, <%=basket.get(i).getVegetable_list() %>, <%= basket.get(i).getSauce_choice() %></span><br>
+			<% for(int i=0; i<vo.size(); i++){ %>
+			<div class="menu_section section<%=i%>">
+				<input type="checkbox" name="menu_checkbox" id="menu_radio<%=i+1 %>" class="menu_radio" value="menu_idx_<%=i+1 %>"><label class="menu_text"><%= vo.get(i).getKor_name() %></label><br>
+				<span class="choice_text">&nbsp;&nbsp;<%= vo.get(i).getSub() %>, <%= vo.get(i).getBread_choice() %>, <%= vo.get(i).getCheese_choice() %>, <%=vo.get(i).getVegetable_list() %>, <%= vo.get(i).getSauce_choice() %></span><br>
 				<strong class="price_text">총 금액 출력</strong>
-				<img src="http://localhost:9000/Subway/menulist/images/<%= basket.get(i).getImage_path() %>" class="menu_image">
+				<img src="http://localhost:9000/Subway/menulist/images/<%= vo.get(i).getImage_path() %>" class="menu_image">
 				<br><br><br>
 				<div class="line"></div>
 				<br><br>
-				<span class="add">추가</span>&nbsp;&nbsp;&nbsp;<span><% if(basket.get(i).getSide_choice() != null) { %><%= basket.get(i).getSide_choice() %> <% } %></span>
+				<span class="add">추가</span>&nbsp;&nbsp;&nbsp;<span><% if(vo.get(i).getSide_choice() != null) { %><%= vo.get(i).getSide_choice() %> <% } %></span>
 				<span class="add_price">추가 금액 출력</span><br><br><br>
-				<span class="add">추가</span>&nbsp;&nbsp;&nbsp;<span><%= basket.get(i).getCookie_choice() %>, <%= basket.get(i).getBeverage_choice() %></span>
-				<span class="add_price"><% if(basket.get(i).getBeverage_choice().equals("탄산음료 16oz")) { %> 1900원 <% } else {%> 2100원 <% } %></span>
+				<span class="add">추가</span>&nbsp;&nbsp;&nbsp;<span><%= vo.get(i).getCookie_choice() %>, <%= vo.get(i).getBeverage_choice() %></span>
+				<span class="add_price"><% if(vo.get(i).getBeverage_choice().equals("탄산음료 16oz")) { %> 1900원 <% } else {%> 2100원 <% } %></span>
 				<br><br>
 				<div class="line"></div>
 				<br><br>
+				
 				<span class="count">수량</span>
-				<input type="button" id="minus_1">
-				<span id="count_result_1">1</span>
-				<input type="button" id="plus_1">
+				<input type="button" id="minus_<%=i %>" class="minus_1">
+				<span id="count_result_<%=i %>" class="count_result_1">1</span>
+				<input type="button" id="plus_<%=i %>" class="plus_1">
 				
 				<div class="price">
 					<span class="total_price_text">총 주문금액</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span id="total_price"><%= tot_price.get(i) %></span><span class="won">원</span>
+					<span id="total_price_<%=i%>"><%= vo.get(i).getPrice() %></span><span class="won">원</span>
 				</div>
 				<br><br>
+				
 			</div>
 			<br><br><br>
 			

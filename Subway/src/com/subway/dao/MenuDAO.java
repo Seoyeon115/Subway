@@ -3,8 +3,74 @@ package com.subway.dao;
 import java.util.ArrayList;
 
 import com.subway.vo.MenuVO;
+import com.subway.vo.OrderVO;
 
 public class MenuDAO extends DBconn{
+	
+	public ArrayList<OrderVO> selectBasket(String email) {
+		ArrayList<OrderVO> volist = new ArrayList<OrderVO>();
+		String sql = "select sub,bread,cheese,vegetable,sauce,side,single_set,cookie,beverage,kor_name,image_path,price from subway_basket where id = ?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				OrderVO vo = new OrderVO();
+				vo.setSub(rs.getString(1));
+				vo.setBread_choice(rs.getString(2));
+				vo.setCheese_choice(rs.getString(3));
+				vo.setVegetable_list(rs.getString(4));
+				vo.setSauce_choice(rs.getString(5));
+				vo.setSide_choice(rs.getString(6));
+				vo.setSingle_set(rs.getString(7));
+				vo.setCookie_choice(rs.getString(8));
+				vo.setBeverage_choice(rs.getString(9));
+				vo.setKor_name(rs.getString(10));
+				vo.setImage_path(rs.getString(11));
+				vo.setPrice(rs.getInt(12));
+				
+				
+				volist.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return volist;
+	}
+	
+	
+	public void insertBasket(OrderVO vo,String email) {
+		String sql = "insert into subway_basket values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+		getPreparedStatement(sql);
+		try {
+			pstmt.setString(1, email);
+			pstmt.setString(2, vo.getSub());
+			pstmt.setString(3, vo.getBread_choice());
+			pstmt.setString(4, vo.getCheese_choice());
+			pstmt.setString(5, vo.getVegetable_list());
+			pstmt.setString(6, vo.getSauce_choice());
+			pstmt.setString(7, vo.getSide_choice());
+			pstmt.setString(8, vo.getSingle_set());
+			pstmt.setString(9, vo.getCookie_choice());
+			pstmt.setString(10, vo.getBeverage_choice());
+			pstmt.setString(11, vo.getKor_name());
+			pstmt.setString(12, vo.getImage_path());
+			pstmt.setInt(13, vo.getPrice());
+			
+			int value = pstmt.executeUpdate();
+			if(value != 1) {
+				System.out.println("장바구니 데이터 입력 에러");
+			}
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+	}
 	
 	
 	public ArrayList<MenuVO> getMenuList(){

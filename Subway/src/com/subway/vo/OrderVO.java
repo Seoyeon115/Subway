@@ -142,5 +142,9 @@ public class OrderVO {
 		
 		return vegetable_list;
 	}
+
+	public void setVegetable_list(String vegetable_list) {
+		this.vegetable_list = vegetable_list;
+	}
 	
 }

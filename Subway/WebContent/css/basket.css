@@ -78,6 +78,7 @@
 	font-size:18px;
 	display:inline-block;
 	margin:30px 0 0 150px;
+	width:50%;
 }
 .price_text {
 	color:#009223;
@@ -114,7 +115,7 @@
 	font-size:20px;
 }
 
-#minus_1,#plus_1 {
+#minus_0,#plus_0,#minus_1,#plus_1,#minus_2,#plus_2,#minus_3,#plus_3,#minus_4,#plus_4,#minus_5,#plus_5 {
 	cursor:pointer;
 	width:40px;
 	height:40px;
@@ -130,15 +131,15 @@
 	padding-right:10px;
 	margin-left:150px;
 }
-#minus_1 {
+#minus_0,#minus_1,#minus_2,#minus_3,#minus_4,#minus_5 {
 	background:url('http://localhost:9000/Subway/order/order_images/btn_minus.png');
 	background-repeat:no-repeat;
 }
-#plus_1 {
+#plus_0,#plus_1,#plus_2,#plus_3,#plus_4,#plus_5 {
 	background:url('http://localhost:9000/Subway/order/order_images/btn_plus.png');
 	background-repeat:no-repeat;
 }
-#count_result_1 {
+#count_result_0,#count_result_1,#count_result_2,#count_result_3,#count_result_4,#count_result_5{
 	font-size:35px;
 	font-weight:bold;
 	color:black;
@@ -154,7 +155,7 @@
 .total_price_text {
 	font-size:20px;
 }
-#total_price {
+#total_price_0,#total_price_1,#total_price_2,#total_price_3,#total_price_4,#total_price_5 {
 	font-size:25px;
 	font-weight:bold;
 	color:#FF8300;
