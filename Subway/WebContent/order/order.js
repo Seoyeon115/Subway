@@ -322,14 +322,11 @@ $(document).ready(function(){
 	
 	$("#plus").click(function(){
 		$("#count_result").text(parseInt($("#count_result").text())+1);
-		//$("#count_price").text(8000+parseInt($("#count_price").text()));
 		$("#count_price").text(parseInt($("#count_price").text())+price);
 	});	
 	
 	$("#orderBtn").click(function(){
 		order_confirm.submit();
-		$("#count_result").val(parseInt($("#count_result").val())+1);
-		$("#count_price").val(parseInt($("#count_price").val())+price);
 	});
 	
 	var price_1 = parseInt($("#total_price").text());

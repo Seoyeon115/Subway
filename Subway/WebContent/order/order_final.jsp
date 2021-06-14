@@ -170,7 +170,7 @@
 									<img src="http://localhost:9000/Subway/order/order_images/bill_list_btn.png" style="width:22px; cursor:pointer;" id="listBtn">
 									<% } %>
 								</dd>
-							</dl>
+							</dl> 
 							<% }else{ %>
 							<dl style="margin-top:-10px; padding:10px 0;">
 								<dt>
