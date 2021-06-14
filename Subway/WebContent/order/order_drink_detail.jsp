@@ -6,7 +6,6 @@
 	MenuDAO dao = new MenuDAO();
 	MenuVO vo = dao.Drink_Detail(idx);
 	
-	session.setAttribute("ordervo", vo);
 %>
 <!DOCTYPE html>
 <html>
@@ -77,7 +76,7 @@
 					</form>
 					</section>
 					<section class="order_btn">
-						<button type="button" class="btn_style2"onclick="location.href='basket.jsp?idx=<%=idx%>'">장바구니</button>
+						<button type="button" class="btn_style2"onclick="location.href='#'">장바구니</button>
 						<button type="button" class="btn_style" id="orderBtn" onclick="location.href='http://localhost:9000/Subway/order/order_final.jsp?idx=<%=vo.getIdx()%>'">주문하기</button>
 					</section>
 				</div>
