@@ -12,7 +12,7 @@
 	
 	MemberDAO dao = new MemberDAO();
 	boolean result = dao.getUpdateResult(vo);
-	System.out.println(result);
+	
 	if(result){
 		response.sendRedirect("Mypage_InfoUpdateFinal.jsp");
 	}

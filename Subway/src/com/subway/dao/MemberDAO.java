@@ -6,6 +6,23 @@ import java.util.*;
 import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
+	//id 吝汗眉农
+	public int getIdCheck(String email) {
+		int result = 0;
+		String sql = " select count(*) from subway_member where email=? ";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1,email);
+			rs = pstmt.executeQuery();
+			if(rs.next()) result = rs.getInt(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
 	//昏力贸府
 	public boolean getDeleteResult(String email, String pass) {
 		boolean result = false;

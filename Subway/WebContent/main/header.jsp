@@ -18,7 +18,7 @@
 				<ul>
 					<li><a href="http://localhost:9000/Subway/member/logout.jsp">로그아웃 </a><div></div></li>
 					<li><a href="http://localhost:9000/Subway/member/Mypage.jsp">마이페이지 </a></li>
-					<li><a href="http://localhost:9000/Subway/member/mybasket.jsp">장바구니</a><div></div></li>
+					<li><a href="http://localhost:9000/Subway/order/basket.jsp">장바구니</a><div></div></li>
 				</ul>
 				<% }else{ %>
 				<a href="http://localhost:9000/Subway/main/subway_main.jsp"><img src="http://localhost:9000/Subway/images/subway.PNG"></a>

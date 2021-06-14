@@ -3,8 +3,7 @@
 <% 
 	String email = request.getParameter("email");
 	String pass = request.getParameter("pass");
-	System.out.println(email);
-	System.out.println(pass);
+	
 	MemberDAO dao = new MemberDAO();
 	MemberVO vo = dao.getInfo(email,pass);
 	

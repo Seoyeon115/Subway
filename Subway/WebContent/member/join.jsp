@@ -11,6 +11,43 @@
 	<script src="http://localhost:9000/Subway/member/js/jquery-3.6.0.min.js"></script>
 	<script>
 		$(document).ready(function(){
+			$("#id_check").click(function(){
+				
+				if($("#email1").val() == ""){
+					alert("이메일 아이디를 입력해주세요");
+					$("#email1").focus();
+					return false;
+				}else if($("#email2").val() == ""){
+					alert("이메일 아이디 주소를 입력해주세요");
+					$("#email2").focus();
+					return false;
+				}else{
+					//alert($("#id").val());
+					
+					//아이디 중복체크를 위한 서버 파일 호출 후 결과 확인!!
+					$.ajax({
+						url:"idCheckProcess.jsp?email="+$("#email1").val() + "@" + $("#email2").val(),
+						success:function(data){
+							//실행결과에 따른 처리 --->> 실행결과 처리는 success 함수에서만 사용 가능!!
+							//alert("data>>>" + data);
+							if(data == 1){
+								//alert("중복된 아이디가 존재합니다. 다시 입력해주세요");
+								$("#idcheck_result").text("중복된 아이디 존재").css({"color":"red","font-size":"13px","float":"right","margin-right":"20px","margin-top":"5px"});
+								$("#email1").focus();
+								return false;
+							}else{
+								//alert("사용이 가능한 아이디입니다.");
+								$("#idcheck_result").text("아이디 사용가능").css({"color":"blue","font-size":"13px","float":"right","margin-right":"20px","margin-top":"5px"});
+								$("#email4").focus();
+								return true;
+							}
+						}//success
+					});//ajax
+					
+				} 
+				
+			});
+			
 			
 			$("#joinbtn").click(function(){
 				if($("#email1").val()==""){
@@ -154,7 +191,8 @@
 											<option value="gmail.com">gmail.com</option>
 											<option value="daum.net">daum.net</option>
 										</select>
-										<button type="button">중복확인</button>
+										<button type="button" id="id_check">중복확인</button>
+										<div id="idcheck_result"></div>
 									</li>
 									<li>
 										<label>아이디(이메일)확인</label>
