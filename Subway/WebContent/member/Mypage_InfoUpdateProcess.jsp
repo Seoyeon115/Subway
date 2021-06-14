@@ -7,10 +7,12 @@
 	vo.setName(request.getParameter("name"));
 	vo.setAddr(request.getParameter("addr"));
 	vo.setHp(request.getParameter("hp"));
+	
 	session.setAttribute("membervo", vo);
 	
 	MemberDAO dao = new MemberDAO();
 	boolean result = dao.getUpdateResult(vo);
+	System.out.println(result);
 	if(result){
 		response.sendRedirect("Mypage_InfoUpdateFinal.jsp");
 	}

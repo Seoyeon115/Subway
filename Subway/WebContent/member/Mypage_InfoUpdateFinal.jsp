@@ -5,7 +5,9 @@
 	session = request.getSession(false);
 	MemberVO vo = (MemberVO) session.getAttribute("membervo");
 	String email = vo.getEmail();
+	System.out.println(email);
 	String pass = vo.getPass();
+	System.out.println(pass);
 	
 	MemberDAO dao = new MemberDAO();
 	//MemberVO vo = dao.getInfo(pass);

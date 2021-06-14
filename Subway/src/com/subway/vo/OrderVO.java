@@ -5,9 +5,17 @@ public class OrderVO {
 	sauce_choice,side_choice,single_set,cookie_choice,beverage_choice,vegetable_list,count,total_price;
 	
 	String[] vegetable_choice;
-	
+	int price;
 
 	
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+
 	public String getImage_path() {
 		return image_path;
 	}

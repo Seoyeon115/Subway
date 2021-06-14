@@ -114,7 +114,7 @@
 	font-size:20px;
 }
 
-#minus,#plus {
+#minus_1,#plus_1 {
 	cursor:pointer;
 	width:40px;
 	height:40px;
@@ -130,15 +130,15 @@
 	padding-right:10px;
 	margin-left:150px;
 }
-#minus {
+#minus_1 {
 	background:url('http://localhost:9000/Subway/order/order_images/btn_minus.png');
 	background-repeat:no-repeat;
 }
-#plus {
+#plus_1 {
 	background:url('http://localhost:9000/Subway/order/order_images/btn_plus.png');
 	background-repeat:no-repeat;
 }
-#count_result {
+#count_result_1 {
 	font-size:35px;
 	font-weight:bold;
 	color:black;
@@ -196,4 +196,5 @@
 	font-weight:bold;
 	background-color:#009223;
 	border-radius:30px;
+	margin-bottom:10px;
 }

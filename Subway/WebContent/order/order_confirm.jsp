@@ -23,7 +23,15 @@
 	vo.setKor_name(menuvo.getKor_name());
 	vo.setImage_path(menuvo.getImage_path());
 	
-	
+	if(request.getParameter("sub").equals("15cm")){
+		vo.setPrice(menuvo.getPrice_15());
+	}else if(request.getParameter("sub").equals("30cm")) {
+		vo.setPrice(menuvo.getPrice_30());
+	}else {
+		vo.setPrice(0);
+	}
+
+
 	session.setAttribute("ordervo", vo);
 	
 %>
@@ -37,7 +45,6 @@
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
 	<script src="order.js"></script>
-	
 	
 </head>
 <body>
@@ -60,8 +67,8 @@
 				<div class="order_detail">
 					<article class="menu_inform">
 						<div>
-							<img src="http://localhost:9000/Subway/order/order_images/<%= menuvo.getImage_path() %>">
-							<p>
+							<img src="http://localhost:9000/Subway/menulist/images/<%= vo.getImage_path() %>">
+							<p>       
 								<span>샌드위치</span>
 								<strong style="font-size:35px;"><%= menuvo.getKor_name() %></strong>
 								<span class="eng_name"><%= menuvo.getEng_name() %></span>
@@ -95,7 +102,7 @@
 							<span>※ 괄호 안 %는 1일 영양소 기준치에 대한 비율</span>
 						</div>
 					</section>
-					<form action="order_final.jsp" name="order_confirm" method="post">
+					<form action="order_final.jsp?idx=<%=vo.getIdx()%>" name="order_confirm" method="post">
 						<section class="confirm">
 							<ol>
 								<li class="step01">
@@ -190,26 +197,24 @@
 							<div class="count">
 								<span>수량</span>
 								<input type="button" onclick="minus" id="minus">
-								<span id="count_result">1</span>
+								<input type="text" id="count_result" name="count_result" value="1" readonly>
 								<input type="button" onclick="plus" id="plus">
 							</div>
 							<div class="price">
 								<span>최종 결제 금액</span>
-								<span id="count_price">
-									<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_15()%>
-									<% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_15()+1900 %>
-									<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_15()+2100 %> <% } else { %> error 
+								<input type="text" id="count_price" name="count_price" value="<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_15()%>
+									<% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_15()+1900%>
+									<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_15()+2100%> <% } else { %> error 
 									<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_30()%>
-									<% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_30()+1900 %>
-									<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_30()+2100 %> <% } else { %> error <% }}} %>
-								</span>
+									<% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_30()+1900%>
+									<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_30()+2100%> <% } else { %> error <% }}} %>" readonly>
 								<span>원</span>
 							</div>
 						</section>
 						<section class="order_btn">
 							<input type="hidden" name="idx" value="<%= idx %>">
-							<button type="button" class="btn_style2"onclick="location.href='basket.jsp'">장바구니</button>
-							<button type="button" class="btn_style" onclick="location.href='http://localhost:9000/Subway/order/order_final.jsp?idx=<%=idx%>'">주문하기</button>
+							<button type="button" class="btn_style2"onclick="location.href='basket.jsp?idx=<%=idx%>'">장바구니</button>
+							<button type="button" class="btn_style" id="orderBtn" onclick="location.href='http://localhost:9000/Subway/order/order_final.jsp?idx=<%=idx%>'">주문하기</button>
 						</section>
 					</form>
 				</div>
