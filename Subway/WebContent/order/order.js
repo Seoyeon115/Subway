@@ -331,10 +331,38 @@ $(document).ready(function(){
 		$("#count_result").text(parseInt($("#count_result").text())+1);
 		//$("#count_price").text(8000+parseInt($("#count_price").text()));
 		$("#count_price").text(parseInt($("#count_price").text())+price);
+	});	
+	
+	$("#orderBtn").click(function(){
+		order_confirm.submit();
 	});
 	
-	$("#count_price").click(function(){
-		alert($("#count_price").text());
+	var price_1 = parseInt($("#total_price").text());
+	$("#minus_1").click(function(){
+		if($("#count_result_1").text() > 1){
+			$("#count_result_1").text(parseInt($("#count_result_1").text())-1);
+			//$("#count_price").text(parseInt($("#count_price").text())-8000);
+			$("#total_price").text(parseInt($("#total_price").text())-price_1);
+			//$("#bottom_total_price").text($("#total_price").text());	
+
+		}
+	});
+	
+	$("#plus_1").click(function(){
+		$("#count_result_1").text(parseInt($("#count_result_1").text())+1);
+		//$("#count_price").text(8000+parseInt($("#count_price").text()));
+		$("#total_price").text(parseInt($("#total_price").text())+price_1);
+		//$("#bottom_total_price").text($("#total_price").text());
+	});
+	
+	
+	$("input:radio[id='allselect']").click(function(){
+		$("#menu_radio").prop("checked",true);
+		
 	})
+	
+	$("#choice_delete").click(function(){
+		$("#menu_radio").prop("checked",false);
+	});
 	
 });
