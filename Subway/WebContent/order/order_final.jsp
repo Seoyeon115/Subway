@@ -3,6 +3,8 @@
 <%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
 <%
 	String idx = request.getParameter("idx");
+	String count_result = request.getParameter("count_result");
+	String count_price = request.getParameter("count_price");
 	MenuDAO dao = new MenuDAO();
 
 	MenuVO allvo = dao.getAllMenuList(idx);
@@ -160,14 +162,9 @@
 									<span id="option"><%= vo.getSub() %>, <%= vo.getBread_choice() %>, <%= vo.getCheese_choice() %>, <%= vo.getVegetable_list() %>, <%= vo.getSauce_choice() %></span>
 								</dt>
 								<dd style="margin-top:10px;">
-									<span id="menu_amount">1개</span>
+									<span id="menu_amount"><%= count_result %>개</span>
 									<strong id="menu_price">
-										<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_15()%>
-										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_15()+1900 %>
-										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_15()+2100 %> <% } else { %> error 
-										<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_30()%>
-										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_30()+1900 %>
-										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_30()+2100 %> <% } else { %> error <% }}} %>
+										<%= count_price %>
 									</strong>원
 									<% if(vo.getSide_choice() != null || vo.getSingle_set().equals("세트")){ %>
 									<img src="http://localhost:9000/Subway/order/order_images/bill_list_btn.png" style="width:22px; cursor:pointer;" id="listBtn">
@@ -180,8 +177,8 @@
 									<%= allvo.getKor_name() %>
 								</dt>
 								<dd>
-									<span id="menu_amount">1개</span>
-									<strong id="menu_price"><%= allvo.getPrice() %> </strong>원
+									<span id="menu_amount"><%= count_result %>개</span>
+									<strong id="menu_price"><%= count_price %> </strong>원
 								</dd>
 							</dl>
 							<% } %>
@@ -218,29 +215,19 @@
 								<dt>총 주문 금액</dt>
 								<dd>
 									<strong id="orderTotal">
-										<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_15()%>
-										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_15()+1900 %>
-										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_15()+2100 %> <% } else { %> error 
-										<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_30()%>
-										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_30()+1900 %>
-										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_30()+2100 %> <% } else { %> error <% }}} %>
+										<%= count_price %>
 									</strong>원
 								</dd>
 							</dl>
 							<dl>
 								<dt>쿠폰 사용</dt>
-								<dd><strong id="couponTotal"></strong>1000 원</dd>
+								<dd><strong id="couponTotal"></strong>0 원</dd>
 							</dl>
 							<dl>
 								<dt>잔여 결제금액</dt>
 								<dd>
 									<strong id="finalTotal">
-										<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_15()-1000%>
-										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_15()+1900-1000 %>
-										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_15()+2100-1000 %> <% } else { %> error 
-										<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= sandwichvo.getPrice_30()-1000%>
-										<% }else if(vo.getSingle_set().equals("세트")) { if(vo.getBeverage_choice().equals("탄산음료 16oz")) { %> <%= sandwichvo.getPrice_30()+1900-1000 %>
-										<% }else if(vo.getBeverage_choice().equals("탄산음료 22oz")) { %> <%= sandwichvo.getPrice_30()+2100-1000 %> <% } else { %> error <% }}} %>
+										<%= count_price %>
 									</strong>원
 								</dd>
 							</dl>
@@ -249,7 +236,7 @@
 								<dt>총 주문 금액</dt>
 								<dd>
 									<strong id="orderTotal">
-										<%= allvo.getPrice() %>
+										<%= count_price %>
 									</strong>원
 								</dd>
 							</dl>
@@ -261,7 +248,7 @@
 								<dt>잔여 결제금액</dt>
 								<dd>
 									<strong id="finalTotal">
-										<%= allvo.getPrice() %>
+										<%= count_price %>
 									</strong>원
 								</dd>
 							</dl>

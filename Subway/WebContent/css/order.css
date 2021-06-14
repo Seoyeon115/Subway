@@ -480,6 +480,7 @@ section.order_price span{
 }
 div.count{
 	float:left;
+	margin-top:15px;
 }
 div.count>input{
 	cursor:pointer;
@@ -502,20 +503,26 @@ div.count>span{
 	color:#555555;
 	margin-left:10px;
 }
-div.count>span#count_result{
+div.count #count_result{
 	font-size:35px;
 	font-weight:bold;
 	color:black;
 	padding:0 15px;
+	margin-top:-15px;
+	text-align:center;
 }
 
 div.price{
 	text-align:right;
 }
-div.price>span:nth-child(2){
+div.price #count_price{
 	font-size:40px;
 	font-weight:bold;
 	color:#009223;
+	border:none;
+	width:150px;
+	text-align:right;
+	margin-right:10px;
 }
 div.price>span:last-child{
 	color:#009223;

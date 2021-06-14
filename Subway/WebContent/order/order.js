@@ -10,8 +10,6 @@ $(document).ready(function(){
 		$("#cheese_option").text(this.value);
 	});
 	
-	
-	
 	/*
 	$("[name='vegetable_choice']").click(function(){
 		if($(this).prop('checked')){
@@ -22,7 +20,6 @@ $(document).ready(function(){
 		}
 	});
 	*/
-	
 	
 	$("[name='vegetable_choice']").change(function(){
 		var value = $(this).val();
@@ -36,9 +33,6 @@ $(document).ready(function(){
 			$("#vege_option").text("");
 		}
 	});
-	
-	
-	
 	
 	
 	
@@ -318,23 +312,22 @@ $(document).ready(function(){
 	});
 	
 	
-	var price = parseInt($("#count_price").text());
+	var price = parseInt($("#count_price").val());
 	$("#minus").click(function(){
-		if($("#count_result").text() > 1){
-			$("#count_result").text(parseInt($("#count_result").text())-1);
-			//$("#count_price").text(parseInt($("#count_price").text())-8000);
-			$("#count_price").text(parseInt($("#count_price").text())-price);
+		if($("#count_result").val() > 1){
+			$("#count_result").val(parseInt($("#count_result").val())-1);
+			$("#count_price").val(parseInt($("#count_price").val())-price);
 		}
 	});
 	
 	$("#plus").click(function(){
-		$("#count_result").text(parseInt($("#count_result").text())+1);
-		//$("#count_price").text(8000+parseInt($("#count_price").text()));
-		$("#count_price").text(parseInt($("#count_price").text())+price);
+		$("#count_result").val(parseInt($("#count_result").val())+1);
+		$("#count_price").val(parseInt($("#count_price").val())+price);
 	});
 	
-	$("#count_price").click(function(){
-		alert($("#count_price").text());
-	})
+	$("#orderBtn").click(function(){
+		order_confirm.submit();
+	});
+	
 	
 });
