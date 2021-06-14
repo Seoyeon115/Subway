@@ -450,13 +450,25 @@ $(document).ready(function(){
 	});
 	
 	
-	$("#choice_delete").click(function(){
+	
+	$("input[name='menu_checkbox']").click(function(){
 		var menulist = [];
+		var total_price = 0;
 		$("input:checkbox[name='menu_checkbox']:checked").each(function(){
-			menulist.push($(this).prev().attr('class'));
-			alert(menulist);
+			menulist.push(($(this).next()).val());
 		});
+		for(var i=0; i<menulist.length; i++){
+			total_price += Number(menulist[i]);
+		}
+		$("#bottom_total_price").text(total_price);
+	});
+	
+	
+	
+	$("#choice_delete").click(function(){
+		
 		
 	});
+	
 	
 });

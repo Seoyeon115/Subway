@@ -39,7 +39,9 @@
 			
 			<% for(int i=0; i<vo.size(); i++){ %>
 			<div class="menu_section section<%=i%>">
-				<input type="checkbox" name="menu_checkbox" id="menu_radio<%=i+1 %>" class="menu_radio" value="menu_idx_<%=i+1 %>"><label class="menu_text"><%= vo.get(i).getKor_name() %></label><br>
+				<input type="checkbox" name="menu_checkbox" id="menu_radio<%=i+1 %>" class="menu_radio" value="menu_idx_<%=i+1 %>">
+				<input type="hidden" id="tatal_price_hidden<%=i %>" value="<%= vo.get(i).getPrice() %>">
+				<label class="menu_text"><%= vo.get(i).getKor_name() %></label><br>
 				<span class="choice_text">&nbsp;&nbsp;<%= vo.get(i).getSub() %>, <%= vo.get(i).getBread_choice() %>, <%= vo.get(i).getCheese_choice() %>, <%=vo.get(i).getVegetable_list() %>, <%= vo.get(i).getSauce_choice() %></span><br>
 				<strong class="price_text">총 금액 출력</strong>
 				<img src="http://localhost:9000/Subway/menulist/images/<%= vo.get(i).getImage_path() %>" class="menu_image">
