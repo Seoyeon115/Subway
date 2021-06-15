@@ -321,8 +321,8 @@ $(document).ready(function(){
 	});
 	
 	$("#plus").click(function(){
-		$("#count_result").text(parseInt($("#count_result").text())+1);
-		$("#count_price").text(parseInt($("#count_price").text())+price);
+		$("#count_result").val(parseInt($("#count_result").val())+1);
+		$("#count_price").val(parseInt($("#count_price").val())+price);
 	});	
 	
 	$("#orderBtn").click(function(){

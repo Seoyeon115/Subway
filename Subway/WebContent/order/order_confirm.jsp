@@ -35,7 +35,7 @@
 	session.setAttribute("ordervo", vo);
 	
 	SessionVO member = (SessionVO) session.getAttribute("svo");
-	dao.insertBasket(vo,member.getEmail());
+	//dao.insertBasket(vo,member.getEmail());
 	
 %>
 <!DOCTYPE html>
@@ -118,19 +118,19 @@
 										<dd>
 											<ul style="margin-top:13px;">
 												<li>
-													<a href="#">길이 선택</a>
+													<a href="#" id="sub">길이 선택</a>
 												</li>
 												<li>
-													<a href="#">빵 선택</a>
+													<a href="#" id="bread">빵 선택</a>
 												</li>
 												<li>
-													<a href="#">치즈 선택</a>
+													<a href="#" id="cheese">치즈 선택</a>
 												</li>
 												<li>
-													<a href="#">야채 선택</a>
+													<a href="#" id="vegetable">야채 선택</a>
 												</li>
 												<li>
-													<a href="#">소스/시즈닝 선택</a>
+													<a href="#" id="sauce">소스/시즈닝 선택</a>
 												</li>
 									
 											</ul>
