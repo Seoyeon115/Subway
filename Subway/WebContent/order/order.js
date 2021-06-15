@@ -347,19 +347,25 @@ $(document).ready(function(){
 	$("#minus_0").click(function(){
 		if($("#count_result_0").text() > 1){
 			$("#count_result_0").text(parseInt($("#count_result_0").text())-1);
+			$("#count_result_hidden_0").val(Number($("#count_result_hidden_0").val())-1);
 			//$("#count_price").text(parseInt($("#count_price").text())-8000);
-			$("#total_price_0").text(parseInt($("#total_price_0").text())-price_1);
+			$("#total_price_0").text(parseInt($("#total_price_0").text())-price_0);
 			//$("#bottom_total_price").text($("#total_price").text());	
-
+			
+			alert($("#count_result_hidden_0").val());
 		}
 	});
 	
 	$("#plus_0").click(function(){
 		$("#count_result_0").text(parseInt($("#count_result_0").text())+1);
 		//$("#count_price").text(8000+parseInt($("#count_price").text()));
-		$("#total_price_0").text(parseInt($("#total_price_0").text())+price_1);
+		$("#total_price_0").text(parseInt($("#total_price_0").text())+price_0);
+		$("#count_result_hidden_0").val(Number($("#count_result_hidden_0").val())+1);
 		//$("#bottom_total_price").text($("#total_price").text());
+		
+		alert($("#count_result_hidden_0").val());
 	});
+	
 	
 	
 	var price_1 = parseInt($("#total_price_1").text());
@@ -368,8 +374,10 @@ $(document).ready(function(){
 			$("#count_result_1").text(parseInt($("#count_result_1").text())-1);
 			//$("#count_price").text(parseInt($("#count_price").text())-8000);
 			$("#total_price_1").text(parseInt($("#total_price_1").text())-price_1);
-			//$("#bottom_total_price").text($("#total_price").text());	
-
+			$("#count_result_hidden_1").val(Number($("#count_result_hidden_1").val())-1);
+			//$("#bottom_total_price").text($("#total_price").text());
+			
+			alert($("#count_result_hidden_1").val());
 		}
 	});
 	
@@ -377,8 +385,13 @@ $(document).ready(function(){
 		$("#count_result_1").text(parseInt($("#count_result_1").text())+1);
 		//$("#count_price").text(8000+parseInt($("#count_price").text()));
 		$("#total_price_1").text(parseInt($("#total_price_1").text())+price_1);
+		$("#count_result_hidden_1").val(Number($("#count_result_hidden_1").val())+1);
 		//$("#bottom_total_price").text($("#total_price").text());
+		
+		alert($("#count_result_hidden_1").val());
 	});
+	
+	
 	
 	var price_2 = parseInt($("#total_price_2").text());
 	$("#minus_2").click(function(){
@@ -387,7 +400,7 @@ $(document).ready(function(){
 			//$("#count_price").text(parseInt($("#count_price").text())-8000);
 			$("#total_price_2").text(parseInt($("#total_price_2").text())-price_1);
 			//$("#bottom_total_price").text($("#total_price").text());	
-
+			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_2));
 		}
 	});
 	
@@ -396,6 +409,7 @@ $(document).ready(function(){
 		//$("#count_price").text(8000+parseInt($("#count_price").text()));
 		$("#total_price_2").text(parseInt($("#total_price_2").text())+price_1);
 		//$("#bottom_total_price").text($("#total_price").text());
+		$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_2));
 	});
 	
 	
@@ -406,6 +420,7 @@ $(document).ready(function(){
 			//$("#count_price").text(parseInt($("#count_price").text())-8000);
 			$("#total_price_3").text(parseInt($("#total_price_3").text())-price_1);
 			//$("#bottom_total_price").text($("#total_price").text());	
+			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_3));
 
 		}
 	});
@@ -415,6 +430,29 @@ $(document).ready(function(){
 		//$("#count_price").text(8000+parseInt($("#count_price").text()));
 		$("#total_price_3").text(parseInt($("#total_price_3").text())+price_1);
 		//$("#bottom_total_price").text($("#total_price").text());
+		$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_3));
+	});
+	
+	
+	
+	var price_4 = parseInt($("#total_price_4").text());
+	$("#minus_4").click(function(){
+		if($("#count_result_4").text() > 1){
+			$("#count_result_4").text(parseInt($("#count_result_4").text())-1);
+			//$("#count_price").text(parseInt($("#count_price").text())-8000);
+			$("#total_price_4").text(parseInt($("#total_price_4").text())-price_1);
+			//$("#bottom_total_price").text($("#total_price").text());	
+			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_4));
+
+		}
+	});
+	
+	$("#plus_4").click(function(){
+		$("#count_result_4").text(parseInt($("#count_result_4").text())+1);
+		//$("#count_price").text(8000+parseInt($("#count_price").text()));
+		$("#total_price_4").text(parseInt($("#total_price_4").text())+price_1);
+		//$("#bottom_total_price").text($("#total_price").text());
+		$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_4));
 	});
 	
 	
@@ -437,12 +475,29 @@ $(document).ready(function(){
 		var menulist = [];
 		var total_price = 0;
 		$("input:checkbox[name='menu_checkbox']:checked").each(function(){
-			menulist.push(($(this).next()).val());
+			var count = Number(($(this).prev()).val());
+			var menu_price = Number(($(this).next()).val());
+			menulist.push(menu_price * count);
 		});
 		for(var i=0; i<menulist.length; i++){
 			total_price += Number(menulist[i]);
 		}
 		$("#bottom_total_price").text(total_price);
+		
+		
+		$("#minus_0").click(function(){
+			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_0));
+		});
+		$("#plus_0").click(function(){
+			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_0));
+		});
+		
+		$("#minus_1").click(function(){
+			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_1));
+		});
+		$("#plus_1").click(function(){
+			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_1));
+		});
 	});
 	
 	
