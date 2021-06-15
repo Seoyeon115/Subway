@@ -226,7 +226,7 @@ public class MemberDAO extends DBconn {
 	
 	public boolean getInsertResult(MemberVO vo){
 		boolean result = false;
-		String sql = "insert into subway_member values(?,?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into subway_member values(?,?,?,?,?,?,?)";
 		getPreparedStatement(sql);
 		
 		try {
@@ -237,9 +237,9 @@ public class MemberDAO extends DBconn {
 			pstmt.setString(5, vo.getPost());
 			pstmt.setString(6, vo.getAddr());
 			pstmt.setString(7, vo.getDaddr());
-			pstmt.setString(8, "1");
-			pstmt.setString(9, "1");
-			pstmt.setString(10, "1");
+			
+			
+			
 			
 			
 			int val = pstmt.executeUpdate();
