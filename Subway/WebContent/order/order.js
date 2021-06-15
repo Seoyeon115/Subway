@@ -1,3 +1,5 @@
+/*****************************order_detail.jsp****************************/
+
 $(document).ready(function(){
 	//체크시 옵션값 적용
 	$("[name='sub']").click(function(){
@@ -34,8 +36,6 @@ $(document).ready(function(){
 		}
 	});
 	
-	
-	
 	$("[name='sauce_choice']").click(function(){
 		$("#sau_option").text(this.value);
 	});
@@ -50,9 +50,6 @@ $(document).ready(function(){
 	});
 	
 	
-	
-	
-
 	$("#next1").click(function(){
 		if($("input[name='sub']:checked").length == 0){
 			alert("빵 길이를 선택해주세요");
@@ -90,7 +87,6 @@ $(document).ready(function(){
 	$("#prev1").click(function(){
 		$("#myModal2").modal("hide");
 	});
-	
 	
 	
 	$("input[name='cheese_choice']").change(function(){
@@ -312,6 +308,8 @@ $(document).ready(function(){
 	});
 	
 	
+	/*****************************order_confirm.jsp****************************/
+	
 	var price = parseInt($("#count_price").val());
 	$("#minus").click(function(){
 		if($("#count_result").val() > 1){
@@ -329,6 +327,26 @@ $(document).ready(function(){
 		order_confirm.submit();
 	});
 	
+	$("#singleBtn").click(function(){
+		$("#singleli").css("background-color","#009223");
+		$("#singleBtn").css("color","white");
+		$("#setli").css("background-color","#F2F2F2");
+		$("#setBtn2").css("color","#333");
+		$("#setMsg").remove();
+		$("#setul").css("margin-top","30px");
+		if($("#beverage_01").is(":checked")) {
+			$("#count_price").val($("#count_price").val()-1900);
+		}else if($("#beverage_02").is(":checked")){
+			$("#count_price").val($("#count_price").val()-2100);
+		}
+		
+		
+		
+		
+	});
+	
+	
+	/*****************************basket.jsp****************************/
 	
 	$("input:radio[id='allselect']").click(function(){
 		$("#menu_radio").prop("checked",true);

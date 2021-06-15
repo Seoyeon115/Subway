@@ -174,19 +174,19 @@
 											<% if(vo.getSingle_set().equals("단품")) { %>
 											<ul>
 												<li style="background-color:#009223;">
-													<a href="#" >단품</a>
+													<a href="#" id="singleBtn2">단품</a>
 												</li>
 												<li style="background-color:#F2F2F2;">
-													<a href="#" style="color:#333">세트</a>
+													<a href="#" style="color:#333" id="setBtn">세트</a>
 												</li>
 											</ul>
 											<% } else { %>
-											<ul style="margin-top:13px;">
-												<li style="background-color:#F2F2F2;">
-													<a href="#" style="color:#333">단품</a>
+											<ul id="setul" style="margin-top:13px;">
+												<li style="background-color:#F2F2F2;" id="singleli">
+													<a href="#" style="color:#333" id="singleBtn">단품</a>
 												</li>
-												<li style="background-color:#009223;">
-													<a href="#" >세트</a>
+												<li style="background-color:#009223;" id="setli">
+													<a href="#" id="setBtn2">세트</a>
 												</li>
 											</ul>
 											<span style="font-size:12px; text-align:left; margin-top:-8px; margin-left:40px;"><%= vo.getCookie_choice() %>, <%= vo.getBeverage_choice() %></span>
