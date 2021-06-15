@@ -5,6 +5,22 @@
 <head>
 <meta charset="UTF-8">
 <title>공지1</title>
+<style>
+.btn_right {
+	float: right;
+	margin-bottom: 10px;
+}
+.btn_style2 {
+	background-color: #009223;
+	border: 1px solid #009223;
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: 900;
+	color: white;
+	padding: 5px 0;
+	margin: 15px 0px 30px 0px;
+}
+</style>
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/board.css">
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 </head>
@@ -37,6 +53,11 @@
 
 				<div class="btn_list">
 					<a href="notice_list.jsp" onclick="view.list();return false;">목록보기</a>
+				</div>
+				<div class="btn_right">
+					<a href="#"><button type="button" class="btn_style2">수정</button></a>
+					<button type="button" class="btn_style2"
+						onclick="noticeFormCheck()">삭제</button>
 				</div>
 
 				<!-- 우측 영역 -->

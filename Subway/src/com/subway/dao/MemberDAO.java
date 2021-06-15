@@ -323,4 +323,21 @@ public class MemberDAO extends DBconn {
 			
 			return result;
 	}
+	
+	/* 전체 카운트 가져오기*/
+	//execTotalCount()
+	public int execTotalCount(){
+		int count = 0;
+		String sql = " select count(*) from mycgv_member ";
+		getPreparedStatement(sql);
+		
+		try {
+			rs = pstmt.executeQuery();
+			if(rs.next()) count = rs.getInt(1);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return count;
+	}
 }

@@ -19,7 +19,6 @@ form {
 div.content{
 	width: 1000px;
 	margin: auto; 
-/* 	border: 1px solid red; */
 }
 
 div.content>section{
@@ -42,7 +41,6 @@ div.content>section{
 	width: 17%;
 	padding:5px 0;
 	margin: 15px 0px 30px 0px;
-	
 }
 
 

@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>공지사항</title>
+<title>관리자 공지사항</title>
 
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/board.css">
@@ -15,7 +15,7 @@
 	<!-- header end -->
 	<!-- content -->
 	<div id="ncontent">
-		<h2 class="subTitle">공지사항</h2>
+		<h2 class="subTitle">관리자 공지사항</h2>
 
 		<!-- 뉴스ㆍ공지사항 list s -->
 		<div class="board_list_wrapper">

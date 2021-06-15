@@ -36,13 +36,13 @@
 				</div>
 
 				<div class="btn_list">
-					<a href="#" onclick="view.list();return false;">목록보기</a>
+					<a href="http://localhost:9000/Subway/event/event_list" onclick="view.list();return false;">목록보기</a>
 				</div>
 
 				<!-- 우측 영역 -->
 				<div class="board_right">
 					<div class="board_nav_cont">
-						<a href="http://localhost:9000/Subway/event/event_content_cupon.jsp" onclick="view.view(192);return false;">
+						<a href="http://localhost:9000/Subway/event/event_content_cpn.jsp" onclick="view.view(192);return false;">
 							<div class="board_nav_txt prev">
 								PREV<span class="arr"></span>
 							</div>
@@ -50,7 +50,7 @@
 							<p class="date">2021.06.01 ~ 2021.06.30</p>
 							<!-- 20180208 --> <!-- 20180208 -->
 							<div class="board_nav_img">
-								<img src="../event/images/cupon_btm.jpg"
+								<img src="../event/images/cpn_btm.jpg"
 									alt="신규회원 할인">
 							</div>
 						</a>
