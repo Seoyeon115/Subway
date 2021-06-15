@@ -5,6 +5,7 @@
 	String idx = request.getParameter("idx");
 	String count_result = request.getParameter("count_result");
 	String count_price = request.getParameter("count_price");
+	String set_price = request.getParameter("set_price_hidden");
 	MenuDAO dao = new MenuDAO();
 
 	MenuVO allvo = dao.getAllMenuList(idx);
@@ -28,13 +29,20 @@
 	<script>
 		$(document).ready(function(){
 			$("#listBtn").click(function(){
-				/*$(this).show();*/
-				/*$(this).css("transform","rotate(360deg)").css("transform-origin","11px, 7px");*/
+				var id = $(this).attr("id");
 				
-				$("#addSide").toggle();
-				$("#addSet").toggle();
+				if(id == "img1"){
+					$(this).attr("src","http://localhost:9000/Subway/order/order_images/bill_list_btn2.png").css("float","right").css("margin","10px 0 0 15px");
+					$(this).attr("id","img2");
+					$("#addSide").show();
+					$("#addSet").show(); 
+				}else{
+					$(this).attr("src","http://localhost:9000/Subway/order/order_images/bill_list_btn.png").css("float","right").css("margin","10px 0 0 15px");
+					$(this).attr("id","img1");
+					$("#addSide").hide();
+					$("#addSet").hide();
+				}
 			});
-			
 		});
 		
 	</script>

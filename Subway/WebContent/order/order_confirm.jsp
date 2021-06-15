@@ -6,6 +6,9 @@
 	String set_price = request.getParameter("set_price_hidden");
 	String idx = request.getParameter("idx");
 	
+	String myModal = request.getParameter("myModal");
+	
+	
 	MenuDAO dao = new MenuDAO();
 	MenuVO menuvo = dao.Menu_Detail(idx);
 	
@@ -48,7 +51,79 @@
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
 	<script src="order.js"></script>
-	
+	<script>
+	$(document).ready(function(){
+		var price = parseInt($("#count_price").val());
+		$("#minus").click(function(){
+			if($("#count_result").val() > 1){
+				$("#count_result").val(parseInt($("#count_result").val())-1);
+				$("#count_price").val(parseInt($("#count_price").val())-price);
+			}
+		});
+		
+		$("#plus").click(function(){
+			$("#count_result").val(parseInt($("#count_result").val())+1);
+			$("#count_price").val(parseInt($("#count_price").val())+price);
+		});	
+		
+		$("#sub").click(function(){
+			alert("길이 선택");
+		});
+		$("#bread").click(function(){
+			alert("빵 선택");
+		});
+		$("#cheese").click(function(){
+			alert("치즈 선택");
+		});
+		$("#vegetable").click(function(){
+			alert("야채 선택");
+		});
+		$("#sauce").click(function(){
+			alert("소스/시즈닝 선택");
+		});
+		$("#addchoice").click(function(){
+			alert("추가 선택");
+		});
+
+		
+		$("#singleBtn").one("click", function(event){
+			$("#singleli").css("background-color","#009223");
+			$("#singleBtn").css("color","white");
+			$("#setli").css("background-color","#F2F2F2");
+			$("#setBtn2").css("color","#333");
+			$("#setMsg").hide();
+			$("#setul").css("margin-top","25px");
+			<% if(set_price.equals("1900원")){%>
+				$("#count_price").val($("#count_price").val()-1900);
+			<% }else if(set_price.equals("2100원")){%>
+				$("#count_price").val($("#count_price").val()-2100);
+			<% }%>
+			
+		});
+		
+		$("#setBtn").one("click", function(event){
+			$("#singleli2").css("background-color","#F2F2F2");
+			$("#singleBtn2").css("color","#333");
+			$("#setli2").css("background-color","#009223");
+			$("#setBtn").css("color","white");
+			$("#setMsg").show();
+			$("#singleul").css("margin-top","13px");
+			<% if(set_price.equals("1900원")){%>
+				$("#count_price").val($("#count_price").val()+1900);
+			<% }else if(set_price.equals("2100원")){%>
+				$("#count_price").val($("#count_price").val()+2100);
+			<% }%>
+			
+		});
+		
+		
+		
+		$("#orderBtn").click(function(){
+			order_confirm.submit();
+		});
+		
+	});
+	</script>
 </head>
 <body>
 	<!-- header -->
@@ -118,19 +193,19 @@
 										<dd>
 											<ul style="margin-top:13px;">
 												<li>
-													<a href="#" id="sub">길이 선택</a>
+													<a id="sub" style="cursor:pointer;">길이 선택</a>
 												</li>
 												<li>
-													<a href="#" id="bread">빵 선택</a>
+													<a id="bread" style="cursor:pointer;">빵 선택</a>
 												</li>
 												<li>
-													<a href="#" id="cheese">치즈 선택</a>
+													<a id="cheese" style="cursor:pointer;">치즈 선택</a>
 												</li>
 												<li>
-													<a href="#" id="vegetable">야채 선택</a>
+													<a id="vegetable" style="cursor:pointer;">야채 선택</a>
 												</li>
 												<li>
-													<a href="#" id="sauce">소스/시즈닝 선택</a>
+													<a id="sauce" style="cursor:pointer;">소스/시즈닝 선택</a>
 												</li>
 									
 											</ul>
@@ -149,13 +224,13 @@
 											<% if(vo.getSide_choice() == null){ %>
 											<ul>
 												<li>
-													<a href="#">추가 선택</a>
+													<a id="addchoice" style="cursor:pointer;">추가 선택</a>
 												</li>
 											</ul>
 											<%}else{ %>
 											<ul style="margin-top:13px;">
 												<li>
-													<a href="#">추가 선택</a>
+													<a id="addchoice" style="cursor:pointer;">추가 선택</a>
 												</li>
 											</ul>
 											<span style="font-size:12px; text-align:left; margin-top:-8px; margin-left:40px;"><%= vo.getSide_choice() %></span>
@@ -172,24 +247,24 @@
 										</dt>
 										<dd>
 											<% if(vo.getSingle_set().equals("단품")) { %>
-											<ul>
-												<li style="background-color:#009223;">
+											<ul id="singleul">
+												<li style="background-color:#009223;" id="singleli2">
 													<a href="#" id="singleBtn2">단품</a>
 												</li>
-												<li style="background-color:#F2F2F2;">
-													<a href="#" style="color:#333" id="setBtn">세트</a>
+												<li style="background-color:#F2F2F2;" id="setli2">
+													<a style="color:#333" id="setBtn">세트</a>
 												</li>
 											</ul>
 											<% } else { %>
 											<ul id="setul" style="margin-top:13px;">
 												<li style="background-color:#F2F2F2;" id="singleli">
-													<a href="#" style="color:#333" id="singleBtn">단품</a>
+													<a style="color:#333; cursor:pointer;" id="singleBtn">단품</a>
 												</li>
 												<li style="background-color:#009223;" id="setli">
 													<a href="#" id="setBtn2">세트</a>
 												</li>
 											</ul>
-											<span style="font-size:12px; text-align:left; margin-top:-8px; margin-left:40px;"><%= vo.getCookie_choice() %>, <%= vo.getBeverage_choice() %></span>
+											<span id="setMsg" style="font-size:12px; text-align:left; margin-top:-8px; margin-left:40px;"><%= vo.getCookie_choice() %>, <%= vo.getBeverage_choice() %></span>
 											<% } %>
 										</dd>
 									</dl>
@@ -205,12 +280,7 @@
 							</div>
 							<div class="price">
 								<span>최종 결제 금액</span>
-								<input type="text" id="count_price" name="count_price" value="<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_15()%>
-									<% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_15()+1900%>
-									<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_15()+2100%> <% } else { %> error 
-									<% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_30()%>
-									<% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_30()+1900%>
-									<% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_30()+2100%> <% } else { %> error <% }}} %>" readonly>
+								<input type="text" id="count_price" name="count_price" value="<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_15()%><% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_15()+1900%><% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_15()+2100%> <% } else { %> error <% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_30()%><% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_30()+1900%><% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_30()+2100%> <% } else { %> error <% }}} %>" readonly>
 								<span>원</span>
 							</div>
 						</section>

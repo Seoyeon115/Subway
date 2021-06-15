@@ -666,7 +666,7 @@ section.final_menu_confirm>div{
 	padding:30px 10px 20px 10px;
 }
 section.final_menu_confirm dt{
-	width:500px;
+	width:650px;
 }
 section.final_menu_confirm dd, section.total_amount dd{
 	display:inline-block;
@@ -674,8 +674,8 @@ section.final_menu_confirm dd, section.total_amount dd{
 }
 #listBtn{
 	float:right;
-	margin:2px 0 0 15px;
-	transform: scaleY(-1);
+	margin:10px 0 0 15px;
+	/* transform: scaleY(-1); */
 }
 #option{
 	color:gray;
