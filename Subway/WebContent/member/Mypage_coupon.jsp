@@ -38,27 +38,27 @@
 			<div id="coupon1">
 				<div class="cute_img1"><img src="http://localhost:9000/Subway/images/img_profile_male.png"></div>
 					<ul>
-						<li id="text1">10%</li>
+						<li id="text1">2000원</li>
 						<li id="text2">할인쿠폰</li>
 					</ul>
 			</div>
-			<div class="notice_text">15,000원 이상 구매시 할인</div>
+			<div class="notice_text">10,000원 이상 구매시 할인</div>
 			<div id="coupon2">
 				<div class="cute_img2"><img src="http://localhost:9000/Subway/images/img_profile_male.png"></div>
 					<ul>
-						<li id="text3">15%</li>
+						<li id="text3">3000원</li>
 						<li id="text4">할인쿠폰</li>
 					</ul>
 			</div>
-			<div class="notice_text">25,000원 이상 구매시 할인</div>
+			<div class="notice_text">20,000원 이상 구매시 할인</div>
 			<div id="coupon3">
 				<div class="cute_img3"><img src="http://localhost:9000/Subway/images/img_profile_male.png"></div>
 					<ul>
-						<li id="text5">30%</li>
+						<li id="text5">4000원</li>
 						<li id="text6">할인쿠폰</li>
 					</ul>
 			</div>
-			<div class="notice_text">50,000원 이상 구매시 할인</div>
+			<div class="notice_text">30,000원 이상 구매시 할인</div>
 		</div>
 	</div>
 	
