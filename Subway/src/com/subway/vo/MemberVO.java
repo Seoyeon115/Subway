@@ -1,7 +1,31 @@
 package com.subway.vo;
 
 public class MemberVO {
-	String email1, email2, email, pass, name, hp1, hp2, hp3, hp, post, addr, daddr;
+	String email1, email2, email, pass, name, hp1, hp2, hp3, hp, post, addr, daddr,coupon1,coupon2,coupon3;
+	
+	public String getCoupon1() {
+		return coupon1;
+	}
+
+	public void setCoupon1(String coupon1) {
+		this.coupon1 = coupon1;
+	}
+
+	public String getCoupon2() {
+		return coupon2;
+	}
+
+	public void setCoupon2(String coupon2) {
+		this.coupon2 = coupon2;
+	}
+
+	public String getCoupon3() {
+		return coupon3;
+	}
+
+	public void setCoupon3(String coupon3) {
+		this.coupon3 = coupon3;
+	}
 
 	public String getEmail1() {
 		return email1;
