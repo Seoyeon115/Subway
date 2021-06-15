@@ -351,8 +351,6 @@ $(document).ready(function(){
 			//$("#count_price").text(parseInt($("#count_price").text())-8000);
 			$("#total_price_0").text(parseInt($("#total_price_0").text())-price_0);
 			//$("#bottom_total_price").text($("#total_price").text());	
-			
-			alert($("#count_result_hidden_0").val());
 		}
 	});
 	
@@ -362,8 +360,6 @@ $(document).ready(function(){
 		$("#total_price_0").text(parseInt($("#total_price_0").text())+price_0);
 		$("#count_result_hidden_0").val(Number($("#count_result_hidden_0").val())+1);
 		//$("#bottom_total_price").text($("#total_price").text());
-		
-		alert($("#count_result_hidden_0").val());
 	});
 	
 	
@@ -376,8 +372,6 @@ $(document).ready(function(){
 			$("#total_price_1").text(parseInt($("#total_price_1").text())-price_1);
 			$("#count_result_hidden_1").val(Number($("#count_result_hidden_1").val())-1);
 			//$("#bottom_total_price").text($("#total_price").text());
-			
-			alert($("#count_result_hidden_1").val());
 		}
 	});
 	
@@ -387,8 +381,6 @@ $(document).ready(function(){
 		$("#total_price_1").text(parseInt($("#total_price_1").text())+price_1);
 		$("#count_result_hidden_1").val(Number($("#count_result_hidden_1").val())+1);
 		//$("#bottom_total_price").text($("#total_price").text());
-		
-		alert($("#count_result_hidden_1").val());
 	});
 	
 	
