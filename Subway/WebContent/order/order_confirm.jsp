@@ -35,7 +35,7 @@
 	session.setAttribute("ordervo", vo);
 	
 	SessionVO member = (SessionVO) session.getAttribute("svo");
-	//dao.insertBasket(vo,member.getEmail());
+	dao.insertBasket(vo,member.getEmail());
 	
 %>
 <!DOCTYPE html>
