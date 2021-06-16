@@ -191,9 +191,9 @@ public class BoardDAO extends DBconn {
 	//select ---> ∆‰¿Ã¬° √≥∏Æ
 		public ArrayList<BoardVO> getList(int start, int end) {
 			ArrayList<BoardVO> list = new ArrayList<BoardVO>();
-			String sql = " SELECT RNO, BID, BTITLE, BHIT, BDATE " + 
-							" FROM (SELECT ROWNUM RNO, BID, BTITLE, BHIT, TO_CHAR(BDATE, 'YYYY-MM-DD') BDATE " + 
-							"		FROM (SELECT BID, BTITLE, BHIT, BDATE FROM MYCGV_BOARD ORDER BY BDATE DESC)) " + 
+			String sql = " SELECT RNO, BID, BTITLE, BDATE " + 
+							" FROM (SELECT ROWNUM RNO, BID, BTITLE, TO_CHAR(BDATE, 'YYYY-MM-DD') BDATE " + 
+							"		FROM (SELECT BID, BTITLE, BDATE FROM SUBWAY_BOARD ORDER BY BDATE DESC)) " + 
 							" WHERE RNO BETWEEN ? AND ? ";
 			getPreparedStatement(sql);
 			
