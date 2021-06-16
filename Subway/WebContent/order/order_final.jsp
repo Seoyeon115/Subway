@@ -43,6 +43,10 @@
 					$("#addSet").hide();
 				}
 			});
+			
+			$("#pay_btn").click(function(){
+				orderfinalForm.submit();
+			});
 		});
 		
 	</script>
@@ -77,6 +81,10 @@
 
 		<section class="menu_list">
 			<div class="menu_sandwich">
+				<form name="orderfinalForm" action="orderlistProcess.jsp" method="post">
+				<input type="hidden" name="idx" value="<%= idx %>">
+				<input type="hidden" name="count_result" value="<%= count_result %>">
+				<input type="hidden" name="count_price" value="<%= count_price %>">
 				<div class="order_detail">
 					<section class="order_form_box">
 						<h2>픽업 매장</h2>
@@ -91,8 +99,8 @@
 								<dl>
 									<dt>방문포장/매장식사</dt>
 									<dd>
-										<input type="radio" value="takeout" name="eat" id="takeout"><label>방문포장 </label>
-										<input type="radio" value="takein" name="eat" id="takein"><label>매장식사</label>
+										<input type="radio" value="방문포장" name="take"><label>방문포장 </label>
+										<input type="radio" value="매장식사" name="take"><label>매장식사</label>
 									</dd>
 								</dl>
 							</div>
@@ -108,7 +116,7 @@
 								<dl>
 									<dt>주문시 요청사항</dt>
 									<dd>
-										<input type="text" placeholder="주문시 요청사항을 입력하세요" style="outline:none;">
+										<input type="text" name="ask" id="ask" placeholder="주문시 요청사항을 입력하세요" style="outline:none;">
 									</dd>
 								</dl>
 							</div>
@@ -264,9 +272,10 @@
 						</div>
 					</section>
 					<section class="pay_btn">
-						<button type="button" class="btn_style"onclick="location.href='http://localhost:9000/Subway/order/order_final_check.jsp'">결제하기</button>
+						<button type="button" class="btn_style" id="pay_btn">결제하기</button>
 					</section>
 				</div>
+				</form>
 			</div>
 		</section>
 	</div>
