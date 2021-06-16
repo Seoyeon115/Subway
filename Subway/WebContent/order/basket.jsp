@@ -40,7 +40,7 @@
 			<% for(int i=0; i<vo.size(); i++){ %>
 			<div class="menu_section section<%=i%>">
 				<input type="hidden" id="count_result_hidden_<%=i %>" value="1">
-				<input type="checkbox" name="menu_checkbox" id="menu_radio<%=i+1 %>" class="menu_radio" value="menu_idx_<%=i+1 %>">
+				<input type="checkbox" name="menu_checkbox" id="menu_checkbox<%=i %>" class="menu_radio" value="menu_idx_<%=i+1 %>">
 				<input type="hidden" id="tatal_price_hidden<%=i %>" value="<%= vo.get(i).getPrice() %>">
 				<label class="menu_text"><%= vo.get(i).getKor_name() %></label><br>
 				<span class="choice_text">&nbsp;&nbsp;<%= vo.get(i).getSub() %>, <%= vo.get(i).getBread_choice() %>, <%= vo.get(i).getCheese_choice() %>, <%=vo.get(i).getVegetable_list() %>, <%= vo.get(i).getSauce_choice() %></span><br>
