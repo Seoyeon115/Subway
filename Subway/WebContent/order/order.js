@@ -12,37 +12,21 @@ $(document).ready(function(){
 		$("#cheese_option").text(this.value);
 	});
 	
-	/*$("[name='vegetable_choice']").click(function(){
-		$("#s1").hide();
-		$("#vege_option").append($(this).val() + " ");
-	});*/
-	/*
-	$("[name='vegetable_choice']").click(function(){
-		if($(this).prop('checked')){
-			$("#s1").hide();
-			$("#vege_option").append($(this).val() + " ").css("padding-bottom","10px");
-		}else if($("#vegetable_01").is('checked') == false){
-			alert(this.value);
+	var vegeCheckArray = [];
+	$("[name='vegetable_choice']").change(function(){
+		var checked = $(this).prop('checked');
+		var idx = vegeCheckArray.indexOf($(this).val());
+		if(checked){
+			if(!vegeCheckArray.includes($(this).val())){
+				vegeCheckArray.push($(this).val());
+				$("#s1").hide();
+				$("#vege_option").text(vegeCheckArray).css("padding-bottom","10px");
+			}
+		}else{
+			vegeCheckArray.splice(idx,1);
+			$("#vege_option").text(vegeCheckArray);
 		}
 	});
-	*/
-	
-	$("[name='vegetable_choice']").change(function(){
-		var checkArray = new Array();
-		checkArray.push($(this).val());
-		var value = $(this).val();
-		var checked = $(this).prop('checked');
-		var $label = $(this).parent();
-		var $span = $(this).next().next();
-		if(checked){
-			$("#s1").hide();
-			$("#vege_option").append(value + " ").css("padding-bottom","10px");
-		}else {
-			$("#vege_option").text("");
-		}
-	})
-	
-	
 	 
 	$("[name='sauce_choice']").click(function(){
 		$("#sau_option").text(this.value);
@@ -318,40 +302,6 @@ $(document).ready(function(){
 	
 	/*****************************order_confirm.jsp****************************/
 	
-	/*var price = parseInt($("#count_price").val());
-	$("#minus").click(function(){
-		if($("#count_result").val() > 1){
-			$("#count_result").val(parseInt($("#count_result").val())-1);
-			$("#count_price").val(parseInt($("#count_price").val())-price);
-		}
-	});
-	
-	$("#plus").click(function(){
-		$("#count_result").val(parseInt($("#count_result").val())+1);
-		$("#count_price").val(parseInt($("#count_price").val())+price);
-	});	
-	
-	$("#orderBtn").click(function(){
-		order_confirm.submit();
-	});*/
-	
-	/*$("#singleBtn").click(function(){
-		$("#singleli").css("background-color","#009223");
-		$("#singleBtn").css("color","white");
-		$("#setli").css("background-color","#F2F2F2");
-		$("#setBtn2").css("color","#333");
-		$("#setMsg").remove();
-		$("#setul").css("margin-top","20px");
-		if($("#beverage_01").is(":checked")) {
-			$("#count_price").val($("#count_price").val()-1900);
-		}else if($("#beverage_02").is(":checked")){
-			$("#count_price").val($("#count_price").val()-2100);
-		}
-		
-		
-		
-		
-	});*/
 	
 	
 	/*****************************basket.jsp****************************/
