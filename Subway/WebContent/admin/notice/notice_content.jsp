@@ -20,7 +20,6 @@ String content = vo.getBcontent().replace("\r\n", "<br>");
 div.bor {
 	border-top: 1px solid rgb(229, 229, 229);
 	width: 100%;
-	height: 1150px;
 	background-color: rgb(246, 246, 246);
 	border: 1px sollid red;
 }
@@ -62,7 +61,7 @@ div.bor {
 									<%= content%>
 									<% if (vo.getBsfile() != null) { %>
 									<img src="http://localhost:9000/Subway/upload/<%=vo.getBsfile()%>"
-										width="800px">
+										style="width: 800px;">
 									<% } %>
 								</p>
 							</div>

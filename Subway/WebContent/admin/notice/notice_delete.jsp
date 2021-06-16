@@ -36,7 +36,7 @@ div.bor {
 					<h3>정말로 삭제하시겠습니까?</h3>
 					<img src="../images/trash_can.jpg">
 					<div>
-						<a href="boardDeleteProcess.jsp?bid=<%=bid%>"><button
+						<a href="noticeDeleteProcess.jsp?bid=<%=bid%>"><button
 								type="submit" class="btn_style2" id="btnDelete">삭제</button></a> <a
 							href="notice_content.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
 								class="btn_style2">이전페이지</button></a> <a href="notice_list.jsp"><button
