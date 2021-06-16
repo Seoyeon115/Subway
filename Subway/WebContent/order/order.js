@@ -540,40 +540,33 @@ $(document).ready(function(){
 		}
 		$("#bottom_total_price").text(total_price);
 		
-//		$("#minus_0").click(function(){
-//			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_0));
-//			alert("0-0");
-//		});
-//		$("#plus_0").click(function(){
-//			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_0));
-//			alert("0+0");
-//		});
-//		
-//		$("#minus_1").click(function(){
-//			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_1));
-//			alert("1-1");
-//		});
-//		$("#plus_1").click(function(){
-//			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_1));
-//			alert("1+1");
-//		});
-//		
-//		$("#minus_2").click(function(){
-//			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_1));
-//			alert("2-2");
-//		});
-//		$("#plus_2").click(function(){
-//			$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_1));
-//			alert("2+2");
-//		});
-		
 	});
 	
 	
 	
 	$("#choice_delete").click(function(){
+		var orderlist = [];
 		
+		$("input:checkbox[name='menu_checkbox']:checked").each(function(){
+			orderlist.push(($(this).prev()).val());
+		});
 		
+		var objorderlist = {"orderlist":orderlist};
+		
+		$.ajax({
+			url : "basketSend.jsp",
+			data: objorderlist,
+			contentType :   "application/x-www-form-urlencoded; charset=UTF-8",
+            type        :   "post",
+            
+            success:function(list){
+            	
+            },
+            error:function(jqXHR, textStatus, errorThrown){
+                alert("에러 발생~~ \n" + textStatus + " : " + errorThrown);
+                self.close();
+            }
+		});
 	});
 	
 	
