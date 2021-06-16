@@ -156,10 +156,8 @@
 					<ul id="tabList">
 						<li onclick="view.tab(this, '');return false;" class="active"><a
 							href="#none">전체</a></li>
-						<li><a href="#none"
-							onclick="view.tab(this, 'Y');return false;">진행중인 이벤트</a></li>
-						<li><a href="#none"
-							onclick="view.tab(this, 'N');return false;">종료된 이벤트</a></li>
+						<li><a href="#none" onclick="view.tab(this, 'Y');return false;">진행중인 이벤트</a></li>
+						<li><a href="#none" onclick="view.tab(this, 'N');return false;">종료된 이벤트</a></li>
 					</ul>
 				</div>
 				<!--// tab -->

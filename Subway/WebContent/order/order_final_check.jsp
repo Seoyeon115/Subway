@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
+<% 
+	
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +50,8 @@
 					
 					<section class="order_check_btn">
 						<button type="button" class="btn_style2"onclick="location.href='http://localhost:9000/Subway/main/subway_main.jsp'">홈으로 이동</button>
-						<button type="button" class="btn_style"onclick="location.href='http://localhost:9000/Subway/member/Mypage_orderlist.jsp'">주문 내역 확인</button>
+						<a href="http://localhost:9000/Subway/member/Mypage_orderlist.jsp"><button type="button" class="btn_style">주문 내역 확인</button></a>
+					<!-- 	<button type="button" class="btn_style"onclick="location.href='http://localhost:9000/Subway/member/Mypage_orderlist.jsp'">주문 내역 확인</button> -->
 					</section>
 				</div>
 			</div>

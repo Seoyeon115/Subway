@@ -1,5 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
+<% 
+	
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +24,7 @@
 			<div class="orderlist_text3">주문 내역을 Tab하시면 상세조회를 할 수 있습니다.</div>
 		</div>
 		<div class="orderlist_content">
-		
+			
 		</div>
 	</div>
 	
