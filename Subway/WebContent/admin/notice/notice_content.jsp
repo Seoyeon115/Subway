@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*"%>
 <%
-	String bid = request.getParameter("bid");
+String bid = request.getParameter("bid");
 String rno = request.getParameter("rno");
 
 BoardDAO dao = new BoardDAO();
@@ -24,10 +24,12 @@ div.bor {
 	background-color: rgb(246, 246, 246);
 	border: 1px sollid red;
 }
+
 .btn_right {
 	float: right;
 	margin-bottom: 10px;
 }
+
 .btn_style2 {
 	background-color: #009223;
 	border: 1px solid #009223;
@@ -50,7 +52,6 @@ div.bor {
 		<div id="content">
 			<!-- 뉴스ㆍ공지사항 view s -->
 			<div class="news_view_wrapper">
-				<form name="notice_content" action="#" method="get">
 					<div class="ncontent">
 						<h2 class="title"><%=vo.getBtitle()%></h2>
 						<div class="date"><%=vo.getBdate()%></div>
@@ -58,16 +59,11 @@ div.bor {
 						<div class="news_view_conten">
 							<div class="text_wrap">
 								<p>
-									<%=content%>
-									<%
-										if (vo.getBsfile() != null) {
-									%>
-									<img
-										src="http://localhost:9000/Subway/board/upload/<%=vo.getBsfile()%>"
-										style="width: 800px;"><br>
-									<%
-										}
-									%>
+									<%= content%>
+									<% if (vo.getBsfile() != null) { %>
+									<img src="http://localhost:9000/Subway/upload/<%=vo.getBsfile()%>"
+										width="800px">
+									<% } %>
 								</p>
 							</div>
 						</div>
@@ -80,8 +76,10 @@ div.bor {
 							<a href="notice_list.jsp" onclick="view.list();return false;">목록보기</a>
 						</div>
 						<div class="btn_right">
-							<a href="notice_update.jsp?bid=<%=bid%>&rno=<%=rno%>"><button type="button" class="btn_style2">수정</button></a>
-							<a href="notice_delete.jsp?bid=<%=bid%>&rno=<%=rno%>"><button type="button" class="btn_style2">삭제</button></a>
+							<a href="notice_update.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
+									type="button" class="btn_style2">수정</button></a> <a
+								href="notice_delete.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
+									type="button" class="btn_style2">삭제</button></a>
 						</div>
 
 						<!-- 우측 영역 -->
@@ -114,7 +112,6 @@ div.bor {
 						</div>
 						<!--// 우측 영역 -->
 					</div>
-				</form>
 			</div>
 			<!--// 뉴스ㆍ공지사항 view e -->
 		</div>

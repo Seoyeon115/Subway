@@ -115,7 +115,7 @@ div.bor {
 									</div></td>
 								<td><div class="title">
 										<a
-											href="board_content.jsp?bid=<%=vo.getBid()%>&rno=<%=vo.getRno()%>"><%= vo.getBtitle() %></a>
+											href="notice_content.jsp?bid=<%=vo.getBid()%>&rno=<%=vo.getRno()%>"><%= vo.getBtitle() %></a>
 									</div></td>
 								<td><div></div></td>
 								<td><div class="date"><%= vo.getBdate() %></div></td>
