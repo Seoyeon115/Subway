@@ -26,6 +26,7 @@
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
 	<script src="order.js"></script>
 	<script>
+	
 		$(document).ready(function(){
 			$("#listBtn").click(function(){
 				var id = $(this).attr("id");
