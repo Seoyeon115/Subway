@@ -30,11 +30,21 @@
 	boolean result = dao.getOrderResult(svo,vo);
 	
 	if(result){
+		//쿠폰 사용한것은 null값으로 바꾸기
+		String coupon_price = request.getParameter("couponTotal");
+		if(coupon_price.equals("0")){
+			
+		}else {
+			MemberDAO mdao = new MemberDAO();
+			mdao.couponUse(svo.getEmail(),coupon_price);
+		}
 		response.sendRedirect("order_final_check.jsp");
 	}else{
 		response.sendRedirect("http://localhost:9000/Subway/member/joinFail.jsp");
 	}
 	 
+	
+	
 	
 	
 	

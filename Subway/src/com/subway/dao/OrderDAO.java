@@ -27,8 +27,9 @@ public class OrderDAO extends DBconn {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+		close();
 		return result;
+		
 	}
 	
 	//주문테이블에 주문데이터 입력

@@ -6,6 +6,31 @@ import java.util.*;
 import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
+	
+	//사용한 쿠폰 0으로 바꾸기
+	public void couponUse(String email,String coupon_price) {
+		String sql = "";
+		if(coupon_price.equals("2000")) {
+			sql += "update subway_member set coupon1 = null where email=?";
+		}else if(coupon_price.equals("3000")) {
+			sql += "update subway_member set coupon2 = null where email=?";
+		}else {
+			sql += "update subway_member set coupon3 = null where email=?";
+		}
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+	}
+	
+	
+	
 	//id 중복체크
 	public int getIdCheck(String email) {
 		int result = 0;

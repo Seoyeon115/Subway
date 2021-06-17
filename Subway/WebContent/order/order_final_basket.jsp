@@ -12,6 +12,7 @@
 	
 	String count_result = request.getParameter("menu_count_hidden");
 	int count_price = basketlist.get(0).getPrice() * Integer.parseInt(count_result);
+	session.setAttribute("ordervo", basketlist.get(0));
 	
 %>
 
