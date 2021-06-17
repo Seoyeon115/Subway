@@ -18,6 +18,27 @@
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
 	<title>SUBWAY 써브웨이</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
+	<script src="../order/js/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#slide01").click(function(){
+				$("#classicBtn").css("color","#009223");
+				$("#freshBtn").css("color","black");
+				$("#premiumBtn").css("color","black");
+			});
+			$("#slide02").click(function(){
+				$("#classicBtn").css("color","black");
+				$("#freshBtn").css("color","#009223");
+				$("#premiumBtn").css("color","black");
+			});
+			$("#slide03").click(function(){
+				$("#classicBtn").css("color","black");
+				$("#freshBtn").css("color","black");
+				$("#premiumBtn").css("color","#009223");
+			});
+			
+		});
+	</script>
 </head>
 <body>
 	<!-- header -->
@@ -48,9 +69,9 @@
 				<div>
 					<h1>Subway's Menu</h1>
 					<ul class="list_ul">
-						<li><label for="slide01" class="lab">클래식 </label><div></div></li>
-						<li><label for="slide02" class="lab">프레쉬&라이트 </label><div></div></li>
-						<li><label for="slide03" class="lab">프리미엄</label></li>
+						<li><label for="slide01" class="lab" id="classicBtn" style="color:#009223;">클래식 </label><div></div></li>
+						<li><label for="slide02" class="lab" id="freshBtn">프레쉬&라이트 </label><div></div></li>
+						<li><label for="slide03" class="lab" id="premiumBtn">프리미엄</label></li>
 					</ul>
 				</div>
 			</div>
