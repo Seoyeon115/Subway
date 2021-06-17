@@ -36,7 +36,7 @@
 						<div class="myorder_text">
 						주문내역<br><p>0개</p>
 						</div>
-						<div class="myorder_link"><a href="http://localhost:9000/Subway/member/Mypage_orderlist.jsp">주문 내역 관리</a></div>
+						<div class="myorder_link"><a href="http://localhost:9000/Subway/member/Mypage_orderlist.jsp?email=<%= svo.getEmail() %>">주문 내역 관리</a></div>
 					</div>
 					<div class="coupon">
 						<div class="coupon_text">
