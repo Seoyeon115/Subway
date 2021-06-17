@@ -69,15 +69,15 @@ public class MemberDAO extends DBconn {
 	//회원정보 변경
 	public boolean getUpdateResult(MemberVO vo) {
 		boolean result = false;
-		String sql = "update subway_member set email=?, name=?, addr=?, hp=? where pass=? ";
+		String sql = "update subway_member set name=?, addr=?, hp=? where email=? ";
 		getPreparedStatement(sql);
 		
 		try {
-			pstmt.setString(1, vo.getEmail());
-			pstmt.setString(2, vo.getName());
-			pstmt.setString(3, vo.getAddr());
-			pstmt.setString(4, vo.getHp());
-			pstmt.setString(5, vo.getPass());
+			
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getAddr());
+			pstmt.setString(3, vo.getHp());
+			pstmt.setString(4, vo.getEmail());
 			
 			int value = pstmt.executeUpdate();
 			if(value != 0) {

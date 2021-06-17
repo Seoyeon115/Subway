@@ -6,7 +6,7 @@
 	
 	MemberDAO dao = new MemberDAO();
 	MemberVO vo = dao.getInfo(email,pass);
-	
+	/* session.setAttribute("sessionvo", vo); */
 	
 %>
 
@@ -72,6 +72,7 @@
 		<h1>정보변경</h1>
 		<form name="modify_form" action="Mypage_InfoUpdateProcess.jsp" method="post">
 			<input type="hidden" name="pass" value="<%= pass %>">
+			<input type="hidden" name="email" value="<%= email %>">
 			<div class="member_info">
 				<div class="member_info2">
 					<div class="member_info3">
@@ -123,7 +124,7 @@
 					<table border="1" id="email_table">
 						<tr>
 							<th>이메일 아이디</th>
-							<td colspan="5"><input type="text" name="email" value="<%=vo.getEmail()%>"></td>
+							<td colspan="5"><input type="text" name="email" value="<%=vo.getEmail()%>" disabled></td>
 						</tr>
 					</table>
 					<br>
@@ -150,7 +151,7 @@
 				</div>
 			</div>
 			<div class="info_button">
-				<a href="Mypage_InfoDelete.jsp?email=<%=email%>&pass=<%=pass%>"><button type="button">회원탈퇴</button></a>
+				<%-- <a href="Mypage_InfoDelete.jsp?email=<%=email%>&pass=<%=pass%>"><button type="button">회원탈퇴</button></a> --%>
 				<button type="submit" id="btnUpdate">회원정보 변경</button>
 			</div>
 		</form>
