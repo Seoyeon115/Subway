@@ -58,25 +58,18 @@
 					
 				<% } %>	
 			</table>
-			<div  style="margin:auto;" >
+			<div class="menu_content" style="margin:auto;" >
 			<% for(int i=0; i<ovo.size(); i++){ %>
 			<div class="menu_section section<%=i%>">
 				<input type="hidden" id="count_result_hidden_<%=i %>" value="1">
 				<label class="menu_text"><%= ovo.get(i).getKor_name() %></label><br>
-				<span class="choice_text">&nbsp;&nbsp;<%= ovo.get(i).getSub() %>, <%= ovo.get(i).getBread_choice() %>, <%= ovo.get(i).getCheese_choice() %>, <%=ovo.get(i).getVegetable_list() %>, <%= ovo.get(i).getSauce_choice() %></span><br>
+				<div class="choice_text"><span class="choice_text">&nbsp;&nbsp;<%= ovo.get(i).getSub() %>, <%= ovo.get(i).getBread_choice() %>, <%= ovo.get(i).getCheese_choice() %>,<br> <%=ovo.get(i).getVegetable_list() %>, <%= ovo.get(i).getSauce_choice() %></span></div><br>
+				<div class="add1"><span class="add1">추가</span>&nbsp;&nbsp;&nbsp;<span><% if(ovo.get(i).getSide_choice() != null) { %><%= ovo.get(i).getSide_choice() %> <% } %></span><br>
+				<div class="add2"><span class="add2">추가</span>&nbsp;&nbsp;&nbsp;<span><%= ovo.get(i).getCookie_choice() %>, <%= ovo.get(i).getBeverage_choice() %></span></div>
+				<span class="add_price"><% if(ovo.get(i).getBeverage_choice().equals("탄산음료 16oz")) { %> <br>추가금액 : 1900원 <% } else {%> <br>추가금액 : 2100원 <% } %></span></div>
 				<img src="http://localhost:9000/Subway/menulist/images/<%= ovo.get(i).getImage_path() %>" class="menu_image">
-				<br><br><br>
-				<div class="line"></div>
-				<br><br>
-				<span class="add">추가</span>&nbsp;&nbsp;&nbsp;<span><% if(ovo.get(i).getSide_choice() != null) { %><%= ovo.get(i).getSide_choice() %> <% } %></span>
-				<span class="add_price"></span><br><br><br>
-				<span class="add">추가</span>&nbsp;&nbsp;&nbsp;<span><%= ovo.get(i).getCookie_choice() %>, <%= ovo.get(i).getBeverage_choice() %></span>
-				<span class="add_price"><% if(ovo.get(i).getBeverage_choice().equals("탄산음료 16oz")) { %> 1900원 <% } else {%> 2100원 <% } %></span>
-				<br><br>
-				
+					
 			</div>
-			<br><br><br>
-			
 			<% } %>
 			</div>
 		</div>

@@ -19,7 +19,7 @@
 	vo.setO_PRICE(request.getParameter("count_price"));
 	
 	String idx = request.getParameter("idx");
-	System.out.println(idx);
+	
 	
 	OrderDAO dao = new OrderDAO();
 	MenuVO menuvo = dao.Order_Detail(idx);
