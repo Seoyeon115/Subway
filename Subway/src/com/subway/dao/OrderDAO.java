@@ -9,6 +9,28 @@ import com.subway.vo.SessionVO;
 
 public class OrderDAO extends DBconn {
 	
+	//주문테이블 갯수 조회하기
+	public int orderListCount(String email) {
+		int result = 0;
+		String sql = "select count(*) from subway_order_detail where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				result = rs.getInt(1);
+			}
+			
+			System.out.println(result);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
 	//주문테이블에 주문데이터 입력
 	public boolean getOrderResult(SessionVO svo, FinalOrderVO vo) {
 		boolean result = false;
