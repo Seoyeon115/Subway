@@ -714,9 +714,23 @@ section.total_amount dl:last-child>dd{
 	font-size:20px;
 	font-weight:bold;
 }
+#couponTotal{
+	width:200px;
+	color:block;
+	font-size:22px;
+	font-weight:bold;
+	border:none;
+	text-align:right;
+	padding-right:10px;
+}
 #finalTotal{
+	width:200px;
 	color:#009223;
 	font-size:30px;
+	font-weight:bold;
+	border:none;
+	text-align:right;
+	padding-right:10px;
 }
 
 /**********************

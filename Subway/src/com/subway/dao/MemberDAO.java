@@ -340,4 +340,95 @@ public class MemberDAO extends DBconn {
 		
 		return count;
 	}
+	
+	//쿠폰 가져오기
+	public MemberVO getCoupon(String email) {
+		MemberVO vo = new MemberVO();
+		String sql = "select coupon1, coupon2, coupon3 from subway_member where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo.setCoupon1(rs.getString(1));
+				vo.setCoupon2(rs.getString(2));
+				vo.setCoupon3(rs.getString(3));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return vo;
+	}
+	
+	//쿠폰 카운트
+	public boolean couponCount(String email) {
+		boolean result = false;
+		String sql = " select count(case when coupon1='1' then 1 end) coupon1,"
+						  + " count(case when coupon2='1' then 1 end) coupon2,"
+						  + " count(case when coupon3='1' then 1 end) coupon3 "
+						  + " from subway_member where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				if(rs.getInt(1) == 1) result = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	
+	//쿠폰1 사용후
+	public boolean coupon1Result(String email) {
+		boolean result = false;
+		String sql = "update subway_member set coupon1=null where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	//쿠폰2 사용후
+	public boolean coupon2Result(String email) {
+		boolean result = false;
+		String sql = "update subway_member set coupon2=null where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	//쿠폰3 사용후
+	public boolean coupon3Result(String email) {
+		boolean result = false;
+		String sql = "update subway_member set coupon3=null where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	
+	
 }

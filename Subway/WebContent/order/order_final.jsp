@@ -7,9 +7,17 @@
 	String count_price = request.getParameter("count_price");
 	String set_price = request.getParameter("set_price_hidden");
 	MenuDAO dao = new MenuDAO();
-
+	MemberDAO mdao = new MemberDAO();
+	
 	MenuVO allvo = dao.getAllMenuList(idx);
 	MenuVO sandwichvo = dao.Menu_Detail(idx);
+	
+	/* MemberVO mvo = new MemberVO();
+	String email = mvo.getEmail(); */
+	SessionVO member = (SessionVO) session.getAttribute("svo");
+	MemberVO memvo = mdao.getCoupon(member.getEmail());
+	
+System.out.println(member.getEmail());	
 
 	session = request.getSession(false);
 	OrderVO vo = (OrderVO) session.getAttribute("ordervo");
@@ -41,6 +49,47 @@
 					$(this).attr("id","img1");
 					$("#addSide").hide();
 					$("#addSet").hide();
+				}
+			});
+			
+			if(<%= count_price %><10000){
+				$("select option[value='2000']").prop('disabled',true);
+				$("select option[value='3000']").prop('disabled',true);
+				$("select option[value='4000']").prop('disabled',true);
+			}else 
+				if(10000<=<%= count_price %> && <%= count_price %><20000){
+				$("select option[value='2000']").prop('disabled',false);
+				$("select option[value='3000']").prop('disabled',true);
+				$("select option[value='4000']").prop('disabled',true);
+			}else if(20000<=<%= count_price %> && <%= count_price %><30000){
+				$("select option[value='2000']").prop('disabled',false);
+				$("select option[value='3000']").prop('disabled',false);
+				$("select option[value='4000']").prop('disabled',true);
+			}else if(30000<=<%= count_price %>){
+				$("select option[value='2000']").prop('disabled',false);
+				$("select option[value='3000']").prop('disabled',false);
+				$("select option[value='4000']").prop('disabled',false);
+			} 
+			
+			$("#useCoupon").click(function(){
+				var select = $('#coupon option:selected').val();
+				var count_price = <%= count_price %>;
+				var coupon1 = 2000;
+				var coupon2 = 3000;
+				var coupon3 = 4000;
+				if(select == 'choiceCoupon'){
+					alert("쿠폰을 선택해주세요.");
+					$("#coupon").focus();
+					return false;
+				}else if(select == '2000') {
+					$("#couponTotal").val("2000");
+					$("#finalTotal").val(count_price-coupon1);
+				}else if(select == '3000'){
+					$("#couponTotal").val("3000");
+					$("#finalTotal").val(count_price-coupon2);
+				}else if(select == '4000'){
+					$("#couponTotal").val("4000");
+					$("#finalTotal").val(count_price-coupon3);
 				}
 			});
 			
@@ -134,11 +183,27 @@
 							<dl>
 								<dt>쿠폰 사용</dt>
 								<dd>
-									<select name="coupon" id="coupon">
-										<option value="">보유하신 쿠폰이 없습니다.</option>
-									</select>
+									<% if(memvo.getCoupon1() != null || memvo.getCoupon2() != null || memvo.getCoupon3() != null){ %>
+										<select name="coupon" id="coupon" style="color:black;">
+											<option id="choiceCoupon" value="choiceCoupon">쿠폰을 선택해주세요.</option>
+											<% if(memvo.getCoupon1() != null){ %>
+												<option id="2000" value="2000">2000원 할인 쿠폰(10,000원 이상 구매시)</option>
+											<% } %>
+											<% if(memvo.getCoupon2() != null){ %>
+												<option id="3000" value="3000">3000원 할인 쿠폰(20,000원 이상 구매시)</option>
+											<% } %>
+											<% if(memvo.getCoupon3() != null){ %>
+												<option id="4000" value="4000">4000원 할인 쿠폰(30,000원 이상 구매시)</option>
+											<% } %>
+										</select>
+									<% } %> 
+									<% if(memvo.getCoupon1() == null && memvo.getCoupon2() == null && memvo.getCoupon3() == null){ %>
+										<select name="coupon" id="coupon" style="color:lightgray;">
+											<option id="couponNone" value="couponNone">보유하신 쿠폰이 없습니다.</option>
+										</select>
+									<% } %> 
 									<div></div>
-									<a href="#">쿠폰 사용</a>
+									<a id="useCoupon" style="cursor:pointer;">쿠폰 사용</a>
 								</dd>
 							</dl>
 						</div>
@@ -237,14 +302,14 @@
 							</dl>
 							<dl>
 								<dt>쿠폰 사용</dt>
-								<dd><strong id="couponTotal"></strong>0 원</dd>
+								<dd>
+									<input type="text" id="couponTotal" name="couponTotal" value="0" readonly>원
+								</dd>
 							</dl>
 							<dl>
 								<dt>잔여 결제금액</dt>
 								<dd>
-									<strong id="finalTotal">
-										<%= count_price %>
-									</strong>원
+									<input type="text" id="finalTotal" name="finalTotal" value="<%= count_price %>" readonly>원
 								</dd>
 							</dl>
 							<% }else{ %>
@@ -258,14 +323,14 @@
 							</dl>
 							<dl>
 								<dt>쿠폰 사용</dt>
-								<dd><strong id="couponTotal"></strong>0원</dd>
+								<dd>
+									<input type="text" id="couponTotal" name="couponTotal" value="0" readonly>원
+								</dd>
 							</dl>
 							<dl>
 								<dt>잔여 결제금액</dt>
 								<dd>
-									<strong id="finalTotal">
-										<%= count_price %>
-									</strong>원
+									<input type="text" id="finalTotal" name="finalTotal" value="<%= count_price %>" readonly>원
 								</dd>
 							</dl>
 							<% } %>
