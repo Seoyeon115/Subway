@@ -29,7 +29,7 @@
 						<div class="info_img">
 						<img src="http://localhost:9000/Subway/images/img_profile_male.png">
 						</div>
-						<div class="info_text">김민호님</div>
+						<div class="info_text"><%= svo.getName() %>님</div>
 						<a href="http://localhost:9000/Subway/member/Mypage_passcheck.jsp">회원 정보 변경</a>
 					</div>
 					<div class="myorder">
