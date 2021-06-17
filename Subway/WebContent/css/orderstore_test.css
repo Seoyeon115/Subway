@@ -66,6 +66,7 @@ div.step_content{
 div.step_content ol{
 	display:inline-block;
 	list-style-type:none;
+	margin-top:20px;
 }
 div.step_content ol li{
 	float:left; 
@@ -121,6 +122,10 @@ div.info_content{
 	display:inline-block;
 	width:290px;
 	height:400px;	
+	margin-top:40px;
+}
+p.txt1{
+	margin:14px 37px 0px 37px;
 }
 div.info_content .step_num{
 	z-index:9; 

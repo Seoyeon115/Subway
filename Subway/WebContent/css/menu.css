@@ -7,14 +7,16 @@
 .img01_h2 {
 	text-align:center;
 	color:white;
-	font-size:60px;
+	font-size:70px;
 	padding-top:80px;
 }
 .img01_p {
 	text-align:center;
 	color:white;
-	font-size:25px;
+	font-size:16px;
+	font-weight:bold;
 	padding-top:40px;
+	line-height:25px;
 }
 
 .detail_menu {
@@ -54,6 +56,7 @@
 	background-color:rgb(242,242,242);
 	margin:auto;
 	width:100%;
+	padding-bottom:80px;
 }
 .menulist>ul {
 	padding:0; margin:0;

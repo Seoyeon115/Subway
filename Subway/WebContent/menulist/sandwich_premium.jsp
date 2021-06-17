@@ -25,7 +25,7 @@
 			<li><a href="sandwich.jsp" id="all">All</a><div class="line"></div></li>
 			<li><a href="sandwich_classic.jsp" id="classic">클래식</a><div class="line"></div></li>
 			<li><a href="sandwich_fresh.jsp" id="fresh">프레쉬&라이트</a><div class="line"></div></li>
-			<li><a href="sandwich_premium.jsp" id="premium" style="color:blue">프리미엄</a></li>
+			<li><a href="sandwich_premium.jsp" id="premium" style="color:#009223">프리미엄</a></li>
 		</ul>
 	</div>
 	<div class="menulist">
