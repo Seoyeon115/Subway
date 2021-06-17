@@ -17,11 +17,11 @@
 	SessionVO member = (SessionVO) session.getAttribute("svo");
 	MemberVO memvo = mdao.getCoupon(member.getEmail());
 	
-System.out.println(member.getEmail());	
+	System.out.println(member.getEmail());	
 
 	session = request.getSession(false);
 	OrderVO vo = (OrderVO) session.getAttribute("ordervo");
-	
+	session.setAttribute("menuvo", allvo);
 %>
 
 <!DOCTYPE html>

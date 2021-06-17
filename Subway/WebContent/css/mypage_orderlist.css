@@ -1,6 +1,6 @@
 div.content{
 	width:100%;
-	height:800px;
+	height:1000px;
 	border-top:2px solid rgb(229,229,229);
 	background-color:rgb(246,246,246);
 }
@@ -33,8 +33,27 @@ div.orderlist_text3{
 
 div.orderlist_content{
 	width:1200px;
-	height:500px;
+	height:700px;
 	margin:auto;
 	margin-top:30px;
 	background-color:white;
+}
+
+div.orderlist_content table{
+	border:1px solid blue;
+	width:600px;
+	height:200px;
+	margin:auto;
+	float:left;
+}
+div.orderlist_content table tr:nth-child(6) th{
+	border-bottom:1px solid green;	
+}
+div.orderlist_content table tr:nth-child(6) td{
+	/*border:1px solid red;*/
+	border-bottom:1px solid green;
+}
+div.orderlist_content table tr td input{
+	text-align:center;
+	border:none;
 }
