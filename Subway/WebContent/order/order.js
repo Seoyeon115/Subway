@@ -323,7 +323,8 @@ $(document).ready(function(){
 	$("#minus_0").click(function(){
 		if($("#count_result_0").text() > 1){
 			$("#count_result_0").text(parseInt($("#count_result_0").text())-1);
-			$("#count_result_hidden_0").val(Number($("#count_result_hidden_0").val())-1);
+			$("#menu_count_hidden").val(Number($("#menu_count_hidden").val())-1);
+			
 			//$("#count_price").text(parseInt($("#count_price").text())-8000);
 			$("#total_price_0").text(parseInt($("#total_price_0").text())-price_0);
 			//$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())-parseInt(price_0));
@@ -334,7 +335,7 @@ $(document).ready(function(){
 		$("#count_result_0").text(parseInt($("#count_result_0").text())+1);
 		//$("#count_price").text(8000+parseInt($("#count_price").text()));
 		$("#total_price_0").text(parseInt($("#total_price_0").text())+price_0);
-		$("#count_result_hidden_0").val(Number($("#count_result_hidden_0").val())+1);
+		$("#menu_count_hidden").val(Number($("#menu_count_hidden").val())+1);
 		//$("#bottom_total_price").text(parseInt($("#bottom_total_price").text())+parseInt(price_0));
 	});
 	
