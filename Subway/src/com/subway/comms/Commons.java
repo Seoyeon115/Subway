@@ -11,7 +11,7 @@ public class Commons {
 		// 페이징 처리 - startCount, endCount 구하기
 		int startCount = 0;
 		int endCount = 0;
-		int pageSize = 5; // 한페이지당 게시물 수
+		int pageSize = 8; // 한페이지당 게시물 수
 		int reqPage = 1; // 요청페이지
 		int pageCount = 1; // 전체 페이지 수
 		int dbCount = 0; // DB에서 가져온 전체 행수
@@ -38,7 +38,7 @@ public class Commons {
 			endCount = reqPage * pageSize;
 		} else {
 			startCount = 1;
-			endCount = 5;
+			endCount = 8;
 		}
 
 		map.put("start", startCount);

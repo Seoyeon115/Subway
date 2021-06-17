@@ -188,19 +188,47 @@ public class BoardDAO extends DBconn {
 		return result;
 	}
 	
-	//select ---> 其捞隆 贸府
+		
+		//select ---> 傍瘤 其捞隆 贸府
+		public ArrayList<BoardVO> getList1() {
+			ArrayList<BoardVO> list1 = new ArrayList<BoardVO>();
+			String sql = " SELECT RNO, BID, BTITLE, BDATE " + 
+					" FROM (SELECT ROWNUM RNO, BID, BTITLE, TO_CHAR(BDATE, 'YYYY-MM-DD') BDATE " + 
+					"		FROM (SELECT BID, BTITLE, BDATE FROM SUBWAY_BOARD ORDER BY BDATE DESC)) " + 
+					" WHERE RNO BETWEEN 1 AND 6 ";
+			getPreparedStatement(sql);
+			
+			try {
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					BoardVO vo = new BoardVO();
+					vo.setRno(rs.getInt(1));
+					vo.setBid(rs.getString(2));
+					vo.setBtitle(rs.getString(3));
+					vo.setBdate(rs.getString(4));
+					
+					list1.add(vo);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			
+			return list1;
+		}
+		
+		//select ---> 其捞隆 贸府
 		public ArrayList<BoardVO> getList(int start, int end) {
 			ArrayList<BoardVO> list = new ArrayList<BoardVO>();
 			String sql = " SELECT RNO, BID, BTITLE, BDATE " + 
-							" FROM (SELECT ROWNUM RNO, BID, BTITLE, TO_CHAR(BDATE, 'YYYY-MM-DD') BDATE " + 
-							"		FROM (SELECT BID, BTITLE, BDATE FROM SUBWAY_BOARD ORDER BY BDATE DESC)) " + 
-							" WHERE RNO BETWEEN ? AND ? ";
+					" FROM (SELECT ROWNUM RNO, BID, BTITLE, TO_CHAR(BDATE, 'YYYY-MM-DD') BDATE " + 
+					"		FROM (SELECT BID, BTITLE, BDATE FROM SUBWAY_BOARD ORDER BY BDATE DESC)) " + 
+					" WHERE RNO BETWEEN ? AND ? ";
 			getPreparedStatement(sql);
 			
 			try {
 				pstmt.setInt(1, start);
 				pstmt.setInt(2, end);
-
+				
 				rs = pstmt.executeQuery();
 				while(rs.next()) {
 					BoardVO vo = new BoardVO();

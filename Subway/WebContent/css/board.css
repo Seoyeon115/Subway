@@ -233,6 +233,13 @@ td {
 	vertical-align: inherit;
 }
 
+/*
+.board_list_wrapper table td .num {
+    color: #ffc300;
+    font-family: font_sw;
+    font-weight: bold;
+}*/
+
 .board_list_wrapper table {
 	clear: both;
 	border-top: 4px solid #009223;
@@ -355,6 +362,7 @@ img {
     padding: 10px 0;
     margin: 15px 20px 30px -10px;
     border-radius: 30px;
+    float: right;
 }
 
 .btn_list {

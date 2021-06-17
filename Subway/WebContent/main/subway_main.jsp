@@ -1,5 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*, com.subway.comms.*" %>
+<%
+	String rpage = request.getParameter("page");  //최초 호출 시에는 rpage=null
+	BoardDAO dao = new BoardDAO();	
+	Commons commons = new Commons();
+	HashMap map = commons.getPage(rpage, dao, "board");
+	
+	int start = (int)map.get("start");
+	int end = (int)map.get("end");
+	ArrayList<BoardVO> list = dao.getList(start, 3);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -189,11 +200,17 @@
 				<div>	
 					<div>
 						<ul>
+							<% for(BoardVO vo : list) {%>
+							<li><a href="http://localhost:9000/Subway/admin/notice/notice_content.jsp?bid=<%=vo.getBid()%>&rno=<%=vo.getRno()%>"><%=vo.getBtitle() %></a></li>
+							<% } %>
+							<li><a href="http://localhost:9000/Subway/board/notice_list.jsp">more</a></li>
+						</ul>
+						<!-- <ul>
 							<li><a href="#">써브웨이 2021년 5월 가격 인상 안내</a></li>
 							<li><a href="#">써브웨이 고객센터 2021년 설 연휴 휴무 안내</a></li>
 							<li><a href="#">2021년 설날 당일 매장 영업 안내</a></li>
-							<li><a href="#">more</a></li>
-						</ul>
+							<li><a href="http://localhost:9000/Subway/board/notice_list.jsp">more</a></li>
+						</ul> -->
 					</div>
 				</div>
 				<div>

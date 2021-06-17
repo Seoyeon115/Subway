@@ -722,9 +722,6 @@ iframe {
     transform: translate(-50%);
 }
 
-.event_view_wrapper .event_view_conten .text_wrap img {
-    max-width: 800px;
-}
 img {
     vertical-align: top;
     border: 0;
