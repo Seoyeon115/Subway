@@ -148,7 +148,6 @@
 				</div>
 			</div>
 			<div class="info_button">
-				<a href="Mypage_InfoDelete.jsp?email=<%=email%>&pass=<%=pass%>"><button type="button">회원탈퇴</button></a>
 				<button type="button">회원정보 변경</button>
 			</div>
 		</form>

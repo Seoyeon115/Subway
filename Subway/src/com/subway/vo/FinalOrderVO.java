@@ -1,8 +1,7 @@
 package com.subway.vo;
 
 public class FinalOrderVO {
-	String  O_NO, O_EAT, HP, O_MESSAGE,  O_COUPON;          
-	int O_AMT,  O_PRICE;
+	String  O_NO, O_EAT, HP, O_MESSAGE,  O_COUPON, O_AMT,  O_PRICE;;          
 	
 	public String getO_NO() {
 		return O_NO;
@@ -34,18 +33,19 @@ public class FinalOrderVO {
 	public void setO_COUPON(String o_COUPON) {
 		O_COUPON = o_COUPON;
 	}
-	public int getO_AMT() {
+	public String getO_AMT() {
 		return O_AMT;
 	}
-	public void setO_AMT(int o_AMT) {
+	public void setO_AMT(String o_AMT) {
 		O_AMT = o_AMT;
 	}
-	public int getO_PRICE() {
+	public String getO_PRICE() {
 		return O_PRICE;
 	}
-	public void setO_PRICE(int o_PRICE) {
+	public void setO_PRICE(String o_PRICE) {
 		O_PRICE = o_PRICE;
 	}
+	
 	
 	    
 }

@@ -6,6 +6,31 @@ import java.util.*;
 import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
+	
+	//사용한 쿠폰 0으로 바꾸기
+	public void couponUse(String email,String coupon_price) {
+		String sql = "";
+		if(coupon_price.equals("2000")) {
+			sql += "update subway_member set coupon1 = null where email=?";
+		}else if(coupon_price.equals("3000")) {
+			sql += "update subway_member set coupon2 = null where email=?";
+		}else {
+			sql += "update subway_member set coupon3 = null where email=?";
+		}
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			pstmt.executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+	}
+	
+	
+	
 	//id 중복체크
 	public int getIdCheck(String email) {
 		int result = 0;
@@ -69,15 +94,15 @@ public class MemberDAO extends DBconn {
 	//회원정보 변경
 	public boolean getUpdateResult(MemberVO vo) {
 		boolean result = false;
-		String sql = "update subway_member set email=?, name=?, addr=?, hp=? where pass=? ";
+		String sql = "update subway_member set name=?, addr=?, hp=? where email=? ";
 		getPreparedStatement(sql);
 		
 		try {
-			pstmt.setString(1, vo.getEmail());
-			pstmt.setString(2, vo.getName());
-			pstmt.setString(3, vo.getAddr());
-			pstmt.setString(4, vo.getHp());
-			pstmt.setString(5, vo.getPass());
+			
+			pstmt.setString(1, vo.getName());
+			pstmt.setString(2, vo.getAddr());
+			pstmt.setString(3, vo.getHp());
+			pstmt.setString(4, vo.getEmail());
 			
 			int value = pstmt.executeUpdate();
 			if(value != 0) {
@@ -340,4 +365,95 @@ public class MemberDAO extends DBconn {
 		
 		return count;
 	}
+	
+	//쿠폰 가져오기
+	public MemberVO getCoupon(String email) {
+		MemberVO vo = new MemberVO();
+		String sql = "select coupon1, coupon2, coupon3 from subway_member where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				vo.setCoupon1(rs.getString(1));
+				vo.setCoupon2(rs.getString(2));
+				vo.setCoupon3(rs.getString(3));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return vo;
+	}
+	
+	//쿠폰 카운트
+	public boolean couponCount(String email) {
+		boolean result = false;
+		String sql = " select count(case when coupon1='1' then 1 end) coupon1,"
+						  + " count(case when coupon2='1' then 1 end) coupon2,"
+						  + " count(case when coupon3='1' then 1 end) coupon3 "
+						  + " from subway_member where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			if(rs.next()) {
+				if(rs.getInt(1) == 1) result = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	
+	//쿠폰1 사용후
+	public boolean coupon1Result(String email) {
+		boolean result = false;
+		String sql = "update subway_member set coupon1=null where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	//쿠폰2 사용후
+	public boolean coupon2Result(String email) {
+		boolean result = false;
+		String sql = "update subway_member set coupon2=null where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	//쿠폰3 사용후
+	public boolean coupon3Result(String email) {
+		boolean result = false;
+		String sql = "update subway_member set coupon3=null where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	
+	
 }

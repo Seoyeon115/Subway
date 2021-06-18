@@ -1,6 +1,6 @@
 div.content{
 	width:100%;
-	height:800px;
+	height:1000px;
 	border-top:2px solid rgb(229,229,229);
 	background-color:rgb(246,246,246);
 }
@@ -33,8 +33,77 @@ div.orderlist_text3{
 
 div.orderlist_content{
 	width:1200px;
-	height:500px;
+	height:700px;
 	margin:auto;
 	margin-top:30px;
 	background-color:white;
+}
+
+div.orderlist_content table{
+	/*border:1px solid blue;*/
+	width:500px;
+	height:440px;
+	margin:auto;
+	float:left;
+	margin-top:30px;
+	margin-left:30px;
+}
+div.orderlist_content table tr th{
+	border:1px solid rgb(238,238,238);
+	border-right:none;
+}
+div.orderlist_content table tr td{
+	border:1px solid rgb(238,238,238);
+	border-left:none;
+}
+div.orderlist_content table tr td input[type="text"]{
+	/*border:1px solid green;*/
+	height:50px;
+}
+div.orderlist_content table tr:nth-child(6) th{
+	
+}
+div.orderlist_content table tr:nth-child(6) td{
+	/*border:1px solid red;*/
+}
+div.orderlist_content table tr td input{
+	text-align:center;
+	border:none;
+}
+div.menu_content{
+	border:1px solid rgb(238,238,238);
+	height:510px;
+}
+label.menu_text{
+	/*border:1px solid green;*/
+	font-weight:900;
+	font-size:20px;
+}
+span.choice_text{
+	/*border:1px solid green;*/
+}
+div.choice_text{
+	margin-top:20px;
+	/*border:1px solid violet;*/
+	display:inline-block;
+	color:rgb(102,102,102);
+	font-weight:900;
+}
+div.add1{
+	/*border:1px solid violet;*/
+	display:inline-block;
+	text-align:left;
+	float:left;
+	margin-top:20px;
+	margin-left:80px;
+	color:rgb(102,102,102);
+	font-weight:900;
+}
+div.add2{
+	border-bottom:2px solid rgb(102,102,102);;
+	display:inline-block;
+}
+div.menu_content img{
+	/*border:1px solid green;*/
+	height:350px;
 }

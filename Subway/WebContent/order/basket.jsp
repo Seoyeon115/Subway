@@ -8,6 +8,7 @@
 	ArrayList<OrderVO> vo = menudao.selectBasket(smember.getEmail());
 	
 	
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -56,27 +57,32 @@
 				<br><br>
 				<div class="line"></div>
 				<br><br>
-				
-				<span class="count">수량</span>
-				<input type="button" id="minus_<%=i %>" class="minus_1">
-				<span id="count_result_<%=i %>" class="count_result_1">1</span>
-				<input type="button" id="plus_<%=i %>" class="plus_1">
-				
-				<div class="price">
-					<span class="total_price_text">총 주문금액</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-					<span id="total_price_<%=i%>"><%= vo.get(i).getPrice() %></span><span class="won">원</span>
+	
+					<span class="count">수량</span>
+					<input type="button" id="minus_<%=i %>" class="minus_1">
+					<span id="count_result_<%=i %>" class="count_result_1">1</span>
+					<input type="button" id="plus_<%=i %>" class="plus_1">
+					
+					<div class="price">
+						<span class="total_price_text">총 주문금액</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						<span id="total_price_<%=i%>"><%= vo.get(i).getPrice() %></span><span class="won">원</span>
+					</div>
+					<br><br>
+					
 				</div>
-				<br><br>
-				
-			</div>
-			<br><br><br>
-			
-			<% } %>
-			<div class="bottom_section">
-				<br><br>
-				<span class="price_checked">최종 결제 금액</span><span id="bottom_total_price"> 금액 출력</span><span class="won_1">원</span>
-				<button type="button" name="order" class="btn_order">주문하기</button>
 				<br><br><br>
+				
+				
+				
+				<% } %>
+				<div class="bottom_section">
+				<form name="basketsend" action="order_final_basket.jsp" method="post"> 
+						<input type="hidden" name="menu_count_hidden" value="1">
+						<br><br>
+						<span class="price_checked">최종 결제 금액</span><span id="bottom_total_price"> 금액 출력</span><span class="won_1">원</span>
+						<button type="submit" name="order" class="btn_order">주문하기</button>
+						<br><br><br>
+				</form>
 			</div> 
 			<br><br><br>
 			
