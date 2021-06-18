@@ -67,7 +67,7 @@ public class MemberDAO extends DBconn {
 	//남은 쿠폰 수량 계산하기
 	public int couponCal(String email) {
 		int value = 0;
-		String sql = "select sum(coupon1+coupon2+coupon3) from subway_member where email=?";
+		String sql = "select NVL(SUM(coupon1),0)+ NVL(SUM(coupon2),0) + NVL(sum(coupon3),0) from subway_member where email=?";
 		getPreparedStatement(sql);
 		
 		try {
