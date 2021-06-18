@@ -36,8 +36,8 @@ div.bor {
 	font-size: 14px;
 	font-weight: 900;
 	color: white;
-	padding: 5px 0;
-	margin: 15px 0px 30px 0px;
+	padding: 5px 10PX;
+	margin: 0px 0px;
 }
 </style>
 </head>
@@ -70,21 +70,23 @@ div.bor {
 						<!-- 첨부파일 -->
 
 						<!--// 첨부파일 -->
-
-						<div class="btn_list">
-							<a href="notice_list.jsp" onclick="view.list();return false;">목록보기</a>
+						<!-- 버튼list -->
+						<div>
+							<div class="btn_list">
+								<a href="http://localhost:9000/Subway/board/notice_list.jsp" onclick="view.list();return false;">목록보기</a>
+							</div>
+							<div class="btn_right">
+								<a href="notice_update.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
+										type="button" class="btn_style2">수정</button></a> <a
+									href="notice_delete.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
+										type="button" class="btn_style2">삭제</button></a>
+							</div>
 						</div>
-						<div class="btn_right">
-							<a href="notice_update.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
-									type="button" class="btn_style2">수정</button></a> <a
-								href="notice_delete.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
-									type="button" class="btn_style2">삭제</button></a>
-						</div>
-
+						<!--// 버튼list -->
 						<!-- 우측 영역 -->
-						<div class="board_right">
+						<!--  <div class="board_right">-->
 							<!-- 공지사항 영역 -->
-							<ul class="notice">
+							<!--<ul class="notice">
 								<li><a href="#" onclick="view.view(244)">써브웨이 2021년 5월
 										가격 인상 안내</a></li>
 								<li><a href="#" onclick="view.view(241)">써브웨이와 함께하는
@@ -97,16 +99,15 @@ div.bor {
 										이용 안내의 건</a></li>
 								<li><a href="#" onclick="view.view(190)">고객 경험 설문조사
 										프로그램 안내</a></li>
-							</ul>
+							</ul> -->
 							<!--// 공지사항 영역 -->
 
 							<!-- 이전,다음글 영역 -->
-							<ul class="board_nav">
-
+							<!-- <ul class="board_nav">
 								<li><strong>써브웨이 2021년 5월 가격 인상 안내</strong></li>
 								<li class="next"><a href="#" onclick="view.view(243)">써브웨이
 										고객센터 2021년 설 연휴 휴무 안내</a></li>
-							</ul>
+							</ul> -->
 							<!--// 이전,다음글 영역 -->
 						</div>
 						<!--// 우측 영역 -->

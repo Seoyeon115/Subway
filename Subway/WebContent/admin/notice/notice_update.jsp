@@ -16,8 +16,8 @@ String content = vo.getBcontent().replace("<br>", "\r\n");
 <title>Insert title here</title>
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/board_write.css">
-<script src="http://localhost:9000/subway/js/jquery-3.6.0.min.js"></script>
-<script src="http://localhost:9000/subway/js/board.js"></script>
+<script src="http://localhost:9000/Subway/admin/js/jquery-3.6.0.min.js"></script>
+<script src="http://localhost:9000/Subway/admin/js/board.js"></script>
 <style>
 span#fname {
 	width: 150px;
@@ -50,6 +50,7 @@ div.bor {
 	padding: 5px 0;
 	margin: 15px 0px 30px 0px;
 }
+</style>
 
 <script>
 	$(document).ready(function() {
@@ -62,7 +63,6 @@ div.bor {
 		});
 	});
 </script>
-</style>
 </head>
 <body>
 	<!-- header start -->
@@ -74,8 +74,9 @@ div.bor {
 		<div class="content">
 			<section class="board_write">
 				<h1 class="title">공지사항 수정</h1>
-				<form name="notice_write" action="noticeWriteProcess.jsp" method="post"
-					enctype="multipart/form-data">
+				<form name="notice_update_form" action="noticeUpdateProcess.jsp" method="post" enctype="multipart/form-data">
+				<input type="hidden" name="bid" value="<%= bid %>"> <!-- 화면엔 표시 되지는 않지만, 업데이트 프로세스를 위해서 꼭 필요한 bid를 넘기는 방법 -->
+				<input type="hidden" name="bsfile_old" value="<%= vo.getBsfile() %>"> <!-- 새 파일을 업로드할 경우, 기존 파일을 db에서 삭제하기 위해 기존 파일 이름을 넘겨줌 -->
 					<table border=1 class="content_layout">
 						<tr>
 							<th>제목</th>
