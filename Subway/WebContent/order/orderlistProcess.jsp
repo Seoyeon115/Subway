@@ -8,6 +8,10 @@
 	String take = request.getParameter("take");	
 	String hp = request.getParameter("hp");
 	String ask = request.getParameter("ask");
+	String coupon_price = request.getParameter("couponTotal");
+	
+	String total_price = String.valueOf(Integer.parseInt(request.getParameter("count_price")) - Integer.parseInt(coupon_price)); 
+	
 	
 	
 	FinalOrderVO vo = new FinalOrderVO();
@@ -16,7 +20,7 @@
 	vo.setO_MESSAGE(request.getParameter("ask"));
 	vo.setO_COUPON(request.getParameter(null));
 	vo.setO_AMT(request.getParameter("count_result"));
-	vo.setO_PRICE(request.getParameter("count_price"));
+	vo.setO_PRICE(total_price);
 	
 	String idx = request.getParameter("idx");
 	
@@ -31,7 +35,6 @@
 	
 	if(result){
 		//쿠폰 사용한것은 null값으로 바꾸기
-		String coupon_price = request.getParameter("couponTotal");
 		if(coupon_price.equals("0")){
 			
 		}else {
