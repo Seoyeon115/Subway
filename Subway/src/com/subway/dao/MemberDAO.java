@@ -7,6 +7,63 @@ import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
 	
+	//사용 가능한 쿠폰 가져오기
+	public int coupon1(String email) {
+		int result = 0;
+		String sql = "select coupon1 from subway_member where email=?";
+		getPreparedStatement(sql);
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				result = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	//사용 가능한 쿠폰 가져오기
+	public int coupon2(String email) {
+		int result = 0;
+		String sql = "select coupon2 from subway_member where email=?";
+		getPreparedStatement(sql);
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				result = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	//사용 가능한 쿠폰 가져오기
+	public int coupon3(String email) {
+		int result = 0;
+		String sql = "select coupon3 from subway_member where email=?";
+		getPreparedStatement(sql);
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				result = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return result;
+	}
+	
+	
+	
 	//남은 쿠폰 수량 계산하기
 	public int couponCal(String email) {
 		int value = 0;
