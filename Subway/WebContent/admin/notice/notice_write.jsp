@@ -53,7 +53,7 @@ div.bor {
 								<!-- <button type="button" class="btn_style2" onclick="noticeFormCheck()">저장</button> -->
 								<button type="button" id="btnWrite" class="btn_style2">저장</button>
 								<button type="reset" id="btnCancel" class="btn_style2">취소</button>
-								<a href="notice_list.jsp"><button type="button" class="btn_style2">리스트</button></a> 
+								<a href="http://localhost:9000/Subway/board/notice_list.jsp"><button type="button" class="btn_style2">리스트</button></a> 
 								<a href="http://localhost:9000/Subway/main/subway_main.jsp"><button	type="button" class="btn_style2">홈으로</button></a>
 							</td>
 						</tr>

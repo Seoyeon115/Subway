@@ -100,7 +100,7 @@ div.bor {
 							<td colspan="2">
 								<button type="button" class="btn_style2" id="btnUpdate">수정</button>
 								<a href="notice_content.jsp?bid=<%=bid%>&rno=<%=rno%>"><button type="button" class="btn_style2">취소</button></a>
-								<a href="notice_list.jsp"><button type="button" class="btn_style2">리스트</button></a> 
+								<a href="http://localhost:9000/Subway/admin/notice/notice_list.jsp"><button type="button" class="btn_style2">리스트</button></a> 
 							</td>
 						</tr>
 					</table>

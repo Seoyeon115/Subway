@@ -39,7 +39,7 @@ div.bor {
 						<a href="noticeDeleteProcess.jsp?bid=<%=bid%>"><button
 								type="submit" class="btn_style2" id="btnDelete">삭제</button></a> <a
 							href="notice_content.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
-								class="btn_style2">이전페이지</button></a> <a href="notice_list.jsp"><button
+								class="btn_style2">이전페이지</button></a> <a href="http://localhost:9000/Subway/board/notice_list.jsp"><button
 								class="btn_style2">리스트</button></a>
 					</div>
 				</div>

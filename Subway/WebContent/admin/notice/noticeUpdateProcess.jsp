@@ -55,6 +55,6 @@
 	}	
 	
 	if(result) {
-		response.sendRedirect("notice_list.jsp");
+		response.sendRedirect("http://localhost:9000/Subway/board/notice_list.jsp");
 	}
 %>
