@@ -8,6 +8,8 @@ String rno = request.getParameter("rno");
 BoardDAO dao = new BoardDAO();
 BoardVO vo = dao.getContent(bid);
 String content = vo.getBcontent().replace("\r\n", "<br>");
+
+SessionVO svo = (SessionVO) session.getAttribute("svo");
 %>
 <!DOCTYPE html>
 <html>
@@ -76,10 +78,12 @@ div.bor {
 								<a href="http://localhost:9000/Subway/board/notice_list.jsp" onclick="view.list();return false;">목록보기</a>
 							</div>
 							<div class="btn_right">
+								<% if(svo.getEmail().equals("admin@naver.com")){ %>
 								<a href="notice_update.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
 										type="button" class="btn_style2">수정</button></a> <a
 									href="notice_delete.jsp?bid=<%=bid%>&rno=<%=rno%>"><button
 										type="button" class="btn_style2">삭제</button></a>
+								<% } %>
 							</div>
 						</div>
 						<!--// 버튼list -->
