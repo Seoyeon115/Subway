@@ -46,7 +46,7 @@ $(document).ready(function(){
 	
 	jQuery('#ampaginationsm').on('am.pagination.change',function(e){  //페이지가 변경되면 href의 주소 변경
 		   jQuery('.showlabelsm').text('The selected page no: '+e.page);
-           $(location).attr('href', "http://localhost:9000/Subway/admin/notice/notice_list.jsp?page="+e.page);         
+           $(location).attr('href', "http://localhost:9000/Subway/board/notice_list.jsp?page="+e.page);         
     });
 	
 	});
