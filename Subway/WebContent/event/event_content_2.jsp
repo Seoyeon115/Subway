@@ -45,7 +45,7 @@ div.bor {
 					</div>
 	
 					<div class="btn_list">
-						<a href="http://localhost:9000/Subway/event/event_list" onclick="view.list();return false;">목록보기</a>
+						<a href="http://localhost:9000/Subway/event/event_list.jsp" onclick="view.list();return false;">목록보기</a>
 					</div>
 	
 					<!-- 우측 영역 -->
