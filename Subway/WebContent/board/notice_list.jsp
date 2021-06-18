@@ -81,7 +81,7 @@ div.bor {
 						총<strong><%=map.get("dbCount")%></strong>건의 게시글이 있습니다.
 					</p>
 					<% if(svo.getEmail().equals("admin@naver.com")){ %>
-						<a class="btn_right" href="http://localhost:9000/Subway/board/notice_write.jsp"><button type="button" class="btn_write" style="width:15%;">글쓰기</button></a>
+						<a class="btn_right" href="http://localhost:9000/Subway/admin/notice/notice_write.jsp"><button type="button" class="btn_write" style="width:15%;">글쓰기</button></a>
 					<% } %>
 
 					<table>
@@ -98,7 +98,7 @@ div.bor {
 								<!-- 공지사항일경우 notice 클래스 추가 -->
 								<td><div class="icon_notice"></div></td>
 								<td><div class="title">
-										<a href="http://localhost:9000/Subway/board/notice_content.jsp?bid=
+										<a href="http://localhost:9000/Subway/admin/notice/notice_content.jsp?bid=
 											<%=vo.getBid()%>&rno=<%=vo.getRno()%>"><%=vo.getBtitle() %></a>
 									</div></td>
 								<td><div></div></td>
