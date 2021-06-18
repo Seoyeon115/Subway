@@ -157,7 +157,7 @@
 								<dl>
 									<dt>전화번호</dt>
 									<dd>
-										<input type="text" name="hp" style="outline:none;">
+										<input type="text" name="hp" placeholder="010-0000-0000" style="outline:none;">
 									</dd>
 								</dl>
 							</div>
