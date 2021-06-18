@@ -27,39 +27,39 @@
 			<div class="orderlist_text2">최근 6개월 이내 고객님의 주문내역입니다.</div>
 			<div class="orderlist_text3">주문 내역을 Tab하시면 상세조회를 할 수 있습니다.</div>
 		</div>
+		<% for(int i=0;i<list.size();i++){ %>
 		<div class="orderlist_content">
 			<table>
-				<% for(FinalOrderVO vo : list){ %>
 					<tr>
 						<th>주문번호</th>
-						<td><input type="text" name="ordernum" id="ordernum" value="<%=vo.getO_NO()%>" readonly></td>
+						<td><input type="text" name="ordernum" id="ordernum" value="<%=list.get(i).getO_NO()%>" readonly></td>
 					</tr>
 					<tr>
 						<th>식사방법</th>
-						<td><input type="text" name="takeinout" id="takeinout" value="<%=vo.getO_EAT()%>" readonly></td>
+						<td><input type="text" name="takeinout" id="takeinout" value="<%=list.get(i).getO_EAT()%>" readonly></td>
 					</tr>
 					<tr>
 						<th>연락처</th>
-						<td><input type="text" name="hp" id="hp" value="<%=vo.getHP()%>" readonly></td>
+						<td><input type="text" name="hp" id="hp" value="<%=list.get(i).getHP()%>" readonly></td>
 					</tr>
 					<tr>
 						<th>주문시 요청사항</th>
-						<td><input type="text" name="message" id="message" value="<%=vo.getO_MESSAGE()%>" readonly></td>
+						<td><input type="text" name="message" id="message" value="<%=list.get(i).getO_MESSAGE()%>" readonly></td>
 					</tr>
 					<tr>
 						<th>수량</th>
-						<td><input type="text" name="amt" id="amt" value="<%=vo.getO_AMT()%>개" readonly></td>
+						<td><input type="text" name="amt" id="amt" value="<%=list.get(i).getO_AMT()%>개" readonly></td>
 					</tr>
 					<tr>
 						<th>주문금액</th>
-						<td><input type="text" name="price" id="price" value="<%=vo.getO_PRICE()%>원" readonly></td>
+						<td><input type="text" name="price" id="price" value="<%=list.get(i).getO_PRICE()%>원" readonly></td>
 						
 					</tr>
 					
-				<% } %>	
+				
 			</table>
 			<div class="menu_content" style="margin:auto;" >
-			<% for(int i=0; i<ovo.size(); i++){ %>
+	
 			<div class="menu_section section<%=i%>">
 				<input type="hidden" id="count_result_hidden_<%=i %>" value="1">
 				<label class="menu_text"><%= ovo.get(i).getKor_name() %></label><br>
@@ -70,9 +70,9 @@
 				<img src="http://localhost:9000/Subway/menulist/images/<%= ovo.get(i).getImage_path() %>" class="menu_image">
 					
 			</div>
-			<% } %>
 			</div>
 		</div>
+		<% } %>	
 	</div>
 	
 	
