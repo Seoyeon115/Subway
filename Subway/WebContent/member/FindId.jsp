@@ -47,7 +47,7 @@
 							</li>
 							<li>
 								<label>전화번호</label>
-								<input type="text" name="hp" id="hp" placeholder="휴대폰 번호 입력" >
+								<input type="text" name="hp" id="hp" placeholder="휴대폰 번호 입력(-입력)" >
 							</li>
 							<li>
 								<button type="button" id="fidbtn">확인</button>

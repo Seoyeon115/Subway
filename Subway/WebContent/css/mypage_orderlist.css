@@ -33,14 +33,13 @@ div.orderlist_text3{
 
 div.orderlist_content{
 	width:1200px;
-	height:700px;
+	height:600px;
 	margin:auto;
 	margin-top:30px;
 	background-color:white;
 }
 
 div.orderlist_content table{
-	/*border:1px solid blue;*/
 	width:500px;
 	height:440px;
 	margin:auto;
@@ -57,53 +56,56 @@ div.orderlist_content table tr td{
 	border-left:none;
 }
 div.orderlist_content table tr td input[type="text"]{
-	/*border:1px solid green;*/
 	height:50px;
 }
 div.orderlist_content table tr:nth-child(6) th{
 	
 }
 div.orderlist_content table tr:nth-child(6) td{
-	/*border:1px solid red;*/
 }
 div.orderlist_content table tr td input{
 	text-align:center;
 	border:none;
 }
 div.menu_content{
-	border:1px solid rgb(238,238,238);
-	height:510px;
+	/*border:1px solid rgb(238,238,238);*/
+	height:530px;
+	border:1px solid rgb(229,229,229);
+}
+div.menu_section section{
 }
 label.menu_text{
-	/*border:1px solid green;*/
 	font-weight:900;
 	font-size:20px;
+	float:right;
+	margin-right:250px;
 }
 span.choice_text{
-	/*border:1px solid green;*/
 }
 div.choice_text{
 	margin-top:20px;
-	/*border:1px solid violet;*/
 	display:inline-block;
 	color:rgb(102,102,102);
 	font-weight:900;
+	float:right;
+	margin-right:100px;
+	text-align:center;
 }
 div.add1{
-	/*border:1px solid violet;*/
 	display:inline-block;
 	text-align:left;
 	float:left;
 	margin-top:20px;
-	margin-left:80px;
+	margin-left:145px;
 	color:rgb(102,102,102);
 	font-weight:900;
 }
 div.add2{
-	border-bottom:2px solid rgb(102,102,102);;
+	border-bottom:2px solid rgb(102,102,102);
 	display:inline-block;
 }
 div.menu_content img{
-	/*border:1px solid green;*/
 	height:350px;
+	float:right;
+	margin-right:50px;
 }
