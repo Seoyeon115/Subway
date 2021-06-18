@@ -222,7 +222,7 @@
 					<div>
 						<ul>
 							<% for(BoardVO vo : list) {%>
-							<li><a href="http://localhost:9000/Subway/admin/notice/notice_content.jsp?bid=<%=vo.getBid()%>&rno=<%=vo.getRno()%>"><%=vo.getBtitle() %></a></li>
+							<li><a id="noticeList" href="http://localhost:9000/Subway/admin/notice/notice_content.jsp?bid=<%=vo.getBid()%>&rno=<%=vo.getRno()%>"><%=vo.getBtitle() %></a></li>
 							<% } %>
 							<li><a href="http://localhost:9000/Subway/board/notice_list.jsp">more</a></li>
 						</ul>

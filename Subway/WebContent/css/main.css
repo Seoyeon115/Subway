@@ -318,10 +318,40 @@
 		font-size:14px;
 		color:#353535;
 	}
-	section.main_inform>article.inform2>div:nth-child(2) a:hover{
+	/* section.main_inform>article.inform2>div:nth-child(2) a:hover{
 		text-decoration:underline;
 		color:#009f00;
+	} */
+	
+	/*왼쪽에서 오른쪽으로 이동하는 에니메이션*/
+	#noticeList{
+	  position: relative;
 	}
+	#noticeList:after{
+	  content: "";
+	  position: absolute;
+	  left: 0;
+	  bottom: -1px;
+	  width: 0px;
+	  height: 1px;
+	  margin: 1px 0 0;
+	  transition: all 0.2s ease-in-out;
+	  transition-duration: 0.2s;
+	  opacity: 0;
+	  color:#009f00;
+	  background-color:#009f00;
+	}
+	#noticeList:hover{
+	  color:#009f00;
+	}
+	#noticeList:hover:after{
+	  width: 100%;
+	  opacity: 1;
+	  color:#009f00;
+	}
+	
+	
+	
 	.section input[id*="slide"] {
 		display:none;
 		margin-bottom:20px;
