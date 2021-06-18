@@ -11,6 +11,8 @@
 	int end = (int)map.get("end");
 	ArrayList<BoardVO> list1 = dao.getList1();
 	ArrayList<BoardVO> list = dao.getList(start, end);
+	
+	SessionVO svo = (SessionVO) session.getAttribute("svo");
 %>
 <!DOCTYPE html>
 <html>
@@ -78,18 +80,9 @@ div.bor {
 					<p class="board_total">
 						총<strong><%=map.get("dbCount")%></strong>건의 게시글이 있습니다.
 					</p>
-
-					<div class="cont_right">
-						<div class="form_search">
-							<form id="searchForm" method="GET" name="searchForm"
-								onsubmit="return view.search();">
-								<input name="page" type="hidden" value="1"> <input
-									name="subject" placeholder="검색어를 입력하세요" type="text" value="">
-								<a class="btn_search" href="#"
-									onclick="view.search();return false;"></a>
-							</form>
-						</div>
-					</div>
+					<% if(svo.getEmail().equals("admin@naver.com")){ %>
+						<a class="btn_right" href="../admin/notice/notice_write.jsp"><button type="button" class="btn_write" style="width:15%;">글쓰기</button></a>
+					<% } %>
 
 					<table>
 						<caption>공지사항 테이블</caption>
@@ -135,6 +128,7 @@ div.bor {
 				<div>
 					<div class="pagination" id="ampaginationsm"></div>
 				</div>
+				
 				<!--// board 페이지 -->
 			</div>
 			<!--// 뉴스ㆍ공지사항 list e -->
