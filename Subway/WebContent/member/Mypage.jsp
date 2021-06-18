@@ -5,6 +5,8 @@
 	if(svo != null){
 	OrderDAO dao = new OrderDAO();
 	int value = dao.orderListCount(svo.getEmail());
+	MemberDAO mdao = new MemberDAO();
+	int couponCount = mdao.couponCal(svo.getEmail());
 
 %>
 <!DOCTYPE html>
@@ -41,7 +43,7 @@
 					</div>
 					<div class="coupon">
 						<div class="coupon_text">
-						쿠폰<br><p>0개</p>
+						쿠폰<br><p><%= couponCount %>개</p>
 						</div>
 						<div class="coupon_link"><a href="http://localhost:9000/Subway/member/Mypage_coupon.jsp">쿠폰 관리</a></div>
 					</div>

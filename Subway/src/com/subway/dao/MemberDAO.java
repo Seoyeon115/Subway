@@ -7,6 +7,27 @@ import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
 	
+	//남은 쿠폰 수량 계산하기
+	public int couponCal(String email) {
+		int value = 0;
+		String sql = "select sum(coupon1+coupon2+coupon3) from subway_member where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				value = rs.getInt(1);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return value;
+	}
+	
+	
 	//사용한 쿠폰 0으로 바꾸기
 	public void couponUse(String email,String coupon_price) {
 		String sql = "";
