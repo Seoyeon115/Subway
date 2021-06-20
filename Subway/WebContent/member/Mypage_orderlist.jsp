@@ -6,6 +6,11 @@
 	ArrayList<FinalOrderVO> list = dao.getOrderlist(email);
 	ArrayList<OrderVO> ovo = dao.selectOrder(email);
 	
+	MapDAO pdao = new MapDAO();
+	String lat = (String)session.getAttribute("latclick");
+	String lng = (String)session.getAttribute("lngclick");
+	StoreVO snamevo = pdao.getStoreName(lat,lng);
+	
 %>
 <!DOCTYPE html>
 <html>
@@ -33,6 +38,10 @@
 					<tr>
 						<th>주문번호</th>
 						<td><input type="text" name="ordernum" id="ordernum" value="<%=list.get(i).getO_NO()%>" readonly></td>
+					</tr>
+					<tr>
+						<th>지점명</th>
+						<td><input type="text" name="ordernum" id="ordernum" value="<%=snamevo.getSname() %>" readonly></td>
 					</tr>
 					<tr>
 						<th>식사방법</th>

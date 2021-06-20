@@ -8,6 +8,12 @@
 	String set_price = request.getParameter("set_price_hidden");
 	MenuDAO dao = new MenuDAO();
 	MemberDAO mdao = new MemberDAO();
+	MapDAO pdao = new MapDAO();
+	
+	String lat = (String)session.getAttribute("latclick");
+	String lng = (String)session.getAttribute("lngclick");
+	
+	StoreVO snamevo = pdao.getStoreName(lat,lng);
 	
 	MenuVO allvo = dao.getAllMenuList(idx);
 	MenuVO sandwichvo = dao.Menu_Detail(idx);
@@ -17,11 +23,12 @@
 	SessionVO member = (SessionVO) session.getAttribute("svo");
 	MemberVO memvo = mdao.getCoupon(member.getEmail());
 	
-	System.out.println(member.getEmail());	
-
 	session = request.getSession(false);
 	OrderVO vo = (OrderVO) session.getAttribute("ordervo");
 	session.setAttribute("menuvo", allvo);
+	
+	
+	
 %>
 
 <!DOCTYPE html>
@@ -141,7 +148,7 @@
 							<div>
 								<dl>
 									<dt>매장명</dt>
-									<dd>주소</dd>
+									<dd><%= snamevo.getSname() %></dd>
 								</dl>
 							</div>
 							<div>
