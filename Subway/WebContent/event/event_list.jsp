@@ -16,14 +16,6 @@
 <script type="text/javascript"
 	src="/js/jquery/jquery_tmpl_min.js"></script>
 <script type="text/javascript" src="/js/news/eventList.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		eventSlider()//이벤트ㆍ프로모션 슬라이더
-	});
-</script>
-<script>
-	<li>
-</script>
 </head>
 <style>
 div.bor {
@@ -55,8 +47,7 @@ div.bor {
 								<li aria-hidden="false"
 									style="float: left; list-style: none; position: relative; width: 1170px;">
 									<div class="event_img">
-										<img src="../event/images/cpn_tp.jpg" alt="신규회원 할인"
-											onclick="view.view(192);return false;">
+										<img src="../event/images/cpn_tp.jpg" alt="신규회원 할인">
 									</div>
 									<div class="event_info" style="opacity: 1; top: 0px;">
 										<div class="date">
@@ -65,36 +56,33 @@ div.bor {
 										<strong class="title">신규회원 이벤트</strong>
 										<p class="summary">6월 한달간 신규회원을 위한 이벤트 !</p>
 										<a class="btn_more"
-											href="http://localhost:9000/Subway/event/event_content_cpn.jsp"
-											onclick="view.view(192);return false;">자세히보기</a>
+											href="http://localhost:9000/Subway/event/event_content_cpn.jsp">자세히보기</a>
 									</div>
 								</li>
 								<li aria-hidden="true"
 									style="float: left; list-style: none; position: relative; width: 1170px;">
 									<div class="event_img">
-										<img src="../event/images/cpn_btm.jpg" alt="신규회원 할인"
-											onclick="view.view(191);return false;">
+										<img src="../event/images/event_770x400_20210503055916948.jpg" alt="이달의 썹프라이즈">
 									</div>
 									<div class="event_info" style="">
 	
 										<div class="date">
-											<em>2021.06.01 ~ 2021.06.30</em>
+											<em>2021.05.04 ~ 2021.06.30</em>
 										</div>
 	
-										<strong class="title">신규회원 할인!</strong>
+										<strong class="title">이달의 썹!프라이즈!</strong>
 										<p class="summary">
-											6월 한달간<br>신규회원을 위한 이벤트 !
+											맛도 가격도 놀라운<br>이달의 썹!프라이즈!
 										</p>
 										<a class="btn_more"
-											href="http://localhost:9000/Subway/event/event_content_cpn.jsp"
-											onclick="view.view(191);return false;">자세히보기</a>
+											href="http://localhost:9000/Subway/event/event_content_cpn.jsp">자세히보기</a>
 									</div>
 								</li>
 								<li aria-hidden="true"
 									style="float: left; list-style: none; position: relative; width: 1170px;">
 									<div class="event_img">
 										<img src="../event/images/event_770x400_20201113042155905.jpg"
-											alt="써브웨이 아침메뉴!" onclick="view.view(186);return false;">
+											alt="써브웨이 아침메뉴!">
 									</div>
 									<div class="event_info" style="">
 										<div class="date">
@@ -105,16 +93,14 @@ div.bor {
 											속은 같아도 빵은 다르게!<br>취향대로 즐기는 아침!
 										</p>
 										<a class="btn_more"
-											href="http://localhost:9000/Subway/event/event_content_2.jsp"
-											onclick="view.view(186);return false;">자세히보기</a>
+											href="http://localhost:9000/Subway/event/event_content_2.jsp">자세히보기</a>
 									</div>
 								</li>
 								<li aria-hidden="true"
 									style="float: left; list-style: none; position: relative; width: 1170px;">
 									<div class="event_img">
 										<img src="../event/images/event_770x400_20201006035853218.jpg"
-											alt="말이 안 나올 땐 손으로 주문하자!"
-											onclick="view.view(180);return false;">
+											alt="말이 안 나올 땐 손으로 주문하자!">
 									</div>
 									<div class="event_info" style="">
 										<div class="date">
@@ -125,8 +111,7 @@ div.bor {
 											말이 안 나올 땐?<br>손으로 주문하자!
 										</p>
 										<a class="btn_more"
-											href="http://localhost:9000/Subway/event/event_content_3.jsp"
-											onclick="view.view(180);return false;">자세히보기</a>
+											href="http://localhost:9000/Subway/event/event_content_3.jsp">자세히보기</a>
 									</div>
 								</li>
 							</ul>
