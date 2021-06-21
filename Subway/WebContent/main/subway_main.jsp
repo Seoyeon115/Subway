@@ -15,10 +15,15 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<title>SUBWAY 써브웨이</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$("#slide01").click(function(){
@@ -45,11 +50,43 @@
 	<jsp:include page="header.jsp"></jsp:include>
 	
 	<!-- content -->
-	<div class="carousel">
-		<section>
-			<img src="http://localhost:9000/Subway/images/main1.png">
-		</section>
+	<!-- <div class="carousel">
+	<section>
+		<img src="http://localhost:9000/Subway/images/main1.png">
+	</section>
+	</div>   -->
+	<div id="demo" class="carousel slide" data-ride="carousel">
+
+	 <!-- Indicators -->
+	 <ul class="carousel-indicators">
+	   <li data-target="#demo" data-slide-to="0" class="active"></li>
+	   <li data-target="#demo" data-slide-to="1"></li>
+	   <li data-target="#demo" data-slide-to="2"></li>
+	   <li data-target="#demo" data-slide-to="3"></li>
+	 </ul>
+	 
+	  
+	  <!-- The slideshow -->
+	  <div class="carousel-inner">
+	    <div class="carousel-item active">
+	      <img src="http://localhost:9000/Subway/images/main1.png" >
+	    </div>
+	    <div class="carousel-item">
+	      <img src="http://localhost:9000/Subway/images/main2.png" >
+	    </div>
+	    <div class="carousel-item">
+	      <img src="http://localhost:9000/Subway/images/main3.jpg" >
+	    </div>
+	    <div class="carousel-item">
+	      <img src="http://localhost:9000/Subway/images/main4.jpg" >
+	    </div>
+	  </div>
+	  
+	 
 	</div>
+
+	
+
 	<div class="carousel_btn">
 		<article class="c_btn">
 			<div class="find">

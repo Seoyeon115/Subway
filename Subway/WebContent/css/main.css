@@ -71,6 +71,22 @@
 		main - content 
 		- carousel
 	******************/
+	.carousel-inner img {
+    width: 100%;
+    height: 460px;
+  	}
+  	ul.carousel-indicators{
+  		margin-right:-1000px;
+  		bottom:10px;
+  		right:300px;
+  	}
+  	ul.carousel-indicators li{
+  		background-color:white;
+  		border-radius:50%;
+  		width:12px;
+  		height:12px;
+  		
+  	}	
 	div.carousel {
 		position:relative;
 		width:100%;
