@@ -61,6 +61,7 @@
 			    document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
 			}
 			
+			
 			function getCookie(cookieName) {
 			    cookieName = cookieName + '=';
 			    var cookieData = document.cookie;
