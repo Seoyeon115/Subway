@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/member.css">
 	<script src="http://localhost:9000/Subway/member/js/jquery-3.6.0.min.js"></script>
+	<script src="jquery.cookie.js"></script>
 	<script>
 		$(document).ready(function(){
 			$("#loginbtn").click(function(){
@@ -27,7 +28,7 @@
 			
 			
 			//아이디 저장
-			var key = getCookie("key");
+			var key = $.cookie("key");
 			$("#email").val(key);
 			
 			if($("#email").val() != ""){
@@ -36,15 +37,15 @@
 			
 			$("#saveid").change(function(){
 				if($("#saveid").is(":checked")){
-					setCookie("key", $("email").val(),7);
+					$.cookie('key',$("#email").val(), { expires: 7});
 				}else{
-					deleteCookie("key");
+					$.removeCookie("key");
 				}
 			});
 			
 			$("#email").keyup(function(){
 				if($("#saveid").is(":checked")){
-					setCookie("key",$("#email").val(),7);
+					$.cookie('key',$("#email").val(), { expires: 7});
 				}
 			});
 			
@@ -74,7 +75,11 @@
 			        cookieValue = cookieData.substring(start, end);
 			    }
 			    return unescape(cookieValue);
-			}
+			} 
+			
+
+			
+
 			
 		});
 	</script>
@@ -94,7 +99,7 @@
 						<ul>
 							<li>
 								<label>이메일 아이디</label>
-								<input type="text" name="email" id="email" placeholder="이메일 아이디 입력">
+								<input type="text" name="email" id="email"  value="" placeholder="이메일 아이디 입력">
 							</li>
 							<li>
 								<label>비밀번호</label>
