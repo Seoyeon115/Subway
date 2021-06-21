@@ -1,0 +1,138 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "맑은고딕";
+}
+
+body {
+	background-color: #fdfcf0;
+}
+
+.btn_style {
+	background-color: red;
+	border: 1px solid red;
+	padding: 8px;
+	margin: 20px 5px;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	width: 30%;
+}
+
+.btn_style2 {
+	background-color: red;
+	border: 1px solid red;
+	padding: 8px;
+	margin: 20px 5px;
+	font-size: 14px;
+	color: white;
+	width: 17%;
+}
+
+.btn_style:hover {
+	background-color: tomato;
+}
+
+header>div, div.content, div.carousel>section, footer>div.f1 {
+	width: 980px;
+	margin: auto;
+}
+
+.content_layout {
+	/*border:1px solid blue;*/
+	width: 60%;
+	margin: auto;
+}
+
+div.content>section {
+	text-align: center;
+}
+/**
+		관리자
+		*/
+section.admin article div {
+	display: inline-block;
+	background-color: red;
+	padding: 20px 50px;
+	margin: 30px 10px;
+	color: white;
+	font-size: 17px;
+	border-radius: 5px;
+}
+
+section.admin article div:hover {
+	background-color: gray;
+}
+
+/**
+		관리자 공통
+		*/
+section.member_content table, section.member_content table th, section.member_content table td
+	{
+	border: 1px solid gray;
+	border-collapse: collapse;
+}
+
+section.member_list table th, section.member_list table td, section.member_content table th,
+	section.member_content table td {
+	padding: 8px 0;
+}
+
+/**
+		관리자 - member_list
+		*/
+section.member_list table {
+	width: 800px;
+}
+
+section.member_list table, section.member_list table th, section.member_list table td
+	{
+	border-collapse: collapse;
+}
+
+section.member_list table th {
+	background-color: red;
+	color: white;
+}
+
+section.membere_list table tr>td:nth-child(2) a {
+	text-decoration: none;
+	color: black;
+}
+
+section.member_list table tr:last-child td {
+	padding-top: 20px;
+}
+
+/**
+		관리자 - member_content
+		*/
+section.member_content table {
+	width: 700px;
+}
+
+section.member_content table th {
+	background-color: lightgray;
+	width: 15%;
+	font-size: 15px;
+}
+
+section.member_content table tr:first-child td {
+	width: 10%;
+}
+
+section.member_content table tr:nth-child(2) td, section.member_content table tr:nth-child(3) td,
+	section.member_content table tr:nth-child(4) td, section.member_content table tr:nth-child(5) td
+	{
+	text-align: left;
+	text-indent: 10px;
+}
+
+section.member_content table tr:nth-child(5) td {
+	height: 100px;
+}
+
+section.member_content table tr:last-child td {
+	text-align: center;
+	border: 1px solid #fdfcf0;
+}

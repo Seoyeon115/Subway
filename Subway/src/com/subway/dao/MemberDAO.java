@@ -329,7 +329,7 @@ public class MemberDAO extends DBconn {
 	
 	public boolean getInsertResult(MemberVO vo){
 		boolean result = false;
-		String sql = "insert into subway_member values(?,?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into subway_member values(?,?,?,?,?,?,?,?,?,?,sysdate,0)";
 		getPreparedStatement(sql);
 		
 		try {
@@ -427,11 +427,37 @@ public class MemberDAO extends DBconn {
 			return result;
 	}
 	
+	//회원 상세 정보
+		public MemberVO getContent(String email) {
+			MemberVO vo = new MemberVO();
+			String sql = "select email, name, hp, addr, post, to_char(mdate, 'yyyy-mm-dd') mdate from subway_member where email=?";
+			getPreparedStatement(sql);
+			
+			try {
+				pstmt.setString(1, email);
+				rs = pstmt.executeQuery();
+				
+				while(rs.next()) {
+					vo.setEmail(rs.getString(1));
+					vo.setName(rs.getString(2));
+					vo.setHp(rs.getString(3));
+					vo.setAddr(rs.getString(4));
+					vo.setPost(rs.getString(5));
+					vo.setMdate(rs.getString(6));
+					
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			close();
+			return vo;
+		}
+	
 	/* 전체 카운트 가져오기*/
 	//execTotalCount()
 	public int execTotalCount(){
 		int count = 0;
-		String sql = " select count(*) from mycgv_member ";
+		String sql = " select count(*) from subway_member ";
 		getPreparedStatement(sql);
 		
 		try {
@@ -532,6 +558,70 @@ public class MemberDAO extends DBconn {
 		close();
 		return result;
 	}
+	
+	//회원 전체 리스트
+		public ArrayList<MemberVO> getList(){
+			ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+			String sql = " select rownum rno, email, name, hp, addr, to_char(mdate, 'yyyy-mm-dd') mdate, choice " 
+					   + " from (select email, name, hp, addr, mdate, choice from subway_member " 
+					   + " 		 order by mdate desc)";
+			getPreparedStatement(sql);
+			
+			try {
+				rs = pstmt.executeQuery();
+				while(rs.next()) {
+					MemberVO vo = new MemberVO();
+					vo.setRno(rs.getInt(1));
+					vo.setEmail(rs.getString(2));
+					vo.setName(rs.getString(3));
+					vo.setHp(rs.getString(4));
+					vo.setAddr(rs.getString(5));
+					vo.setMdate(rs.getString(6));
+					vo.setChoice(rs.getInt(7));
+					
+					list.add(vo);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			close();
+			return list;
+		}
+		
+		//Select --> 전체 리스트 : 페이징 처리
+			public ArrayList<MemberVO> getList(int start, int end){
+				ArrayList<MemberVO> list = new ArrayList<MemberVO>();
+				String sql = " select rno, email, name, hp, addr, mdate, choice "
+						   + " from(select rownum rno, email, name, hp, addr, to_char(mdate, 'yyyy-mm-dd') mdate, choice " 
+						   + " from (select email, name, hp, addr, mdate, choice from subway_member " 
+						   + " 		 order by mdate desc))"
+						   + " where rno between ? and ?";
+				getPreparedStatement(sql);
+				
+				try {
+					pstmt.setInt(1, start);
+					pstmt.setInt(2, end);
+					
+					rs = pstmt.executeQuery();
+					while(rs.next()){
+						MemberVO vo = new MemberVO();
+						vo.setRno(rs.getInt(1));
+						vo.setEmail(rs.getString(2));
+						vo.setName(rs.getString(3));
+						vo.setHp(rs.getString(4));
+						vo.setAddr(rs.getString(5));
+						vo.setMdate(rs.getString(6));
+						vo.setChoice(rs.getInt(7));
+						
+						list.add(vo);
+					}
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+				close();
+				
+				return list;
+			}
 	
 	
 }

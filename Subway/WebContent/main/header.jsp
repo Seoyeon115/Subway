@@ -13,21 +13,31 @@
 	<header>
 		<div>
 			<nav>
-			<% if(svo != null){ %>
-				<a href="http://localhost:9000/Subway/main/subway_main.jsp"><img src="http://localhost:9000/Subway/images/subway.PNG"></a>
-				<ul>
-					<li><a href="http://localhost:9000/Subway/member/logout.jsp">로그아웃 </a><div></div></li>
-					<li><a href="http://localhost:9000/Subway/member/Mypage.jsp">마이페이지 </a><div></div></li>
-					<li><a href="http://localhost:9000/Subway/order/basket.jsp">장바구니</a></li>
-				</ul>
-				<% }else{ %>
+			<% if(svo == null){ %>
 				<a href="http://localhost:9000/Subway/main/subway_main.jsp"><img src="http://localhost:9000/Subway/images/subway.PNG"></a>
 				<ul>
 					<li><a href="http://localhost:9000/Subway/member/login.jsp">로그인 </a><div></div></li>
 					<li><a href="http://localhost:9000/Subway/member/join.jsp">회원가입 </a><div></div></li>
 					<li><a href="http://localhost:9000/Subway/member/Mypage.jsp">마이페이지 </a></li>
 				</ul>
+			<% }else{ %>
+				<%if(svo.getEmail().equals("admin@naver.com")) {%>
+					<a href="http://localhost:9000/Subway/main/subway_main.jsp"><img src="http://localhost:9000/Subway/images/subway.PNG"></a>
+					<ul>
+						<li><a href="http://localhost:9000/Subway/member/logout.jsp">로그아웃 </a><div></div></li>
+						<li><a href="http://localhost:9000/Subway/member/Mypage.jsp">마이페이지 </a><div></div></li>
+						<li><a href="http://localhost:9000/Subway/order/basket.jsp">장바구니</a><div></div></li>
+						<li><a href="http://localhost:9000/Subway/admin/admin.jsp">Admin </a></li>
+					</ul>
+				<%}else {%>
+					<a href="http://localhost:9000/Subway/main/subway_main.jsp"><img src="http://localhost:9000/Subway/images/subway.PNG"></a>
+					<ul>
+						<li><a href="http://localhost:9000/Subway/member/logout.jsp">로그아웃 </a><div></div></li>
+						<li><a href="http://localhost:9000/Subway/member/Mypage.jsp">마이페이지 </a><div></div></li>
+						<li><a href="http://localhost:9000/Subway/order/basket.jsp">장바구니</a></li>
+					</ul>
 				<% } %>
+			<% } %>
 			</nav>
 		</div>
 		<div>
