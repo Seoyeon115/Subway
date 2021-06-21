@@ -80,8 +80,10 @@ div.bor {
 					<p class="board_total">
 						총<strong><%=map.get("dbCount")%></strong>건의 게시글이 있습니다.
 					</p>
-					<% if(svo.getEmail().equals("admin@naver.com")){ %>
-						<a class="btn_right" href="http://localhost:9000/Subway/admin/notice/notice_write.jsp"><button type="button" class="btn_write" style="width:15%;">글쓰기</button></a>
+					<% if(svo.getEmail() != null) {%>
+						<% if(svo.getEmail().equals("admin@naver.com")) { %>
+							<a class="btn_right" href="http://localhost:9000/Subway/admin/notice/notice_write.jsp"><button type="button" class="btn_write" style="width:15%;">글쓰기</button></a>
+						<% } %>
 					<% } %>
 
 					<table>
