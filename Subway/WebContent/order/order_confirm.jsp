@@ -280,7 +280,7 @@
 							</div>
 							<div class="price">
 								<span>최종 결제 금액</span>
-								<input type="text" id="count_price" name="count_price" value="<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_15()%><% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_15()+1900%><% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_15()+2100%> <% } else { %> error <% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %> <%= menuvo.getPrice_30()%><% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %> <%= menuvo.getPrice_30()+1900%><% }else if(set_price.equals("2100원")) { %> <%= menuvo.getPrice_30()+2100%> <% } else { %> error <% }}} %>" readonly>
+								<input type="text" id="count_price" name="count_price" value="<% if(vo.getSub().equals("15cm")) { if(vo.getSingle_set().equals("단품")) { %><%=menuvo.getPrice_15()%><% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %><%=menuvo.getPrice_15()+1900%><% }else if(set_price.equals("2100원")) { %><%=menuvo.getPrice_15()+2100%><% } else { %> error <% }}} else if(vo.getSub().equals("30cm")) { if(vo.getSingle_set().equals("단품")) { %><%=menuvo.getPrice_30()%><% }else if(vo.getSingle_set().equals("세트")) { if(set_price.equals("1900원")) { %><%=menuvo.getPrice_30()+1900%><% }else if(set_price.equals("2100원")) { %><%=menuvo.getPrice_30()+2100%><% } else { %> error <% }}} %>" readonly>
 								<span>원</span>
 							</div>
 						</section>

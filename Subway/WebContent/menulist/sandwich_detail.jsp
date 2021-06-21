@@ -42,7 +42,7 @@
 	
 	<div class="detail_name">
 		<h1><%= vo.getKor_name() %></h1><br>
-		<div class="detail_eng_kcal"><span class="detail_eng"><%= vo.getEng_name() %></span><div class="line"></div><span class="detail_cal"><%= vo.getKcal() %></span></div>
+		<div class="detail_eng_kcal"><span class="detail_eng"><%= vo.getEng_name() %></span><div class="line"></div><span class="detail_cal"><%= vo.getKcal() %> kcal</span></div>
 	</div>
 	<div class="detail_image">
 		<a href="sandwich_detail.jsp?idx=<%=idx_prev %>"><img src="http://localhost:9000/Subway/menulist/images/<%= menu_prev.getImage_path() %>" class="image_left" ></a>
@@ -82,7 +82,7 @@
 			</ul>
 			<p class="sub_p">
 				* 매장에 따라 추천소스는 상이할 수 있습니다.<br>
-				* 써브웨이가 제공하는 신선한 야채가 정량으로 제공됩니다.<br>
+				* 써브웨이가 제공하는 신선한 야채가 정량으로 제공됩니다.<br><br>
 
 				* 제품 사진은 이미지컷입니다.
 			</p>
