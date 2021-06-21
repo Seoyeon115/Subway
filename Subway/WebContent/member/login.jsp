@@ -24,6 +24,57 @@
 					login_form.submit();
 				}
 			});
+			
+			
+			//아이디 저장
+			var key = getCookie("key");
+			$("#email").val(key);
+			
+			if($("#email").val() != ""){
+				$("#saveid").attr("checked",true);
+			}
+			
+			$("#saveid").change(function(){
+				if($("#saveid").is(":checked")){
+					setCookie("key", $("email").val(),7);
+				}else{
+					deleteCookie("key");
+				}
+			});
+			
+			$("#email").keyup(function(){
+				if($("#saveid").is(":checked")){
+					setCookie("key",$("#email").val(),7);
+				}
+			});
+			
+			function setCookie(cookieName, value, exdays){
+			    var exdate = new Date();
+			    exdate.setDate(exdate.getDate() + exdays);
+			    var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+			    document.cookie = cookieName + "=" + cookieValue;
+			}
+			
+			function deleteCookie(cookieName){
+			    var expireDate = new Date();
+			    expireDate.setDate(expireDate.getDate() - 1);
+			    document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
+			}
+			
+			function getCookie(cookieName) {
+			    cookieName = cookieName + '=';
+			    var cookieData = document.cookie;
+			    var start = cookieData.indexOf(cookieName);
+			    var cookieValue = '';
+			    if(start != -1){
+			        start += cookieName.length;
+			        var end = cookieData.indexOf(';', start);
+			        if(end == -1)end = cookieData.length;
+			        cookieValue = cookieData.substring(start, end);
+			    }
+			    return unescape(cookieValue);
+			}
+			
 		});
 	</script>
 </head>
@@ -49,7 +100,7 @@
 								<input type="password" name="pass" id="pass" placeholder="비밀번호 입력" >
 							</li>
 							<li>
-								<span class="radio"><input type="radio" name="saveid" id="saveid" value="sid">이메일 아이디 저장</span>
+								<span class="radio"><input type="checkbox" name="saveid" id="saveid" value="sid">이메일 아이디 저장</span>
 							</li>
 							<li>
 								<button type="button" id="loginbtn">로그인</button>
