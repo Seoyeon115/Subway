@@ -27,14 +27,14 @@
 			<div class="coupon_tab">
 				<section>
 					<article>
-						<div class="coupon1">
+						<div class="coupon1" style="background-color:white; border:1px solid white; ">
 							<ul>
-								<li><a href="Mypage_coupon.jsp">사용 가능한 쿠폰</a></li>
+								<li><a href="Mypage_coupon.jsp" style="color:black;">사용 가능한 쿠폰</a></li>
 							</ul>
 						</div>
-						<div class="coupon2">
+						<div class="coupon2" style="border:1px solid green; background-color:rgb(0,146,35);  ">
 							<ul>
-								<li><a href="Mypage_coupon_used.jsp">만료된 쿠폰</a></li>
+								<li><a href="Mypage_coupon_used.jsp" style="color:white;">만료된 쿠폰</a></li>
 							</ul>
 						</div>
 					</article>
