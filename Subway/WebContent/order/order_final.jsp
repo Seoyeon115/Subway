@@ -87,7 +87,6 @@
 				if(select == 'choiceCoupon'){
 					alert("쿠폰을 선택해주세요.");
 					$("#coupon").focus();
-					return false;
 				}else if(select == '2000') {
 					$("#couponTotal").val("2000");
 					$("#finalTotal").val(count_price-coupon1);

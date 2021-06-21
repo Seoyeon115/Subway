@@ -17,9 +17,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<title>SUBWAY 써브웨이</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -261,7 +261,7 @@
 							<% for(BoardVO vo : list) {%>
 							<li><a id="noticeList" href="http://localhost:9000/Subway/admin/notice/notice_content.jsp?bid=<%=vo.getBid()%>&rno=<%=vo.getRno()%>"><%=vo.getBtitle() %></a></li>
 							<% } %>
-							<li><a href="http://localhost:9000/Subway/board/notice_list.jsp">more</a></li>
+							<li><a href="http://localhost:9000/Subway/board/notice_list.jsp" style="color:gray;">more</a></li>
 						</ul>
 						<!-- <ul>
 							<li><a href="#">써브웨이 2021년 5월 가격 인상 안내</a></li>
