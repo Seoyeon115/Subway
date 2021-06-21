@@ -341,6 +341,7 @@ $(document).ready(function(){
 	
 	
 	
+	
 	var price_1 = parseInt($("#total_price_1").text());
 	$("#minus_1").click(function(){
 		if($("#count_result_1").text() > 1){

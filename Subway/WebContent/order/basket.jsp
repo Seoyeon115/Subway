@@ -83,6 +83,7 @@
 						<button type="submit" name="order" class="btn_order">주문하기</button>
 						<br><br><br>
 				</form>
+				
 			</div> 
 			<br><br><br>
 			
