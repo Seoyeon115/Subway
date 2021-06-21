@@ -8,6 +8,8 @@
 	String take = request.getParameter("take");	
 	String hp = request.getParameter("hp");
 	String ask = request.getParameter("ask");
+	
+	
 	String coupon_price = request.getParameter("couponTotal");
 	
 	String total_price = String.valueOf(Integer.parseInt(request.getParameter("count_price")) - Integer.parseInt(coupon_price)); 

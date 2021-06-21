@@ -77,7 +77,7 @@
 				<% } %>
 				<div class="bottom_section">
 				<form name="basketsend" action="order_final_basket.jsp" method="post"> 
-						<input type="hidden" name="menu_count_hidden" value="1">
+						<input type="hidden" name="menu_count_hidden" id="menu_count_hidden" value="1">
 						<br><br>
 						<span class="price_checked">최종 결제 금액</span><span id="bottom_total_price"> 금액 출력</span><span class="won_1">원</span>
 						<button type="submit" name="order" class="btn_order">주문하기</button>
