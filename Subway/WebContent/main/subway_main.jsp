@@ -21,29 +21,10 @@
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 	<script src="../order/js/jquery-3.6.0.min.js"></script>
+	<script src="main.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<script>
-		$(document).ready(function(){
-			$("#slide01").click(function(){
-				$("#classicBtn").css("color","#009223");
-				$("#freshBtn").css("color","black");
-				$("#premiumBtn").css("color","black");
-			});
-			$("#slide02").click(function(){
-				$("#classicBtn").css("color","black");
-				$("#freshBtn").css("color","#009223");
-				$("#premiumBtn").css("color","black");
-			});
-			$("#slide03").click(function(){
-				$("#classicBtn").css("color","black");
-				$("#freshBtn").css("color","black");
-				$("#premiumBtn").css("color","#009223");
-			});
-			
-		});
-	</script>
 </head>
 <body>
 	<!-- header -->
@@ -119,108 +100,132 @@
 			<article class="classic">
 				<ul class="slidelist">
 					<li>
-						<div>
-								<img src="http://localhost:9000/Subway/images/sandwich_cl06.jpg">
-								<div>
-									<h3>에그마요</h3>
-									<span>부드러운 달걀과 고소한 마요네즈가 만나</span><br>
-									<span>더 부드러운 스테디 셀러</span>
-								</div>
+						<div id="01">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=17"><img src="http://localhost:9000/Subway/images/sandwich_cl06.jpg"></a>
+							<div>
+								<h3>에그마요</h3>
+								<p>
+									부드러운 달걀과 고소한 마요네즈가 만나<br>
+									더 부드러운 스테디 셀러
+								</p>
+							</div>
 						</div>
-						<div>
-							<img src="http://localhost:9000/Subway/images/sandwich_cl01.jpg">
+						<div id="02">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=12"><img src="http://localhost:9000/Subway/images/sandwich_cl01.jpg"></a>
 							<div>
 								<h3>이탈리안 비엠티</h3>
-								<span>페퍼로니, 살라미 그리고 햄이 만들어내는 최상의</span><br>
-								<span>조화! 전세계가 사랑하는 써브웨이의 베스트셀러!</span><br>
-								<span>Biggest Meatiest Tastiest, its' B.M.T!</span>
+								<p>
+									페퍼로니, 살라미 그리고 햄이 만들어내는 최상의<br>
+									조화! 전세계가 사랑하는 써브웨이의 베스트셀러!<br>
+									Biggest Meatiest Tastiest, its' B.M.T!
+								</p>
 							</div>
 						</div>
-						<div>
-							<img src="http://localhost:9000/Subway/images/sandwich_cl02.jpg">
+						<div id="03">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=11"><img src="http://localhost:9000/Subway/images/sandwich_cl02.jpg"></a>
 							<div>
 								<h3>비엘티</h3>
-								<span>오리지널 아메리칸 스타일 베이컨의</span><br>
-								<span>풍미와 바삭함 그대로</span>
+								<p>
+									오리지널 아메리칸 스타일 베이컨의<br>
+									풍미와 바삭함 그대로
+								</p>
 							</div>
 						</div>
-						<div>
-							<img src="http://localhost:9000/Subway/images/sandwich_cl03.jpg">
+						<div id="04">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=13"><img src="http://localhost:9000/Subway/images/sandwich_cl03.jpg"></a>
 							<div>
 								<h3>미트볼</h3>
-								<span>이탈리안 스타일 비프 미트볼에</span><br>
-								<span>써브웨이만의 풍부한 토마토 향이 듬뿍 살아있는</span><br>
-								<span>마리나라소스를 듬뿍</span>
+								<p>
+									이탈리안 스타일 비프 미트볼에<br>
+									써브웨이만의 풍부한 토마토 향이 듬뿍 살아있는<br>
+									마리나라소스를 듬뿍
+								</p>
 							</div>
 						</div>
 					</li>
 					<li>
-						<div>
-							<img src="../menulist/images/item_sandwich_rotisserie_20210312063000816.jpg">
+						<div id="05">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=6"><img src="../menulist/images/item_sandwich_rotisserie_20210312063000816.jpg"></a>
 							<div>
 								<h3>로티세리 바비큐 치킨</h3>
-								<span>촉촉한 바비큐 치킨의 풍미가득.</span><br>
-								<span>손으로 찢어 더욱 부드러운 치킨의 혁명</span>
+								<p>
+									촉촉한 바비큐 치킨의 풍미가득<br>
+									손으로 찢어 더욱 부드러운 치킨의 혁명
+								</p>
 							</div>
 						</div>
-						<div>
-							<img src="../menulist/images/로스트치킨샌드위치_20210503113731657.png">
+						<div id="06">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=5"><img src="../menulist/images/로스트치킨샌드위치_20210503113731657.png"></a>
 							<div>
 								<h3>로스트 치킨</h3>
-								<span>오븐에 구워 담백한 저칼로리</span><br>
-								<span>닭가슴살의 건강한 풍미</span>
+								<p>
+									오븐에 구워 담백한 저칼로리<br>
+									닭가슴살의 건강한 풍미
+								</p>
 							</div>
 						</div>
-						<div>
-							<img src="../menulist/images/비엘티_20200707033847305_20210204025320342.jpg">
+						<div id="07">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=8"><img src="../menulist/images/써브웨이 클럽(샌드위치)_20210503113422349.png"></a>
 							<div>
-								<h3>비엘티</h3>
-								<span>명실공허 시그니처 써브!</span><br>
-								<span>터키,햄,베이컨의 완벽한 앙상블</span>
+								<h3>서브웨이 클럽</h3>
+								<p>
+									명실공허 시그니처 써브!<br>
+									터키,햄,베이컨의 완벽한 앙상블
+								</p>
 							</div>
 						</div>
-						<div>
-							<img src="../menulist/images/item_sandwich_turkey_20210312063055119.jpg">
+						<div id="08">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=14"><img src="../menulist/images/item_sandwich_turkey_20210312063055119.jpg"></a>
 							<div>
 								<h3>터키</h3>
-								<span>280kcal로 슬림하게 즐기는</span><br>
-								<span>오리지날 터키 샌드위치</span>
+								<p>
+									280kcal로 슬림하게 즐기는<br>
+									오리지날 터키 샌드위치
+								</p>
 							</div>
 						</div>
 					</li>
 					<li>
-						<div>
-							<img src="../menulist/images/스파이스쉬림프(샌드위치)_20210429050445371.png">
+						<div id="09">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=1"><img src="../menulist/images/스파이스쉬림프(샌드위치)_20210429050445371.png"></a>
 							<div>
 								<h3>스파이시 쉬림프</h3>
-								<span>빨간맛에 빠진 쉬림프!</span><br>
-								<span>이국적인 매콤함이 더해진</span><br>
-								<span>시즌 한정 스파이시 쉬림프!</span>
+								<p>
+									빨간맛에 빠진 쉬림프!<br>
+									이국적인 매콤함이 더해진<br>
+									시즌 한정 스파이시 쉬림프!
+								</p>
 							</div>
 						</div>
-						<div>
-							<img src="../menulist/images/스파이스쉬림프아보카도(샌드위치)_20210429050610933.png">
+						<div id="10">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=9"><img src="../menulist/images/스파이시 이탈리안_20200914110115080.jpg"></a>
 							<div>
-								<h3>스파이시 쉬림프 아보카도</h3>
-								<span>매콤한 쉬림프와 부~드러운 아보카도가 만나,</span><br>
-								<span>이국적인 풍미 업!</span>
+								<h3>스파이시 이탈리안</h3>
+								<p>
+									살라미,페퍼로니가 입안 한가득!<br>
+									쏘 핫한 이탈리아의 맛
+								</p>
 							</div>
 						</div>
-						<div>
-							<img src="../menulist/images/shrimp_20210315103931131.jpg">
+						<div id="11">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=2"><img src="../menulist/images/shrimp_20210315103931131.jpg"></a>
 							<div>
 								<h3>쉬림프</h3>
-								<span>탱글한 식감이 그대로 살아있는 통새우가</span><br>
-								<span>5마리 들어가 한 입 베어 먹을 때 마다</span><br>
-								<span>진짜 새우의 흥미가 가득</span>
+								<p>
+									탱글한 식감이 그대로 살아있는 통새우가<br>
+									5마리 들어가 한 입 베어 먹을 때 마다<br>
+									진짜 새우의 흥미가 가득
+								</p>
 							</div>
 						</div>
-						<div>
-							<img src="../menulist/images/풀드포크_20200914110036750.jpg">
+						<div id="12">
+							<a href="http://localhost:9000/Subway/menulist/sandwich_detail.jsp?idx=7"><img src="../menulist/images/풀드포크_20200914110036750.jpg"></a>
 							<div>
 								<h3>폴드 포크 바비큐</h3>
-								<span>훈연한 미국 정통 스타일의 리얼 바비큐 폴드포크가</span><br>
-								<span>들어간 샌드위치</span>
+								<p>
+									훈연한 미국 정통 스타일의 리얼 바비큐<br>
+									폴드포크가 들어간 샌드위치
+								</p>
 							</div>
 						</div>
 					</li>

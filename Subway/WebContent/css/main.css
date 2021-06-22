@@ -77,15 +77,15 @@
   	}
   	ul.carousel-indicators{
   		margin-right:-1000px;
-  		bottom:10px;
-  		right:350px;
+  		bottom:15px;
+  		right:260px;
   	}
   	ul.carousel-indicators li{
   		background-color:white;
   		border-radius:50%;
-  		width:12px;
-  		height:12px;
-  		
+  		width:10px;
+  		height:10px;
+  		margin:5px;
   	}	
 	/* div.carousel {
 		position:relative;
@@ -111,7 +111,7 @@
 	}
 	
 	div.carousel_btn{
-		width:1000px;
+		width:1100px;
 		margin:auto;
 		text-align:right;
 	}
@@ -189,7 +189,7 @@
 		text-align:right;
 		margin-top:-30px;
 		display:inline-block;
-		margin-left:440px;
+		margin-left:490px;
 	}
 	.list_ul>li{
 		display:inline-block;
@@ -214,7 +214,7 @@
 		margin-bottom:-100px;
 	}
 	section.main_menu article>ul>li>div{
-		margin:10px;
+		margin:15px;
 		float:left;
 	}
 	section.main_menu article img{
@@ -225,13 +225,13 @@
 		color:gray;
 		font-size:13px;
 	}
-	section.main_menu article>ul>li>div>div>span{
-		display:inline-block;
+	ul.slidelist p{
 		color:gray;
 		font-size:12px;
-		padding-top:5px;
+		font-weight:bold;
+		line-height:20px;
 	}
-	section.main_menu article>ul>li>div>div>h3{
+	ul.slidelist h3{
 		color:black;
 		font-size:18px;
 		margin-bottom:10px;
