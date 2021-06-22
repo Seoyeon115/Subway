@@ -4,44 +4,47 @@
 	font-family: "讣篮绊雕";
 }
 
-body {
-	background-color: #fdfcf0;
+.btn_style{
+	width:180px;
+	background-color:#009223;
+	border:2px solid #009223;
+	border-radius:30px;
+	padding:10px;
+	color:white;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	margin:20px 10px 0 10px;
+	cursor:pointer;
 }
-
-.btn_style {
-	background-color: #009223;
-	border: 1px solid #009223;
-	padding: 8px;
-	margin: 20px 5px;
-	font-size: 14px;
-	font-weight: bold;
-	color: white;
-	width: 30%;
+.btn_style:hover{
+	border:2px solid #00791f;
+	background-color:#00791f;
 }
-
-.btn_style2 {
-	background-color: #009223;
-	border: 1px solid #009223;
-	padding: 8px;
-	margin: 20px 5px;
-	font-size: 14px;
-	color: white;
-	width: 17%;
+.btn_style2{
+	width:180px;
+	background-color:white;
+	border:2px solid #009223;
+	border-radius:30px;
+	padding:10px;
+	color:#009223;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	margin:20px 10px 0 10px;
+	cursor:pointer;
 }
-
-.btn_style:hover {
-	background-color: #009223;
-}
-
-header>div, div.content, div.carousel>section, footer>div.f1 {
-	width: 980px;
-	margin: auto;
+.btn_style2:hover{
+	background-color:#009223;
+	color:white;
 }
 
 .content_layout {
 	/*border:1px solid blue;*/
-	width: 60%;
+	width: 80%;
+	height:400px;
 	margin: auto;
+	background-color:white;
 }
 
 div.content>section {
@@ -50,14 +53,20 @@ div.content>section {
 /**
 		包府磊
 		*/
+section.admin h1{
+	font-size:35px;
+	margin:80px 0 30px 0;
+	padding-top:100px;
+}
+
 section.admin article div {
 	display: inline-block;
 	background-color: #009223;
-	padding: 20px 50px;
+	padding: 10px 40px;
 	margin: 30px 10px;
 	color: white;
 	font-size: 17px;
-	border-radius: 5px;
+	border-radius: 50px;
 }
 
 section.admin article div:hover {
@@ -106,6 +115,11 @@ section.member_list table tr:last-child td {
 	padding-top: 20px;
 }
 
+section.member_list h1,
+section.member_content h1{
+	margin:50px 0;
+}
+
 /**
 		包府磊 - member_content
 		*/
@@ -136,5 +150,6 @@ section.member_content table tr:nth-child(5) td {
 
 section.member_content table tr:last-child td {
 	text-align: center;
-	border: 1px solid #fdfcf0;
+	border: 1px solid rgb(246, 246, 246);
+	background-color:rgb(246, 246, 246);
 }

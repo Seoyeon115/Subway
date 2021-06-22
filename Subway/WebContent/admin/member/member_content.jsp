@@ -16,6 +16,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
 	<title>관리자>회원관리>상세페이지</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/admin.css">
@@ -70,7 +71,7 @@ div.content>section.member_content {
 					<tr>
 						<td colspan="7"> 
 							<a href="member_list.jsp"><button type="button" class="btn_style2">리스트</button></a>
-							<a href="http://localhost:9000/mycgv/admin/member/admin.jsp"><button type="button" class="btn_style2">관리자홈</button></a>
+							<a href="http://localhost:9000/mycgv/admin/member/admin.jsp"><button type="button" class="btn_style">관리자홈</button></a>
 						</td>
 					</tr>
 				</table>
