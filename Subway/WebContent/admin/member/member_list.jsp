@@ -19,6 +19,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
 	<title>관리자>회원관리</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/admin.css">
@@ -56,7 +57,7 @@
 div.bor {
 	border-top: 1px solid rgb(229, 229, 229);
 	width: 100%;
-	height: 1150px;
+	height: 1000px;
 	background-color: rgb(246, 246, 246);
 	border: 1px sollid red;
 }
@@ -97,7 +98,7 @@ div.content>section.member_list {
 							<% if(vo.getChoice() == 0){ %>
 							<button type="button" disabled>신청</button>
 							<% }else{ %>
-							<button type="button">신청</button>
+							<a href="member_delete_process.jsp?email=<%= vo.getEmail() %>"><button type="button">신청</button></a>
 							<% } %>
 						</td>
 					</tr>

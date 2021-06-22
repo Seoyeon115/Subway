@@ -201,14 +201,13 @@ public class OrderDAO extends DBconn {
 	}
 	
 	//삭제처리
-	public boolean getDeleteResult(String email, String pass) {
+	public boolean getDeleteResult(String email) {
 		boolean result = false;
-		String sql = " delete from subway_order where email=? and pass=? ";
+		String sql = " delete from subway_order where email=?";
 		getPreparedStatement(sql);
 		
 		try {
 			pstmt.setString(1, email);
-			pstmt.setString(2, pass);
 			
 			int value = pstmt.executeUpdate();
 			if(value != 0) {
