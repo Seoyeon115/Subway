@@ -7,6 +7,45 @@ import com.subway.vo.*;
 
 public class MemberDAO extends DBconn {
 	
+	//관리자 페이지- 사용자 탈퇴 처리하기
+	public boolean member_delete(String email) {
+		boolean result = false;
+		String sql = "delete from subway_member where email=?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			int value = pstmt.executeUpdate();
+			if(value !=0) {
+				result = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();		}
+		close();
+		return result;
+	}
+	
+	
+	//관리자페이지 - 사용자 탈퇴 버튼 활성화
+	public boolean delete_btn_able(String email) {
+		boolean result = false;
+		String sql = "update subway_member set choice=1 where email = ?";
+		getPreparedStatement(sql);
+		try {
+			pstmt.setString(1, email);
+			int value = pstmt.executeUpdate();
+			
+			if(value != 0) {
+				result = true;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		close();
+		return result;
+	}
+	
+	
 	//사용 가능한 쿠폰 가져오기
 	public int coupon1(String email) {
 		int result = 0;

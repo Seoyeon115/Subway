@@ -36,7 +36,7 @@
 						<div class="delete_img"><img src="http://localhost:9000/Subway/images/logo.png"></div>
 						<div class="delete_button">
 						<a href="Mypage_InfoModify.jsp?email=<%=email%>&pass=<%=pass%>"><button type="button">이전페이지</button></a>
-						<a href="Mypage_InfoDeleteProcess.jsp?email=<%=email%>&pass=<%=pass%>"><button type="button">확인</button></a>
+						<a href="Mypage_InfoDeleteProcess.jsp?email=<%=email%>"><button type="button">확인</button></a>
 						</div>				
 					</div>
 					

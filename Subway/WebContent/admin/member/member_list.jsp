@@ -97,7 +97,7 @@ div.content>section.member_list {
 							<% if(vo.getChoice() == 0){ %>
 							<button type="button" disabled>신청</button>
 							<% }else{ %>
-							<button type="button">신청</button>
+							<a href="member_delete_process.jsp?email=<%= vo.getEmail() %>"><button type="button">신청</button></a>
 							<% } %>
 						</td>
 					</tr>
