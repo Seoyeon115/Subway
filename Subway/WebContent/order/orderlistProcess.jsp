@@ -4,7 +4,6 @@
 	SessionVO svo = (SessionVO)session.getAttribute("svo");	
 	
 	StoreVO snamevo = (StoreVO)session.getAttribute("storevo");
-	System.out.println(snamevo.getSname());
 	String count_result = request.getParameter("count_result");
 	String count_price = request.getParameter("count_price");
 	String take = request.getParameter("take");	
@@ -19,7 +18,6 @@
 	
 	
 	FinalOrderVO vo = new FinalOrderVO();
-	vo.setO_STORE(request.getParameter(snamevo.getSname()));
 	vo.setO_EAT(request.getParameter("take"));
 	vo.setHP(request.getParameter("hp"));
 	vo.setO_MESSAGE(request.getParameter("ask"));
@@ -36,7 +34,7 @@
 	OrderVO ovo = (OrderVO) session.getAttribute("ordervo");
 	dao.insertOrder(svo,ovo);
 	
-	boolean result = dao.getOrderResult(svo,vo);
+	boolean result = dao.getOrderResult(svo,snamevo,vo);
 	
 	if(result){
 		//쿠폰 사용한것은 null값으로 바꾸기

@@ -6,6 +6,7 @@ import com.subway.vo.FinalOrderVO;
 import com.subway.vo.MenuVO;
 import com.subway.vo.OrderVO;
 import com.subway.vo.SessionVO;
+import com.subway.vo.StoreVO;
 
 public class OrderDAO extends DBconn {
 	
@@ -33,14 +34,14 @@ public class OrderDAO extends DBconn {
 	}
 	
 	//주문테이블에 주문데이터 입력
-	public boolean getOrderResult(SessionVO svo, FinalOrderVO vo) {
+	public boolean getOrderResult(SessionVO svo, StoreVO snamevo, FinalOrderVO vo) {
 		boolean result = false;
 		String sql = " insert into subway_order values('O_'||sequ_subway_order.nextval,?,?,?,?,?,?,?,?) ";
 		getPreparedStatement(sql);
 		
 		try {
 			pstmt.setString(1, svo.getEmail());
-			pstmt.setString(2, vo.getO_STORE());
+			pstmt.setString(2, snamevo.getSname());
 			pstmt.setString(3, vo.getO_EAT());
 			pstmt.setString(4, vo.getHP());
 			pstmt.setString(5, vo.getO_MESSAGE());
