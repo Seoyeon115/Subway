@@ -14,8 +14,6 @@
 	int end = (int)map.get("end");
 	ArrayList<MemberVO> list = dao.getList(start, end);
 	
-
-	
 %>
 <!DOCTYPE html>
 <html>
@@ -54,50 +52,65 @@
 	 	});
 	</script> 
 </head>
+<style>
+div.bor {
+	border-top: 1px solid rgb(229, 229, 229);
+	width: 100%;
+	height: 1150px;
+	background-color: rgb(246, 246, 246);
+	border: 1px sollid red;
+}
+
+div.content>section.member_list {
+    text-align: center;
+    width: auto;
+}
+</style>
 <body>
 	<!-- header -->
-	<jsp:include page="http://localhost:9000/Subway/main/header.jsp"></jsp:include>
+	<jsp:include page="../../main/header.jsp"></jsp:include>
 	
 	<!-- content -->
-	<div class="content">
-		<section class="member_list">
-			<h1 class="title">회원 관리</h1>
-			<table class="content_layout">
-				<tr>
-					<th>번호</th>
-					<th>이메일</th>
-					<th>이름</th>
-					<th>핸드폰</th>
-					<th>주소</th>
-					<th>가입일자</th>
-					<th>회원탈퇴</th>
-				</tr>
-				<% for(MemberVO vo : list){ %>
-				<tr>
-					<td><%= vo.getRno() %></td>
-					<td><a href="http://localhost:9000/Subway/admin/member/member_content.jsp?email=<%= vo.getEmail() %>&rno=<%= vo.getRno()%>"><%= vo.getEmail() %></a></td>
-					<td><%= vo.getName() %></td>
-					<td><%= vo.getHp() %></td>
-					<td><%= vo.getAddr() %></td>
-					<td><%= vo.getMdate() %></td>
-					<td>
-						<% if(vo.getChoice() == 0){ %>
-						<button type="button" disabled>신청</button>
-						<% }else{ %>
-						<button type="button">신청</button>
-						<% } %>
-					</td>
-				</tr>
-				<% } %>
-				<tr>
-					<td colspan="8"><div id="ampaginationsm"></div></td>
-				</tr>
-			</table>
-		</section>
+	<div class="bor">
+		<div class="content">
+			<section class="member_list">
+				<h1 class="title">회원 관리</h1>
+				<table class="content_layout">
+					<tr>
+						<th>번호</th>
+						<th>아이디</th>
+						<th>이름</th>
+						<th>핸드폰</th>
+						<th>주소</th>
+						<th>가입일자</th>
+						<th>회원탈퇴</th>
+					</tr>
+					<% for(MemberVO vo : list){ %>
+					<tr>
+						<td><%= vo.getRno() %></td>
+						<td><a href="http://localhost:9000/Subway/admin/member/member_content.jsp?email=<%= vo.getEmail() %>&rno=<%= vo.getRno()%>"><%= vo.getEmail() %></a></td>
+						<td><%= vo.getName() %></td>
+						<td><%= vo.getHp() %></td>
+						<td><%= vo.getAddr() %></td>
+						<td><%= vo.getMdate() %></td>
+						<td>
+							<% if(vo.getChoice() == 0){ %>
+							<button type="button" disabled>신청</button>
+							<% }else{ %>
+							<button type="button">신청</button>
+							<% } %>
+						</td>
+					</tr>
+					<% } %>
+					<tr>
+						<td colspan="8"><div id="ampaginationsm"></div></td>
+					</tr>
+				</table>
+			</section>
+		</div>
 	</div>
-	
 	<!-- footer -->
-	<jsp:include page="http://localhost:9000/Subway/main/footer.jsp"></jsp:include>
+	<jsp:include page="../../main/footer.jsp"></jsp:include>
 	
 </body>
 </html>

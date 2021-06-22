@@ -9,8 +9,8 @@ body {
 }
 
 .btn_style {
-	background-color: red;
-	border: 1px solid red;
+	background-color: #009223;
+	border: 1px solid #009223;
 	padding: 8px;
 	margin: 20px 5px;
 	font-size: 14px;
@@ -20,8 +20,8 @@ body {
 }
 
 .btn_style2 {
-	background-color: red;
-	border: 1px solid red;
+	background-color: #009223;
+	border: 1px solid #009223;
 	padding: 8px;
 	margin: 20px 5px;
 	font-size: 14px;
@@ -30,7 +30,7 @@ body {
 }
 
 .btn_style:hover {
-	background-color: tomato;
+	background-color: #009223;
 }
 
 header>div, div.content, div.carousel>section, footer>div.f1 {
@@ -52,7 +52,7 @@ div.content>section {
 		*/
 section.admin article div {
 	display: inline-block;
-	background-color: red;
+	background-color: #009223;
 	padding: 20px 50px;
 	margin: 30px 10px;
 	color: white;
@@ -78,6 +78,8 @@ section.member_list table th, section.member_list table td, section.member_conte
 	padding: 8px 0;
 }
 
+
+
 /**
 		°ü¸®ÀÚ - member_list
 		*/
@@ -91,7 +93,7 @@ section.member_list table, section.member_list table th, section.member_list tab
 }
 
 section.member_list table th {
-	background-color: red;
+	background-color: #009223;
 	color: white;
 }
 
@@ -112,7 +114,7 @@ section.member_content table {
 }
 
 section.member_content table th {
-	background-color: lightgray;
+	background-color: #ffc300;
 	width: 15%;
 	font-size: 15px;
 }

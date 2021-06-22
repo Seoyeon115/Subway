@@ -34,22 +34,10 @@ div.bor {
 		<div id="content">
 			<h2 class="subTitle">이벤트ㆍ프로모션</h2>
 
-
-
-			<!-- 캐러셀 시작 -->
-			<div id="demo" class="carousel slide" data-ride="carousel">
-
-				<!-- Indicators -->
-				<ul class="carousel-indicators">
-					<li data-target="#demo" data-slide-to="0" class="active"></li>
-					<li data-target="#demo" data-slide-to="1"></li>
-					<li data-target="#demo" data-slide-to="2"></li>
-					<li data-target="#demo" data-slide-to="3"></li>
-				</ul>
-
 				<!-- The slideshow -->
 				<div class="carousel-inner">
 					<div class="event_img">
+					<div class="slide_content slide01">
 						<div class="carousel-item active">
 							<img src="../event/images/cpn_tp.jpg" alt="신규회원 할인"
 								width="1170px">
@@ -63,6 +51,8 @@ div.bor {
 							<a class="btn_more"
 								href="http://localhost:9000/Subway/event/event_content_cpn.jsp">자세히보기</a>
 						</div>
+					</div>
+					<div class="slide_content slide02">
 						<div class="carousel-item">
 							<img src="../event/images/event_770x400_20210503055916948.jpg"
 								alt="이달의 썹프라이즈" width="1170px">
@@ -80,6 +70,8 @@ div.bor {
 							<a class="btn_more"
 								href="http://localhost:9000/Subway/event/event_content_2.jsp">자세히보기</a>
 						</div>
+					</div>
+					<div class="slide_content slide03">
 						<div class="carousel-item">
 							<img src="images/carousel3.jpg" alt="써브웨이  아침메뉴!" width="1170px">
 						</div>
@@ -94,6 +86,8 @@ div.bor {
 							<a class="btn_more"
 								href="#">자세히보기</a>
 						</div>
+					</div>
+					<div class="slide_content slide04">
 						<div class="carousel-item">
 							<img src="images/carousel4.jpg" alt="말이 안 나올 떈 손으로 주문하자!"
 								width="1170px">
@@ -109,6 +103,7 @@ div.bor {
 							<a class="btn_more"
 								href="#">자세히보기</a>
 						</div>
+					</div>
 					</div>
 
 					<!-- Left and right controls -->
@@ -254,8 +249,8 @@ div.bor {
 				const slideList = document.querySelector('.slide_list'); // Slide parent dom
 				const slideContents = document
 						.querySelectorAll('.slide_content'); // each slide dom
-				const slideBtnNext = document.querySelector('.slide_btn_next'); // next button
-				const slideBtnPrev = document.querySelector('.slide_btn_prev'); // prev button
+				const slideBtnNext = document.querySelector('.bx_next'); // next button
+				const slideBtnPrev = document.querySelector('.bx_prev'); // prev button
 				const pagination = document.querySelector('.slide_pagination');
 				const slideLen = slideContents.length; // slide length
 				const slideWidth = 1000; // slide width
