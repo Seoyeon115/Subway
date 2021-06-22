@@ -35,17 +35,18 @@ public class OrderDAO extends DBconn {
 	//주문테이블에 주문데이터 입력
 	public boolean getOrderResult(SessionVO svo, FinalOrderVO vo) {
 		boolean result = false;
-		String sql = " insert into subway_order values('O_'||sequ_subway_order.nextval,?,?,?,?,?,?,?) ";
+		String sql = " insert into subway_order values('O_'||sequ_subway_order.nextval,?,?,?,?,?,?,?,?) ";
 		getPreparedStatement(sql);
 		
 		try {
 			pstmt.setString(1, svo.getEmail());
-			pstmt.setString(2, vo.getO_EAT());
-			pstmt.setString(3, vo.getHP());
-			pstmt.setString(4, vo.getO_MESSAGE());
-			pstmt.setString(5, null);
-			pstmt.setString(6, vo.getO_AMT());
-			pstmt.setString(7, vo.getO_PRICE());
+			pstmt.setString(2, vo.getO_STORE());
+			pstmt.setString(3, vo.getO_EAT());
+			pstmt.setString(4, vo.getHP());
+			pstmt.setString(5, vo.getO_MESSAGE());
+			pstmt.setString(6, null);
+			pstmt.setString(7, vo.getO_AMT());
+			pstmt.setString(8, vo.getO_PRICE());
 			
 			int value = pstmt.executeUpdate();
 			
@@ -64,7 +65,7 @@ public class OrderDAO extends DBconn {
 	//주문한 데이터 주문내역에 출력
 	public ArrayList<FinalOrderVO> getOrderlist(String email) {
 		ArrayList<FinalOrderVO> list = new ArrayList<FinalOrderVO>();
-		String sql = " select o_no,o_eat,hp,o_message,o_amt,o_price from subway_order where email=? ";
+		String sql = " select o_no,o_store,o_eat,hp,o_message,o_amt,o_price from subway_order where email=? ";
 		getPreparedStatement(sql);
 		
 		try {
@@ -73,11 +74,12 @@ public class OrderDAO extends DBconn {
 			while(rs.next()) {
 				FinalOrderVO vo = new FinalOrderVO();
 				vo.setO_NO(rs.getString(1));
-				vo.setO_EAT(rs.getString(2));
-				vo.setHP(rs.getString(3));
-				vo.setO_MESSAGE(rs.getString(4));
-				vo.setO_AMT(rs.getString(5));
-				vo.setO_PRICE(rs.getString(6));
+				vo.setO_STORE(rs.getString(2));
+				vo.setO_EAT(rs.getString(3));
+				vo.setHP(rs.getString(4));
+				vo.setO_MESSAGE(rs.getString(5));
+				vo.setO_AMT(rs.getString(6));
+				vo.setO_PRICE(rs.getString(7));
 				list.add(vo);
 			}
 			

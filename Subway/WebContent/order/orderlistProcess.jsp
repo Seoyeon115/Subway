@@ -3,6 +3,8 @@
 <%
 	SessionVO svo = (SessionVO)session.getAttribute("svo");	
 	
+	StoreVO snamevo = (StoreVO)session.getAttribute("storevo");
+	System.out.println(snamevo.getSname());
 	String count_result = request.getParameter("count_result");
 	String count_price = request.getParameter("count_price");
 	String take = request.getParameter("take");	
@@ -17,6 +19,7 @@
 	
 	
 	FinalOrderVO vo = new FinalOrderVO();
+	vo.setO_STORE(request.getParameter(snamevo.getSname()));
 	vo.setO_EAT(request.getParameter("take"));
 	vo.setHP(request.getParameter("hp"));
 	vo.setO_MESSAGE(request.getParameter("ask"));

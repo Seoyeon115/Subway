@@ -14,6 +14,7 @@
 	String lng = (String)session.getAttribute("lngclick");
 	
 	StoreVO snamevo = pdao.getStoreName(lat,lng);
+	session.setAttribute("storevo",snamevo);
 	
 	MenuVO allvo = dao.getAllMenuList(idx);
 	MenuVO sandwichvo = dao.Menu_Detail(idx);

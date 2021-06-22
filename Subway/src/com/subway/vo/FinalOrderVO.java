@@ -1,13 +1,20 @@
 package com.subway.vo;
 
 public class FinalOrderVO {
-	String  O_NO, O_EAT, HP, O_MESSAGE,  O_COUPON, O_AMT,  O_PRICE;;          
+	String  O_NO, O_EAT, HP, O_MESSAGE,  O_COUPON, O_AMT,  O_PRICE, O_STORE;         
 	
 	public String getO_NO() {
 		return O_NO;
 	}
 	public void setO_NO(String o_NO) {
 		O_NO = o_NO;
+	}
+	
+	public String getO_STORE() {
+		return O_STORE;
+	}
+	public void setO_STORE(String o_STORE) {
+		O_STORE = o_STORE;
 	}
 	public String getO_EAT() {
 		return O_EAT;

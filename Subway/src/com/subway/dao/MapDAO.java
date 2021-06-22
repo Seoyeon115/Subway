@@ -1,5 +1,7 @@
 package com.subway.dao;
 
+import java.util.ArrayList;
+
 import com.subway.vo.StoreVO;
 
 public class MapDAO extends DBconn {
@@ -44,5 +46,26 @@ public class MapDAO extends DBconn {
 		}
 		
 		return vo;
+	}
+	
+	public ArrayList<StoreVO> getStorelist(String lat, String lng){
+		ArrayList<StoreVO> slist = new ArrayList<StoreVO>();
+		String sql = " select sname from subway_store where latitude = ? and longitude = ? ";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, lat);
+			pstmt.setString(2, lng);
+			while(rs.next()) {
+				StoreVO vo = new StoreVO();
+				vo.setSname(rs.getString(1));
+				slist.add(vo);
+			}
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return slist;
 	}
 }
