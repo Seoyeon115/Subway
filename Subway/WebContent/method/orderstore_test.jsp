@@ -8,6 +8,7 @@
 	<title>SUBWAY 써브웨이</title>
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/orderstore_test.css">
+</head>
 	<style>
 	#container { width: 1000px; margin: auto; /*border:1px solid red;*/ }
    .slide_wrap { position: relative; width: 1000px; margin: auto; padding-bottom: 30px; /*border:1px solid green;*/ }
@@ -28,7 +29,6 @@
    .slide_pagination .dot.dot_active { background: #333; }
    .slide_pagination .dot a { display: block; width: 100%; height: 100%; }
 	</style>
-</head>
 <body>
 	<!-- header -->
 	<jsp:include page="../main/header.jsp"></jsp:include>
@@ -198,7 +198,7 @@
 
 			</div>
 		</div>
-	</div>-
+	</div>
 	
 	<!-- footer -->
 	<jsp:include page="../main/footer.jsp"></jsp:include>

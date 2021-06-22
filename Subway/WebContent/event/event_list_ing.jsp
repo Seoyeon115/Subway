@@ -4,156 +4,274 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>SUBWAY EVENT</title>
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/event.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script type="text/javascript"
-	src="/js/jquery/jquery_tmpl_min.js"></script>
-<script type="text/javascript" src="/js/news/eventList.js"></script>
-<script type="text/javascript">
-	$(document).ready(function() {
-		eventSlider()//이벤트ㆍ프로모션 슬라이더
-	});
-</script>
-<script>
-	<li>
-</script>
 </head>
 <style>
+#container {
+	width: 1000px;
+	margin: auto; /*border:1px solid red;*/
+}
+.slide_wrap {
+	position: relative;
+	width: 1000px;
+	margin: auto;
+	padding-bottom: 30px; /*border:1px solid green;*/
+}
+.slide_box {
+	width: 100%;
+	margin: auto;
+	overflow-x: hidden; /*border:1px solid violet;*/
+}
+.slide_content {
+	display: table;
+	float: left;
+	width: 1000px;
+	height: 400px;
+}
+.slide_content.slide01 img {
+	float: left;
+}
+.slide_content.slide02 img {
+	float: left;
+}
+.slide_content.slide03 img {
+	float: left;
+}
+.slide_content.slide04 img {
+	float: left;
+}
+.slide_content.slide05 img {
+	float: left;
+}
+.slide_btn_box>button {
+	position: absolute;
+	top: 50%;
+	margin-top: -45px;
+	width: 20px;
+	height: 20px;
+	font-size: 16px;
+	color: #999;
+	border: 1px solid #f6f6f6;
+	cursor: pointer;
+}
+.slide_btn_box>.slide_btn_prev {
+	left: -145px;
+	background: url("http://localhost:9000/Subway/images/slider_arr2.png");
+}
+.slide_btn_box>.slide_btn_next {
+	right: -145px;
+	background: url("http://localhost:9000/Subway/images/slider_arr.png");
+}
+.slide_pagination {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	transform: translateX(-50%);
+}
+.slide_pagination .dot {
+	display: none;
+	width: 15px;
+	height: 15px;
+	margin: 0 5px;
+	overflow: hidden;
+	background: #ddd;
+	border-radius: 50%;
+	transition: 0.3s;
+}
+.slide_pagination .dot.dot_active {
+	background: #333;
+}
+.slide_pagination .dot a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
 div.bor {
 	border-top: 1px solid rgb(229, 229, 229);
 	width: 100%;
 	background-color: rgb(246, 246, 246);
 	border: 1px sollid red;
 }
-
+.date em {
+	color: #009223;
+	font-size: 22px;
+	font-family: font_sw;
+	font-weight: bold;
+	letter-spacing: -0.015em;
+}
+.date {
+	margin-bottom: 9px;
+}
+.title {
+	font-size: 28px;
+	color: #292929;
+	font-weight: bold;
+	line-height: 42px;
+	letter-spacing: -0.03em;
+	display: block;
+}
+.summary {
+	font-size: 16px;
+	color: #666666;
+	line-height: 26px;
+	letter-spacing: -0.04em;
+	margin-top: 27px;
+}
+p {
+	display: block;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+	margin-inline-start: 0px;
+	margin-inline-end: 0px;
+}
+.event_tinfo {
+    margin-left: 800px;
+    margin-top: 40px;
+    position: relative;
+    min-height: 380px;
+    top: 30px;
+    opacity: 0;
+}
+ .btn_more {
+    color: #bbbbbb;
+    font-weight: 300;
+    font-size: 18px;
+    position: absolute;
+    left: 0;
+    bottom: 16px;
+    letter-spacing: -0.05em;
+    width: 140px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #009223;
+    border-radius: 50px;
+    color: #fff;
+    text-indent: -10px;
+    margin-left: 40px;
+}
+.btn_more:after {
+    content: '';
+    background: url(../event/images/icon_arr_r01.png) 0 0 no-repeat;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
 </style>
 <body>
-	<!-- header start -->
+		<!-- header -->
 	<jsp:include page="../main/header.jsp"></jsp:include>
 	<!-- header end -->
-
+	
 	<!-- content -->
 	<div class="bor">
-		<div id="content">
+		<div class="content" id="content">
 			<h2 class="subTitle">이벤트ㆍ프로모션</h2>
-	
-			<!-- 이벤트ㆍ프로모션 slider s -->
-			<div class="event_slider_wrapper">
-				<div class="event_slider_cont">
-					<div class="bx-wrapper" style="max-width: 100%;">
-						<div class="bx-viewport" aria-live="polite"
-							style="width: 100%; overflow: hidden; position: relative; height: 400px;">
-							<ul class="evnet_slider"
-								style="width: 4215%; position: relative; transition-duration: 0.5s; transform: translate3d(0px, 0px, 0px);">
-								<li aria-hidden="false"
-									style="float: left; list-style: none; position: relative; width: 1170px;">
-									<div class="event_img">
-										<img src="../event/images/cpn_tp.jpg" alt="신규회원 할인"
-											onclick="view.view(192);return false;">
-									</div>
-									<div class="event_info" style="opacity: 1; top: 0px;">
-										<div class="date">
-											<em>2021.06.01 ~ 2021.06.30</em>
-										</div>
-										<strong class="title">신규회원 이벤트</strong>
-										<p class="summary">6월 한달간 신규회원을 위한 이벤트 !</p>
-										<a class="btn_more"
-											href="http://localhost:9000/Subway/event/event_content_cpn.jsp"
-											onclick="view.view(192);return false;">자세히보기</a>
-									</div>
-								</li>
-								<li aria-hidden="true"
-									style="float: left; list-style: none; position: relative; width: 1170px;">
-									<div class="event_img">
-										<img src="../event/images/cpn_btm.jpg" alt="신규회원 할인"
-											onclick="view.view(191);return false;">
-									</div>
-									<div class="event_info" style="">
-	
-										<div class="date">
-											<em>2021.06.01 ~ 2021.06.30</em>
-										</div>
-	
-										<strong class="title">신규회원 할인!</strong>
-										<p class="summary">
-											6월 한달간<br>신규회원을 위한 이벤트 !
-										</p>
-										<a class="btn_more"
-											href="http://localhost:9000/Subway/event/event_content_cpn.jsp"
-											onclick="view.view(191);return false;">자세히보기</a>
-									</div>
-								</li>
-								<li aria-hidden="true"
-									style="float: left; list-style: none; position: relative; width: 1170px;">
-									<div class="event_img">
-										<img src="../event/images/event_770x400_20201113042155905.jpg"
-											alt="써브웨이 아침메뉴!" onclick="view.view(186);return false;">
-									</div>
-									<div class="event_info" style="">
-										<div class="date">
-											<em>2020.11.16 ~ </em>
-										</div>
-										<strong class="title">써브웨이 아침메뉴!</strong>
-										<p class="summary">
-											속은 같아도 빵은 다르게!<br>취향대로 즐기는 아침!
-										</p>
-										<a class="btn_more"
-											href="http://localhost:9000/Subway/event/event_content_2.jsp"
-											onclick="view.view(186);return false;">자세히보기</a>
-									</div>
-								</li>
-								<li aria-hidden="true"
-									style="float: left; list-style: none; position: relative; width: 1170px;">
-									<div class="event_img">
-										<img src="../event/images/event_770x400_20201006035853218.jpg"
-											alt="말이 안 나올 땐 손으로 주문하자!"
-											onclick="view.view(180);return false;">
-									</div>
-									<div class="event_info" style="">
-										<div class="date">
-											<em>2020.10.16 ~ </em>
-										</div>
-										<strong class="title">말이 안 나올 땐 손으로 주문하자!</strong>
-										<p class="summary">
-											말이 안 나올 땐?<br>손으로 주문하자!
-										</p>
-										<a class="btn_more"
-											href="http://localhost:9000/Subway/event/event_content_3.jsp"
-											onclick="view.view(180);return false;">자세히보기</a>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="bx-controls bx-has-controls-direction bx-has-pager">
-							<div class="bx-controls-direction">
-								<a class="bx-prev" href="">Prev</a><a class="bx-next" href="">Next</a>
+			<div class="orderstore_content" id="store_order">
+				<div class="slide_wrap" style="max-width: 100%;">
+					<div class="slide_box">
+						<div class="slide_list clearfix">
+							<div class="slide_content slide01">
+								<img src="../event/images/cpn_tp.jpg" style="margin-top: 40px;">
+								<div class="info_content">
+									<ol>
+										<li class="active" style="margin-top: 0; opacity: 1">
+											<div class="event_tinfo" style="opacity: 1; top: 0px;">
+												<div class="date">
+													<em>2021.06.01 ~ 2021.06.30</em>
+												</div>
+												<strong class="title">신규회원 이벤트</strong>
+												<p class="summary">6월 한달간 신규회원을 위한 이벤트 !</p>
+												<a class="btn_more"
+													href="http://localhost:9000/Subway/event/event_content_cpn.jsp">자세히보기</a>
+											</div>
+										</li>
+									</ol>
+								</div>
 							</div>
-							<div class="bx-pager bx-default-pager">
-								<div class="bx-pager-item">
-									<a href="" data-slide-index="0" class="bx-pager-link active">1</a>
+							<div class="slide_content slide02">
+								<img src="../event/images/event_770x400_20210503055916948.jpg"
+									style="margin-top: 50px;">
+								<div class="info_content">
+									<ol>
+										<li class="active" style="margin-top: 0; opacity: 1">
+											<div class="event_tinfo" id="top" style="opacity: 1; top: 0px;">
+
+												<div class="date">
+													<em>2021.05.04 ~ 2021.06.30</em>
+												</div>
+
+												<strong class="title">이달의 썹!프라이즈!</strong>
+												<p class="summary">
+													맛도 가격도 놀라운<br>이달의 썹!프라이즈!
+												</p>
+												<a class="btn_more"
+													href="http://localhost:9000/Subway/event/event_content_2.jsp">자세히보기</a>
+											</div>
+										</li>
+									</ol>
 								</div>
-								<div class="bx-pager-item">
-									<a href="" data-slide-index="1" class="bx-pager-link">2</a>
+							</div>
+							<div class="slide_content slide03">
+								<img src="../event/images/event_770x400_20201113042155905.jpg"
+									style="margin-top: 50px;">
+								<div class="info_content">
+									<ol>
+										<li class="active" style="margin-top: 0; opacity: 1">
+											<div class="event_tinfo" style="opacity: 1; top: 0px;">
+												<div class="date">
+													<em>2020.11.16 ~ </em>
+												</div>
+												<strong class="title">써브웨이 아침메뉴!</strong>
+												<p class="summary">
+													속은 같아도 빵은 다르게!<br>취향대로 즐기는 아침!
+												</p>
+												<a class="btn_more" href="#">자세히보기</a>
+											</div>
+										</li>
+									</ol>
 								</div>
-								<div class="bx-pager-item">
-									<a href="" data-slide-index="2" class="bx-pager-link">3</a>
-								</div>
-								<div class="bx-pager-item">
-									<a href="" data-slide-index="3" class="bx-pager-link">4</a>
+							</div>
+							<div class="slide_content slide04">
+								<img src="../event/images/event_770x400_20201006035853218.jpg"
+									style="margin-top: 50px;">
+								<div class="info_content">
+									<ol>
+										<li class="active" style="margin-top: 0; opacity: 1">
+											<div class="event_tinfo" style="opacity: 1; top: 0px;">
+												<div class="date">
+													<em>2020.10.16 ~ </em>
+												</div>
+												<strong class="title">말이 안 나올 땐 손으로 주문하자!</strong>
+												<p class="summary">
+													말이 안 나올 땐?<br>손으로 주문하자!
+												</p>
+												<a class="btn_more" href="#">자세히보기</a>
+											</div>
+										</li>
+									</ol>
 								</div>
 							</div>
 						</div>
+						<!-- // .slide_list -->
 					</div>
+					<!-- // .slide_box -->
+					<div class="slide_btn_box">
+						<button type="button" class="slide_btn_prev"></button>
+						<button type="button" class="slide_btn_next"></button>
+					</div>
+					<!-- // .slide_btn_box -->
+					<ul class="slide_pagination"></ul>
+					<!-- // .slide_pagination -->
 				</div>
+				<!-- // .slide_wrap -->
 			</div>
-			<!--// 이벤트ㆍ프로모션 slider s -->
 	
 	
 			<!-- 이벤트 list s -->
@@ -241,7 +359,6 @@ div.bor {
 				</div>
 			</div>
 			<!--// 이벤트 list e -->
-	
 		</div>
 	</div>
 
