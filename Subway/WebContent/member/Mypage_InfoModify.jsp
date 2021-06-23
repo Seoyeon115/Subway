@@ -92,18 +92,18 @@
 												<ul>
 													<li>
 														<label>현재 비밀번호</label>
-														<input type="text" name="pass" id="pass" placeholder="현재 비밀번호">
+														<input type="password" name="pass" id="pass" placeholder="현재 비밀번호">
 													</li>
 													<li>
 														<label>새 비밀번호</label>
-														<input type="text" name="npass" id="npass" placeholder="비밀번호 변경">
+														<input type="password" name="npass" id="npass" placeholder="비밀번호 변경">
 													</li>
 													<li>
 														<p>※ 반드시 현재의 비밀번호와 다르게 입력해주세요.</p>
 													</li>
 													<li>
 														<label>새 비밀번호 확인</label>
-														<input type="text" name="ncpass" id="ncpass" placeholder="비밀번호 변경">
+														<input type="password" name="ncpass" id="ncpass" placeholder="비밀번호 변경">
 														<div id="pass_msg"></div>
 													</li>
 													</ul>

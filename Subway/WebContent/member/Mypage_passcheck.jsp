@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="com.subway.vo.*, com.subway.dao.*, java.util.*" %>
+<% 
+	SessionVO svo = (SessionVO)session.getAttribute("svo");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,13 +40,13 @@
 			<h1>회원정보 확인</h1>
 			<p>회원가입시 등록한 비밀번호를 재입력 해주세요.</p>
 			<form name="passcheck_form" action="Mypage_PassProcess.jsp" method="post">
-			
+			<input type="hidden" name="email" value="<%= svo.getEmail() %>">
 			<div class="content1">
 				<div class="passcheck_form">
 								<ul>
 									<li>
 										<label>이메일 주소</label>
-										<input type="text" name="email" id="email" placeholder="이메일주소 입력">
+										<input type="text" name="email" id="email" value="<%= svo.getEmail() %>" readonly>
 									</li>
 									<li>
 										<label>비밀번호</label>
