@@ -7,7 +7,7 @@ div {
 .title {
     width: 30%;
     font-size: 30px;
-    padding: 100px 0px 30px 0px;
+    padding: 50px 0px 30px 0px;
     margin: 30px 0px 30px 0px;
 }
 
@@ -31,19 +31,40 @@ div.content>section{
 	margin: 0px 50px;
 }
 
-.btn_style2 {
-	background-color: #009223;
-	border:1px solid #009223;
-	border-radius:3px;
-	font-size: 14px;
-	font-weight: 900;
+.btn_style{
+	width:150px;
+	background-color:#009223;
+	border:2px solid #009223;
+	border-radius:30px;
+	padding:10px;
 	color:white;
-	width: 17%;
-	padding:5px 0;
-	margin: 15px 0px 30px 0px;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	margin:20px 10px 0 10px;
+	cursor:pointer;
 }
-
-
+.btn_style:hover{
+	border:2px solid #00791f;
+	background-color:#00791f;
+}
+.btn_style2{
+	width:150px;
+	background-color:white;
+	border:2px solid #009223;
+	border-radius:30px;
+	padding:10px;
+	color:#009223;
+	font-size:18px;
+	font-weight:bold;
+	text-align:center;
+	margin:20px 10px 0 10px;
+	cursor:pointer;
+}
+.btn_style2:hover{
+	background-color:#009223;
+	color:white;
+}
 
 /*** 게시판 공통 ****/
 section.board_list table, section.board_list table th, section.board_list table td,
@@ -85,6 +106,9 @@ h1 {
     font-weight: bold;
 }
 
+section.board_write table{
+	background-color:white;
+}
 section.board_write table th{
 	width:20%;
 }
@@ -96,6 +120,8 @@ section.board_write table td{
 
 section.board_write table tr:last-child>td {
 	text-align: center;
+	border: 1px solid rgb(246, 246, 246);
+	background-color:rgb(246, 246, 246);
 }
 
 section.board_write input, section.board_write textarea{
@@ -112,7 +138,6 @@ section.board_write table tr:nth-child(3) input {
 	border: 1px solid white;
 }
 section.board_write table tr:last-child td{
-	border: 1px solid white;
 	padding-top:20px;
 }
 section.board_write table button{

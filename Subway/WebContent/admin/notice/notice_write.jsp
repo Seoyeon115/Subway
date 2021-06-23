@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
 <title>관리자 - 글쓰기</title>
 
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
@@ -54,7 +55,7 @@ div.bor {
 								<button type="button" id="btnWrite" class="btn_style2">저장</button>
 								<button type="reset" id="btnCancel" class="btn_style2">취소</button>
 								<a href="http://localhost:9000/Subway/board/notice_list.jsp"><button type="button" class="btn_style2">리스트</button></a> 
-								<a href="http://localhost:9000/Subway/main/subway_main.jsp"><button	type="button" class="btn_style2">홈으로</button></a>
+								<a href="http://localhost:9000/Subway/main/subway_main.jsp"><button	type="button" class="btn_style">홈으로</button></a>
 							</td>
 						</tr>
 					</table>

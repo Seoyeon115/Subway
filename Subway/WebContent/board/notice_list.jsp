@@ -18,6 +18,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
 <title>공지사항</title>
 
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">

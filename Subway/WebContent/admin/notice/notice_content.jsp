@@ -15,7 +15,8 @@ SessionVO svo = (SessionVO) session.getAttribute("svo");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
+<title>공지사항</title>
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/board.css">
 <style>
@@ -34,11 +35,11 @@ div.bor {
 .btn_style2 {
 	background-color: #009223;
 	border: 1px solid #009223;
-	border-radius: 3px;
+	border-radius: 50px;
 	font-size: 14px;
 	font-weight: 900;
 	color: white;
-	padding: 5px 10PX;
+	padding: 10px 20PX;
 	margin: 0px 0px;
 }
 </style>

@@ -9,7 +9,8 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
+<title>공지사항</title>
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/board_write.css">
 </head>
@@ -21,6 +22,10 @@ div.bor {
 	background-color: rgb(246, 246, 246);
 	border: 1px sollid red;
 }
+h3{
+	margin:100px 0 50px 0;
+}
+
 </style>
 <body>
 	<!-- header start -->
@@ -31,10 +36,10 @@ div.bor {
 	<div class="bor">
 		<div class="content">
 			<section class="board_delete">
-				<h1 class="title">게시판</h1>
+				<!-- <h1 class="title">공지사항 삭제</h1> -->
 				<div class="content_layout">
 					<h3>정말로 삭제하시겠습니까?</h3>
-					<img src="http://localhost:9000/Subway/board/images/trash_can.jpg">
+					<!-- <img src="http://localhost:9000/Subway/board/images/trash_can.jpg"> -->
 					<div>
 						<a href="noticeDeleteProcess.jsp?bid=<%=bid%>"><button
 								type="submit" class="btn_style2" id="btnDelete">삭제</button></a> <a

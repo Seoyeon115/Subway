@@ -13,19 +13,20 @@ String content = vo.getBcontent().replace("<br>", "\r\n");
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<link rel="shortcut icon" type="image⁄x-icon" href="http://localhost:9000/Subway/images/icon.png">
+<title>공지사항</title>
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 <link rel="stylesheet" href="http://localhost:9000/Subway/css/board_write.css">
 <script src="http://localhost:9000/Subway/admin/js/jquery-3.6.0.min.js"></script>
 <script src="http://localhost:9000/Subway/admin/js/board.js"></script>
 <style>
 span#fname {
-	width: 150px;
+	width: 300px;
 	display: inline-block;
 	font-size: 13px;
-	margin-left: -370px;
+	margin-left:-585px;
 	background-color: white;
-	padding: 2px 0 2px 2px;
+	padding: 2px 0 2px 5px;
 }
 
 div.bor {
@@ -33,6 +34,7 @@ div.bor {
 	width: 100%;
 	background-color: rgb(246, 246, 246);
 	border: 1px sollid red;
+	padding-bottom:80px;
 }
 
 .btn_right {
@@ -40,16 +42,6 @@ div.bor {
 	margin-bottom: 10px;
 }
 
-.btn_style2 {
-	background-color: #009223;
-	border: 1px solid #009223;
-	border-radius: 3px;
-	font-size: 14px;
-	font-weight: 900;
-	color: white;
-	padding: 5px 0;
-	margin: 15px 0px 30px 0px;
-}
 </style>
 
 <script>
@@ -100,7 +92,7 @@ div.bor {
 							<td colspan="2">
 								<button type="button" class="btn_style2" id="btnUpdate">수정</button>
 								<a href="notice_content.jsp?bid=<%=bid%>&rno=<%=rno%>"><button type="button" class="btn_style2">취소</button></a>
-								<a href="http://localhost:9000/Subway/admin/notice/notice_list.jsp"><button type="button" class="btn_style2">리스트</button></a> 
+								<a href="http://localhost:9000/Subway/admin/notice/notice_list.jsp"><button type="button" class="btn_style">리스트</button></a> 
 							</td>
 						</tr>
 					</table>
