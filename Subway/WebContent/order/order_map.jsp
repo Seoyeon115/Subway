@@ -52,7 +52,7 @@
 							<div class="option"> 
 								<div> 
 									<input type="text" value="써브웨이 강남" id="keyword" size="15" > 
-									<button onclick="searchPlaces(); return false;">검색하기</button> 
+									<button onclick="searchPlaces(); return false;" style="background-color:rgb(0,146,35); color:white; border:1px solid rgb(0,146,35); height:20px; padding:0px 5px; ">검색</button> 
 								</div> 
 							</div>
 							<hr>
