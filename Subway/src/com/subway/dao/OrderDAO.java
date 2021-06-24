@@ -199,6 +199,38 @@ public class OrderDAO extends DBconn {
 		return list;
 		
 	}
+	public ArrayList<OrderVO> selectSingleOrder(String email) {
+		ArrayList<OrderVO> list = new ArrayList<OrderVO>();
+		String sql = "select sub,bread,cheese,vegetable,sauce,side,single_set,kor_name,image_path from subway_order_detail where email = ?";
+		getPreparedStatement(sql);
+		
+		try {
+			pstmt.setString(1, email);
+			
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				OrderVO vo = new OrderVO();
+				vo.setSub(rs.getString(1));
+				vo.setBread_choice(rs.getString(2));
+				vo.setCheese_choice(rs.getString(3));
+				vo.setVegetable_list(rs.getString(4));
+				vo.setSauce_choice(rs.getString(5));
+				vo.setSide_choice(rs.getString(6));
+				vo.setSingle_set(rs.getString(7));
+				vo.setKor_name(rs.getString(8));
+				vo.setImage_path(rs.getString(9));
+				
+				list.add(vo);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return list;
+		
+	}
+	
+	
 	
 	//삭제처리
 	public boolean getDeleteResult(String email) {
