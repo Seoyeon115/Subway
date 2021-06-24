@@ -57,16 +57,16 @@ div.content>section.member_content {
 						<td colspan="6"><%= vo.getHp() %></td>
 					</tr>
 					<tr>
-						<th>주소</th>
-						<td colspan="6"><%= vo.getAddr() %></td>
-					</tr>
-					<tr>
 						<th>가입일자</th>
 						<td colspan="6"><%= vo.getMdate() %></td>
 					</tr>
 					<tr>
-						<th>메모</th>
+						<th>우편번호</th>
 						<td colspan="6"><%= vo.getPost() %></td>
+					</tr>
+					<tr>
+						<th>주소</th>
+						<td colspan="6"><%= vo.getAddr() %></td>
 					</tr>
 					<tr>
 						<td colspan="7"> 
