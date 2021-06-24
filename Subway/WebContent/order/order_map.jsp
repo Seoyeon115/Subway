@@ -14,6 +14,17 @@
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/main.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/order.css">
 	<link rel="stylesheet" href="http://localhost:9000/Subway/css/mapkakao.css">
+	<script src="../order/js/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#orderbtn").click(function(){
+				if($("#fulladdress").val() == ""){
+					alert("매장을 선택해주세요.");
+					return false;
+				}
+			});
+		});
+	</script>
 </head>
 <body>
 	<!-- header -->
@@ -264,7 +275,7 @@
 		</div>
 		</section>
 		<section class="map_order_btn">
-			<button type="submit" class="btn_style2">주문하기</button>
+			<button type="submit" class="btn_style2" id="orderbtn">주문하기</button>
 		</section>
 		</form>
 	</div>
