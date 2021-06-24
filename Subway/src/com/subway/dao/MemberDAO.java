@@ -634,7 +634,7 @@ public class MemberDAO extends DBconn {
 						   + " from(select rownum rno, email, name, hp, addr, to_char(mdate, 'yyyy-mm-dd') mdate, choice " 
 						   + " from (select email, name, hp, addr, mdate, choice from subway_member " 
 						   + " 		 order by mdate desc))"
-						   + " where rno between ? and ?";
+						   + " where rno between ? and ? and email != 'admin@naver.com'";
 				getPreparedStatement(sql);
 				
 				try {

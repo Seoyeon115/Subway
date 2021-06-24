@@ -47,7 +47,6 @@ public class Commons {
 		map.put("pageSize", pageSize);
 		map.put("rpage", reqPage);
 
-		System.out.println(map);
 		return map;
 	}
 }
