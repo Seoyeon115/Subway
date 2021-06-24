@@ -1,12 +1,13 @@
 package com.subway.dao;
 
+
 import java.util.ArrayList;
 
 import com.subway.vo.BoardVO;
 
 public class BoardDAO extends DBconn {
 	
-	/* 전체 카운트 가져오기*/
+	/* 전체 카운트 가져오기 */
 	//execTotalCount()
 	public int execTotalCount(){
 		int count = 0;
